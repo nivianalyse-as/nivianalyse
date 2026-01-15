@@ -20,19 +20,25 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Hurtiglenker</h4>
             <nav className="flex flex-col gap-3">
               <a
-                href="#tjenester"
+                href="#fagomrader"
                 className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
               >
-                Tjenester
+                Våre fagområder
               </a>
               <a
-                href="#aktuelt"
+                href="#inspirasjon"
                 className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
               >
-                Artikler
+                Inspirasjon
               </a>
               <a
-                href="#om-oss"
+                href="#referanser"
+                className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
+              >
+                Referanser
+              </a>
+              <a
+                href="#eksperter"
                 className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
               >
                 Om oss

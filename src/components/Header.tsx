@@ -1,143 +1,124 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import niviLogo from "@/assets/nivi-logo.png";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
 
-  const services = [
-    { name: "Strategisk Analyse", href: "#tjenester" },
-    { name: "Kommuneøkonomi", href: "#tjenester" },
-    { name: "Organisasjonsutvikling", href: "#tjenester" },
-    { name: "Politisk Rådgivning", href: "#tjenester" },
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const navItems = [
+    { name: "Startside", href: "#top" },
+    { name: "Våre fagområder", href: "#fagomrader" },
+    { name: "Hvordan jobber vi?", href: "#eksperter" },
+    { name: "Inspirasjon", href: "#inspirasjon" },
+    { name: "Referanser", href: "#referanser" },
+    { name: "Om oss", href: "#om-oss" },
   ];
 
+  const scrollToSection = (href: string) => {
+    if (href === "#top") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+    setIsOpen(false);
+  };
+
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background border-b border-border">
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled
+          ? "bg-primary/95 backdrop-blur-sm shadow-lg"
+          : "bg-transparent"
+      }`}
+    >
       <div className="container-narrow">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
-            <img src={niviLogo} alt="NIVI Analyse" className="h-20 w-auto" />
+            <img
+              src={niviLogo}
+              alt="NIVI Analyse"
+              className="h-16 w-auto brightness-0 invert"
+            />
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
-            <Link
-              to="/"
-              className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors link-underline"
-            >
-              Hjem
-            </Link>
-
-            {/* Services Dropdown */}
-            <div
-              className="relative"
-              onMouseEnter={() => setServicesOpen(true)}
-              onMouseLeave={() => setServicesOpen(false)}
-            >
-              <button className="flex items-center gap-1 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors">
-                Tjenester
-                <ChevronDown className="h-4 w-4" />
+          <nav className="hidden lg:flex items-center gap-6">
+            {navItems.map((item) => (
+              <button
+                key={item.name}
+                onClick={() => scrollToSection(item.href)}
+                className={`text-sm font-medium text-white/90 hover:text-white transition-colors relative py-2 ${
+                  item.name === "Startside"
+                    ? "after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-white"
+                    : "hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:right-0 hover:after:h-0.5 hover:after:bg-white/50"
+                }`}
+              >
+                {item.name}
               </button>
-              {servicesOpen && (
-                <div className="absolute top-full left-0 pt-2">
-                  <div className="bg-background border border-border rounded-lg shadow-lg py-2 min-w-48">
-                    {services.map((service) => (
-                      <a
-                        key={service.name}
-                        href={service.href}
-                        className="block px-4 py-2 text-sm text-foreground/80 hover:bg-muted hover:text-foreground transition-colors"
-                      >
-                        {service.name}
-                      </a>
-                    ))}
-                  </div>
-                </div>
-              )}
-            </div>
-
-            <a
-              href="#aktuelt"
-              className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors link-underline"
-            >
-              Artikler
-            </a>
-
-            <a
-              href="#om-oss"
-              className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors link-underline"
-            >
-              Om oss
-            </a>
+            ))}
           </nav>
 
           {/* CTA Button */}
-          <div className="hidden md:block">
-            <Button variant="cta" size="lg">
-              Ta kontakt
+          <div className="hidden lg:block">
+            <Button
+              variant="cta"
+              size="lg"
+              onClick={() => scrollToSection("#kontakt")}
+              className="bg-accent hover:bg-accent/90 text-white rounded-md"
+            >
+              Kontakt
             </Button>
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2"
+            className="lg:hidden p-2"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
             {isOpen ? (
-              <X className="h-6 w-6 text-foreground" />
+              <X className="h-6 w-6 text-white" />
             ) : (
-              <Menu className="h-6 w-6 text-foreground" />
+              <Menu className="h-6 w-6 text-white" />
             )}
           </button>
         </div>
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden py-4 border-t border-border">
+          <div className="lg:hidden py-4 border-t border-white/20 bg-primary/95 backdrop-blur-sm">
             <nav className="flex flex-col gap-4">
-              <Link
-                to="/"
-                className="text-sm font-medium text-foreground/80 hover:text-foreground"
-                onClick={() => setIsOpen(false)}
+              {navItems.map((item) => (
+                <button
+                  key={item.name}
+                  onClick={() => scrollToSection(item.href)}
+                  className="text-sm font-medium text-white/90 hover:text-white text-left"
+                >
+                  {item.name}
+                </button>
+              ))}
+              <Button
+                variant="cta"
+                className="mt-2 bg-accent hover:bg-accent/90 text-white"
+                onClick={() => scrollToSection("#kontakt")}
               >
-                Hjem
-              </Link>
-              <div className="space-y-2">
-                <span className="text-sm font-medium text-foreground">
-                  Tjenester
-                </span>
-                {services.map((service) => (
-                  <a
-                    key={service.name}
-                    href={service.href}
-                    className="block pl-4 text-sm text-foreground/70 hover:text-foreground"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    {service.name}
-                  </a>
-                ))}
-              </div>
-              <a
-                href="#aktuelt"
-                className="text-sm font-medium text-foreground/80 hover:text-foreground"
-                onClick={() => setIsOpen(false)}
-              >
-                Artikler
-              </a>
-              <a
-                href="#om-oss"
-                className="text-sm font-medium text-foreground/80 hover:text-foreground"
-                onClick={() => setIsOpen(false)}
-              >
-                Om oss
-              </a>
-              <Button variant="cta" className="mt-2">
-                Ta kontakt
+                Kontakt
               </Button>
             </nav>
           </div>

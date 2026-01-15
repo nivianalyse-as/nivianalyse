@@ -3,7 +3,7 @@ import heroImage from "@/assets/hero-consultants.jpg";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-[90vh] flex items-center pt-20">
+    <section id="top" className="relative min-h-[90vh] flex items-center pt-20">
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -29,7 +29,7 @@ const HeroSection = () => {
 
           <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-delay-2">
             <Button variant="heroOutline" size="xl" asChild>
-              <a href="#tjenester">Se våre tjenester</a>
+              <a href="#fagomrader">Se våre fagområder</a>
             </Button>
             <Button variant="heroCta" size="xl" asChild>
               <a href="#kontakt">Kontakt oss</a>
