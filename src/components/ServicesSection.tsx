@@ -29,10 +29,10 @@ const services = [
 
 const ServicesSection = () => {
   return (
-    <section id="tjenester" className="section-padding bg-muted">
+    <section id="fagomrader" className="section-padding bg-muted">
       <div className="container-narrow">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Våre tjenester</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Våre fagområder</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Vi tilbyr skreddersydd rådgivning basert på mange års erfaring med
             norsk kommunesektor.

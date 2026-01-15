@@ -20,7 +20,7 @@ const experts = [
 
 const ExpertsSection = () => {
   return (
-    <section id="om-oss" className="section-padding bg-muted">
+    <section id="eksperter" className="section-padding bg-muted">
       <div className="container-narrow">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">

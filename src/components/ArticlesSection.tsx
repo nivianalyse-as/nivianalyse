@@ -26,12 +26,12 @@ const articles = [
 
 const ArticlesSection = () => {
   return (
-    <section id="aktuelt" className="section-padding bg-background">
+    <section id="inspirasjon" className="section-padding bg-background">
       <div className="container-narrow">
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-12">
           <div>
             <h2 className="text-3xl md:text-4xl font-bold mb-2">
-              Aktuelt & Innsikt
+              Inspirasjon & Faglig påfyll
             </h2>
             <p className="text-muted-foreground">
               Fagartikler og analyser fra våre eksperter
