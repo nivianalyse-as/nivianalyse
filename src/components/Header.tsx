@@ -53,7 +53,7 @@ const Header = () => {
             <img
               src={niviLogo}
               alt="NIVI Analyse"
-              className="h-16 w-auto brightness-0 invert"
+              className="h-16 w-auto"
             />
           </Link>
 
