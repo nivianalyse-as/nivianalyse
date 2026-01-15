@@ -61,8 +61,8 @@ const Footer = () => {
               <div className="flex items-start gap-3 text-primary-foreground/80">
                 <MapPin className="w-5 h-5 flex-shrink-0 mt-0.5" />
                 <span>
-                  Storgata 1<br />
-                  0155 Oslo
+                  Solløkkaveien 73<br />
+                  3233 Sandefjord
                 </span>
               </div>
             </div>
