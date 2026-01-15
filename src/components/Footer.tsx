@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-12">
           {/* Logo & About */}
           <div>
-            <img src={niviLogo} alt="NIVI Analyse" className="h-14 w-auto mb-4" />
+            <img src={niviLogo} alt="NIVI Analyse" className="h-20 w-auto mb-4" />
             <p className="text-primary-foreground/80 leading-relaxed mb-6">
               Uavhengig rådgivning og analyse for kommuner, fylkeskommuner og
               offentlig sektor.
