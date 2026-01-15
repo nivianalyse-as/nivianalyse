@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
+import niviLogo from "@/assets/nivi-logo.png";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,9 +21,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
-            <span className="text-2xl font-bold tracking-tight text-primary">
-              NIVI Analyse
-            </span>
+            <img src={niviLogo} alt="NIVI Analyse" className="h-12 w-auto" />
           </Link>
 
           {/* Desktop Navigation */}
