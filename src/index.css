@@ -6,43 +6,51 @@
 
 @layer base {
   :root {
-    /* Nivi Analyse Brand Colors */
+    /* Nivi Analyse Brand Colors - Light Variant */
+    /* Primary: Dark Green #07342F */
+    --primary: 168 79% 11%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Background: Clean white with light blue sections */
     --background: 0 0% 100%;
     --foreground: 168 79% 11%;
 
+    /* Card: White */
     --card: 0 0% 100%;
     --card-foreground: 168 79% 11%;
 
     --popover: 0 0% 100%;
     --popover-foreground: 168 79% 11%;
 
-    /* Primary: Dark Green #07342F */
-    --primary: 168 79% 11%;
-    --primary-foreground: 0 0% 100%;
-
     /* Secondary: Light Blue-Gray #BDD1DE */
     --secondary: 201 32% 81%;
     --secondary-foreground: 168 79% 11%;
 
-    /* Accent: Orange #DC4B0C */
+    /* Accent: Orange #DC4B0C - used sparingly */
     --accent: 17 90% 45%;
     --accent-foreground: 0 0% 100%;
 
-    --muted: 201 32% 95%;
-    --muted-foreground: 168 40% 30%;
+    /* Soft accent: #FFAB91 for hover states */
+    --accent-soft: 14 100% 78%;
+
+    /* Muted: Very light blue-gray */
+    --muted: 201 32% 96%;
+    --muted-foreground: 168 40% 35%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 201 20% 85%;
-    --input: 201 20% 85%;
+    /* Borders: Subtle */
+    --border: 201 20% 88%;
+    --input: 201 20% 88%;
     --ring: 168 79% 11%;
 
     --radius: 0.5rem;
 
     /* Custom tokens */
     --hero-overlay: 168 79% 11%;
-    --section-alt: 201 32% 95%;
+    --section-alt: 201 32% 81%;
+    --section-light: 201 32% 96%;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -55,33 +63,40 @@
   }
 
   .dark {
+    /* Dark Variant - Primary green backgrounds */
+    --primary: 168 79% 11%;
+    --primary-foreground: 0 0% 100%;
+
     --background: 168 79% 6%;
     --foreground: 0 0% 98%;
 
-    --card: 168 79% 8%;
+    --card: 168 60% 10%;
     --card-foreground: 0 0% 98%;
 
-    --popover: 168 79% 8%;
+    --popover: 168 60% 10%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 0 0% 98%;
-    --primary-foreground: 168 79% 11%;
-
-    --secondary: 168 40% 15%;
+    --secondary: 168 40% 18%;
     --secondary-foreground: 0 0% 98%;
 
     --accent: 17 90% 50%;
     --accent-foreground: 0 0% 100%;
 
+    --accent-soft: 14 80% 70%;
+
     --muted: 168 40% 15%;
-    --muted-foreground: 201 20% 70%;
+    --muted-foreground: 201 20% 75%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 168 40% 20%;
-    --input: 168 40% 20%;
+    --border: 168 40% 22%;
+    --input: 168 40% 22%;
     --ring: 201 32% 81%;
+
+    --hero-overlay: 168 79% 11%;
+    --section-alt: 168 50% 12%;
+    --section-light: 168 40% 15%;
 
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
@@ -110,31 +125,55 @@
 
 @layer components {
   .section-padding {
-    @apply py-16 md:py-24;
+    @apply py-20 md:py-28;
+  }
+
+  .section-padding-sm {
+    @apply py-12 md:py-16;
   }
 
   .container-narrow {
-    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+    @apply max-w-6xl mx-auto px-5 sm:px-6 lg:px-8;
   }
 
   .text-balance {
     text-wrap: balance;
   }
 
+  /* Hero overlay - uses primary dark green #07342F */
   .hero-overlay {
     background: linear-gradient(
       135deg,
-      hsl(var(--hero-overlay) / 0.88) 0%,
-      hsl(var(--hero-overlay) / 0.75) 100%
+      hsl(var(--hero-overlay) / 0.85) 0%,
+      hsl(var(--hero-overlay) / 0.70) 100%
     );
   }
 
+  /* Light section background using #BDD1DE */
+  .section-alt-bg {
+    background-color: hsl(var(--section-alt) / 0.4);
+  }
+
+  .section-light-bg {
+    background-color: hsl(var(--section-light));
+  }
+
   .card-hover {
-    @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+    @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5;
   }
 
   .link-underline {
     @apply relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-accent after:transition-all after:duration-300 hover:after:w-full;
+  }
+
+  /* CTA button styling - controlled orange usage */
+  .btn-cta {
+    @apply bg-accent text-accent-foreground hover:bg-accent/90 transition-colors;
+  }
+
+  /* Subtle card styling */
+  .card-subtle {
+    @apply bg-card border border-border/50 shadow-sm;
   }
 }
 

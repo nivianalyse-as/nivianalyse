@@ -28,44 +28,44 @@ const ArticlesSection = () => {
   return (
     <section id="inspirasjon" className="section-padding bg-background">
       <div className="container-narrow">
-        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-12">
+        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-10 md:mb-12">
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-2">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2">
               Inspirasjon & Faglig påfyll
             </h2>
-            <p className="text-muted-foreground">
+            <p className="text-muted-foreground text-sm md:text-base">
               Fagartikler og analyser fra våre eksperter
             </p>
           </div>
           <a
             href="#artikler"
-            className="flex items-center gap-2 text-accent font-semibold hover:gap-3 transition-all"
+            className="flex items-center gap-2 text-primary font-medium hover:text-accent hover:gap-3 transition-all text-sm md:text-base"
           >
             Se alle artikler
             <ArrowRight className="w-4 h-4" />
           </a>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {articles.map((article, index) => (
             <article
               key={index}
-              className="group bg-card border border-border rounded-lg overflow-hidden card-hover"
+              className="group bg-card border border-border/60 rounded-lg overflow-hidden card-hover"
             >
-              <div className="p-6">
+              <div className="p-5 md:p-6">
                 <div className="flex items-center gap-3 mb-4">
-                  <span className="px-3 py-1 bg-secondary text-primary text-xs font-medium rounded-full">
+                  <span className="px-3 py-1 bg-secondary/50 text-primary text-xs font-medium rounded-full">
                     {article.category}
                   </span>
-                  <span className="flex items-center gap-1 text-sm text-muted-foreground">
+                  <span className="flex items-center gap-1 text-xs md:text-sm text-muted-foreground">
                     <Calendar className="w-3 h-3" />
                     {article.date}
                   </span>
                 </div>
-                <h3 className="text-lg font-semibold mb-3 group-hover:text-accent transition-colors">
+                <h3 className="text-base md:text-lg font-semibold mb-3 group-hover:text-accent transition-colors line-clamp-2">
                   {article.title}
                 </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
+                <p className="text-muted-foreground text-sm leading-relaxed line-clamp-3">
                   {article.excerpt}
                 </p>
               </div>
