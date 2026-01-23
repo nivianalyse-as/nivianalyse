@@ -29,7 +29,7 @@ const services = [
 
 const ServicesSection = () => {
   return (
-    <section id="fagomrader" className="section-padding bg-muted">
+    <section id="fagomrader" className="section-padding section-alt-bg">
       <div className="container-narrow">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Våre fagområder</h2>
@@ -39,18 +39,18 @@ const ServicesSection = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid sm:grid-cols-2 gap-6 lg:gap-8">
           {services.map((service, index) => (
             <div
               key={service.title}
-              className="bg-card p-8 rounded-lg border border-border card-hover"
+              className="bg-card p-6 md:p-8 rounded-lg border border-border/60 card-hover"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="w-14 h-14 bg-secondary rounded-lg flex items-center justify-center mb-6">
-                <service.icon className="w-7 h-7 text-primary" />
+              <div className="w-12 h-12 md:w-14 md:h-14 bg-secondary/60 rounded-lg flex items-center justify-center mb-5">
+                <service.icon className="w-6 h-6 md:w-7 md:h-7 text-primary" />
               </div>
-              <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
-              <p className="text-muted-foreground leading-relaxed">
+              <h3 className="text-lg md:text-xl font-semibold mb-3">{service.title}</h3>
+              <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
                 {service.description}
               </p>
             </div>
