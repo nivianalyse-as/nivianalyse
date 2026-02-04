@@ -1,23 +1,35 @@
 const ReferencesSection = () => {
+  const references = [
+    "Viken fylkeskommune",
+    "Oslo kommune",
+    "Trondheim kommune",
+    "Bergen kommune",
+    "Stavanger kommune",
+    "Drammen kommune",
+    "KS",
+    "Kommunaldepartementet",
+  ];
+
   return (
-    <section id="referanser" className="section-padding bg-background">
+    <section id="referanser" className="section-padding bg-section-alt/40">
       <div className="container-narrow">
         <div className="text-center mb-10 md:mb-14">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">Referanser</h2>
-          <p className="text-sm md:text-lg text-muted-foreground max-w-2xl mx-auto">
-            Vi har samarbeidet med kommuner og fylkeskommuner over hele Norge.
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3">
+            Referanser
+          </h2>
+          <p className="text-muted-foreground max-w-lg mx-auto text-sm md:text-base">
+            Vi har samarbeidet med kommuner, fylkeskommuner og departementer over hele Norge.
           </p>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
-          {/* Placeholder for future references */}
-          {[1, 2, 3, 4].map((i) => (
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 max-w-4xl mx-auto">
+          {references.map((ref, i) => (
             <div
               key={i}
-              className="h-20 md:h-24 bg-muted/50 rounded-lg border border-border/50 flex items-center justify-center"
+              className="h-20 md:h-24 bg-card rounded-xl border border-border/50 flex items-center justify-center px-4 hover:border-border hover:shadow-sm transition-all duration-300"
             >
-              <span className="text-muted-foreground text-xs md:text-sm">
-                Referanse {i}
+              <span className="text-primary font-medium text-sm md:text-base text-center">
+                {ref}
               </span>
             </div>
           ))}
