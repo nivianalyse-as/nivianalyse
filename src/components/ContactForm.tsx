@@ -34,9 +34,9 @@ interface FormErrors {
 }
 
 const topics = [
-  { value: "strategisk-analyse", label: "Strategisk analyse" },
   { value: "kommuneokonomi", label: "Kommuneøkonomi" },
-  { value: "organisasjonsutvikling", label: "Organisasjonsutvikling" },
+  { value: "kommunestruktur", label: "Kommunestruktur / interkommunalt samarbeid" },
+  { value: "organisering", label: "Organisering og effektivisering" },
   { value: "politisk-radgivning", label: "Politisk rådgivning" },
   { value: "annet", label: "Annet" },
 ];
@@ -156,19 +156,19 @@ const ContactForm = () => {
   if (isSubmitted) {
     return (
       <div className="bg-card border border-primary/[0.08] rounded-[20px] p-8 md:p-10 shadow-sm">
-        <div className="text-center py-8">
-          <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-green-100 mb-6">
-            <CheckCircle2 className="w-8 h-8 text-green-600" />
+        <div className="text-center py-6">
+          <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-green-100 mb-5">
+            <CheckCircle2 className="w-7 h-7 text-green-600" />
           </div>
-          <h3 className="text-xl font-semibold text-primary mb-3">
-            Takk for din henvendelse!
+          <h3 className="text-lg font-semibold text-primary mb-2">
+            Takk!
           </h3>
-          <p className="text-muted-foreground max-w-md mx-auto">
-            Vi har mottatt meldingen din og svarer normalt innen 1–2 virkedager.
+          <p className="text-muted-foreground text-[15px] max-w-sm mx-auto leading-relaxed">
+            Vi har mottatt henvendelsen din og svarer normalt innen 1–2 virkedager.
           </p>
           <Button
             variant="outline"
-            className="mt-6"
+            className="mt-5 rounded-xl"
             onClick={() => setIsSubmitted(false)}
           >
             Send ny henvendelse
