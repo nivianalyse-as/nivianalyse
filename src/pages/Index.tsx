@@ -6,7 +6,9 @@ import ArticlesSection from "@/components/ArticlesSection";
 import MediaSection from "@/components/MediaSection";
 import ReferencesSection from "@/components/ReferencesSection";
 import ExpertsSection from "@/components/ExpertsSection";
+import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
+import CookieConsent from "@/components/CookieConsent";
 import SEOHead from "@/components/SEOHead";
 import SchemaMarkup, { 
   niviOrganizationSchema, 
@@ -31,8 +33,10 @@ const Index = () => {
         <MediaSection />
         <ReferencesSection />
         <ExpertsSection />
+        <ContactSection />
       </main>
       <Footer />
+      <CookieConsent />
     </div>
   );
 };
