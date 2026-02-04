@@ -10,47 +10,50 @@ const HeroSection = () => {
   };
 
   return (
-    <section id="top" className="relative py-6 md:py-10 lg:py-12 bg-background">
+    <section id="top" className="relative py-5 md:py-8 lg:py-10 bg-background">
       <div className="container-narrow">
         {/* Premium rounded frame container */}
-        <div className="relative rounded-[22px] overflow-hidden min-h-[500px] md:min-h-[600px] lg:min-h-[650px] flex items-center">
+        <div className="relative rounded-[22px] overflow-hidden min-h-[480px] md:min-h-[560px] lg:min-h-[620px] flex items-center shadow-[0_4px_32px_-8px_rgba(7,52,47,0.15)]">
           {/* Background Image */}
           <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-[1.02]"
             style={{ backgroundImage: `url(${heroImage})` }}
             aria-hidden="true"
           />
 
-          {/* Premium Overlay - #07342F with 55-65% opacity */}
+          {/* Premium Overlay - Lighter, more elegant gradient */}
           <div 
             className="absolute inset-0"
             style={{
               background: `linear-gradient(
-                135deg,
-                rgba(7, 52, 47, 0.65) 0%,
-                rgba(7, 52, 47, 0.55) 50%,
-                rgba(7, 52, 47, 0.60) 100%
+                145deg,
+                rgba(7, 52, 47, 0.58) 0%,
+                rgba(7, 52, 47, 0.42) 40%,
+                rgba(7, 52, 47, 0.48) 100%
               )`
             }}
             aria-hidden="true"
           />
 
           {/* Content */}
-          <div className="relative z-10 px-6 sm:px-10 md:px-12 lg:px-16 py-12 md:py-16 lg:py-20">
+          <div className="relative z-10 px-7 sm:px-10 md:px-14 lg:px-16 py-14 md:py-18 lg:py-20">
             <div className="max-w-[560px]">
-              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.75rem] font-bold leading-[1.15] text-white mb-5 md:mb-6 animate-fade-in">
+              <h1 
+                className="font-bold leading-[1.12] text-white mb-5 md:mb-7 animate-fade-in tracking-[-0.02em]"
+                style={{ fontSize: 'clamp(1.75rem, 5vw, 2.75rem)' }}
+              >
                 Erfaringen bak NIVI Analyse.{" "}
-                <span className="block mt-1.5">Nå direkte til deg.</span>
+                <span className="block mt-2">Nå direkte til deg.</span>
               </h1>
 
-              <p className="text-base md:text-lg text-white/90 mb-8 md:mb-10 leading-relaxed max-w-[480px] animate-fade-in-delay-1">
+              <p className="text-[16px] md:text-[18px] text-white/92 mb-9 md:mb-11 leading-[1.65] max-w-[480px] animate-fade-in-delay-1">
                 Håvard Moe og Geir Vinsand tilbyr spisskompetanse på kommunal forvaltning og rådgivning – direkte til din kommune.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 animate-fade-in-delay-2">
+              <div className="flex flex-col sm:flex-row gap-3.5 sm:gap-4 animate-fade-in-delay-2">
                 <Button 
                   size="lg" 
-                  className="w-full sm:w-auto bg-[#DC4B0C] hover:bg-[#DC4B0C]/90 text-white font-semibold shadow-lg px-6"
+                  className="w-full sm:w-auto bg-accent hover:bg-accent/90 text-accent-foreground font-semibold shadow-lg shadow-accent/20 px-7 py-3 h-auto text-[15px] rounded-xl transition-all duration-200"
                   onClick={() => scrollToSection("#kontakt")}
                 >
                   Kontakt oss
@@ -58,7 +61,7 @@ const HeroSection = () => {
                 <Button 
                   variant="outline" 
                   size="lg" 
-                  className="w-full sm:w-auto border-2 border-white/60 text-white bg-transparent hover:bg-white/10 hover:border-white font-medium px-6"
+                  className="w-full sm:w-auto border-2 border-white/50 text-white bg-white/[0.06] hover:bg-white/15 hover:border-white/70 font-medium px-7 py-3 h-auto text-[15px] rounded-xl backdrop-blur-sm transition-all duration-200"
                   onClick={() => scrollToSection("#fagomrader")}
                 >
                   Se våre fagområder
