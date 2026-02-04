@@ -105,17 +105,27 @@ const Footer = () => {
           </p>
           <div className="flex items-center gap-5">
             <a
-              href="#"
+              href="/personvern"
               className="text-[13px] text-white/70 hover:text-white hover:underline underline-offset-4 decoration-[0.5px] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-offset-2 focus-visible:ring-offset-[#07342F] rounded"
             >
               Personvern
             </a>
             <a
-              href="#"
+              href="/cookies"
               className="text-[13px] text-white/70 hover:text-white hover:underline underline-offset-4 decoration-[0.5px] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-offset-2 focus-visible:ring-offset-[#07342F] rounded"
             >
-              Vilkår
+              Cookies
             </a>
+            <button
+              onClick={() => {
+                if ((window as any).openCookieSettings) {
+                  (window as any).openCookieSettings();
+                }
+              }}
+              className="text-[13px] text-white/70 hover:text-white hover:underline underline-offset-4 decoration-[0.5px] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-offset-2 focus-visible:ring-offset-[#07342F] rounded"
+            >
+              Cookie-innstillinger
+            </button>
           </div>
         </div>
       </div>

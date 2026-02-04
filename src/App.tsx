@@ -9,6 +9,8 @@ import Inspirasjon from "./pages/Inspirasjon";
 import InspirasjonDetail from "./pages/InspirasjonDetail";
 import IMedia from "./pages/IMedia";
 import IMediaDetail from "./pages/IMediaDetail";
+import Personvern from "./pages/Personvern";
+import Cookies from "./pages/Cookies";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -26,6 +28,8 @@ const App = () => (
             <Route path="/inspirasjon/:slug" element={<InspirasjonDetail />} />
             <Route path="/i-media" element={<IMedia />} />
             <Route path="/i-media/:slug" element={<IMediaDetail />} />
+            <Route path="/personvern" element={<Personvern />} />
+            <Route path="/cookies" element={<Cookies />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
