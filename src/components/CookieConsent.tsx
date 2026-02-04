@@ -109,24 +109,23 @@ const CookieConsent = () => {
       {/* Cookie Banner */}
       {isVisible && !showSettings && (
         <div 
-          className="fixed bottom-0 left-0 right-0 z-50 p-4 md:p-6 animate-fade-in"
+          className="fixed bottom-0 left-0 right-0 z-50 p-3 md:p-4 animate-fade-in"
           role="dialog"
           aria-label="Cookie-samtykke"
           aria-modal="false"
         >
           <div className="max-w-4xl mx-auto bg-primary rounded-2xl shadow-2xl overflow-hidden">
-            <div className="p-5 md:p-6">
-              <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-6">
+            <div className="p-4 md:p-5">
+              <div className="flex flex-col md:flex-row md:items-center gap-3 md:gap-5">
                 <div className="flex-1">
-                  <div className="flex items-center gap-2 mb-2">
-                    <Shield className="w-5 h-5 text-white/80" />
-                    <h3 className="text-white font-semibold text-[15px]">
+                  <div className="flex items-center gap-2 mb-1">
+                    <Shield className="w-4 h-4 text-white/80" />
+                    <h3 className="text-white font-semibold text-[14px]">
                       Vi bruker informasjonskapsler
                     </h3>
                   </div>
-                  <p className="text-white/80 text-[14px] leading-relaxed">
-                    Vi bruker cookies for å forbedre din opplevelse på nettstedet. 
-                    Du kan velge hvilke kategorier du godtar.{" "}
+                  <p className="text-white/80 text-[13px] leading-snug">
+                    Vi bruker cookies for å forbedre opplevelsen. Du velger selv hva du samtykker til.{" "}
                     <Link 
                       to="/cookies" 
                       className="underline underline-offset-2 hover:text-white transition-colors"
@@ -136,28 +135,28 @@ const CookieConsent = () => {
                   </p>
                 </div>
 
-                <div className="flex flex-col sm:flex-row gap-2.5">
+                <div className="flex flex-wrap gap-2">
                   <Button
                     variant="outline"
                     size="sm"
                     onClick={openSettings}
-                    className="border-white/30 text-white bg-transparent hover:bg-white/10 hover:border-white/50 rounded-xl px-4 h-10 text-[14px] font-medium order-3 sm:order-1"
+                    className="border-white/30 text-white bg-transparent hover:bg-white/10 hover:border-white/50 rounded-lg px-3 h-9 text-[13px] font-medium"
                   >
-                    <Settings className="w-4 h-4 mr-1.5" />
+                    <Settings className="w-3.5 h-3.5 mr-1" />
                     Innstillinger
                   </Button>
                   <Button
                     variant="outline"
                     size="sm"
                     onClick={acceptNecessaryOnly}
-                    className="border-white/30 text-white bg-transparent hover:bg-white/10 hover:border-white/50 rounded-xl px-4 h-10 text-[14px] font-medium order-2"
+                    className="border-white/30 text-white bg-transparent hover:bg-white/10 hover:border-white/50 rounded-lg px-3 h-9 text-[13px] font-medium"
                   >
                     Kun nødvendige
                   </Button>
                   <Button
                     size="sm"
                     onClick={acceptAll}
-                    className="bg-accent hover:bg-accent/90 text-accent-foreground rounded-xl px-5 h-10 text-[14px] font-semibold order-1 sm:order-3"
+                    className="bg-accent hover:bg-accent/90 text-accent-foreground rounded-lg px-4 h-9 text-[13px] font-semibold"
                   >
                     Godta alle
                   </Button>
