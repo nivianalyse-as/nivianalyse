@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Mail, Phone, MapPin } from "lucide-react";
 import {
   Sheet,
   SheetContent,
@@ -33,9 +33,21 @@ const Header = () => {
     return () => document.removeEventListener("keydown", handleEscape);
   }, []);
 
+  // Lock body scroll when menu is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
+
   const navItems = [
     { name: "Startside", href: "/" },
-    { name: "Fagområder", href: "/#fagomrader" },
+    { name: "Våre fagområder", href: "/#fagomrader" },
     { name: "Inspirasjon", href: "/inspirasjon" },
     { name: "Referanser", href: "/#referanser" },
     { name: "Om oss", href: "/#eksperter" },
@@ -95,59 +107,85 @@ const Header = () => {
       {/* Skip to content link for accessibility */}
       <a
         href="#main-content"
-        className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[100] focus:px-4 focus:py-2 focus:bg-primary focus:text-primary-foreground focus:rounded-md focus:outline-none focus:ring-2 focus:ring-accent"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-primary focus:text-primary-foreground focus:rounded-md focus:outline-none focus:ring-2 focus:ring-accent"
       >
         Hopp til hovedinnhold
       </a>
 
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-background ${
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled
-            ? "shadow-sm border-b border-border"
-            : "border-b border-transparent"
+            ? "bg-white shadow-sm"
+            : "bg-white/95 backdrop-blur-sm"
         }`}
       >
-        <div className="h-16 md:h-[72px] px-5 sm:px-6 lg:px-8 flex items-center justify-between max-w-7xl mx-auto">
+        <div className="h-16 md:h-[72px] px-5 sm:px-6 lg:px-8 flex items-center justify-between max-w-[1200px] mx-auto">
           {/* Wordmark Logo */}
           <Link
             to="/"
             onClick={() => handleNavClick("/")}
-            className="flex items-center gap-0.5 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-md"
+            className="flex items-center focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-md"
           >
-            <span className="text-primary text-lg sm:text-xl md:text-[22px] tracking-tight">
-              <span className="font-semibold">NIVI</span>
-              <span className="font-normal ml-1.5">Analyse</span>
+            <span className="text-[#07342F] text-lg sm:text-xl md:text-[22px] font-bold tracking-[-0.02em]">
+              NIVI
             </span>
-            <span className="w-1.5 h-1.5 rounded-full bg-accent ml-1 mt-0.5" aria-hidden="true" />
+            <span className="text-[#07342F] text-lg sm:text-xl md:text-[22px] font-normal tracking-[-0.02em] ml-1.5">
+              Analyse
+            </span>
+            <span 
+              className="w-1.5 h-1.5 rounded-full bg-[#DC4B0C] ml-0.5 mb-2" 
+              aria-hidden="true" 
+            />
           </Link>
 
-          {/* Hamburger Menu Button */}
-          <button
-            className="p-2.5 -mr-2 rounded-md hover:bg-muted transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
-            onClick={() => setIsOpen(true)}
-            aria-label="Åpne meny"
-            aria-expanded={isOpen}
-            aria-controls="mobile-menu"
-            style={{ minWidth: 44, minHeight: 44 }}
-          >
-            <Menu className="h-5 w-5 md:h-6 md:w-6 text-primary" strokeWidth={2} />
-          </button>
+          {/* Right side: Kontakt button (desktop) + Hamburger */}
+          <div className="flex items-center gap-3">
+            {/* Kontakt button - visible on md and up */}
+            <Button
+              variant="outline"
+              size="sm"
+              className="hidden md:inline-flex border-[#07342F]/20 text-[#07342F] hover:bg-[#07342F] hover:text-white hover:border-[#07342F] transition-all font-medium"
+              onClick={handleContactClick}
+            >
+              Kontakt
+            </Button>
+
+            {/* Hamburger Menu Button - ALWAYS visible */}
+            <button
+              className="p-2.5 -mr-2 rounded-md hover:bg-muted/60 transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+              onClick={() => setIsOpen(true)}
+              aria-label="Åpne meny"
+              aria-expanded={isOpen}
+              aria-controls="mobile-menu"
+              style={{ minWidth: 44, minHeight: 44 }}
+            >
+              <Menu className="h-5 w-5 md:h-6 md:w-6 text-[#07342F]" strokeWidth={2} />
+            </button>
+          </div>
         </div>
 
         {/* Navigation Drawer */}
         <Sheet open={isOpen} onOpenChange={setIsOpen}>
           <SheetContent
             side="right"
-            className="w-[300px] sm:w-[340px] bg-[#07342F] border-l-0 p-0 overflow-y-auto"
+            className="w-[320px] sm:w-[360px] bg-[#07342F] border-l-0 p-0 overflow-y-auto"
             id="mobile-menu"
           >
-            <SheetHeader className="p-5 pb-4 border-b border-white/10">
+            <SheetHeader className="p-6 pb-5 border-b border-white/10">
               <div className="flex items-center justify-between">
-                <span className="text-white text-lg tracking-tight">
-                  <span className="font-semibold">NIVI</span>
-                  <span className="font-normal ml-1.5">Analyse</span>
-                </span>
-                <SheetClose className="rounded-full p-2 hover:bg-white/10 transition-colors focus:outline-none focus:ring-2 focus:ring-white/50">
+                <div className="flex items-center">
+                  <span className="text-white text-xl font-bold tracking-[-0.02em]">
+                    NIVI
+                  </span>
+                  <span className="text-white text-xl font-normal tracking-[-0.02em] ml-1.5">
+                    Analyse
+                  </span>
+                  <span 
+                    className="w-1.5 h-1.5 rounded-full bg-[#DC4B0C] ml-0.5 mb-2" 
+                    aria-hidden="true" 
+                  />
+                </div>
+                <SheetClose className="rounded-full p-2.5 hover:bg-white/10 transition-colors focus:outline-none focus:ring-2 focus:ring-white/50">
                   <X className="h-5 w-5 text-white" />
                   <span className="sr-only">Lukk meny</span>
                 </SheetClose>
@@ -155,26 +193,47 @@ const Header = () => {
               <SheetTitle className="sr-only">Navigasjonsmeny</SheetTitle>
             </SheetHeader>
 
-            <nav className="flex flex-col p-5" role="navigation">
+            <nav className="flex flex-col p-6" role="navigation">
               {navItems.map((item) => (
                 <button
                   key={item.name}
                   onClick={() => handleNavClick(item.href)}
-                  className="text-base font-medium text-white/90 hover:text-white hover:bg-white/5 text-left px-4 py-3.5 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-white/50 focus:bg-white/5"
+                  className="text-[17px] font-medium text-white/90 hover:text-white hover:bg-white/5 text-left px-4 py-4 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-white/50 focus:bg-white/5"
                 >
                   {item.name}
                 </button>
               ))}
 
-              <div className="border-t border-white/10 mt-5 pt-5">
+              <div className="mt-6 pt-6 border-t border-white/10">
                 <Button
-                  variant="cta"
                   size="lg"
-                  className="w-full bg-accent hover:bg-accent/90 text-white font-semibold py-5 text-base rounded-lg"
+                  className="w-full bg-[#DC4B0C] hover:bg-[#DC4B0C]/90 text-white font-semibold py-6 text-base rounded-xl"
                   onClick={handleContactClick}
                 >
                   Kontakt oss
                 </Button>
+              </div>
+
+              {/* Contact info in drawer */}
+              <div className="mt-8 pt-6 border-t border-white/10 space-y-4">
+                <a
+                  href="mailto:post@nivianalyse.no"
+                  className="flex items-center gap-3 text-white/80 hover:text-white transition-colors text-sm"
+                >
+                  <Mail className="w-4 h-4 flex-shrink-0" />
+                  <span>post@nivianalyse.no</span>
+                </a>
+                <a
+                  href="tel:+4722123456"
+                  className="flex items-center gap-3 text-white/80 hover:text-white transition-colors text-sm"
+                >
+                  <Phone className="w-4 h-4 flex-shrink-0" />
+                  <span>+47 22 12 34 56</span>
+                </a>
+                <div className="flex items-start gap-3 text-white/80 text-sm">
+                  <MapPin className="w-4 h-4 flex-shrink-0 mt-0.5" />
+                  <span>Solløkkaveien 73, 3233 Sandefjord</span>
+                </div>
               </div>
             </nav>
           </SheetContent>
