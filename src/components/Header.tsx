@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
-import niviLogo from "@/assets/nivi-logo.png";
 import {
   Sheet,
   SheetContent,
@@ -56,36 +55,35 @@ const Header = () => {
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-background ${
           isScrolled
-            ? "shadow-sm border-b border-border/50"
+            ? "shadow-sm border-b border-border"
             : "border-b border-transparent"
         }`}
       >
-        <div className="container-narrow">
-          <div className="flex items-center justify-between h-16 md:h-20">
-            {/* Logo - clean, no heavy badge */}
-            <Link
-              to="/"
-              onClick={() => scrollToSection("#top")}
-              className="flex items-center focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-md"
-            >
-              <img
-                src={niviLogo}
-                alt="NIVI Analyse"
-                className="h-10 md:h-12 w-auto"
-              />
-            </Link>
+        <div className="h-16 md:h-[72px] px-6 md:px-8 flex items-center justify-between max-w-7xl mx-auto">
+          {/* Wordmark Logo */}
+          <Link
+            to="/"
+            onClick={() => scrollToSection("#top")}
+            className="flex items-center gap-0.5 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-md max-w-[220px]"
+          >
+            <span className="text-primary text-xl md:text-2xl tracking-tight">
+              <span className="font-bold">NIVI</span>
+              <span className="font-normal ml-1.5">Analyse</span>
+            </span>
+            <span className="w-1.5 h-1.5 rounded-full bg-accent ml-1 mt-0.5" aria-hidden="true" />
+          </Link>
 
-            {/* Hamburger Menu Button - always visible */}
-            <button
-              className="p-3 -mr-3 rounded-md hover:bg-muted/50 transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
-              onClick={() => setIsOpen(true)}
-              aria-label="Åpne meny"
-              aria-expanded={isOpen}
-              aria-controls="mobile-menu"
-            >
-              <Menu className="h-6 w-6 text-primary" strokeWidth={2} />
-            </button>
-          </div>
+          {/* Hamburger Menu Button */}
+          <button
+            className="p-2.5 -mr-2.5 rounded-md hover:bg-muted/50 transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+            onClick={() => setIsOpen(true)}
+            aria-label="Åpne meny"
+            aria-expanded={isOpen}
+            aria-controls="mobile-menu"
+            style={{ minWidth: 44, minHeight: 44 }}
+          >
+            <Menu className="h-6 w-6 text-primary" strokeWidth={2} />
+          </button>
         </div>
 
         {/* Navigation Drawer */}
@@ -97,11 +95,10 @@ const Header = () => {
           >
             <SheetHeader className="p-6 pb-4 border-b border-white/10">
               <div className="flex items-center justify-between">
-                <img
-                  src={niviLogo}
-                  alt="NIVI Analyse"
-                  className="h-8 w-auto brightness-0 invert"
-                />
+                <span className="text-white text-xl tracking-tight">
+                  <span className="font-bold">NIVI</span>
+                  <span className="font-normal ml-1.5">Analyse</span>
+                </span>
                 <SheetClose className="rounded-full p-2 hover:bg-white/10 transition-colors focus:outline-none focus:ring-2 focus:ring-white/50">
                   <X className="h-5 w-5 text-white" />
                   <span className="sr-only">Lukk meny</span>
@@ -137,7 +134,7 @@ const Header = () => {
       </header>
 
       {/* Spacer for fixed header */}
-      <div className="h-16 md:h-20" />
+      <div className="h-16 md:h-[72px]" />
     </>
   );
 };
