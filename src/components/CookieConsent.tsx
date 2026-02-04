@@ -75,7 +75,7 @@ const CookieConsent = () => {
     saveConsent({ necessary: true, statistics: true, marketing: true, timestamp: 0 });
   };
 
-  const rejectAll = () => {
+  const acceptNecessaryOnly = () => {
     saveConsent({ necessary: true, statistics: false, marketing: false, timestamp: 0 });
   };
 
@@ -85,6 +85,11 @@ const CookieConsent = () => {
 
   const openSettings = () => {
     setShowSettings(true);
+  };
+
+  const acceptAllFromModal = () => {
+    setPreferences({ necessary: true, statistics: true, marketing: true, timestamp: 0 });
+    saveConsent({ necessary: true, statistics: true, marketing: true, timestamp: 0 });
   };
 
   // Expose function to open settings from footer
@@ -144,10 +149,10 @@ const CookieConsent = () => {
                   <Button
                     variant="outline"
                     size="sm"
-                    onClick={rejectAll}
+                    onClick={acceptNecessaryOnly}
                     className="border-white/30 text-white bg-transparent hover:bg-white/10 hover:border-white/50 rounded-xl px-4 h-10 text-[14px] font-medium order-2"
                   >
-                    Avvis
+                    Kun nødvendige
                   </Button>
                   <Button
                     size="sm"
@@ -251,17 +256,17 @@ const CookieConsent = () => {
 
             <div className="flex flex-col-reverse sm:flex-row gap-3 pt-2">
               <Button
+                onClick={savePreferences}
                 variant="outline"
-                onClick={acceptAll}
                 className="flex-1 h-11 rounded-xl border-primary/20 text-primary hover:bg-primary hover:text-primary-foreground"
               >
-                Godta alle
+                Lagre valg
               </Button>
               <Button
-                onClick={savePreferences}
+                onClick={acceptAllFromModal}
                 className="flex-1 h-11 rounded-xl bg-accent hover:bg-accent/90 text-accent-foreground font-semibold"
               >
-                Lagre valg
+                Godta alle
               </Button>
             </div>
 
