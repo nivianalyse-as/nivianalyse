@@ -1,7 +1,9 @@
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
+import TrustStrip from "@/components/TrustStrip";
 import ServicesSection from "@/components/ServicesSection";
 import ArticlesSection from "@/components/ArticlesSection";
+import MediaSection from "@/components/MediaSection";
 import ReferencesSection from "@/components/ReferencesSection";
 import ExpertsSection from "@/components/ExpertsSection";
 import Footer from "@/components/Footer";
@@ -23,8 +25,10 @@ const Index = () => {
       <Header />
       <main id="main-content">
         <HeroSection />
+        <TrustStrip />
         <ServicesSection />
         <ArticlesSection />
+        <MediaSection />
         <ReferencesSection />
         <ExpertsSection />
       </main>

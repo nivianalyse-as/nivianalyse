@@ -7,6 +7,8 @@ import { ThemeProvider } from "next-themes";
 import Index from "./pages/Index";
 import Inspirasjon from "./pages/Inspirasjon";
 import InspirasjonDetail from "./pages/InspirasjonDetail";
+import IMedia from "./pages/IMedia";
+import IMediaDetail from "./pages/IMediaDetail";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -22,6 +24,8 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/inspirasjon" element={<Inspirasjon />} />
             <Route path="/inspirasjon/:slug" element={<InspirasjonDetail />} />
+            <Route path="/i-media" element={<IMedia />} />
+            <Route path="/i-media/:slug" element={<IMediaDetail />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
