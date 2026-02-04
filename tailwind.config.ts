@@ -65,6 +65,7 @@ export default {
         /* Section backgrounds */
         "section-alt": "hsl(var(--section-alt))",
         "section-light": "hsl(var(--section-light))",
+        "bg-alt": "hsl(var(--bg-alt))",
       },
       borderRadius: {
         lg: "var(--radius)",

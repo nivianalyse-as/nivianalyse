@@ -29,7 +29,7 @@ const services = [
 
 const ServicesSection = () => {
   return (
-    <section id="fagomrader" className="section-padding bg-section-alt/40">
+    <section id="fagomrader" className="section-padding bg-alt">
       <div className="container-narrow">
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
@@ -44,10 +44,10 @@ const ServicesSection = () => {
           {services.map((service, index) => (
             <div
               key={service.title}
-              className="bg-card p-6 md:p-8 rounded-xl border border-border/50 hover:border-border hover:shadow-md transition-all duration-300"
+              className="card-premium p-6 md:p-8"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="w-12 h-12 bg-section-alt rounded-lg flex items-center justify-center mb-5">
+              <div className="w-12 h-12 bg-secondary/40 rounded-xl flex items-center justify-center mb-5">
                 <service.icon className="w-6 h-6 text-primary" />
               </div>
               <h3 className="text-lg md:text-xl font-semibold mb-2">

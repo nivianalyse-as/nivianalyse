@@ -45,12 +45,12 @@ const ExpertsSection = () => {
           {experts.map((expert) => (
             <div
               key={expert.name}
-              className="bg-card rounded-xl overflow-hidden border border-border/50 hover:border-border hover:shadow-md transition-all duration-300"
+              className="card-premium overflow-hidden"
             >
               <div className="aspect-[4/3] overflow-hidden">
                 <img
                   src={expert.image}
-                  alt={expert.name}
+                  alt={`${expert.name}, ${expert.title}`}
                   className="w-full h-full object-cover object-top"
                 />
               </div>
@@ -58,7 +58,7 @@ const ExpertsSection = () => {
                 <h3 className="text-xl md:text-2xl font-bold mb-1">
                   {expert.name}
                 </h3>
-                <p className="text-primary/80 font-medium mb-4 text-sm">
+                <p className="text-primary/70 font-medium mb-4 text-sm">
                   {expert.title}
                 </p>
                 
@@ -66,7 +66,7 @@ const ExpertsSection = () => {
                   {expert.expertise.map((skill) => (
                     <span
                       key={skill}
-                      className="px-3 py-1 bg-section-alt text-primary text-xs font-medium rounded-full"
+                      className="chip chip-default"
                     >
                       {skill}
                     </span>
