@@ -115,36 +115,37 @@ const Header = () => {
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled
-            ? "bg-white shadow-sm"
-            : "bg-white/95 backdrop-blur-sm"
+            ? "bg-white/98 backdrop-blur-md shadow-[0_1px_0_0_rgba(7,52,47,0.08)]"
+            : "bg-white"
         }`}
+        style={{ borderBottom: '1px solid rgba(7,52,47,0.10)' }}
       >
-        <div className="h-16 md:h-[72px] px-5 sm:px-6 lg:px-8 flex items-center justify-between max-w-[1200px] mx-auto">
+        <div className="h-[72px] md:h-20 px-5 sm:px-6 lg:px-8 flex items-center justify-between max-w-[1200px] mx-auto">
           {/* Wordmark Logo */}
           <Link
             to="/"
             onClick={() => handleNavClick("/")}
-            className="flex items-center focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-md"
+            className="flex items-center focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-md group"
           >
-            <span className="text-[#07342F] text-lg sm:text-xl md:text-[22px] font-bold tracking-[-0.02em]">
+            <span className="text-primary text-[20px] sm:text-[22px] md:text-[24px] font-bold tracking-[-0.025em]">
               NIVI
             </span>
-            <span className="text-[#07342F] text-lg sm:text-xl md:text-[22px] font-normal tracking-[-0.02em] ml-1.5">
+            <span className="text-primary text-[20px] sm:text-[22px] md:text-[24px] font-normal tracking-[-0.025em] ml-1">
               Analyse
             </span>
             <span 
-              className="w-1.5 h-1.5 rounded-full bg-[#DC4B0C] ml-0.5 mb-2" 
+              className="w-[6px] h-[6px] rounded-full bg-accent ml-0.5 mb-3 group-hover:scale-110 transition-transform" 
               aria-hidden="true" 
             />
           </Link>
 
           {/* Right side: Kontakt button (desktop) + Hamburger */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-4">
             {/* Kontakt button - visible on md and up */}
             <Button
               variant="outline"
               size="sm"
-              className="hidden md:inline-flex border-[#07342F]/20 text-[#07342F] hover:bg-[#07342F] hover:text-white hover:border-[#07342F] transition-all font-medium"
+              className="hidden md:inline-flex border-primary/25 text-primary hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-200 font-medium px-5 py-2.5 h-auto rounded-xl text-[14px]"
               onClick={handleContactClick}
             >
               Kontakt
@@ -152,14 +153,14 @@ const Header = () => {
 
             {/* Hamburger Menu Button - ALWAYS visible */}
             <button
-              className="p-2.5 -mr-2 rounded-md hover:bg-muted/60 transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+              className="p-3 -mr-2 rounded-xl hover:bg-muted/50 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
               onClick={() => setIsOpen(true)}
               aria-label="Åpne meny"
               aria-expanded={isOpen}
               aria-controls="mobile-menu"
-              style={{ minWidth: 44, minHeight: 44 }}
+              style={{ minWidth: 48, minHeight: 48 }}
             >
-              <Menu className="h-5 w-5 md:h-6 md:w-6 text-[#07342F]" strokeWidth={2} />
+              <Menu className="h-[22px] w-[22px] md:h-6 md:w-6 text-primary" strokeWidth={1.75} />
             </button>
           </div>
         </div>
@@ -241,7 +242,7 @@ const Header = () => {
       </header>
 
       {/* Spacer for fixed header */}
-      <div className="h-16 md:h-[72px]" />
+      <div className="h-[72px] md:h-20" />
     </>
   );
 };

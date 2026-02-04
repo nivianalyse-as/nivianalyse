@@ -7,29 +7,29 @@ const MediaSection = () => {
   const featuredMedia = getFeaturedMedia();
 
   return (
-    <section className="py-16 md:py-24 bg-secondary/20">
-      <div className="container max-w-6xl mx-auto px-4">
+    <section className="py-20 md:py-28 bg-secondary/15">
+      <div className="container-narrow">
         {/* Header */}
-        <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between gap-4 mb-10">
+        <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between gap-4 mb-12">
           <div>
-            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-2">
+            <h2 className="text-[26px] md:text-[32px] font-bold text-primary mb-3 tracking-[-0.02em]">
               I media
             </h2>
-            <p className="text-muted-foreground max-w-xl">
-              Utvalgte artikler, omtaler og debatter der NIVI Analyse bidrar med innsikt og faglige vurderinger.
+            <p className="text-muted-foreground text-[15px] md:text-base max-w-xl leading-relaxed">
+              Utvalgte omtaler, debatter og artikler der NIVI Analyse bidrar med innsikt.
             </p>
           </div>
           <Link 
             to="/i-media" 
-            className="group inline-flex items-center gap-1.5 text-sm font-medium text-foreground hover:text-accent transition-colors whitespace-nowrap"
+            className="group inline-flex items-center gap-2 text-[14px] font-medium text-primary hover:text-accent transition-colors duration-200 whitespace-nowrap"
           >
             Se alt i media
-            <ArrowRight className="w-4 h-4 text-accent group-hover:translate-x-0.5 transition-transform" />
+            <ArrowRight className="w-4 h-4 text-accent group-hover:translate-x-1 transition-transform duration-200" />
           </Link>
         </div>
 
         {/* Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-7">
           {featuredMedia.map((entry) => (
             <MediaCard key={entry.id} entry={entry} />
           ))}
