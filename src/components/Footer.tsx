@@ -9,56 +9,58 @@ const Footer = () => {
   ];
 
   return (
-    <footer id="kontakt" className="bg-[#07342F]/95">
-      {/* Top divider - thin line separating content from footer */}
+    <footer id="kontakt" className="bg-[#07342F]">
+      {/* Top divider */}
       <div className="h-px bg-white/10" />
       
       {/* Main Footer Content */}
-      <div className="max-w-[1200px] mx-auto px-6 pt-16 pb-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-14">
+      <div className="max-w-[1200px] mx-auto px-6 md:px-6 pt-16 md:pt-[72px] pb-14 md:pb-14">
+        <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr] gap-8 md:gap-14">
           
           {/* Column 1: Brand */}
           <div className="md:col-span-1">
             {/* Wordmark */}
-            <div className="mb-4">
-              <span className="text-white text-xl md:text-[22px] tracking-tight">
+            <div className="mb-5">
+              <span className="text-white text-[21px] leading-[1.2] tracking-[-0.01em]">
                 <span className="font-semibold">NIVI</span>
                 <span className="font-normal ml-1.5">Analyse</span>
               </span>
             </div>
             
-            {/* Tagline */}
-            <p className="text-white/85 text-sm leading-[1.7] mb-3 max-w-[280px]">
-              Uavhengig analyse og rådgivning for kommuner, fylkeskommuner og offentlig sektor.
-            </p>
-            
-            {/* Additional statement */}
-            <p className="text-white/85 text-sm leading-[1.7] max-w-[280px]">
-              Vi leverer utredninger og beslutningsgrunnlag med høy faglig presisjon.
-            </p>
+            {/* Tagline and statement */}
+            <div className="max-w-[380px] space-y-3">
+              <p className="text-white/85 text-sm leading-[1.65]">
+                Uavhengig analyse og rådgivning for kommuner, fylkeskommuner og offentlig sektor.
+              </p>
+              <p className="text-white/85 text-sm leading-[1.65]">
+                Vi leverer utredninger og beslutningsgrunnlag med høy faglig presisjon.
+              </p>
+            </div>
           </div>
 
           {/* Column 2: Kontakt (shown second on mobile) */}
-          <div className="md:col-span-1 order-2 md:order-3">
-            <h4 className="text-white font-semibold text-[15px] mb-4">Kontakt</h4>
-            <div className="flex flex-col gap-3.5">
+          <div className="md:col-span-1 order-2 md:order-3 pt-2 md:pt-0">
+            <h4 className="text-white font-semibold text-[13px] uppercase tracking-[0.04em] mb-4">
+              Kontakt
+            </h4>
+            <div className="flex flex-col gap-3">
               <a
                 href="mailto:post@nivianalyse.no"
-                className="group flex items-center gap-2.5 text-white/85 hover:text-white hover:underline underline-offset-4 transition-colors text-sm"
+                className="group flex items-center gap-2.5 text-white/85 hover:text-white focus:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-offset-2 focus-visible:ring-offset-[#07342F] rounded transition-colors text-sm min-h-[44px] md:min-h-0"
               >
                 <Mail className="w-4 h-4 flex-shrink-0 opacity-70 group-hover:opacity-100 transition-opacity" />
-                post@nivianalyse.no
+                <span className="group-hover:underline underline-offset-4">post@nivianalyse.no</span>
               </a>
               <a
                 href="tel:+4722123456"
-                className="group flex items-center gap-2.5 text-white/85 hover:text-white hover:underline underline-offset-4 transition-colors text-sm"
+                className="group flex items-center gap-2.5 text-white/85 hover:text-white focus:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-offset-2 focus-visible:ring-offset-[#07342F] rounded transition-colors text-sm min-h-[44px] md:min-h-0"
               >
                 <Phone className="w-4 h-4 flex-shrink-0 opacity-70 group-hover:opacity-100 transition-opacity" />
-                +47 22 12 34 56
+                <span className="group-hover:underline underline-offset-4">+47 22 12 34 56</span>
               </a>
               <div className="flex items-start gap-2.5 text-white/85 text-sm">
                 <MapPin className="w-4 h-4 flex-shrink-0 mt-0.5 opacity-70" />
-                <span className="leading-relaxed">
+                <span className="leading-[1.6]">
                   Solløkkaveien 73<br />
                   3233 Sandefjord
                 </span>
@@ -67,14 +69,16 @@ const Footer = () => {
           </div>
 
           {/* Column 3: Meny (shown third on mobile) */}
-          <div className="md:col-span-1 order-3 md:order-2">
-            <h4 className="text-white font-semibold text-[15px] mb-4">Meny</h4>
-            <nav className="flex flex-col gap-2.5">
+          <div className="md:col-span-1 order-3 md:order-2 pt-2 md:pt-0">
+            <h4 className="text-white font-semibold text-[13px] uppercase tracking-[0.04em] mb-4">
+              Meny
+            </h4>
+            <nav className="flex flex-col gap-2">
               {menuLinks.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
-                  className="text-white/85 hover:text-white hover:underline underline-offset-4 transition-colors text-sm py-0.5"
+                  className="text-white/85 hover:text-white focus:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-offset-2 focus-visible:ring-offset-[#07342F] rounded hover:underline underline-offset-4 transition-colors text-sm py-1.5 min-h-[44px] md:min-h-0 flex items-center"
                 >
                   {link.label}
                 </a>
@@ -84,27 +88,27 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Divider */}
-      <div className="max-w-[1200px] mx-auto px-6">
-        <div className="h-px bg-white/[0.12]" />
+      {/* Divider - aligned with container */}
+      <div className="max-w-[1200px] mx-auto px-6 md:px-6">
+        <div className="h-px bg-white/[0.14]" />
       </div>
 
       {/* Bottom Bar */}
-      <div className="max-w-[1200px] mx-auto px-6">
-        <div className="py-5 flex flex-col sm:flex-row justify-between items-center gap-3">
-          <p className="text-xs text-white/70 text-center sm:text-left">
+      <div className="max-w-[1200px] mx-auto px-6 md:px-6">
+        <div className="py-[18px] flex flex-col sm:flex-row justify-between items-center gap-3">
+          <p className="text-[12px] text-white/75 text-center sm:text-left">
             © {new Date().getFullYear()} NIVI Analyse AS. Alle rettigheter forbeholdt.
           </p>
           <div className="flex gap-5">
             <a
               href="#"
-              className="text-xs text-white/70 hover:text-white/90 hover:underline underline-offset-4 transition-colors"
+              className="text-[12px] text-white/75 hover:text-white/95 focus:text-white/95 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 rounded hover:underline underline-offset-4 transition-colors"
             >
               Personvern
             </a>
             <a
               href="#"
-              className="text-xs text-white/70 hover:text-white/90 hover:underline underline-offset-4 transition-colors"
+              className="text-[12px] text-white/75 hover:text-white/95 focus:text-white/95 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 rounded hover:underline underline-offset-4 transition-colors"
             >
               Vilkår
             </a>
