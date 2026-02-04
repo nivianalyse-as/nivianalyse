@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import {
@@ -13,6 +13,8 @@ import {
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,24 +24,70 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Close menu on escape
+  useEffect(() => {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setIsOpen(false);
+    };
+    document.addEventListener("keydown", handleEscape);
+    return () => document.removeEventListener("keydown", handleEscape);
+  }, []);
+
   const navItems = [
-    { name: "Startside", href: "#top" },
-    { name: "Fagområder", href: "#fagomrader" },
-    { name: "Inspirasjon", href: "#inspirasjon" },
-    { name: "Referanser", href: "#referanser" },
-    { name: "Om oss", href: "#eksperter" },
+    { name: "Startside", href: "/" },
+    { name: "Fagområder", href: "/#fagomrader" },
+    { name: "Inspirasjon", href: "/inspirasjon" },
+    { name: "Referanser", href: "/#referanser" },
+    { name: "Om oss", href: "/#eksperter" },
   ];
 
-  const scrollToSection = (href: string) => {
-    if (href === "#top") {
+  const handleNavClick = (href: string) => {
+    setIsOpen(false);
+    
+    if (href === "/") {
+      navigate("/");
       window.scrollTo({ top: 0, behavior: "smooth" });
-    } else {
-      const element = document.querySelector(href);
+      return;
+    }
+    
+    if (href.startsWith("/#")) {
+      const sectionId = href.substring(2);
+      if (location.pathname === "/") {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      } else {
+        navigate("/");
+        setTimeout(() => {
+          const element = document.getElementById(sectionId);
+          if (element) {
+            element.scrollIntoView({ behavior: "smooth" });
+          }
+        }, 100);
+      }
+      return;
+    }
+    
+    navigate(href);
+  };
+
+  const handleContactClick = () => {
+    setIsOpen(false);
+    if (location.pathname === "/") {
+      const element = document.getElementById("kontakt");
       if (element) {
         element.scrollIntoView({ behavior: "smooth" });
       }
+    } else {
+      navigate("/");
+      setTimeout(() => {
+        const element = document.getElementById("kontakt");
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
     }
-    setIsOpen(false);
   };
 
   return (
@@ -59,15 +107,15 @@ const Header = () => {
             : "border-b border-transparent"
         }`}
       >
-        <div className="h-16 md:h-[72px] px-6 md:px-8 flex items-center justify-between max-w-7xl mx-auto">
+        <div className="h-16 md:h-[72px] px-5 sm:px-6 lg:px-8 flex items-center justify-between max-w-7xl mx-auto">
           {/* Wordmark Logo */}
           <Link
             to="/"
-            onClick={() => scrollToSection("#top")}
-            className="flex items-center gap-0.5 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-md max-w-[220px]"
+            onClick={() => handleNavClick("/")}
+            className="flex items-center gap-0.5 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-md"
           >
-            <span className="text-primary text-xl md:text-2xl tracking-tight">
-              <span className="font-bold">NIVI</span>
+            <span className="text-primary text-lg sm:text-xl md:text-[22px] tracking-tight">
+              <span className="font-semibold">NIVI</span>
               <span className="font-normal ml-1.5">Analyse</span>
             </span>
             <span className="w-1.5 h-1.5 rounded-full bg-accent ml-1 mt-0.5" aria-hidden="true" />
@@ -75,14 +123,14 @@ const Header = () => {
 
           {/* Hamburger Menu Button */}
           <button
-            className="p-2.5 -mr-2.5 rounded-md hover:bg-muted/50 transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+            className="p-2.5 -mr-2 rounded-md hover:bg-muted transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
             onClick={() => setIsOpen(true)}
             aria-label="Åpne meny"
             aria-expanded={isOpen}
             aria-controls="mobile-menu"
             style={{ minWidth: 44, minHeight: 44 }}
           >
-            <Menu className="h-6 w-6 text-primary" strokeWidth={2} />
+            <Menu className="h-5 w-5 md:h-6 md:w-6 text-primary" strokeWidth={2} />
           </button>
         </div>
 
@@ -90,13 +138,13 @@ const Header = () => {
         <Sheet open={isOpen} onOpenChange={setIsOpen}>
           <SheetContent
             side="right"
-            className="w-[320px] sm:w-[380px] bg-primary border-l-0 p-0 overflow-y-auto"
+            className="w-[300px] sm:w-[340px] bg-[#07342F] border-l-0 p-0 overflow-y-auto"
             id="mobile-menu"
           >
-            <SheetHeader className="p-6 pb-4 border-b border-white/10">
+            <SheetHeader className="p-5 pb-4 border-b border-white/10">
               <div className="flex items-center justify-between">
-                <span className="text-white text-xl tracking-tight">
-                  <span className="font-bold">NIVI</span>
+                <span className="text-white text-lg tracking-tight">
+                  <span className="font-semibold">NIVI</span>
                   <span className="font-normal ml-1.5">Analyse</span>
                 </span>
                 <SheetClose className="rounded-full p-2 hover:bg-white/10 transition-colors focus:outline-none focus:ring-2 focus:ring-white/50">
@@ -107,23 +155,23 @@ const Header = () => {
               <SheetTitle className="sr-only">Navigasjonsmeny</SheetTitle>
             </SheetHeader>
 
-            <nav className="flex flex-col p-6" role="navigation">
+            <nav className="flex flex-col p-5" role="navigation">
               {navItems.map((item) => (
                 <button
                   key={item.name}
-                  onClick={() => scrollToSection(item.href)}
-                  className="text-lg font-medium text-white/90 hover:text-white hover:bg-white/5 text-left px-4 py-4 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-white/50 focus:bg-white/5"
+                  onClick={() => handleNavClick(item.href)}
+                  className="text-base font-medium text-white/90 hover:text-white hover:bg-white/5 text-left px-4 py-3.5 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-white/50 focus:bg-white/5"
                 >
                   {item.name}
                 </button>
               ))}
 
-              <div className="border-t border-white/10 mt-6 pt-6">
+              <div className="border-t border-white/10 mt-5 pt-5">
                 <Button
                   variant="cta"
                   size="lg"
-                  className="w-full bg-accent hover:bg-accent/90 text-white font-semibold py-6 text-base rounded-lg"
-                  onClick={() => scrollToSection("#kontakt")}
+                  className="w-full bg-accent hover:bg-accent/90 text-white font-semibold py-5 text-base rounded-lg"
+                  onClick={handleContactClick}
                 >
                   Kontakt oss
                 </Button>

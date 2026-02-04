@@ -1,30 +1,25 @@
-import { ArrowRight, Calendar } from "lucide-react";
-
-const articles = [
-  {
-    title: "Kommunesamarbeid i praksis",
-    excerpt:
-      "En gjennomgang av hvordan norske kommuner kan styrke samarbeidet for bedre tjenester.",
-    date: "12. jan 2025",
-    category: "Analyse",
-  },
-  {
-    title: "Økonomisk bærekraft i små kommuner",
-    excerpt:
-      "Hvordan sikre langsiktig økonomisk stabilitet i møte med demografiske endringer?",
-    date: "5. jan 2025",
-    category: "Økonomi",
-  },
-  {
-    title: "Politisk ledelse i krisetider",
-    excerpt:
-      "Lærdommer fra pandemien og hvordan kommuner kan styrke sin beredskap.",
-    date: "18. des 2024",
-    category: "Rådgivning",
-  },
-];
+import { Link } from "react-router-dom";
+import { ArrowRight, Calendar, Newspaper, Radio } from "lucide-react";
+import { articles, mediaMentions, debattEntries } from "@/data/inspirasjonContent";
+import { ContentItem } from "@/types/content";
 
 const ArticlesSection = () => {
+  // Get latest 3 items from all content
+  const allItems: ContentItem[] = [...articles, ...mediaMentions, ...debattEntries];
+  const latestItems = allItems
+    .sort((a, b) => {
+      const dateA = new Date(a.date.split(".").reverse().join("-"));
+      const dateB = new Date(b.date.split(".").reverse().join("-"));
+      return dateB.getTime() - dateA.getTime();
+    })
+    .slice(0, 3);
+
+  const getIcon = (item: ContentItem) => {
+    if (item.type === "media") return Newspaper;
+    if (item.type === "debatt") return Radio;
+    return null;
+  };
+
   return (
     <section id="inspirasjon" className="section-padding bg-background">
       <div className="container-narrow">
@@ -37,40 +32,46 @@ const ArticlesSection = () => {
               Fagartikler og analyser fra våre eksperter
             </p>
           </div>
-          <a
-            href="#artikler"
-            className="group flex items-center gap-2 text-primary font-medium hover:text-primary/80 transition-colors text-sm"
+          <Link
+            to="/inspirasjon"
+            className="group flex items-center gap-2 text-primary font-medium hover:text-accent transition-colors text-sm"
           >
             Se alle artikler
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-          </a>
+          </Link>
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
-          {articles.map((article, index) => (
-            <article
-              key={index}
-              className="group bg-card border border-border/50 rounded-xl overflow-hidden hover:border-border hover:shadow-md transition-all duration-300"
-            >
-              <div className="p-5 md:p-6">
+          {latestItems.map((item) => {
+            const Icon = getIcon(item);
+            
+            return (
+              <Link
+                key={item.id}
+                to={`/inspirasjon/${item.slug}`}
+                className="group card-premium p-5 md:p-6 block"
+              >
                 <div className="flex items-center gap-3 mb-4">
-                  <span className="px-3 py-1 bg-section-alt text-primary text-xs font-medium rounded-full">
-                    {article.category}
+                  <span className="chip chip-default text-xs">
+                    {Icon && <Icon className="w-3 h-3 mr-1" />}
+                    {item.category}
                   </span>
                   <span className="flex items-center gap-1.5 text-xs text-muted-foreground">
                     <Calendar className="w-3 h-3" />
-                    {article.date}
+                    {item.date}
                   </span>
                 </div>
-                <h3 className="text-base md:text-lg font-semibold mb-2 group-hover:text-primary/80 transition-colors">
-                  {article.title}
+                <h3 className="text-base md:text-lg font-semibold mb-2 group-hover:text-accent transition-colors line-clamp-2">
+                  {item.type === "debatt" ? item.programName : item.title}
                 </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  {article.excerpt}
+                <p className="text-muted-foreground text-sm leading-relaxed line-clamp-2">
+                  {item.type === "article" && item.excerpt}
+                  {item.type === "media" && item.summary}
+                  {item.type === "debatt" && `${item.topic} – ${item.channel}`}
                 </p>
-              </div>
-            </article>
-          ))}
+              </Link>
+            );
+          })}
         </div>
       </div>
     </section>

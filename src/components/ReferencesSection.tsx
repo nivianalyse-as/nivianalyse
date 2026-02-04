@@ -11,7 +11,7 @@ const ReferencesSection = () => {
   ];
 
   return (
-    <section id="referanser" className="section-padding bg-section-alt/40">
+    <section id="referanser" className="section-padding bg-alt">
       <div className="container-narrow">
         <div className="text-center mb-10 md:mb-14">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3">
@@ -26,7 +26,7 @@ const ReferencesSection = () => {
           {references.map((ref, i) => (
             <div
               key={i}
-              className="h-20 md:h-24 bg-card rounded-xl border border-border/50 flex items-center justify-center px-4 hover:border-border hover:shadow-sm transition-all duration-300"
+              className="h-20 md:h-24 card-premium flex items-center justify-center px-4"
             >
               <span className="text-primary font-medium text-sm md:text-base text-center">
                 {ref}
