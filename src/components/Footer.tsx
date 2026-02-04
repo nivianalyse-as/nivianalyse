@@ -46,19 +46,19 @@ const Footer = () => {
             <div className="flex flex-col gap-2.5">
               <a
                 href="mailto:post@nivianalyse.no"
-                className="group flex items-center gap-2.5 text-white/85 hover:text-white focus:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-offset-2 focus-visible:ring-offset-[#07342F] rounded transition-colors text-[14px] leading-[1.5] min-h-[44px] md:min-h-0"
+                className="group flex items-center gap-2.5 text-white/[0.88] hover:text-white focus:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-offset-2 focus-visible:ring-offset-[#07342F] rounded transition-colors text-[14px] leading-[1.5] min-h-[44px] md:min-h-0"
               >
                 <Mail className="w-4 h-4 flex-shrink-0 opacity-70 group-hover:opacity-100 transition-opacity" />
-                <span className="group-hover:underline underline-offset-4">post@nivianalyse.no</span>
+                <span className="group-hover:underline underline-offset-4 decoration-[0.5px]">post@nivianalyse.no</span>
               </a>
               <a
                 href="tel:+4722123456"
-                className="group flex items-center gap-2.5 text-white/85 hover:text-white focus:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-offset-2 focus-visible:ring-offset-[#07342F] rounded transition-colors text-[14px] leading-[1.5] min-h-[44px] md:min-h-0"
+                className="group flex items-center gap-2.5 text-white/[0.88] hover:text-white focus:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-offset-2 focus-visible:ring-offset-[#07342F] rounded transition-colors text-[14px] leading-[1.5] min-h-[44px] md:min-h-0"
               >
                 <Phone className="w-4 h-4 flex-shrink-0 opacity-70 group-hover:opacity-100 transition-opacity" />
-                <span className="group-hover:underline underline-offset-4">+47 22 12 34 56</span>
+                <span className="group-hover:underline underline-offset-4 decoration-[0.5px]">+47 22 12 34 56</span>
               </a>
-              <div className="flex items-start gap-2.5 text-white/85 text-[14px] leading-[1.5]">
+              <div className="flex items-start gap-2.5 text-white/[0.88] text-[14px] leading-[1.5]">
                 <MapPin className="w-4 h-4 flex-shrink-0 mt-0.5 opacity-70" />
                 <span>
                   Solløkkaveien 73<br />
@@ -78,7 +78,7 @@ const Footer = () => {
                 <a
                   key={link.href}
                   href={link.href}
-                  className="text-white/85 hover:text-white focus:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-offset-2 focus-visible:ring-offset-[#07342F] rounded hover:underline underline-offset-4 transition-colors text-[14px] leading-[1.5] py-1 min-h-[44px] md:min-h-0 flex items-center"
+                  className="text-white/[0.88] hover:text-white focus:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-offset-2 focus-visible:ring-offset-[#07342F] rounded hover:underline underline-offset-4 decoration-[0.5px] transition-colors text-[14px] leading-[1.5] py-1 min-h-[44px] md:min-h-0 flex items-center"
                 >
                   {link.label}
                 </a>
@@ -96,19 +96,19 @@ const Footer = () => {
       {/* Bottom Bar */}
       <div className="max-w-[1200px] mx-auto px-6 md:px-6">
         <div className="py-[18px] flex flex-col sm:flex-row justify-between items-center gap-3">
-          <p className="text-[13px] text-white/75 text-center sm:text-left">
+          <p className="text-[12.5px] text-white/[0.78] text-center sm:text-left">
             © {new Date().getFullYear()} NIVI Analyse AS. Alle rettigheter forbeholdt.
           </p>
-          <div className="flex gap-5">
+          <div className="flex items-center gap-[18px]">
             <a
               href="#"
-              className="text-[13px] text-white/75 hover:text-white hover:underline underline-offset-4 focus:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-offset-2 focus-visible:ring-offset-[#07342F] rounded transition-colors"
+              className="text-[12.5px] text-white/[0.78] hover:text-white hover:underline underline-offset-4 decoration-[0.5px] focus:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-offset-2 focus-visible:ring-offset-[#07342F] rounded transition-colors"
             >
               Personvern
             </a>
             <a
               href="#"
-              className="text-[13px] text-white/75 hover:text-white hover:underline underline-offset-4 focus:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-offset-2 focus-visible:ring-offset-[#07342F] rounded transition-colors"
+              className="text-[12.5px] text-white/[0.78] hover:text-white hover:underline underline-offset-4 decoration-[0.5px] focus:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-offset-2 focus-visible:ring-offset-[#07342F] rounded transition-colors"
             >
               Vilkår
             </a>
