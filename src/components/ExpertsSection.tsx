@@ -47,11 +47,11 @@ const ExpertsSection = () => {
               key={expert.name}
               className="card-premium overflow-hidden"
             >
-              <div className="aspect-[4/3] overflow-hidden">
+              <div className="aspect-[3/4] sm:aspect-[4/5] overflow-hidden">
                 <img
                   src={expert.image}
                   alt={`${expert.name}, ${expert.title}`}
-                  className="w-full h-full object-cover object-top"
+                  className="w-full h-full object-cover object-[center_20%]"
                 />
               </div>
               <div className="p-5 md:p-7">
