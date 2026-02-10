@@ -1,5 +1,5 @@
 import { Mail, Phone, MapPin } from "lucide-react";
-import niviLogo from "@/assets/nivi-logo-transparent.png";
+import niviBadge from "@/assets/nivi-badge.png";
 
 const Footer = () => {
   const menuLinks = [
@@ -20,7 +20,7 @@ const Footer = () => {
           <div>
             {/* Wordmark */}
             <div className="mb-5">
-              <img src={niviLogo} alt="NIVI Analyse" className="h-10 w-auto brightness-0 invert" />
+              <img src={niviBadge} alt="NIVI Analyse" className="h-14 w-auto" />
             </div>
             
             {/* Tagline */}
