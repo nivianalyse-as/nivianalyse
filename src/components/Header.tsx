@@ -121,14 +121,14 @@ const Header = () => {
         }`}
         style={{ borderBottom: '1px solid rgba(7,52,47,0.10)' }}
       >
-        <div className="h-[72px] md:h-20 px-5 sm:px-6 lg:px-8 flex items-center justify-between max-w-[1200px] mx-auto">
+        <div className="h-16 md:h-[72px] px-5 sm:px-6 lg:px-8 flex items-center justify-between max-w-[1200px] mx-auto">
           {/* Wordmark Logo */}
           <Link
             to="/"
             onClick={() => handleNavClick("/")}
             className="flex items-center focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-md group"
           >
-            <img src={niviLogo} alt="NIVI Analyse" className="h-9 sm:h-10 md:h-11 w-auto" />
+            <img src={niviLogo} alt="NIVI Analyse" className="h-7 sm:h-8 md:h-9 lg:h-10 w-auto flex-shrink-0" style={{ filter: 'contrast(1.1) saturate(1.05)' }} />
           </Link>
 
           {/* Right side: Kontakt button (desktop) + Hamburger */}
@@ -223,7 +223,7 @@ const Header = () => {
       </header>
 
       {/* Spacer for fixed header */}
-      <div className="h-[72px] md:h-20" />
+      <div className="h-16 md:h-[72px]" />
     </>
   );
 };
