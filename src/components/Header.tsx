@@ -128,7 +128,7 @@ const Header = () => {
             onClick={() => handleNavClick("/")}
             className="flex items-center focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-md group"
           >
-            <img src={niviLogo} alt="NIVI Analyse" className="h-7 sm:h-8 md:h-9 lg:h-10 w-auto flex-shrink-0" style={{ filter: 'contrast(1.1) saturate(1.05)' }} />
+            <img src={niviLogo} alt="NIVI Analyse" className="h-8 sm:h-9 md:h-10 w-auto max-w-[200px] flex-shrink-0" style={{ filter: 'drop-shadow(0 1px 1px rgba(0,0,0,0.18))' }} />
           </Link>
 
           {/* Right side: Kontakt button (desktop) + Hamburger */}
