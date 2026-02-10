@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Mail, Phone, MapPin } from "lucide-react";
+import niviLogo from "@/assets/nivi-logo-transparent.png";
 import {
   Sheet,
   SheetContent,
@@ -127,16 +128,7 @@ const Header = () => {
             onClick={() => handleNavClick("/")}
             className="flex items-center focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-md group"
           >
-            <span className="text-primary text-[20px] sm:text-[22px] md:text-[24px] font-bold tracking-[-0.025em]">
-              NIVI
-            </span>
-            <span className="text-primary text-[20px] sm:text-[22px] md:text-[24px] font-normal tracking-[-0.025em] ml-1">
-              Analyse
-            </span>
-            <span 
-              className="w-[6px] h-[6px] rounded-full bg-accent ml-0.5 mb-3 group-hover:scale-110 transition-transform" 
-              aria-hidden="true" 
-            />
+            <img src={niviLogo} alt="NIVI Analyse" className="h-9 sm:h-10 md:h-11 w-auto" />
           </Link>
 
           {/* Right side: Kontakt button (desktop) + Hamburger */}
@@ -174,18 +166,7 @@ const Header = () => {
           >
             <SheetHeader className="p-6 pb-5 border-b border-white/10">
               <div className="flex items-center justify-between">
-                <div className="flex items-center">
-                  <span className="text-white text-xl font-bold tracking-[-0.02em]">
-                    NIVI
-                  </span>
-                  <span className="text-white text-xl font-normal tracking-[-0.02em] ml-1.5">
-                    Analyse
-                  </span>
-                  <span 
-                    className="w-1.5 h-1.5 rounded-full bg-[#DC4B0C] ml-0.5 mb-2" 
-                    aria-hidden="true" 
-                  />
-                </div>
+                <img src={niviLogo} alt="NIVI Analyse" className="h-9 w-auto brightness-0 invert" />
                 <SheetClose className="rounded-full p-2.5 hover:bg-white/10 transition-colors focus:outline-none focus:ring-2 focus:ring-white/50">
                   <X className="h-5 w-5 text-white" />
                   <span className="sr-only">Lukk meny</span>
