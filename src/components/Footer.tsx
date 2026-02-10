@@ -19,16 +19,11 @@ const Footer = () => {
           {/* Column 1: Brand */}
           <div>
             {/* Wordmark */}
-            <div className="flex items-center mb-5">
-              <span className="text-white text-xl font-bold tracking-[-0.02em]">
-                NIVI
-              </span>
-              <span className="text-white text-xl font-normal tracking-[-0.02em] ml-1.5">
-                Analyse
-              </span>
-              <span 
-                className="w-1.5 h-1.5 rounded-full bg-[#DC4B0C] ml-0.5 mb-2" 
-                aria-hidden="true" 
+            <div className="mb-5">
+              <img 
+                src={niviFooterLogo} 
+                alt="NIVI Analyse" 
+                className="h-14 w-auto"
               />
             </div>
             
