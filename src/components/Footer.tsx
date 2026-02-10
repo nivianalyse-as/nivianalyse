@@ -1,4 +1,5 @@
 import { Mail, Phone, MapPin } from "lucide-react";
+import niviFooterLogo from "@/assets/nivi-footer-logo.png";
 
 const Footer = () => {
   const menuLinks = [
