@@ -27,9 +27,9 @@ const HeroSection = () => {
             style={{
               background: `linear-gradient(
                 145deg,
-                rgba(7, 52, 47, 0.58) 0%,
-                rgba(7, 52, 47, 0.42) 40%,
-                rgba(7, 52, 47, 0.48) 100%
+                rgba(7, 52, 47, 0.72) 0%,
+                rgba(7, 52, 47, 0.55) 40%,
+                rgba(7, 52, 47, 0.62) 100%
               )`
             }}
             aria-hidden="true"
