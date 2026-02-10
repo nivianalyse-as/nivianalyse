@@ -46,7 +46,7 @@ const HeroSection = () => {
                 <span className="block mt-2">Nå direkte til deg.</span>
               </h1>
 
-              <p className="text-[16px] md:text-[18px] text-white/92 mb-9 md:mb-11 leading-[1.65] max-w-[480px] animate-fade-in-delay-1">
+              <p className="text-[16px] md:text-[18px] text-white mb-9 md:mb-11 leading-[1.65] max-w-[480px] animate-fade-in-delay-1">
                 Håvard Moe og Geir Vinsand tilbyr spisskompetanse på kommunal forvaltning og rådgivning – direkte til din kommune.
               </p>
 
