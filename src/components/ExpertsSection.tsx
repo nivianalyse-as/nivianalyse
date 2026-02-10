@@ -41,17 +41,17 @@ const ExpertsSection = () => {
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 gap-6 lg:gap-8 max-w-4xl mx-auto">
+        <div className="grid sm:grid-cols-2 gap-5 lg:gap-6 max-w-3xl mx-auto">
           {experts.map((expert) => (
             <div
               key={expert.name}
               className="card-premium overflow-hidden"
             >
-              <div className="aspect-[3/4] sm:aspect-[4/5] overflow-hidden">
+              <div className="aspect-[4/5] overflow-hidden">
                 <img
                   src={expert.image}
                   alt={`${expert.name}, ${expert.title}`}
-                  className="w-full h-full object-cover object-[center_20%]"
+                  className="w-full h-full object-cover object-[center_15%]"
                 />
               </div>
               <div className="p-5 md:p-7">
