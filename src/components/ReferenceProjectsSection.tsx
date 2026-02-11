@@ -1,6 +1,7 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import SectionHeader from "@/components/SectionHeader";
 
 interface ReferenceProject {
   kommune: string;
@@ -100,14 +101,11 @@ const ReferenceProjectsSection = () => {
   return (
     <section id="referanseoppdrag" className="section-padding bg-background">
       <div className="container-narrow">
-        <div className="text-center mb-10 md:mb-14">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 tracking-tight leading-[1.15]">
-            Utvalgte referanseoppdrag
-          </h2>
-          <div className="heading-line mx-auto" />
-          <p className="text-muted-foreground max-w-2xl mx-auto text-sm md:text-base mt-3">
-            Dokumentert erfaring fra omstilling, kommuneøkonomi og styring i små og store kommuner.
-          </p>
+        <div className="mb-10 md:mb-14">
+          <SectionHeader
+            title="Utvalgte referanseoppdrag"
+            subtitle="Dokumentert erfaring fra omstilling, kommuneøkonomi og styring i små og store kommuner."
+          />
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">

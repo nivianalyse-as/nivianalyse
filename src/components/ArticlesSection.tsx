@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Calendar, Newspaper, Radio } from "lucide-react";
+import SectionHeader from "@/components/SectionHeader";
 import { articles, mediaMentions, debattEntries } from "@/data/inspirasjonContent";
 import { ContentItem } from "@/types/content";
 
@@ -23,23 +24,21 @@ const ArticlesSection = () => {
   return (
     <section id="inspirasjon" className="section-padding bg-background">
       <div className="container-narrow">
-        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4 mb-10 md:mb-12">
-          <div>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 tracking-tight leading-[1.15]">
-              Inspirasjon & Faglig påfyll
-            </h2>
-            <div className="heading-line" />
-            <p className="text-muted-foreground text-sm md:text-base mt-3">
-              Fagartikler og analyser fra våre eksperter
-            </p>
+        <div className="mb-10 md:mb-12">
+          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4">
+            <SectionHeader
+              title="Inspirasjon & Faglig påfyll"
+              subtitle="Fagartikler og analyser fra våre eksperter"
+              centered={false}
+            />
+            <Link
+              to="/inspirasjon"
+              className="group flex items-center gap-2 text-primary font-medium hover:text-accent transition-colors text-sm"
+            >
+              Se alle artikler
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </Link>
           </div>
-          <Link
-            to="/inspirasjon"
-            className="group flex items-center gap-2 text-primary font-medium hover:text-accent transition-colors text-sm"
-          >
-            Se alle artikler
-            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-          </Link>
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">

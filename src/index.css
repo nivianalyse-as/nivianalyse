@@ -203,27 +203,7 @@
     box-shadow: var(--shadow-hover);
   }
 
-  /* Section heading precision line */
-  .heading-line {
-    width: 140px;
-    max-width: 25%;
-    height: 1px;
-    margin-top: 12px;
-    border-radius: 9999px;
-    background-color: hsl(var(--border-subtle) / 0.18);
-  }
-
-  @media (max-width: 1024px) {
-    .heading-line {
-      width: 120px;
-    }
-  }
-
-  @media (max-width: 640px) {
-    .heading-line {
-      width: 96px;
-    }
-  }
+  /* Legacy heading-line class removed — now handled by SectionHeader component */
 
   .link-underline {
     @apply relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-accent after:transition-all after:duration-300 hover:after:w-full;
