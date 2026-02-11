@@ -34,10 +34,7 @@ const IMediaDetail = () => {
     )
     .slice(0, 3);
 
-  // Short summary for "Kort oppsummert" box
-  const shortSummary = entry.id === 1
-    ? "NIVI Analyse styrker laget. Håvard Moe inn i miljøet sammen med Geir Vinsand, med mål om å levere enda tydeligere analyser og råd til kommuner og offentlig sektor."
-    : entry.excerpt;
+  const shortSummary = entry.excerpt;
 
   return (
     <div className="min-h-screen bg-background">
@@ -145,11 +142,24 @@ const IMediaDetail = () => {
                   </a>
                 </Button>
               )}
-              {entry.embedUrl && (
+              {entry.embedUrl && entry.embedUrl.includes("youtube") && (
+                <div className="mb-8">
+                  <div className="aspect-video rounded-[18px] overflow-hidden bg-secondary/30">
+                    <iframe
+                      src={entry.embedUrl.replace("watch?v=", "embed/").replace("youtube.com/live/", "youtube.com/embed/")}
+                      title={entry.title}
+                      className="w-full h-full"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    />
+                  </div>
+                </div>
+              )}
+              {entry.embedUrl && !entry.embedUrl.includes("youtube") && (
                 <Button variant="outline" size="lg" asChild>
                   <a href={entry.embedUrl} target="_blank" rel="noopener noreferrer">
                     <Play className="w-4 h-4 mr-2" />
-                    Se på NRK
+                    Se sendingen
                   </a>
                 </Button>
               )}

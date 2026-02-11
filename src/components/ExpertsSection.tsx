@@ -4,27 +4,31 @@ import havardImage from "@/assets/havard-moe.jpg";
 const experts = [
   {
     name: "Geir Vinsand",
-    title: "Seniorrådgiver",
+    title: "Daglig leder og seniorrådgiver",
     image: geirImage,
     expertise: [
       "Interkommunalt samarbeid",
-      "Kommunestruktur",
-      "Offentlig forvaltning",
+      "Kommunestruktur og -reform",
+      "Offentlig forvaltning og styring",
+      "Kommunal organisering",
+      "Kartlegging og utredning",
     ],
     description:
-      "Over 30 års erfaring med kommunal forvaltning. En av landets fremste eksperter på interkommunalt samarbeid.",
+      "Over 30 års erfaring med analyse og rådgivning for kommunesektoren. En av Norges fremste eksperter på interkommunalt samarbeid og kommunestruktur, med oppdrag for departementer, KS og et stort antall kommuner og regioner.",
   },
   {
     name: "Håvard Moe",
     title: "Seniorrådgiver",
     image: havardImage,
     expertise: [
-      "Kommuneøkonomi",
-      "Organisasjonsutvikling",
+      "Kommuneøkonomi og ressursbruk",
+      "Organisasjonsgjennomgang",
       "Strategisk planlegging",
+      "Økonomisk analyse og benchmarking",
+      "Tjenesteanalyse",
     ],
     description:
-      "Erfaren analytiker med bred kompetanse. Har bistått over 100 kommuner med økonomiske analyser.",
+      "Erfaren analytiker med bred kompetanse innen økonomi, organisasjon og tjenesteutvikling. Har bistått over 100 kommuner med økonomiske analyser, omstillingsprosjekter og strategisk rådgivning.",
   },
 ];
 
