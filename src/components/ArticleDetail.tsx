@@ -166,13 +166,13 @@ const ArticleDetail = () => {
                   </a>
                 </Button>
               )}
-              {item.pdfUrl && (
-                <Button variant="outline" size="lg" asChild>
-                  <a href={item.pdfUrl} target="_blank" rel="noopener noreferrer">
-                    Last ned PDF
-                  </a>
-                </Button>
-              )}
+            {item.pdfUrl && (
+              <Button variant="outline" size="lg" asChild>
+                <a href={item.pdfUrl} download>
+                  Last ned PDF
+                </a>
+              </Button>
+            )}
               {!item.sourceUrl && !item.pdfUrl && (
                 <p className="text-muted-foreground text-sm italic">
                   Lenke til artikkelen kommer snart.

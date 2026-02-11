@@ -70,7 +70,7 @@ const MediaMentionCard = ({ mention, variant = "compact" }: MediaMentionCardProp
         )}
         {mention.pdfUrl && (
           <Button variant="outline" size="default" asChild>
-            <a href={mention.pdfUrl} target="_blank" rel="noopener noreferrer">
+            <a href={mention.pdfUrl} download>
               <Download className="w-4 h-4 mr-2" />
               Last ned PDF
             </a>

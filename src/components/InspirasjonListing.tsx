@@ -205,8 +205,7 @@ const ContentCard = ({ item }: { item: ContentItem }) => {
             {item.pdfUrl && (
               <a 
                 href={item.pdfUrl}
-                target="_blank"
-                rel="noopener noreferrer"
+                download
                 className="inline-flex items-center gap-1.5 text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
               >
                 <FileText className="w-3.5 h-3.5" />
