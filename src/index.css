@@ -205,15 +205,23 @@
 
   /* Section heading precision line */
   .heading-line {
-    width: 72px;
+    width: 140px;
+    max-width: 25%;
     height: 1px;
     margin-top: 12px;
+    border-radius: 9999px;
     background-color: hsl(var(--border-subtle) / 0.18);
+  }
+
+  @media (max-width: 1024px) {
+    .heading-line {
+      width: 120px;
+    }
   }
 
   @media (max-width: 640px) {
     .heading-line {
-      width: 56px;
+      width: 96px;
     }
   }
 
