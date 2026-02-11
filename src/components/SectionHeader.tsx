@@ -11,7 +11,7 @@ const SectionHeader = ({ title, subtitle, centered = true, as: Tag = "h2" }: Sec
       <Tag className="text-4xl font-semibold text-primary">
         {title}
       </Tag>
-      <div className={`h-[2px] w-20 mt-5 bg-primary/30 rounded-full ${centered ? "mx-auto" : ""}`} />
+      <div className={`mx-auto mt-6 h-[2px] w-16 bg-primary/30 rounded-full ${!centered ? "mx-0" : ""}`} />
       {subtitle && (
         <p className={`max-w-2xl mt-6 text-lg text-muted-foreground ${centered ? "mx-auto" : ""}`}>
           {subtitle}
