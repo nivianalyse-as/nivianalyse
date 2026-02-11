@@ -128,7 +128,7 @@ export const mediaMentions: MediaMention[] = [
     category: "I media",
     slug: "kommunal-rapport-brolaper",
     sourceUrl: undefined,
-    pdfUrl: undefined
+    pdfUrl: "/docs/de-to-storste-brolapene.pdf"
   }
 ];
 
