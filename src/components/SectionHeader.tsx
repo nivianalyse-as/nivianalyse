@@ -6,13 +6,13 @@ interface SectionHeaderProps {
 
 const SectionHeader = ({ title, subtitle, as: Tag = "h2" }: SectionHeaderProps) => {
   return (
-    <div className="max-w-6xl mx-auto px-6">
-      <Tag className="text-4xl font-semibold text-primary">
+    <div className="max-w-6xl mx-auto px-6 text-center">
+      <Tag className="text-4xl md:text-5xl font-semibold text-primary">
         {title}
       </Tag>
-      <div className="h-[2px] w-20 mt-5 bg-primary/30 rounded-full" />
+      <div className="mx-auto mt-5 h-[2px] w-16 bg-primary/30" />
       {subtitle && (
-        <p className="max-w-2xl mt-6 text-lg text-muted-foreground">
+        <p className="max-w-2xl mx-auto mt-8 text-lg text-muted-foreground leading-relaxed">
           {subtitle}
         </p>
       )}
