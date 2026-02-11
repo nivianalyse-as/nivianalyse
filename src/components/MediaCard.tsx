@@ -37,7 +37,21 @@ const MediaCard = ({ entry }: MediaCardProps) => {
   return (
     <Link
       to={`/i-media/${entry.slug}`}
-      className="group block bg-card border border-primary/[0.08] rounded-[18px] p-6 md:p-7 shadow-[0_2px_8px_-2px_rgba(7,52,47,0.06)] hover:shadow-[0_8px_24px_-8px_rgba(7,52,47,0.12)] hover:-translate-y-1 hover:border-primary/[0.15] transition-all duration-300"
+      className="group block bg-card rounded-2xl p-6 md:p-7 transition-all duration-200"
+      style={{
+        border: '1px solid hsl(168 40% 20% / 0.12)',
+        boxShadow: 'var(--shadow-soft)',
+      }}
+      onMouseEnter={(e) => {
+        e.currentTarget.style.transform = 'translateY(-2px)';
+        e.currentTarget.style.boxShadow = 'var(--shadow-hover)';
+        e.currentTarget.style.borderColor = 'hsl(168 40% 20% / 0.20)';
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.transform = 'translateY(0)';
+        e.currentTarget.style.boxShadow = 'var(--shadow-soft)';
+        e.currentTarget.style.borderColor = 'hsl(168 40% 20% / 0.12)';
+      }}
     >
       <div className="flex items-center gap-2.5 mb-4">
         <Badge 

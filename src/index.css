@@ -56,6 +56,14 @@
     --ring: 168 79% 11%;
     
     --radius: 0.75rem;
+
+    /* Refined tokens */
+    --surface: 0 0% 100%;
+    --surface-alt: 150 10% 97%;
+    --border-subtle: 168 40% 20%;
+    --shadow-soft: 0 10px 30px rgba(0,0,0,0.06);
+    --shadow-hover: 0 14px 40px rgba(0,0,0,0.10);
+    --text-muted-refined: 168 30% 38%;
     
     /* Section backgrounds */
     --hero-overlay: 168 79% 11%;
@@ -116,6 +124,9 @@
 
   body {
     @apply bg-background text-foreground font-sans antialiased;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -172,11 +183,38 @@
 
   /* Premium card styling */
   .card-premium {
-    @apply bg-card rounded-2xl border border-border/50 shadow-sm hover:shadow-md hover:border-border transition-all duration-300;
+    @apply bg-card rounded-2xl border transition-all duration-200;
+    border-color: hsl(var(--border-subtle) / 0.12);
+    box-shadow: var(--shadow-soft);
+  }
+
+  .card-premium:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+    border-color: hsl(var(--border-subtle) / 0.20);
   }
 
   .card-hover {
-    @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5;
+    @apply transition-all duration-200 hover:-translate-y-0.5;
+    box-shadow: var(--shadow-soft);
+  }
+  
+  .card-hover:hover {
+    box-shadow: var(--shadow-hover);
+  }
+
+  /* Section heading precision line */
+  .heading-line {
+    width: 72px;
+    height: 1px;
+    margin-top: 12px;
+    background-color: hsl(var(--border-subtle) / 0.18);
+  }
+
+  @media (max-width: 640px) {
+    .heading-line {
+      width: 56px;
+    }
   }
 
   .link-underline {
@@ -190,7 +228,8 @@
   
   /* Chip/tag styling */
   .chip {
-    @apply inline-flex items-center px-3 py-1.5 rounded-full text-xs font-medium transition-colors;
+    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-medium transition-colors;
+    border: 1px solid hsl(var(--border-subtle) / 0.10);
   }
   
   .chip-default {

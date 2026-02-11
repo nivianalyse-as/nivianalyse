@@ -53,10 +53,11 @@ const InspirasjonListing = () => {
       <div className="max-w-[1200px] mx-auto px-6">
         {/* Header */}
         <div className="mb-10 md:mb-12">
-          <h1 className="text-3xl md:text-4xl font-bold text-primary mb-3">
+          <h1 className="text-3xl md:text-4xl font-bold text-primary mb-3 tracking-tight leading-[1.15]">
             Inspirasjon & Faglig påfyll
           </h1>
-          <p className="text-muted-foreground max-w-2xl text-base md:text-lg">
+          <div className="heading-line" />
+          <p className="text-muted-foreground max-w-2xl text-base md:text-lg mt-3 leading-relaxed">
             Analyser, artikler og medieomtaler fra NIVI Analyse. Følg med på våre faglige bidrag til debatten om kommunal sektor.
           </p>
         </div>
@@ -137,7 +138,7 @@ const ContentCard = ({ item }: { item: ContentItem }) => {
   const isDebatt = item.type === "debatt";
 
   return (
-    <article className="group bg-card rounded-[18px] border border-border/60 p-5 md:p-6 hover:shadow-md hover:border-border transition-all duration-300">
+    <article className="group bg-card rounded-2xl p-5 md:p-6 transition-all duration-200" style={{ border: '1px solid hsl(168 40% 20% / 0.12)', boxShadow: 'var(--shadow-soft)' }} onMouseEnter={(e) => { e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = 'var(--shadow-hover)'; }} onMouseLeave={(e) => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = 'var(--shadow-soft)'; }}>
       {/* Category & Date */}
       <div className="flex items-center justify-between mb-3">
         <span className={`chip text-xs ${

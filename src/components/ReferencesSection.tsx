@@ -14,10 +14,11 @@ const ReferencesSection = () => {
     <section id="referanser" className="section-padding bg-alt">
       <div className="container-narrow">
         <div className="text-center mb-10 md:mb-14">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 tracking-tight leading-[1.15]">
             Referanser
           </h2>
-          <p className="text-muted-foreground max-w-lg mx-auto text-sm md:text-base">
+          <div className="heading-line mx-auto" />
+          <p className="text-muted-foreground max-w-lg mx-auto text-sm md:text-base mt-3">
             Vi har samarbeidet med kommuner, fylkeskommuner og departementer over hele Norge.
           </p>
         </div>

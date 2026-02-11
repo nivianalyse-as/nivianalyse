@@ -12,10 +12,11 @@ const MediaSection = () => {
         {/* Header */}
         <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between gap-4 mb-12">
           <div>
-            <h2 className="text-[26px] md:text-[32px] font-bold text-primary mb-3 tracking-[-0.02em]">
+            <h2 className="text-[26px] md:text-[32px] font-bold text-primary mb-3 tracking-tight leading-[1.15]">
               I media
             </h2>
-            <p className="text-muted-foreground text-[15px] md:text-base max-w-xl leading-relaxed">
+            <div className="heading-line" />
+            <p className="text-muted-foreground text-[15px] md:text-base max-w-xl leading-relaxed mt-3">
               Utvalgte omtaler, debatter og artikler der NIVI Analyse bidrar med innsikt.
             </p>
           </div>
