@@ -1,0 +1,194 @@
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
+
+interface ReferenceProject {
+  kommune: string;
+  periode: string;
+  type: "Omstillingsstøtte" | "Utviklingsstøtte";
+  kort: string;
+  leveranser: string[];
+  resultat?: string;
+}
+
+const projects: ReferenceProject[] = [
+  {
+    kommune: "Vinje kommune",
+    periode: "2025–2026",
+    type: "Omstillingsstøtte",
+    kort: "Kraftinntekter, men vedvarende utfordringer med bærekraftig kommuneøkonomi og ressursbruk.",
+    leveranser: [
+      "Forankring politisk/administrativt + tillitsvalgte",
+      "Kommunekompassevaluering (forvaltningspraksis)",
+      "Analyse av kommuneøkonomi og ressursbruk",
+      "Rammesak til kommunestyret (sept 2026)",
+    ],
+  },
+  {
+    kommune: "Karlsøy kommune",
+    periode: "2025",
+    type: "Omstillingsstøtte",
+    kort: "Høye inntekter fra havbruksfondet inn i drift + investeringspress. Behov for å redusere løpende ressursbruk.",
+    leveranser: [
+      "Forankringsprosess (politikk/adm/tillitsvalgte)",
+      "Kommuneøkonomianalyse",
+      "Arbeidsverksteder",
+      "16 arbeidsgrupperapporter som grunnlag for rammesak",
+    ],
+  },
+  {
+    kommune: "Lindesnes kommune",
+    periode: "2024–2025",
+    type: "Omstillingsstøtte",
+    kort: "«Sammen i utvikling» med identifisert omstillingspotensial på 100 MNOK.",
+    leveranser: [
+      "Prosjektstyring og ekstern prosjektledelse",
+      "Økonomiske analyser",
+      "Ledersamlinger og politiske verksteder",
+      "Styringsgrupper (politisk/administrativ)",
+    ],
+  },
+  {
+    kommune: "Frøya kommune",
+    periode: "2022–nå",
+    type: "Omstillingsstøtte",
+    kort: "Høye, sårbare inntekter faset inn i drift. Mål: redusere sårbarhet og styrke styring.",
+    leveranser: [
+      "Analyser og kommunekompassevalueringer",
+      "Ledersamlinger og politiske verksteder",
+      "Tiltaks- og gevinstrealiseringsplaner",
+    ],
+  },
+  {
+    kommune: "Lillehammer kommune",
+    periode: "2020–2022",
+    type: "Omstillingsstøtte",
+    kort: "Balanse '24. Fra merforbruk til solid netto driftsresultat.",
+    leveranser: [
+      "Helhetlig utviklingsløp (drift/investering, fag/økonomi)",
+      "Forankring og politisk arbeid",
+      "Styrings- og oppfølgingsstruktur",
+    ],
+    resultat: "Netto driftsresultat forbedret til 2,2 % (2022)",
+  },
+  {
+    kommune: "Karasjok kommune",
+    periode: "2018–2022",
+    type: "Omstillingsstøtte",
+    kort: "Omfattende omstilling knyttet til økonomi, styring, ledelse og tillit.",
+    leveranser: [
+      "Oppbygging av helhetlig omstillingsprogram",
+      "Prosjektkoordinering og myndighetsrapportering",
+      "Tiltaks- og styringspakke over flere år",
+    ],
+    resultat: "Snudd resultat fra −12 MNOK (2018) til +18 MNOK (budsjett 2022)",
+  },
+  {
+    kommune: "Longyearbyen lokalstyre",
+    periode: "2013–2024",
+    type: "Utviklingsstøtte",
+    kort: "Stabil forvaltningspraksis i en organisasjon med høy turnover.",
+    leveranser: [
+      "Evalueringer og kommunekompassevalueringer",
+      "Utvikling av forvaltningspraksis og lederutvikling",
+      "Administrativ organisering og strategisk utviklingspartner",
+    ],
+  },
+];
+
+const ReferenceProjectsSection = () => {
+  return (
+    <section id="referanseoppdrag" className="section-padding bg-background">
+      <div className="container-narrow">
+        <div className="text-center mb-10 md:mb-14">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3">
+            Utvalgte referanseoppdrag
+          </h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto text-sm md:text-base">
+            Dokumentert erfaring fra omstilling, kommuneøkonomi og styring i små og store kommuner.
+          </p>
+        </div>
+
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
+          {projects.map((project) => (
+            <div
+              key={project.kommune}
+              className="card-premium p-5 md:p-6 flex flex-col"
+            >
+              {/* Header */}
+              <div className="mb-3">
+                <div className="flex items-center justify-between gap-2 mb-2">
+                  <span className="text-xs text-muted-foreground font-medium">
+                    {project.periode}
+                  </span>
+                  <Badge
+                    variant={project.type === "Omstillingsstøtte" ? "default" : "secondary"}
+                    className="text-[11px] px-2 py-0.5"
+                  >
+                    {project.type}
+                  </Badge>
+                </div>
+                <h3 className="text-lg font-bold leading-tight">
+                  {project.kommune}
+                </h3>
+              </div>
+
+              {/* Description */}
+              <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+                {project.kort}
+              </p>
+
+              {/* Leveranser */}
+              <div className="flex-1">
+                <p className="text-xs font-semibold text-primary/70 uppercase tracking-wide mb-2">
+                  Leveranser
+                </p>
+                <ul className="space-y-1.5 mb-4">
+                  {project.leveranser.map((item, i) => (
+                    <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
+                      <span className="w-1 h-1 rounded-full bg-accent mt-2 flex-shrink-0" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Result */}
+              {project.resultat && (
+                <div className="bg-secondary/20 rounded-lg px-3 py-2 mb-3">
+                  <p className="text-xs font-semibold text-primary/70 uppercase tracking-wide mb-0.5">
+                    Resultat
+                  </p>
+                  <p className="text-sm font-medium text-primary">
+                    {project.resultat}
+                  </p>
+                </div>
+              )}
+
+              {/* Reference note */}
+              <p className="text-xs text-muted-foreground italic border-t border-border/50 pt-3 mt-auto">
+                Referanse oppgis ved forespørsel
+              </p>
+            </div>
+          ))}
+        </div>
+
+        {/* CTA */}
+        <div className="text-center mt-10 md:mt-14">
+          <Button
+            variant="cta"
+            size="lg"
+            onClick={() =>
+              document.getElementById("kontakt")?.scrollIntoView({ behavior: "smooth" })
+            }
+          >
+            Be om referanseliste
+            <ArrowRight className="w-4 h-4 ml-1" />
+          </Button>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ReferenceProjectsSection;
