@@ -25,10 +25,11 @@ const ArticlesSection = () => {
       <div className="container-narrow">
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4 mb-10 md:mb-12">
           <div>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 tracking-tight leading-[1.15]">
               Inspirasjon & Faglig påfyll
             </h2>
-            <p className="text-muted-foreground text-sm md:text-base">
+            <div className="heading-line" />
+            <p className="text-muted-foreground text-sm md:text-base mt-3">
               Fagartikler og analyser fra våre eksperter
             </p>
           </div>

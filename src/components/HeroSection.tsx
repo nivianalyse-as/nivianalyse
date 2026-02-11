@@ -39,7 +39,7 @@ const HeroSection = () => {
           <div className="relative z-10 px-7 sm:px-10 md:px-14 lg:px-16 py-14 md:py-18 lg:py-20">
             <div className="max-w-[560px]">
               <h1 
-                className="font-bold leading-[1.12] text-white mb-5 md:mb-7 animate-fade-in tracking-[-0.02em]"
+                className="font-bold leading-[1.08] text-white mb-5 md:mb-7 animate-fade-in tracking-[-0.025em]"
                 style={{ fontSize: 'clamp(1.75rem, 5vw, 2.75rem)' }}
               >
                 Erfaringen bak NIVI Analyse.{" "}

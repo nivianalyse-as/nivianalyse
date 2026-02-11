@@ -34,13 +34,14 @@ const experts = [
 
 const ExpertsSection = () => {
   return (
-    <section id="eksperter" className="section-padding bg-background">
+    <section id="eksperter" className="section-padding" style={{ backgroundColor: 'hsl(150 10% 97%)' }}>
       <div className="container-narrow">
         <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 tracking-tight leading-[1.15]">
             Møt ekspertene
           </h2>
-          <p className="text-muted-foreground max-w-lg mx-auto text-sm md:text-base">
+          <div className="heading-line mx-auto" />
+          <p className="text-muted-foreground max-w-lg mx-auto text-sm md:text-base mt-3">
             Over 60 års samlet erfaring fra kommunesektoren.
           </p>
         </div>

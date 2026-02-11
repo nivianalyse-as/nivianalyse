@@ -29,13 +29,14 @@ const services = [
 
 const ServicesSection = () => {
   return (
-    <section id="fagomrader" className="section-padding bg-alt">
+    <section id="fagomrader" className="section-padding" style={{ backgroundColor: 'hsl(150 10% 97%)' }}>
       <div className="container-narrow">
         <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 tracking-tight leading-[1.15]">
             Våre fagområder
           </h2>
-          <p className="text-muted-foreground max-w-xl mx-auto text-sm md:text-base">
+          <div className="heading-line mx-auto" />
+          <p className="text-muted-foreground max-w-xl mx-auto text-sm md:text-base mt-4 leading-relaxed">
             Skreddersydd rådgivning basert på tiår med erfaring fra norsk kommunesektor.
           </p>
         </div>
