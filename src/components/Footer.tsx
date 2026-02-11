@@ -125,6 +125,23 @@ const Footer = () => {
           </div>
         </div>
       </div>
+
+      {/* Site Credit */}
+      <div className="max-w-[1200px] mx-auto px-6">
+        <div className="pb-4 pt-2">
+          <p className="text-[12px] text-white/60 text-center sm:text-left">
+            Nettsiden er utviklet av{" "}
+            <a
+              href="https://www.digitalthinking.no/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white/60 hover:text-white/90 hover:underline underline-offset-4 decoration-[0.5px] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-offset-2 focus-visible:ring-offset-[#07342F] rounded"
+            >
+              Digital Thinking
+            </a>
+          </p>
+        </div>
+      </div>
     </footer>
   );
 };
