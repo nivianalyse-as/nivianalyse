@@ -64,6 +64,13 @@ const SchemaMarkup = ({ schema }: SchemaMarkupProps) => {
         } : undefined,
         telephone: schema.telephone,
         email: schema.email,
+        ...((schema as any).creator ? {
+          creator: {
+            "@type": "Organization",
+            name: (schema as any).creator.name,
+            url: (schema as any).creator.url,
+          },
+        } : {}),
       };
     } else if (schema.type === "Person") {
       jsonLd = {
@@ -120,7 +127,7 @@ const SchemaMarkup = ({ schema }: SchemaMarkupProps) => {
 export default SchemaMarkup;
 
 // Pre-configured schemas for NIVI Analyse
-export const niviOrganizationSchema: OrganizationSchema = {
+export const niviOrganizationSchema: OrganizationSchema & { creator?: { name: string; url: string } } = {
   type: "Organization",
   name: "NIVI Analyse AS",
   url: "https://nivianalyse.lovable.app",
@@ -133,6 +140,10 @@ export const niviOrganizationSchema: OrganizationSchema = {
   },
   telephone: "+47 22 12 34 56",
   email: "post@nivianalyse.no",
+  creator: {
+    name: "Digital Thinking",
+    url: "https://www.digitalthinking.no/",
+  },
 };
 
 export const geirVinsandSchema: PersonSchema = {
