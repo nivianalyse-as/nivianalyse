@@ -16,7 +16,6 @@ const MediaSection = () => {
             <SectionHeader
               title="I media"
               subtitle="Utvalgte omtaler, debatter og artikler der NIVI Analyse bidrar med innsikt."
-              centered={false}
             />
             <Link 
               to="/i-media" 

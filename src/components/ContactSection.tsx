@@ -13,7 +13,6 @@ const ContactSection = () => {
               <SectionHeader
                 title="Kontakt oss"
                 subtitle="Ta kontakt for en uforpliktende prat om hvordan vi kan bistå din kommune eller organisasjon."
-                centered={false}
               />
             </div>
 

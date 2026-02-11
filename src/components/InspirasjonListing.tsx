@@ -57,7 +57,6 @@ const InspirasjonListing = () => {
           <SectionHeader
             title="Inspirasjon & Faglig påfyll"
             subtitle="Analyser, artikler og medieomtaler fra NIVI Analyse. Følg med på våre faglige bidrag til debatten om kommunal sektor."
-            centered={false}
             as="h1"
           />
         </div>
