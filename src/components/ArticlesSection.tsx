@@ -29,7 +29,6 @@ const ArticlesSection = () => {
             <SectionHeader
               title="Inspirasjon & Faglig påfyll"
               subtitle="Fagartikler og analyser fra våre eksperter"
-              centered={false}
             />
             <Link
               to="/inspirasjon"
