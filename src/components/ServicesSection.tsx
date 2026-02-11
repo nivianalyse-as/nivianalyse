@@ -1,4 +1,5 @@
 import { BarChart3, Building2, Users, Scale } from "lucide-react";
+import SectionHeader from "@/components/SectionHeader";
 
 const services = [
   {
@@ -31,14 +32,11 @@ const ServicesSection = () => {
   return (
     <section id="fagomrader" className="section-padding" style={{ backgroundColor: 'hsl(150 10% 97%)' }}>
       <div className="container-narrow">
-        <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 tracking-tight leading-[1.15]">
-            Våre fagområder
-          </h2>
-          <div className="heading-line mx-auto" />
-          <p className="text-muted-foreground max-w-xl mx-auto text-sm md:text-base mt-4 leading-relaxed">
-            Skreddersydd rådgivning basert på tiår med erfaring fra norsk kommunesektor.
-          </p>
+        <div className="mb-12 md:mb-16">
+          <SectionHeader
+            title="Våre fagområder"
+            subtitle="Skreddersydd rådgivning basert på tiår med erfaring fra norsk kommunesektor."
+          />
         </div>
 
         <div className="grid sm:grid-cols-2 gap-5 lg:gap-6 max-w-4xl mx-auto">

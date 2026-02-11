@@ -1,5 +1,6 @@
 import ContactForm from "@/components/ContactForm";
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
+import SectionHeader from "@/components/SectionHeader";
 
 const ContactSection = () => {
   return (
@@ -8,13 +9,13 @@ const ContactSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
           {/* Left column - Info */}
           <div>
-             <h2 className="text-[26px] md:text-[32px] font-bold text-primary mb-3 tracking-tight leading-[1.15]">
-              Kontakt oss
-            </h2>
-            <div className="heading-line" />
-            <p className="text-muted-foreground text-[15px] md:text-base leading-relaxed mb-8 max-w-md mt-3">
-              Ta kontakt for en uforpliktende prat om hvordan vi kan bistå din kommune eller organisasjon.
-            </p>
+            <div className="mb-8">
+              <SectionHeader
+                title="Kontakt oss"
+                subtitle="Ta kontakt for en uforpliktende prat om hvordan vi kan bistå din kommune eller organisasjon."
+                centered={false}
+              />
+            </div>
 
             <div className="space-y-5">
               <a

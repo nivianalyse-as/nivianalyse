@@ -1,6 +1,7 @@
 import { useState, useMemo } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, Calendar, Newspaper, Radio, ExternalLink, FileText, Play } from "lucide-react";
+import SectionHeader from "@/components/SectionHeader";
 import { allContent, articles, mediaMentions, debattEntries } from "@/data/inspirasjonContent";
 import { ContentCategory, ContentItem } from "@/types/content";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -53,13 +54,12 @@ const InspirasjonListing = () => {
       <div className="max-w-[1200px] mx-auto px-6">
         {/* Header */}
         <div className="mb-10 md:mb-12">
-          <h1 className="text-3xl md:text-4xl font-bold text-primary mb-3 tracking-tight leading-[1.15]">
-            Inspirasjon & Faglig påfyll
-          </h1>
-          <div className="heading-line" />
-          <p className="text-muted-foreground max-w-2xl text-base md:text-lg mt-3 leading-relaxed">
-            Analyser, artikler og medieomtaler fra NIVI Analyse. Følg med på våre faglige bidrag til debatten om kommunal sektor.
-          </p>
+          <SectionHeader
+            title="Inspirasjon & Faglig påfyll"
+            subtitle="Analyser, artikler og medieomtaler fra NIVI Analyse. Følg med på våre faglige bidrag til debatten om kommunal sektor."
+            centered={false}
+            as="h1"
+          />
         </div>
 
         {/* Tabs */}
