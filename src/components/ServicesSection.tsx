@@ -25,9 +25,9 @@ const ServicesSection = () => {
               key={label}
               href="#"
               onClick={(e) => e.preventDefault()}
-              className="card-premium p-5 md:p-6 flex items-center justify-center text-center rounded-2xl shadow-sm hover:shadow-md transition-all duration-200 hover:border-primary/20 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+              className="card-premium p-5 md:p-6 flex items-center justify-center text-center rounded-lg md:rounded-2xl shadow-sm hover:shadow-md transition-all duration-200 hover:border-primary/20 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
             >
-              <span className="text-primary font-semibold text-base md:text-lg leading-snug">
+              <span className="text-primary font-medium md:font-semibold text-base md:text-lg leading-snug">
                 {label}
               </span>
             </a>

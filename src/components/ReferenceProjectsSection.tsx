@@ -77,7 +77,7 @@ const ReferenceProjectsSection = () => {
           {projects.map((project, index) => (
             <div
               key={project.kommune}
-              className={`card-premium p-5 md:p-6 flex flex-col shadow-sm rounded-xl ${index >= 2 ? 'hidden md:flex' : ''}`}
+              className={`card-premium p-5 md:p-6 flex flex-col shadow-sm rounded-lg md:rounded-xl ${index >= 2 ? 'hidden md:flex' : ''}`}
             >
               {/* Header */}
               <div className="mb-3">
