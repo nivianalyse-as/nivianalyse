@@ -43,7 +43,7 @@ const HeroSection = () => {
           />
 
           {/* Content */}
-          <div className="relative z-10 px-7 sm:px-10 md:px-14 lg:px-16 pt-20 md:pt-0 py-16 md:py-18 lg:py-20">
+          <div className="relative z-10 px-7 sm:px-10 md:px-14 lg:px-16 pt-24 md:pt-0 py-16 md:py-18 lg:py-20">
             <div className="max-w-[560px]">
               {/* Mobile heading - without names */}
               <h1 
@@ -81,7 +81,7 @@ const HeroSection = () => {
                 <Button 
                   variant="outline" 
                   size="lg" 
-                  className="w-full md:w-auto border border-white/50 text-white bg-transparent hover:bg-white/10 font-medium px-8 py-4 h-auto text-[15px] rounded-xl transition-all duration-200"
+                  className="w-full md:w-auto border border-white/40 text-white bg-transparent hover:bg-white/10 hover:border-white/70 font-medium px-8 py-4 h-auto text-[15px] rounded-xl transition-all duration-200"
                   onClick={() => scrollToSection("#fagomrader")}
                 >
                   Se våre fagområder
