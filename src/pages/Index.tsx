@@ -39,6 +39,8 @@ const Index = () => {
         <ExpertsSection />
         <ContactSection />
       </main>
+      {/* Soft gradient transition to footer (mobile) */}
+      <div className="h-8 bg-gradient-to-b from-background to-[#0E3B32] md:hidden" aria-hidden="true" />
       <Footer />
       <CookieConsent />
     </div>
