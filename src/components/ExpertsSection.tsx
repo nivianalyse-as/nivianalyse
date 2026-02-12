@@ -5,7 +5,7 @@ import SectionHeader from "@/components/SectionHeader";
 const experts = [
   {
     name: "Geir Vinsand",
-    title: "Daglig leder og seniorrådgiver",
+    title: "Styreformann og seniorrådgiver",
     image: geirImage,
     expertise: [
       "Interkommunalt samarbeid",
@@ -19,7 +19,7 @@ const experts = [
   },
   {
     name: "Håvard Moe",
-    title: "Seniorrådgiver",
+    title: "Daglig leder og seniorrådgiver",
     image: havardImage,
     expertise: [
       "Kommuneøkonomi og ressursbruk",
