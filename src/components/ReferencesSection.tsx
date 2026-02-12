@@ -23,7 +23,7 @@ const ReferencesSection = () => {
   ];
 
   return (
-    <section id="referanser" className="section-padding bg-alt">
+    <section id="referanser" className="py-16 md:section-padding bg-alt">
       <div className="container-narrow">
         <div className="mb-10 md:mb-14">
           <SectionHeader
@@ -32,11 +32,11 @@ const ReferencesSection = () => {
           />
         </div>
 
-        <div className="flex flex-wrap justify-center gap-2.5 max-w-4xl mx-auto">
+        <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
           {references.map((ref, i) => (
             <span
               key={i}
-              className="inline-block px-4 py-2 rounded-full bg-secondary/40 text-primary/80 text-sm font-medium select-none"
+              className="inline-block px-4 py-2 rounded-full bg-white shadow-sm text-primary/80 text-sm font-medium select-none"
             >
               {ref}
             </span>
