@@ -90,7 +90,7 @@ const HeroSection = () => {
                 <Button 
                   variant="outline" 
                   size="lg" 
-                  className="w-full md:w-auto border border-white/50 text-white bg-transparent hover:bg-white/10 hover:border-white/80 font-medium px-8 py-4 h-auto text-[15px] rounded-xl transition-all duration-200"
+                  className="w-full md:w-auto border border-white/60 text-white bg-transparent hover:bg-white/15 hover:border-white font-medium px-8 py-4 h-auto text-[15px] rounded-xl transition-all duration-200"
                   onClick={() => scrollToSection("#fagomrader")}
                 >
                   Se våre fagområder
