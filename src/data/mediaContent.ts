@@ -207,6 +207,37 @@ export const mediaEntries: MediaEntry[] = [
     externalUrl: "https://open.spotify.com/episode/35fe6t8Mrs395e0FWrTwW6?si=d2402c97bf794006&nd=1&dlsi=9e3b4589fe9b49fb",
     featured: false,
     tags: ["spotify", "podkast", "kommuner"]
+  },
+  {
+    id: 13,
+    title: "De to største brølapene slår seg sammen",
+    slug: "kommunal-rapport-brolaper",
+    type: "article",
+    source: "Kommunal Rapport",
+    date: "2026-02-04",
+    excerpt: "NIVI Analyse ved Geir Vinsand og Håvard Moe kommenterer sammenslåingsprosessen mellom to store kommuner og peker på viktige lærdommer for fremtidige strukturendringer.",
+    keyPoints: [
+      "Sammenslåingsprosessen mellom to store kommuner",
+      "Viktige lærdommer for fremtidige strukturendringer"
+    ],
+    pdfUrl: "/docs/de-to-storste-brolapene.pdf",
+    featured: false,
+    tags: ["kommunal rapport", "kommunestruktur", "sammenslåing"]
+  },
+  {
+    id: 14,
+    title: "Dagsnytt 18 – Kommuneøkonomi og statsbudsjettet",
+    slug: "dagsnytt-18-kommuneokonomi",
+    type: "debate",
+    source: "NRK",
+    date: "2025-01-15",
+    excerpt: "Håvard Moe deltok i Dagsnytt 18 om kommuneøkonomi og statsbudsjettet.",
+    keyPoints: [
+      "Kommuneøkonomi og statsbudsjettet",
+      "Deltaker: Håvard Moe"
+    ],
+    featured: false,
+    tags: ["nrk", "debatt", "kommuneøkonomi"]
   }
 ];
 
