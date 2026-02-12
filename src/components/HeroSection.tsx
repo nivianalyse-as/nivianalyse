@@ -73,7 +73,7 @@ const HeroSection = () => {
               <div className="flex flex-col gap-4 md:flex-row md:gap-4 animate-fade-in-delay-2 mt-8 md:mt-0">
                 <Button 
                   size="lg" 
-                  className="w-full sm:w-auto bg-accent hover:bg-accent/90 text-accent-foreground font-semibold shadow-lg shadow-accent/20 px-7 py-3 h-auto text-[15px] rounded-xl transition-all duration-200"
+                  className="w-full md:w-auto bg-accent hover:bg-accent/95 text-accent-foreground font-medium shadow-md hover:shadow-lg px-8 py-4 h-auto text-[15px] rounded-xl transition-all duration-200"
                   onClick={() => scrollToSection("#kontakt")}
                 >
                   Kontakt oss
@@ -81,7 +81,7 @@ const HeroSection = () => {
                 <Button 
                   variant="outline" 
                   size="lg" 
-                  className="w-full sm:w-auto border-2 border-white/50 text-white bg-white/[0.06] hover:bg-white/15 hover:border-white/70 font-medium px-7 py-3 h-auto text-[15px] rounded-xl backdrop-blur-sm transition-all duration-200"
+                  className="w-full md:w-auto border border-white/50 text-white bg-transparent hover:bg-white/10 font-medium px-8 py-4 h-auto text-[15px] rounded-xl transition-all duration-200"
                   onClick={() => scrollToSection("#fagomrader")}
                 >
                   Se våre fagområder
