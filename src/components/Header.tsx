@@ -49,7 +49,8 @@ const Header = () => {
     { name: "Startside", href: "/" },
     { name: "Våre fagområder", href: "/#fagomrader" },
     { name: "Inspirasjon", href: "/inspirasjon" },
-    { name: "Referanser", href: "/#referanser" },
+    { name: "Publikasjoner", href: "/publikasjoner" },
+    { name: "Våre oppdragsgivere", href: "/#referanser" },
     { name: "Om oss", href: "/#eksperter" },
   ];
 

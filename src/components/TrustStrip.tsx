@@ -7,7 +7,7 @@ const TrustStrip = () => {
       <div className="container-narrow py-5 md:py-6">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-[14px] md:text-[15px] text-muted-foreground tracking-[-0.01em]">
-            <span className="font-semibold text-primary">Omtalt i:</span>{" "}
+            <span className="font-semibold text-primary">NIVI i media:</span>{" "}
             <span className="text-primary/75">Kommunal Rapport</span>
             <span className="mx-2 text-primary/30">·</span>
             <span className="text-primary/75">NRK</span>
