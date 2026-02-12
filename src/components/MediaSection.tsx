@@ -8,7 +8,7 @@ const MediaSection = () => {
   const featuredMedia = getFeaturedMedia();
 
   return (
-    <section className="py-16 md:py-24 bg-secondary/15">
+    <section className="py-16 md:py-24 bg-background">
       <div className="container-narrow">
         {/* Header */}
         <div className="mb-12">

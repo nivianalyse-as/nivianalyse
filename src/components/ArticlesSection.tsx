@@ -31,7 +31,7 @@ const ArticlesSection = () => {
     .slice(0, 3);
 
   return (
-    <section id="inspirasjon" className="py-16 md:py-24 pb-16 bg-[#F7F7F5] md:bg-background">
+    <section id="inspirasjon" className="py-16 md:py-24 pb-16 bg-[#F7F7F5]">
       <div className="container-narrow">
         <div className="mb-10 md:mb-10">
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4">

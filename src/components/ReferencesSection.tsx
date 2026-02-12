@@ -23,7 +23,7 @@ const ReferencesSection = () => {
   ];
 
   return (
-    <section id="referanser" className="py-16 md:section-padding bg-alt">
+    <section id="referanser" className="py-16 md:py-24 bg-[#F7F7F5]">
       <div className="container-narrow">
         <div className="mb-10 md:mb-14">
           <SectionHeader
