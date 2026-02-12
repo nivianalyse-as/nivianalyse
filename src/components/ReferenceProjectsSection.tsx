@@ -73,7 +73,7 @@ const ReferenceProjectsSection = () => {
           />
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-y-10 md:gap-y-8 gap-x-5 lg:gap-x-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-y-10 md:gap-y-12 gap-x-5 lg:gap-x-8">
           {projects.map((project, index) => (
             <div
               key={project.kommune}

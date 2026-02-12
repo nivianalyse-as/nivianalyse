@@ -97,7 +97,7 @@ const ExpertsSection = () => {
           />
         </div>
 
-        <div className="grid sm:grid-cols-2 gap-y-8 gap-x-5 lg:gap-x-12 max-w-3xl mx-auto">
+        <div className="grid sm:grid-cols-2 gap-y-8 gap-x-5 lg:gap-x-16 max-w-4xl mx-auto">
           {experts.map((expert) => (
             <div
               key={expert.name}

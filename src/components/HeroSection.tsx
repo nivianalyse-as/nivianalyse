@@ -11,10 +11,10 @@ const HeroSection = () => {
   };
 
   return (
-    <section id="top" className="relative py-0 md:py-8 lg:py-10 bg-background">
-      <div className="md:container-narrow">
-        {/* Premium rounded frame container */}
-        <div className="relative rounded-none md:rounded-[22px] overflow-hidden aspect-[4/5] md:aspect-auto md:h-[650px] lg:min-h-[620px] flex items-center shadow-none md:shadow-[0_4px_32px_-8px_rgba(7,52,47,0.15)]">
+    <section id="top" className="relative py-0 bg-background">
+      <div>
+        {/* Premium frame container */}
+        <div className="relative rounded-none overflow-hidden aspect-[4/5] md:aspect-auto md:h-[700px] lg:min-h-[680px] flex items-center">
           {/* Desktop Background Image */}
           <img
             src={heroImage}
@@ -52,7 +52,7 @@ const HeroSection = () => {
           />
 
           {/* Content */}
-          <div className="relative z-10 px-6 md:px-14 lg:px-16 pt-24 md:pt-0 py-16 md:py-28 lg:py-28">
+          <div className="relative z-10 px-6 md:px-6 lg:px-6 pt-24 md:pt-0 py-16 md:py-32 lg:py-32 max-w-6xl mx-auto w-full">
             <div className="max-w-[85%] md:max-w-2xl">
               {/* Mobile heading - without names */}
               <h1 
@@ -63,8 +63,7 @@ const HeroSection = () => {
 
               {/* Desktop heading - with names */}
               <h1 
-                className="hidden md:block font-bold leading-[1.08] text-white mb-7 animate-fade-in tracking-tight"
-                style={{ fontSize: 'clamp(1.75rem, 5vw, 2.75rem)' }}
+                className="hidden md:block text-4xl lg:text-5xl font-bold leading-tight text-white mb-7 animate-fade-in tracking-tight"
               >
                 Håvard Moe og Geir Vinsand tilbyr spisskompetanse på kommunal utvikling og omstilling
               </h1>
