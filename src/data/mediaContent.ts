@@ -183,6 +183,30 @@ export const mediaEntries: MediaEntry[] = [
     embedUrl: "https://www.youtube.com/watch?v=dIuaRU-5zxs",
     featured: false,
     tags: ["youtube", "presentasjon", "kommuneøkonomi"]
+  },
+  {
+    id: 11,
+    title: "Kommunene – fortsettelsen av «Podkast uten portefølje»",
+    slug: "podkast-uten-portefolje-kommunene",
+    type: "podcast",
+    source: "Spotify",
+    excerpt: "Episode av Podkast uten portefølje.",
+    keyPoints: [],
+    externalUrl: "https://open.spotify.com/episode/3hvmwuNGwHMPEWKzVDiQC2?si=53273841b08e40e4&nd=1&dlsi=946c3de112c943a6",
+    featured: false,
+    tags: ["spotify", "podkast", "kommuner"]
+  },
+  {
+    id: 12,
+    title: "Norske kommuner i stabilt sideleie av «Podkast uten portefølje»",
+    slug: "podkast-uten-portefolje-stabilt-sideleie",
+    type: "podcast",
+    source: "Spotify",
+    excerpt: "Episode av Podkast uten portefølje.",
+    keyPoints: [],
+    externalUrl: "https://open.spotify.com/episode/35fe6t8Mrs395e0FWrTwW6?si=d2402c97bf794006&nd=1&dlsi=9e3b4589fe9b49fb",
+    featured: false,
+    tags: ["spotify", "podkast", "kommuner"]
   }
 ];
 
@@ -200,6 +224,6 @@ export const getMediaSources = (): string[] => {
 };
 
 export const getMediaYears = (): string[] => {
-  const years = new Set(mediaEntries.map(entry => entry.date.split("-")[0]));
+  const years = new Set(mediaEntries.filter(e => e.date).map(entry => entry.date!.split("-")[0]));
   return Array.from(years).sort((a, b) => parseInt(b) - parseInt(a));
 };
