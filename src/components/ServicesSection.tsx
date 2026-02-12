@@ -19,15 +19,15 @@ const ServicesSection = () => {
           />
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-5 max-w-4xl mx-auto">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-y-6 gap-x-5 lg:gap-5 max-w-4xl mx-auto">
           {fagomrader.map((label) => (
             <a
               key={label}
               href="#"
               onClick={(e) => e.preventDefault()}
-              className="card-premium p-5 md:p-6 flex items-center justify-center text-center rounded-lg md:rounded-2xl shadow-sm hover:shadow-md transition-all duration-200 hover:border-primary/20 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+              className="card-premium p-4 md:p-6 flex items-center justify-center text-center rounded-md md:rounded-2xl shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200 hover:border-primary/20 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
             >
-              <span className="text-primary font-medium md:font-semibold text-base md:text-lg leading-snug">
+              <span className="text-primary font-semibold text-base md:text-lg leading-snug">
                 {label}
               </span>
             </a>
