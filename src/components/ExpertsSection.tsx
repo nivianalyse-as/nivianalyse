@@ -101,7 +101,7 @@ const ExpertsSection = () => {
           {experts.map((expert) => (
             <div
               key={expert.name}
-              className="card-premium overflow-hidden"
+              className="card-premium overflow-hidden flex flex-col"
             >
               <div className="aspect-[4/5] overflow-hidden">
                 <img
@@ -110,7 +110,7 @@ const ExpertsSection = () => {
                   className="w-full h-full object-cover object-[center_15%]"
                 />
               </div>
-              <div className="p-5 md:p-7">
+              <div className="p-5 md:p-7 flex flex-col flex-1">
                 <h3 className="text-xl md:text-2xl font-bold mb-1">
                   {expert.name}
                 </h3>
@@ -129,7 +129,7 @@ const ExpertsSection = () => {
                   ))}
                 </div>
                 
-                <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+                <p className="text-muted-foreground text-sm leading-relaxed mb-4 flex-1">
                   {expert.description}
                 </p>
 
