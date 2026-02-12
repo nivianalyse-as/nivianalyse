@@ -63,7 +63,7 @@ const Publikasjoner = () => {
         <section className="section-padding bg-background">
           <div className="container-narrow">
             <h2 className="text-2xl md:text-3xl font-semibold text-primary mb-6">
-              NIVIs historie
+              NIVI rapporter
             </h2>
             <div className="card-premium p-6 md:p-8 max-w-3xl">
               <p className="text-muted-foreground leading-relaxed">
