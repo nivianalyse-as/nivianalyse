@@ -14,13 +14,13 @@ const HeroSection = () => {
     <section id="top" className="relative py-0 bg-background">
       <div>
         {/* Premium frame container */}
-        <div className="relative rounded-none overflow-hidden aspect-[4/5] md:aspect-auto md:h-[720px] flex items-center">
+        <div className="relative overflow-hidden aspect-[4/5] md:aspect-auto md:h-[720px]">
           {/* Desktop Background Image */}
           <img
             src={heroImage}
             alt=""
             aria-hidden="true"
-            className="absolute inset-0 w-full h-full object-cover object-[72%_30%] scale-[1.02] hidden md:block"
+            className="absolute inset-0 w-full h-full object-cover object-[72%_28%] hidden md:block"
           />
 
           {/* Mobile Background Image */}
@@ -52,7 +52,7 @@ const HeroSection = () => {
           />
 
           {/* Content */}
-          <div className="relative z-10 px-6 md:px-6 lg:px-6 pt-24 md:pt-0 py-16 md:py-32 lg:py-32 max-w-6xl mx-auto w-full">
+          <div className="relative z-10 px-6 md:px-6 lg:px-6 pt-24 md:pt-0 py-16 md:py-32 lg:py-32 max-w-6xl mx-auto w-full flex items-center md:h-full">
             <div className="max-w-[85%] md:max-w-2xl">
               {/* Mobile heading - without names */}
               <h1 
