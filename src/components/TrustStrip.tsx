@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 
 const TrustStrip = () => {
   return (
-    <section className="bg-background pt-14">
+    <section className="bg-background pt-14 pb-16 md:pb-0">
       <div className="container-narrow py-5 md:py-6">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-[14px] md:text-[15px] text-muted-foreground tracking-[-0.01em]">
