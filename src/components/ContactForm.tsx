@@ -196,7 +196,7 @@ const ContactForm = () => {
         />
       </div>
 
-      <div className="space-y-5">
+      <div className="space-y-4 md:space-y-5">
         {/* Name */}
         <div className="space-y-2">
           <Label htmlFor="name" className="text-[14px] font-medium text-primary">
@@ -313,7 +313,7 @@ const ContactForm = () => {
             id="message"
             value={formData.message}
             onChange={(e) => handleInputChange("message", e.target.value)}
-            className={`min-h-[140px] rounded-xl border-primary/15 focus:border-primary focus:ring-primary resize-y ${
+            className={`min-h-[120px] md:min-h-[140px] rounded-xl border-primary/15 focus:border-primary focus:ring-primary resize-y ${
               errors.message ? "border-red-500 focus:border-red-500 focus:ring-red-500" : ""
             }`}
             placeholder="Beskriv din henvendelse (minimum 20 tegn)"
