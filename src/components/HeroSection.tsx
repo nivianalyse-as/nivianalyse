@@ -13,7 +13,7 @@ const HeroSection = () => {
     <section id="top" className="relative py-4 md:py-8 lg:py-10 bg-background">
       <div className="container-narrow">
         {/* Premium rounded frame container */}
-        <div className="relative rounded-[22px] overflow-hidden h-[520px] md:h-auto md:min-h-[560px] lg:min-h-[620px] flex items-center shadow-[0_4px_32px_-8px_rgba(7,52,47,0.15)]">
+        <div className="relative rounded-[22px] overflow-hidden h-[560px] md:h-[650px] lg:min-h-[620px] flex items-center shadow-[0_4px_32px_-8px_rgba(7,52,47,0.15)]">
           {/* Background Image */}
           <img
             src={heroImage}
@@ -24,7 +24,7 @@ const HeroSection = () => {
 
           {/* Mobile overlay - gradient for readability */}
           <div 
-            className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent md:hidden"
+            className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70 md:hidden"
             aria-hidden="true"
           />
 
@@ -47,7 +47,7 @@ const HeroSection = () => {
             <div className="max-w-[560px]">
               {/* Mobile heading - without names */}
               <h1 
-                className="md:hidden font-bold leading-tight text-white animate-fade-in tracking-[-0.025em] text-3xl max-w-[90%] mx-auto"
+                className="md:hidden font-bold leading-tight text-white animate-fade-in tracking-tight text-3xl max-w-[90%] mx-auto"
               >
                 Spisskompetanse på kommunal utvikling og omstilling
               </h1>
@@ -61,7 +61,7 @@ const HeroSection = () => {
               </h1>
 
               {/* Mobile paragraph - includes names */}
-              <p className="md:hidden text-[16px] text-white leading-[1.65] max-w-[90%] mx-auto animate-fade-in-delay-1 mt-4">
+              <p className="md:hidden text-base text-white leading-relaxed max-w-[90%] mx-auto animate-fade-in-delay-1 mt-5">
                 Håvard Moe og Geir Vinsand tilbyr uavhengig rådgivning for kommuner som vil styrke økonomi, styring og tjenesteutvikling.
               </p>
 
@@ -70,7 +70,7 @@ const HeroSection = () => {
                 Uavhengig rådgivning for kommuner som vil styrke økonomi, styring og tjenesteutvikling.
               </p>
 
-              <div className="flex flex-col gap-4 md:flex-row md:gap-4 animate-fade-in-delay-2 mt-8 md:mt-0">
+              <div className="flex flex-col gap-4 md:flex-row md:gap-4 animate-fade-in-delay-2 mt-10 md:mt-0">
                 <Button 
                   size="lg" 
                   className="w-full md:w-auto bg-accent hover:bg-accent/95 text-accent-foreground font-medium shadow-md hover:shadow-lg px-8 py-4 h-auto text-[15px] rounded-xl transition-all duration-200"
@@ -81,7 +81,7 @@ const HeroSection = () => {
                 <Button 
                   variant="outline" 
                   size="lg" 
-                  className="w-full md:w-auto border border-white/40 text-white bg-transparent hover:bg-white/10 hover:border-white/70 font-medium px-8 py-4 h-auto text-[15px] rounded-xl transition-all duration-200"
+                  className="w-full md:w-auto border border-white/50 text-white bg-transparent hover:bg-white/10 hover:border-white/80 font-medium px-8 py-4 h-auto text-[15px] rounded-xl transition-all duration-200"
                   onClick={() => scrollToSection("#fagomrader")}
                 >
                   Se våre fagområder
