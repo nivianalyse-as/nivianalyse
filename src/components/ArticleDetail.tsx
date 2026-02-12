@@ -1,15 +1,21 @@
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, Navigate } from "react-router-dom";
 import { ArrowLeft, Calendar, User, Tag } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { articles, mediaMentions, debattEntries } from "@/data/inspirasjonContent";
-import { ContentItem } from "@/types/content";
+import { articles } from "@/data/inspirasjonContent";
+import { mediaEntries } from "@/data/mediaContent";
+import { ArticleContent } from "@/types/content";
 
 const ArticleDetail = () => {
   const { slug } = useParams<{ slug: string }>();
   
-  // Find the content item
-  const allItems: ContentItem[] = [...articles, ...mediaMentions, ...debattEntries];
-  const item = allItems.find((i) => i.slug === slug);
+  // Check if this slug belongs to a media entry — redirect to /i-media/:slug
+  const mediaMatch = mediaEntries.find((e) => e.slug === slug);
+  if (mediaMatch) {
+    return <Navigate to={`/i-media/${slug}`} replace />;
+  }
+
+  // Find the article
+  const item = articles.find((i) => i.slug === slug);
 
   if (!item) {
     return (
@@ -116,128 +122,6 @@ const ArticleDetail = () => {
                 Kontakt oss
               </Button>
             </div>
-          </div>
-        </div>
-      </article>
-    );
-  }
-
-  // Media mention
-  if (item.type === "media") {
-    return (
-      <article className="bg-background">
-        <div className="bg-primary text-primary-foreground py-16 md:py-24">
-          <div className="container-content">
-            <Link 
-              to="/inspirasjon" 
-              className="inline-flex items-center gap-2 text-white/80 hover:text-white mb-6 transition-colors text-sm"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Tilbake til Inspirasjon
-            </Link>
-            
-            <div className="flex flex-wrap items-center gap-3 mb-4">
-              <span className="px-3 py-1 bg-white/20 rounded-full text-xs font-medium">
-                {item.outlet}
-              </span>
-              <span className="flex items-center gap-1.5 text-sm text-white/80">
-                <Calendar className="w-4 h-4" />
-                {item.date}
-              </span>
-            </div>
-            
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight text-white">
-              {item.title}
-            </h1>
-          </div>
-        </div>
-
-        <div className="section-padding">
-          <div className="container-content">
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-8">
-              {item.summary}
-            </p>
-            
-            <div className="flex flex-wrap gap-4">
-              {item.sourceUrl && (
-                <Button variant="outline" size="lg" asChild>
-                  <a href={item.sourceUrl} target="_blank" rel="noopener noreferrer">
-                    Les omtalen
-                  </a>
-                </Button>
-              )}
-            {item.pdfUrl && (
-              <Button variant="outline" size="lg" asChild>
-                <a href={item.pdfUrl} download>
-                  Last ned PDF
-                </a>
-              </Button>
-            )}
-              {!item.sourceUrl && !item.pdfUrl && (
-                <p className="text-muted-foreground text-sm italic">
-                  Lenke til artikkelen kommer snart.
-                </p>
-              )}
-            </div>
-          </div>
-        </div>
-      </article>
-    );
-  }
-
-  // Debatt entry
-  if (item.type === "debatt") {
-    return (
-      <article className="bg-background">
-        <div className="bg-primary text-primary-foreground py-16 md:py-24">
-          <div className="container-content">
-            <Link 
-              to="/inspirasjon" 
-              className="inline-flex items-center gap-2 text-white/80 hover:text-white mb-6 transition-colors text-sm"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Tilbake til Inspirasjon
-            </Link>
-            
-            <div className="flex flex-wrap items-center gap-3 mb-4">
-              <span className="px-3 py-1 bg-white/20 rounded-full text-xs font-medium">
-                {item.channel}
-              </span>
-              <span className="flex items-center gap-1.5 text-sm text-white/80">
-                <Calendar className="w-4 h-4" />
-                {item.date}
-              </span>
-            </div>
-            
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight text-white mb-4">
-              {item.programName}
-            </h1>
-            
-            <p className="text-lg md:text-xl text-white/90">
-              Tema: {item.topic}
-            </p>
-            
-            {item.participant && (
-              <p className="text-white/80 mt-4">
-                Med: {item.participant}
-              </p>
-            )}
-          </div>
-        </div>
-
-        <div className="section-padding">
-          <div className="container-content">
-            {item.videoUrl ? (
-              <Button variant="cta" size="lg" asChild>
-                <a href={item.videoUrl} target="_blank" rel="noopener noreferrer">
-                  Se sendingen
-                </a>
-              </Button>
-            ) : (
-              <p className="text-muted-foreground text-sm italic">
-                Lenke til sendingen kommer snart.
-              </p>
-            )}
           </div>
         </div>
       </article>

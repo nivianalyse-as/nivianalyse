@@ -1,25 +1,34 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Calendar, Newspaper, Radio } from "lucide-react";
+import { ArrowRight, Calendar, Newspaper } from "lucide-react";
 import SectionHeader from "@/components/SectionHeader";
-import { articles, mediaMentions, debattEntries } from "@/data/inspirasjonContent";
-import { ContentItem } from "@/types/content";
+import { articles } from "@/data/inspirasjonContent";
+import { mediaEntries } from "@/data/mediaContent";
+import { ArticleContent } from "@/types/content";
+import { MediaEntry } from "@/types/media";
+
+type MixedItem = 
+  | { kind: "article"; data: ArticleContent }
+  | { kind: "media"; data: MediaEntry };
 
 const ArticlesSection = () => {
-  // Get latest 3 items from all content
-  const allItems: ContentItem[] = [...articles, ...mediaMentions, ...debattEntries];
+  // Combine articles and media, sort by date, take latest 3
+  const articleItems: MixedItem[] = articles.map(a => ({ kind: "article", data: a }));
+  const mediaItems: MixedItem[] = mediaEntries
+    .filter(e => e.date)
+    .map(m => ({ kind: "media", data: m }));
+  
+  const allItems = [...articleItems, ...mediaItems];
   const latestItems = allItems
     .sort((a, b) => {
-      const dateA = new Date(a.date.split(".").reverse().join("-"));
-      const dateB = new Date(b.date.split(".").reverse().join("-"));
-      return dateB.getTime() - dateA.getTime();
+      const getDate = (item: MixedItem) => {
+        if (item.kind === "article") {
+          return new Date(item.data.date.split(".").reverse().join("-"));
+        }
+        return new Date(item.data.date!);
+      };
+      return getDate(b).getTime() - getDate(a).getTime();
     })
     .slice(0, 3);
-
-  const getIcon = (item: ContentItem) => {
-    if (item.type === "media") return Newspaper;
-    if (item.type === "debatt") return Radio;
-    return null;
-  };
 
   return (
     <section id="inspirasjon" className="section-padding bg-background">
@@ -42,31 +51,57 @@ const ArticlesSection = () => {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
           {latestItems.map((item) => {
-            const Icon = getIcon(item);
-            
+            if (item.kind === "media") {
+              const m = item.data;
+              return (
+                <Link
+                  key={`m-${m.id}`}
+                  to={`/i-media/${m.slug}`}
+                  className="group card-premium p-5 md:p-6 block"
+                >
+                  <div className="flex items-center gap-3 mb-4">
+                    <span className="chip chip-default text-xs">
+                      <Newspaper className="w-3 h-3 mr-1" />
+                      {m.source}
+                    </span>
+                    {m.date && (
+                      <span className="flex items-center gap-1.5 text-xs text-muted-foreground">
+                        <Calendar className="w-3 h-3" />
+                        {new Date(m.date).toLocaleDateString("nb-NO")}
+                      </span>
+                    )}
+                  </div>
+                  <h3 className="text-base md:text-lg font-semibold mb-2 group-hover:text-accent transition-colors line-clamp-2">
+                    {m.title}
+                  </h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed line-clamp-2">
+                    {m.excerpt}
+                  </p>
+                </Link>
+              );
+            }
+
+            const a = item.data;
             return (
               <Link
-                key={item.id}
-                to={`/inspirasjon/${item.slug}`}
+                key={`a-${a.id}`}
+                to={`/inspirasjon/${a.slug}`}
                 className="group card-premium p-5 md:p-6 block"
               >
                 <div className="flex items-center gap-3 mb-4">
                   <span className="chip chip-default text-xs">
-                    {Icon && <Icon className="w-3 h-3 mr-1" />}
-                    {item.category}
+                    {a.category}
                   </span>
                   <span className="flex items-center gap-1.5 text-xs text-muted-foreground">
                     <Calendar className="w-3 h-3" />
-                    {item.date}
+                    {a.date}
                   </span>
                 </div>
                 <h3 className="text-base md:text-lg font-semibold mb-2 group-hover:text-accent transition-colors line-clamp-2">
-                  {item.type === "debatt" ? item.programName : item.title}
+                  {a.title}
                 </h3>
                 <p className="text-muted-foreground text-sm leading-relaxed line-clamp-2">
-                  {item.type === "article" && item.excerpt}
-                  {item.type === "media" && item.summary}
-                  {item.type === "debatt" && `${item.topic} – ${item.channel}`}
+                  {a.excerpt}
                 </p>
               </Link>
             );

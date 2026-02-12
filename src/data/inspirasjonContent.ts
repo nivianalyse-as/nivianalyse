@@ -1,4 +1,4 @@
-import { ArticleContent, MediaMention, DebattEntry, ContentItem } from "@/types/content";
+import { ArticleContent } from "@/types/content";
 
 export const articles: ArticleContent[] = [
   {
@@ -115,40 +115,4 @@ export const articles: ArticleContent[] = [
     relatedTopics: ["Organisasjon", "Kommuneøkonomi"],
     authors: ["Håvard Moe"]
   }
-];
-
-export const mediaMentions: MediaMention[] = [
-  {
-    id: "m1",
-    type: "media",
-    outlet: "Kommunal Rapport",
-    title: "De to største brølapene slår seg sammen",
-    date: "04.02.2026",
-    summary: "NIVI Analyse ved Geir Vinsand og Håvard Moe kommenterer sammenslåingsprosessen mellom to store kommuner og peker på viktige lærdommer for fremtidige strukturendringer.",
-    category: "I media",
-    slug: "kommunal-rapport-brolaper",
-    sourceUrl: undefined,
-    pdfUrl: "/docs/de-to-storste-brolapene.pdf"
-  }
-];
-
-export const debattEntries: DebattEntry[] = [
-  {
-    id: "d1",
-    type: "debatt",
-    programName: "Dagsnytt 18",
-    channel: "NRK",
-    date: "15. jan 2025",
-    topic: "Kommuneøkonomi og statsbudsjettet",
-    category: "Debatt/NRK",
-    slug: "dagsnytt-18-kommuneokonomi",
-    participant: "Håvard Moe",
-    videoUrl: undefined
-  }
-];
-
-export const allContent: ContentItem[] = [
-  ...articles,
-  ...mediaMentions,
-  ...debattEntries
 ];
