@@ -10,6 +10,16 @@ const ReferencesSection = () => {
     "Drammen kommune",
     "KS",
     "Kommunaldepartementet",
+    "Kristiansand kommune",
+    "Tromsø kommune",
+    "Bodø kommune",
+    "Fredrikstad kommune",
+    "Sarpsborg kommune",
+    "Bærum kommune",
+    "Asker kommune",
+    "Sandefjord kommune",
+    "Nordland fylkeskommune",
+    "Vestland fylkeskommune",
   ];
 
   return (
@@ -17,21 +27,19 @@ const ReferencesSection = () => {
       <div className="container-narrow">
         <div className="mb-10 md:mb-14">
           <SectionHeader
-            title="Referanser"
+            title="Våre oppdragsgivere"
             subtitle="Vi har samarbeidet med kommuner, fylkeskommuner og departementer over hele Norge."
           />
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 max-w-4xl mx-auto">
+        <div className="flex flex-wrap justify-center gap-2.5 max-w-4xl mx-auto">
           {references.map((ref, i) => (
-            <div
+            <span
               key={i}
-              className="h-20 md:h-24 card-premium flex items-center justify-center px-4"
+              className="inline-block px-4 py-2 rounded-full bg-secondary/40 text-primary/80 text-sm font-medium select-none"
             >
-              <span className="text-primary font-medium text-sm md:text-base text-center">
-                {ref}
-              </span>
-            </div>
+              {ref}
+            </span>
           ))}
         </div>
       </div>

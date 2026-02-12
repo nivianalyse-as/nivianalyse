@@ -60,41 +60,6 @@ const projects: ReferenceProject[] = [
       "Tiltaks- og gevinstrealiseringsplaner",
     ],
   },
-  {
-    kommune: "Lillehammer kommune",
-    periode: "2020–2022",
-    type: "Omstillingsstøtte",
-    kort: "Balanse '24. Fra merforbruk til solid netto driftsresultat.",
-    leveranser: [
-      "Helhetlig utviklingsløp (drift/investering, fag/økonomi)",
-      "Forankring og politisk arbeid",
-      "Styrings- og oppfølgingsstruktur",
-    ],
-    resultat: "Netto driftsresultat forbedret til 2,2 % (2022)",
-  },
-  {
-    kommune: "Karasjok kommune",
-    periode: "2018–2022",
-    type: "Omstillingsstøtte",
-    kort: "Omfattende omstilling knyttet til økonomi, styring, ledelse og tillit.",
-    leveranser: [
-      "Oppbygging av helhetlig omstillingsprogram",
-      "Prosjektkoordinering og myndighetsrapportering",
-      "Tiltaks- og styringspakke over flere år",
-    ],
-    resultat: "Snudd resultat fra −12 MNOK (2018) til +18 MNOK (budsjett 2022)",
-  },
-  {
-    kommune: "Longyearbyen lokalstyre",
-    periode: "2013–2024",
-    type: "Utviklingsstøtte",
-    kort: "Stabil forvaltningspraksis i en organisasjon med høy turnover.",
-    leveranser: [
-      "Evalueringer og kommunekompassevalueringer",
-      "Utvikling av forvaltningspraksis og lederutvikling",
-      "Administrativ organisering og strategisk utviklingspartner",
-    ],
-  },
 ];
 
 const ReferenceProjectsSection = () => {

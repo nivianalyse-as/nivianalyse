@@ -1,31 +1,11 @@
-import { BarChart3, Building2, Users, Scale } from "lucide-react";
 import SectionHeader from "@/components/SectionHeader";
 
-const services = [
-  {
-    icon: BarChart3,
-    title: "Strategisk Analyse",
-    description:
-      "Dybdeanalyser som gir kommuner kunnskapsgrunnlag for gode beslutninger.",
-  },
-  {
-    icon: Building2,
-    title: "Kommuneøkonomi",
-    description:
-      "Økonomiske utredninger for bærekraftig drift og langsiktig planlegging.",
-  },
-  {
-    icon: Users,
-    title: "Organisasjonsutvikling",
-    description:
-      "Rådgivning for effektivisering som styrker tjenesteleveransen.",
-  },
-  {
-    icon: Scale,
-    title: "Politisk Rådgivning",
-    description:
-      "Uavhengig rådgivning for godt forankrede politiske prosesser.",
-  },
+const fagomrader = [
+  "Kommuneøkonomi og omstilling",
+  "Organisasjonsutvikling",
+  "Interkommunalt samarbeid og strukturreformer",
+  "Beredskap og samfunnssikkerhet",
+  "Foredrag og debatt",
 ];
 
 const ServicesSection = () => {
@@ -39,23 +19,18 @@ const ServicesSection = () => {
           />
         </div>
 
-        <div className="grid sm:grid-cols-2 gap-5 lg:gap-6 max-w-4xl mx-auto">
-          {services.map((service, index) => (
-            <div
-              key={service.title}
-              className="card-premium p-6 md:p-8"
-              style={{ animationDelay: `${index * 0.1}s` }}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-5 max-w-4xl mx-auto">
+          {fagomrader.map((label) => (
+            <a
+              key={label}
+              href="#"
+              onClick={(e) => e.preventDefault()}
+              className="card-premium p-5 md:p-6 flex items-center justify-center text-center rounded-2xl transition-all duration-200 hover:shadow-md hover:border-primary/20 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
             >
-              <div className="w-12 h-12 bg-secondary/40 rounded-xl flex items-center justify-center mb-5">
-                <service.icon className="w-6 h-6 text-primary" />
-              </div>
-              <h3 className="text-lg md:text-xl font-semibold mb-2">
-                {service.title}
-              </h3>
-              <p className="text-muted-foreground text-sm md:text-base leading-relaxed">
-                {service.description}
-              </p>
-            </div>
+              <span className="text-primary font-semibold text-base md:text-lg leading-snug">
+                {label}
+              </span>
+            </a>
           ))}
         </div>
       </div>

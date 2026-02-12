@@ -42,12 +42,11 @@ const HeroSection = () => {
                 className="font-bold leading-[1.08] text-white mb-5 md:mb-7 animate-fade-in tracking-[-0.025em]"
                 style={{ fontSize: 'clamp(1.75rem, 5vw, 2.75rem)' }}
               >
-                Erfaringen bak NIVI Analyse.{" "}
-                <span className="block mt-2">Nå direkte til deg.</span>
+                Håvard Moe og Geir Vinsand tilbyr spisskompetanse på kommunal utvikling og omstilling
               </h1>
 
               <p className="text-[16px] md:text-[18px] text-white mb-9 md:mb-11 leading-[1.65] max-w-[480px] animate-fade-in-delay-1">
-                Håvard Moe og Geir Vinsand tilbyr spisskompetanse på kommunal forvaltning og rådgivning – direkte til din kommune.
+                Uavhengig rådgivning for kommuner som vil styrke økonomi, styring og tjenesteutvikling.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-3.5 sm:gap-4 animate-fade-in-delay-2">
