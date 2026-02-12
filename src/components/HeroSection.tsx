@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-consultants.jpg";
+import heroMobileImage from "@/assets/hero-mobile.png";
 
 const HeroSection = () => {
   const scrollToSection = (href: string) => {
@@ -14,17 +15,25 @@ const HeroSection = () => {
       <div className="container-narrow">
         {/* Premium rounded frame container */}
         <div className="relative rounded-[22px] overflow-hidden h-[560px] md:h-[650px] lg:min-h-[620px] flex items-center shadow-[0_4px_32px_-8px_rgba(7,52,47,0.15)]">
-          {/* Background Image */}
+          {/* Desktop Background Image */}
           <img
             src={heroImage}
             alt=""
             aria-hidden="true"
-            className="absolute inset-0 w-full h-full object-cover object-[75%_center] md:object-center scale-[1.02]"
+            className="absolute inset-0 w-full h-full object-cover object-center scale-[1.02] hidden md:block"
+          />
+
+          {/* Mobile Background Image */}
+          <img
+            src={heroMobileImage}
+            alt=""
+            aria-hidden="true"
+            className="absolute inset-0 w-full h-full object-cover object-top md:hidden"
           />
 
           {/* Mobile overlay - gradient for readability */}
           <div 
-            className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/35 to-transparent md:hidden"
+            className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/30 to-transparent md:hidden"
             aria-hidden="true"
           />
 
@@ -70,7 +79,7 @@ const HeroSection = () => {
                 Uavhengig rådgivning for kommuner som vil styrke økonomi, styring og tjenesteutvikling.
               </p>
 
-              <div className="flex flex-col gap-4 md:flex-row md:gap-4 animate-fade-in-delay-2 mt-12 md:mt-0">
+              <div className="flex flex-col gap-4 md:flex-row md:gap-4 animate-fade-in-delay-2 mt-10 md:mt-0">
                 <Button 
                   size="lg" 
                   className="w-full md:w-auto bg-accent hover:bg-accent/95 text-accent-foreground font-medium shadow-md hover:shadow-lg px-8 py-4 h-auto text-[15px] rounded-xl transition-all duration-200"
