@@ -24,7 +24,7 @@ const HeroSection = () => {
 
           {/* Mobile overlay - gradient for readability */}
           <div 
-            className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70 md:hidden"
+            className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/35 to-transparent md:hidden"
             aria-hidden="true"
           />
 
@@ -61,7 +61,7 @@ const HeroSection = () => {
               </h1>
 
               {/* Mobile paragraph - includes names */}
-              <p className="md:hidden text-base text-white leading-relaxed max-w-[90%] mx-auto animate-fade-in-delay-1 mt-5">
+              <p className="md:hidden text-base text-white leading-relaxed max-w-[90%] mx-auto animate-fade-in-delay-1 mt-4">
                 Håvard Moe og Geir Vinsand tilbyr uavhengig rådgivning for kommuner som vil styrke økonomi, styring og tjenesteutvikling.
               </p>
 
@@ -70,7 +70,7 @@ const HeroSection = () => {
                 Uavhengig rådgivning for kommuner som vil styrke økonomi, styring og tjenesteutvikling.
               </p>
 
-              <div className="flex flex-col gap-4 md:flex-row md:gap-4 animate-fade-in-delay-2 mt-10 md:mt-0">
+              <div className="flex flex-col gap-4 md:flex-row md:gap-4 animate-fade-in-delay-2 mt-12 md:mt-0">
                 <Button 
                   size="lg" 
                   className="w-full md:w-auto bg-accent hover:bg-accent/95 text-accent-foreground font-medium shadow-md hover:shadow-lg px-8 py-4 h-auto text-[15px] rounded-xl transition-all duration-200"
