@@ -14,13 +14,13 @@ const HeroSection = () => {
     <section id="top" className="relative py-0 bg-background">
       <div>
         {/* Premium frame container */}
-        <div className="relative rounded-none overflow-hidden aspect-[4/5] md:aspect-auto md:h-[700px] lg:min-h-[680px] flex items-center">
+        <div className="relative rounded-none overflow-hidden aspect-[4/5] md:aspect-auto md:h-[720px] flex items-center">
           {/* Desktop Background Image */}
           <img
             src={heroImage}
             alt=""
             aria-hidden="true"
-            className="absolute inset-0 w-full h-full object-cover object-[72%_center] scale-[1.02] hidden md:block"
+            className="absolute inset-0 w-full h-full object-cover object-[72%_30%] scale-[1.02] hidden md:block"
           />
 
           {/* Mobile Background Image */}
