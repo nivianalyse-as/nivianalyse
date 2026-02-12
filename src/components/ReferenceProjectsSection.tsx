@@ -73,11 +73,11 @@ const ReferenceProjectsSection = () => {
           />
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-y-6 gap-x-5 lg:gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-y-8 md:gap-y-6 gap-x-5 lg:gap-6">
           {projects.map((project, index) => (
             <div
               key={project.kommune}
-              className={`card-premium p-5 md:p-6 flex flex-col shadow-sm rounded-lg md:rounded-xl ${index >= 2 ? 'hidden md:flex' : ''}`}
+              className={`card-premium p-5 md:p-6 flex flex-col shadow-sm rounded-md md:rounded-xl ${index >= 2 ? 'hidden md:flex' : ''}`}
             >
               {/* Header */}
               <div className="mb-3">

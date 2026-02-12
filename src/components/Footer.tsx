@@ -11,9 +11,9 @@ const Footer = () => {
   ];
 
   return (
-    <footer id="kontakt" className="bg-[#07342F] w-full">
+    <footer id="kontakt" className="bg-[#07342F] w-full border-t border-white/10">
       {/* Main Footer Content */}
-      <div className="max-w-[1200px] mx-auto px-6 pt-16 md:pt-20 pb-12 md:pb-14">
+      <div className="max-w-[1200px] mx-auto px-6 pt-16 md:pt-20 pb-12 md:pb-14 space-y-4 md:space-y-0">
         <div className="grid grid-cols-1 md:grid-cols-[1.5fr_1fr_1fr] gap-10 md:gap-12">
           
           {/* Column 1: Brand */}
