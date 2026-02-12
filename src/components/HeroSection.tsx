@@ -79,7 +79,7 @@ const HeroSection = () => {
                 Uavhengig rådgivning for kommuner som vil styrke økonomi, styring og tjenesteutvikling.
               </p>
 
-              <div className="flex flex-col gap-4 md:flex-row md:gap-4 animate-fade-in-delay-2 mt-10 md:mt-0">
+              <div className="flex flex-col gap-4 md:flex-row md:gap-4 animate-fade-in-delay-2 mt-6 md:mt-0">
                 <Button 
                   size="lg" 
                   className="w-full md:w-auto bg-accent hover:bg-accent/95 text-accent-foreground font-medium shadow-md hover:shadow-lg px-8 py-4 h-auto text-[15px] rounded-xl transition-all duration-200"
@@ -90,7 +90,7 @@ const HeroSection = () => {
                 <Button 
                   variant="outline" 
                   size="lg" 
-                  className="w-full md:w-auto border border-white/60 text-white bg-transparent hover:bg-white/15 hover:border-white font-medium px-8 py-4 h-auto text-[15px] rounded-xl transition-all duration-200"
+                  className="w-full md:w-auto border border-white/60 text-white bg-transparent hover:bg-white/15 hover:border-white font-medium px-6 py-3 md:px-8 md:py-4 h-auto text-[15px] rounded-xl transition-all duration-200"
                   onClick={() => scrollToSection("#fagomrader")}
                 >
                   Se våre fagområder
