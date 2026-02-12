@@ -43,17 +43,17 @@ const HeroSection = () => {
             style={{
               background: `linear-gradient(
                 145deg,
-                rgba(7, 52, 47, 0.38) 0%,
-                rgba(7, 52, 47, 0.25) 40%,
-                rgba(7, 52, 47, 0.32) 100%
+                rgba(7, 52, 47, 0.32) 0%,
+                rgba(7, 52, 47, 0.20) 40%,
+                rgba(7, 52, 47, 0.28) 100%
               )`
             }}
             aria-hidden="true"
           />
 
           {/* Content */}
-          <div className="relative z-10 px-6 md:px-14 lg:px-16 pt-24 md:pt-0 py-16 md:py-18 lg:py-20">
-            <div className="max-w-[85%] md:max-w-[560px]">
+          <div className="relative z-10 px-6 md:px-14 lg:px-16 pt-24 md:pt-0 py-16 md:py-28 lg:py-28">
+            <div className="max-w-[85%] md:max-w-2xl">
               {/* Mobile heading - without names */}
               <h1 
                 className="md:hidden font-bold leading-tight text-white animate-fade-in tracking-tight text-3xl"
@@ -63,7 +63,7 @@ const HeroSection = () => {
 
               {/* Desktop heading - with names */}
               <h1 
-                className="hidden md:block font-bold leading-[1.08] text-white mb-7 animate-fade-in tracking-[-0.025em]"
+                className="hidden md:block font-bold leading-[1.08] text-white mb-7 animate-fade-in tracking-tight"
                 style={{ fontSize: 'clamp(1.75rem, 5vw, 2.75rem)' }}
               >
                 Håvard Moe og Geir Vinsand tilbyr spisskompetanse på kommunal utvikling og omstilling
@@ -79,7 +79,7 @@ const HeroSection = () => {
                 Uavhengig rådgivning for kommuner som vil styrke økonomi, styring og tjenesteutvikling.
               </p>
 
-              <div className="flex flex-col gap-4 md:flex-row md:gap-4 animate-fade-in-delay-2 mt-6 md:mt-0">
+              <div className="flex flex-col gap-4 md:flex-row md:gap-6 animate-fade-in-delay-2 mt-6 md:mt-0">
                 <Button 
                   size="lg" 
                   className="w-full md:w-auto bg-accent hover:bg-accent/95 text-accent-foreground font-medium shadow-md hover:shadow-lg px-8 py-4 h-auto text-[15px] rounded-xl transition-all duration-200"

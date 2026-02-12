@@ -64,7 +64,7 @@ const projects: ReferenceProject[] = [
 
 const ReferenceProjectsSection = () => {
   return (
-    <section id="referanseoppdrag" className="py-16 md:section-padding bg-background">
+    <section id="referanseoppdrag" className="py-16 md:py-24 bg-background">
       <div className="container-narrow">
         <div className="mb-10 md:mb-14">
           <SectionHeader
@@ -73,11 +73,11 @@ const ReferenceProjectsSection = () => {
           />
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-y-10 md:gap-y-6 gap-x-5 lg:gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-y-10 md:gap-y-8 gap-x-5 lg:gap-x-8">
           {projects.map((project, index) => (
             <div
               key={project.kommune}
-              className={`card-premium p-5 md:p-6 flex flex-col shadow-sm rounded-md md:rounded-xl ${index >= 2 ? 'hidden md:flex' : ''}`}
+              className={`card-premium p-5 md:p-8 flex flex-col shadow-sm rounded-md md:rounded-lg ${index >= 2 ? 'hidden md:flex' : ''}`}
             >
               {/* Header */}
               <div className="mb-3">
@@ -107,7 +107,7 @@ const ReferenceProjectsSection = () => {
                 <p className="text-xs font-semibold text-primary/70 uppercase tracking-wide mb-2">
                   Leveranser
                 </p>
-                <ul className="space-y-1 mb-4">
+                <ul className="space-y-1 md:space-y-2 mb-4">
                   {project.leveranser.map((item, i) => (
                     <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground leading-relaxed">
                       <span className="w-1 h-1 rounded-full bg-accent mt-2 flex-shrink-0" />

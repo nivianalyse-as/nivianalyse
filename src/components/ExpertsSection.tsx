@@ -88,7 +88,7 @@ const experts: Expert[] = [
 
 const ExpertsSection = () => {
   return (
-    <section id="eksperter" className="py-16 md:section-padding" style={{ backgroundColor: 'hsl(150 10% 97%)' }}>
+    <section id="eksperter" className="py-16 md:py-24" style={{ backgroundColor: 'hsl(150 10% 97%)' }}>
       <div className="container-narrow">
         <div className="mb-12 md:mb-16">
           <SectionHeader
@@ -97,20 +97,20 @@ const ExpertsSection = () => {
           />
         </div>
 
-        <div className="grid sm:grid-cols-2 gap-y-8 gap-x-5 lg:gap-6 max-w-3xl mx-auto">
+        <div className="grid sm:grid-cols-2 gap-y-8 gap-x-5 lg:gap-x-12 max-w-3xl mx-auto">
           {experts.map((expert) => (
             <div
               key={expert.name}
               className="card-premium overflow-hidden flex flex-col shadow-sm hover:shadow-md transition-all duration-200"
             >
-              <div className="aspect-[4/5] overflow-hidden">
+              <div className="aspect-[4/5] md:aspect-[3/4] overflow-hidden">
                 <img
                   src={expert.image}
                   alt={`${expert.name}, ${expert.title}`}
                   className="w-full h-full object-cover object-[center_15%]"
                 />
               </div>
-              <div className="p-6 md:p-7 flex flex-col flex-1">
+              <div className="p-6 md:p-8 flex flex-col flex-1">
                 <h3 className="text-xl md:text-2xl font-bold mb-1">
                   {expert.name}
                 </h3>
@@ -129,7 +129,7 @@ const ExpertsSection = () => {
                   ))}
                 </div>
                 
-                <p className="text-muted-foreground text-sm leading-relaxed mb-4 flex-1 line-clamp-5 md:line-clamp-none">
+                <p className="text-muted-foreground text-sm leading-relaxed mb-4 flex-1 line-clamp-5">
                   {expert.description}
                 </p>
 
