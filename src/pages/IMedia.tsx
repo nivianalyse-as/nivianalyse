@@ -44,7 +44,7 @@ const IMedia = () => {
       const matchesSource = sourceFilter === "all" || entry.source === sourceFilter;
 
       // Year filter
-      const entryYear = entry.date.split("-")[0];
+      const entryYear = entry.date?.split("-")[0];
       const matchesYear = yearFilter === "all" || entryYear === yearFilter;
 
       return matchesSearch && matchesType && matchesSource && matchesYear;

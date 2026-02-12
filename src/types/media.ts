@@ -1,6 +1,6 @@
 // Media content types for I media section
 
-export type MediaType = "article" | "video" | "debate" | "other";
+export type MediaType = "article" | "video" | "debate" | "podcast" | "other";
 
 export interface MediaEntry {
   id: number;
@@ -8,7 +8,7 @@ export interface MediaEntry {
   slug: string;
   type: MediaType;
   source: string;
-  date: string; // ISO format
+  date?: string; // ISO format, optional for podcasts
   excerpt: string;
   keyPoints: string[];
   externalUrl?: string;
@@ -22,5 +22,6 @@ export const mediaTypeLabels: Record<MediaType, string> = {
   article: "Artikkel",
   video: "TV & video",
   debate: "Debatt",
+  podcast: "Podkast",
   other: "Annet"
 };
