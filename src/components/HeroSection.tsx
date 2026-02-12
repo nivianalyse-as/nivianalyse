@@ -10,7 +10,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section id="top" className="relative py-5 md:py-8 lg:py-10 bg-background">
+    <section id="top" className="relative py-4 md:py-8 lg:py-10 bg-background">
       <div className="container-narrow">
         {/* Premium rounded frame container */}
         <div className="relative rounded-[22px] overflow-hidden min-h-[480px] md:min-h-[560px] lg:min-h-[620px] flex items-center shadow-[0_4px_32px_-8px_rgba(7,52,47,0.15)]">
@@ -21,9 +21,15 @@ const HeroSection = () => {
             aria-hidden="true"
           />
 
-          {/* Premium Overlay - Lighter, more elegant gradient */}
+          {/* Mobile overlay - darker for readability */}
           <div 
-            className="absolute inset-0"
+            className="absolute inset-0 bg-black/50 md:hidden"
+            aria-hidden="true"
+          />
+
+          {/* Desktop overlay - original lighter gradient */}
+          <div 
+            className="absolute inset-0 hidden md:block"
             style={{
               background: `linear-gradient(
                 145deg,
@@ -36,20 +42,34 @@ const HeroSection = () => {
           />
 
           {/* Content */}
-          <div className="relative z-10 px-7 sm:px-10 md:px-14 lg:px-16 py-14 md:py-18 lg:py-20">
+          <div className="relative z-10 px-7 sm:px-10 md:px-14 lg:px-16 py-16 md:py-18 lg:py-20">
             <div className="max-w-[560px]">
+              {/* Mobile heading - without names */}
               <h1 
-                className="font-bold leading-[1.08] text-white mb-5 md:mb-7 animate-fade-in tracking-[-0.025em]"
+                className="md:hidden font-bold leading-tight text-white mb-5 animate-fade-in tracking-[-0.025em] text-3xl max-w-[90%] mx-auto"
+              >
+                Spisskompetanse på kommunal utvikling og omstilling
+              </h1>
+
+              {/* Desktop heading - with names */}
+              <h1 
+                className="hidden md:block font-bold leading-[1.08] text-white mb-7 animate-fade-in tracking-[-0.025em]"
                 style={{ fontSize: 'clamp(1.75rem, 5vw, 2.75rem)' }}
               >
                 Håvard Moe og Geir Vinsand tilbyr spisskompetanse på kommunal utvikling og omstilling
               </h1>
 
-              <p className="text-[16px] md:text-[18px] text-white mb-9 md:mb-11 leading-[1.65] max-w-[480px] animate-fade-in-delay-1">
+              {/* Mobile paragraph - includes names */}
+              <p className="md:hidden text-[16px] text-white mb-9 leading-[1.65] max-w-[90%] mx-auto animate-fade-in-delay-1">
+                Håvard Moe og Geir Vinsand tilbyr uavhengig rådgivning for kommuner som vil styrke økonomi, styring og tjenesteutvikling.
+              </p>
+
+              {/* Desktop paragraph */}
+              <p className="hidden md:block text-[18px] text-white mb-11 leading-[1.65] max-w-[480px] animate-fade-in-delay-1">
                 Uavhengig rådgivning for kommuner som vil styrke økonomi, styring og tjenesteutvikling.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-3.5 sm:gap-4 animate-fade-in-delay-2">
+              <div className="flex flex-col gap-4 sm:flex-row sm:gap-4 animate-fade-in-delay-2">
                 <Button 
                   size="lg" 
                   className="w-full sm:w-auto bg-accent hover:bg-accent/90 text-accent-foreground font-semibold shadow-lg shadow-accent/20 px-7 py-3 h-auto text-[15px] rounded-xl transition-all duration-200"
