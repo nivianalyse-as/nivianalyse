@@ -75,7 +75,7 @@ const ContactSection = () => {
           </div>
 
           {/* Right column - Form */}
-          <div>
+          <div className="mt-10 lg:mt-0">
             <ContactForm />
           </div>
         </div>
