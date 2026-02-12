@@ -14,7 +14,7 @@ const HeroSection = () => {
     <section id="top" className="relative py-0 md:py-8 lg:py-10 bg-background">
       <div className="md:container-narrow">
         {/* Premium rounded frame container */}
-        <div className="relative rounded-none md:rounded-[22px] overflow-hidden h-[520px] md:h-[650px] lg:min-h-[620px] flex items-center shadow-none md:shadow-[0_4px_32px_-8px_rgba(7,52,47,0.15)]">
+        <div className="relative rounded-none md:rounded-[22px] overflow-hidden aspect-[4/5] md:aspect-auto md:h-[650px] lg:min-h-[620px] flex items-center shadow-none md:shadow-[0_4px_32px_-8px_rgba(7,52,47,0.15)]">
           {/* Desktop Background Image */}
           <img
             src={heroImage}
@@ -28,7 +28,7 @@ const HeroSection = () => {
             src={heroMobileImage}
             alt=""
             aria-hidden="true"
-            className="absolute inset-0 w-full h-full object-cover object-top md:hidden"
+            className="absolute inset-0 w-full h-full object-cover object-center md:hidden"
           />
 
           {/* Mobile overlay - gradient for readability */}
