@@ -31,9 +31,9 @@ const ArticlesSection = () => {
     .slice(0, 3);
 
   return (
-    <section id="inspirasjon" className="py-16 md:section-padding pb-16 bg-[#F7F7F5] md:bg-background">
+    <section id="inspirasjon" className="py-16 md:py-24 pb-16 bg-[#F7F7F5] md:bg-background">
       <div className="container-narrow">
-        <div className="mb-10 md:mb-12">
+        <div className="mb-10 md:mb-10">
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4">
             <SectionHeader
               title="Inspirasjon & Faglig påfyll"
@@ -49,7 +49,7 @@ const ArticlesSection = () => {
           </div>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-y-6 gap-x-5 lg:gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-y-6 lg:gap-y-12 gap-x-5 lg:gap-x-6">
           {latestItems.map((item) => {
             if (item.kind === "media") {
               const m = item.data;
@@ -74,7 +74,7 @@ const ArticlesSection = () => {
                   <h3 className="text-base md:text-lg font-semibold mb-2 group-hover:text-accent transition-colors line-clamp-2">
                     {m.title}
                   </h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed line-clamp-2">
+                  <p className="text-muted-foreground text-sm leading-relaxed line-clamp-2 md:line-clamp-3">
                     {m.excerpt}
                   </p>
                 </Link>
@@ -100,7 +100,7 @@ const ArticlesSection = () => {
                 <h3 className="text-base md:text-lg font-semibold mb-2 group-hover:text-accent transition-colors line-clamp-2">
                   {a.title}
                 </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed line-clamp-2">
+                <p className="text-muted-foreground text-sm leading-relaxed line-clamp-2 md:line-clamp-3">
                   {a.excerpt}
                 </p>
               </Link>
