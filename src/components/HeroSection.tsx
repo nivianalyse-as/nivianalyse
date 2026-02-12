@@ -22,9 +22,9 @@ const HeroSection = () => {
             className="absolute inset-0 w-full h-full object-cover object-[75%_center] md:object-center scale-[1.02]"
           />
 
-          {/* Mobile overlay - darker for readability */}
+          {/* Mobile overlay - gradient for readability */}
           <div 
-            className="absolute inset-0 bg-black/50 md:hidden"
+            className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent md:hidden"
             aria-hidden="true"
           />
 
@@ -43,11 +43,11 @@ const HeroSection = () => {
           />
 
           {/* Content */}
-          <div className="relative z-10 px-7 sm:px-10 md:px-14 lg:px-16 py-16 md:py-18 lg:py-20">
+          <div className="relative z-10 px-7 sm:px-10 md:px-14 lg:px-16 pt-20 md:pt-0 py-16 md:py-18 lg:py-20">
             <div className="max-w-[560px]">
               {/* Mobile heading - without names */}
               <h1 
-                className="md:hidden font-bold leading-tight text-white mb-5 animate-fade-in tracking-[-0.025em] text-3xl max-w-[90%] mx-auto"
+                className="md:hidden font-bold leading-tight text-white animate-fade-in tracking-[-0.025em] text-3xl max-w-[90%] mx-auto"
               >
                 Spisskompetanse på kommunal utvikling og omstilling
               </h1>
@@ -61,7 +61,7 @@ const HeroSection = () => {
               </h1>
 
               {/* Mobile paragraph - includes names */}
-              <p className="md:hidden text-[16px] text-white mb-9 leading-[1.65] max-w-[90%] mx-auto animate-fade-in-delay-1">
+              <p className="md:hidden text-[16px] text-white leading-[1.65] max-w-[90%] mx-auto animate-fade-in-delay-1 mt-4">
                 Håvard Moe og Geir Vinsand tilbyr uavhengig rådgivning for kommuner som vil styrke økonomi, styring og tjenesteutvikling.
               </p>
 
@@ -70,7 +70,7 @@ const HeroSection = () => {
                 Uavhengig rådgivning for kommuner som vil styrke økonomi, styring og tjenesteutvikling.
               </p>
 
-              <div className="flex flex-col gap-4 sm:flex-row sm:gap-4 animate-fade-in-delay-2">
+              <div className="flex flex-col gap-4 md:flex-row md:gap-4 animate-fade-in-delay-2 mt-8 md:mt-0">
                 <Button 
                   size="lg" 
                   className="w-full sm:w-auto bg-accent hover:bg-accent/90 text-accent-foreground font-semibold shadow-lg shadow-accent/20 px-7 py-3 h-auto text-[15px] rounded-xl transition-all duration-200"
