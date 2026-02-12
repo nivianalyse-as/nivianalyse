@@ -10,7 +10,7 @@ const fagomrader = [
 
 const ServicesSection = () => {
   return (
-    <section id="fagomrader" className="py-16 md:section-padding" style={{ backgroundColor: 'hsl(150 10% 97%)' }}>
+    <section id="fagomrader" className="py-16 md:section-padding bg-[#F5F5F3]" style={{ backgroundColor: undefined }}>
       <div className="container-narrow">
         <div className="mb-12 md:mb-16">
           <SectionHeader
@@ -25,7 +25,7 @@ const ServicesSection = () => {
               key={label}
               href="#"
               onClick={(e) => e.preventDefault()}
-              className="card-premium p-4 md:p-6 flex items-center justify-center text-center rounded-md md:rounded-2xl shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200 hover:border-primary/20 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+              className="bg-white border border-black/5 p-4 md:p-6 flex items-center justify-center text-center rounded-md md:rounded-2xl shadow-sm transition-all duration-200 hover:shadow-md hover:border-primary/20 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
             >
               <span className="text-primary font-semibold text-base md:text-lg leading-snug">
                 {label}
