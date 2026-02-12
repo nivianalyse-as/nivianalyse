@@ -13,12 +13,13 @@ const HeroSection = () => {
     <section id="top" className="relative py-4 md:py-8 lg:py-10 bg-background">
       <div className="container-narrow">
         {/* Premium rounded frame container */}
-        <div className="relative rounded-[22px] overflow-hidden min-h-[480px] md:min-h-[560px] lg:min-h-[620px] flex items-center shadow-[0_4px_32px_-8px_rgba(7,52,47,0.15)]">
+        <div className="relative rounded-[22px] overflow-hidden h-[520px] md:h-auto md:min-h-[560px] lg:min-h-[620px] flex items-center shadow-[0_4px_32px_-8px_rgba(7,52,47,0.15)]">
           {/* Background Image */}
-          <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-[1.02]"
-            style={{ backgroundImage: `url(${heroImage})` }}
+          <img
+            src={heroImage}
+            alt=""
             aria-hidden="true"
+            className="absolute inset-0 w-full h-full object-cover object-[75%_center] md:object-center scale-[1.02]"
           />
 
           {/* Mobile overlay - darker for readability */}
