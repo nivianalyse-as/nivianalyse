@@ -1,46 +1,42 @@
+import { ArrowRight } from "lucide-react";
 import SectionHeader from "@/components/SectionHeader";
 
 interface Fagomrade {
   title: string;
-  points?: string[];
+  description: string;
 }
 
 const fagomrader: Fagomrade[] = [
-  { title: "Kommuneøkonomi og omstilling" },
-  { title: "Organisasjonsutvikling" },
+  {
+    title: "Kommuneøkonomi og omstilling",
+    description: "Analyser, styringsgrunnlag og beslutningsstøtte for bærekraftig økonomi.",
+  },
+  {
+    title: "Organisasjonsutvikling",
+    description: "Struktur, ledelse og gjennomførbare omstillingsprosesser.",
+  },
   {
     title: "Interkommunalt samarbeid",
-    points: [
-      "Egen metodikk for kommunevis kartlegging og analyse av formalisert interkommunalt samarbeid",
-      "200+ kommuner kartlagt etter 2019",
-      "Oppdrag for statsforvaltere i åtte fylker",
-      "Prinsipper for langsiktig samarbeid og styringsmodeller",
-    ],
+    description: "Kartlegging, analyse og utvikling av robuste samarbeidsmodeller.",
   },
   {
     title: "Strukturreformer",
-    points: [
-      "Kompetanse i alle faser av kommunesammenslåing",
-      "Utredninger, innbyggerundersøkelser, intensjonsavtaler, styringsdokumenter",
-      "Arbeid med nasjonale kriterier, finansieringssystem og kommunesystemets utvikling",
-    ],
+    description: "Utredning og prosessledelse ved kommunesammenslåing og systemendringer.",
   },
   {
     title: "Beredskap og samfunnssikkerhet",
-    points: [
-      "Innbyggerundersøkelser",
-      "Organisering av beredskapsfunksjoner",
-      "Bidrag til DSBs kommunebarometer",
-      "Prosjektlederrolle for Nasjonalt strålevernbarometer",
-    ],
+    description: "Organisering, innbyggerundersøkelser og styrking av beredskapsfunksjoner.",
   },
-  { title: "Foredrag og debatt" },
+  {
+    title: "Foredrag og debatt",
+    description: "Faglige innlegg, analyser og perspektiver på kommunesystemets utvikling.",
+  },
 ];
 
 const ServicesSection = () => {
   return (
     <section id="fagomrader" className="py-16 md:py-24 bg-[#F5F5F3] md:bg-background">
-      <div className="container-narrow">
+      <div className="mx-auto px-5 sm:px-6 lg:px-8" style={{ maxWidth: '1100px' }}>
         <div className="mb-12 md:mb-12">
           <SectionHeader
             title="Våre fagområder"
@@ -48,25 +44,23 @@ const ServicesSection = () => {
           />
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-y-6 gap-x-5 lg:gap-6 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {fagomrader.map((fag) => (
             <div
               key={fag.title}
-              className="bg-white border border-black/5 p-4 md:p-8 flex flex-col rounded-md md:rounded-lg shadow-sm transition-all duration-200 md:hover:shadow-md md:hover:-translate-y-1 hover:border-primary/20 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+              className="group bg-card border border-border/60 p-5 md:p-7 flex flex-col justify-between rounded-2xl shadow-[0_2px_12px_rgba(0,0,0,0.05)] transition-all duration-200 cursor-pointer md:hover:-translate-y-1 md:hover:shadow-[0_8px_24px_rgba(0,0,0,0.08)] md:hover:border-primary/40"
             >
-              <span className="text-primary font-semibold text-base md:text-lg leading-snug mb-2">
-                {fag.title}
-              </span>
-              {fag.points && (
-                <ul className="space-y-1.5 mt-1">
-                  {fag.points.map((point, i) => (
-                    <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground leading-relaxed">
-                      <span className="w-1 h-1 rounded-full bg-accent mt-2 flex-shrink-0" />
-                      {point}
-                    </li>
-                  ))}
-                </ul>
-              )}
+              <div>
+                <h3 className="text-primary font-bold text-xl leading-tight mb-2">
+                  {fag.title}
+                </h3>
+                <p className="leading-snug mb-3" style={{ fontSize: '15px', color: '#3A4F46' }}>
+                  {fag.description}
+                </p>
+              </div>
+              <ArrowRight
+                className="w-4 h-4 text-primary/50 group-hover:text-primary group-hover:translate-x-1 transition-all duration-200 mt-auto"
+              />
             </div>
           ))}
         </div>
