@@ -44,10 +44,10 @@ const ReferencesSection = () => {
           />
         </div>
 
-        <div className="max-w-4xl mx-auto space-y-8">
+        <div className="max-w-4xl mx-auto space-y-10">
           {groups.map((group) => (
-            <div key={group.label}>
-              <p className="text-sm text-muted-foreground font-medium text-center mb-4">
+            <div key={group.label} className="pt-6">
+              <p className="text-sm font-semibold text-primary text-center mb-3" style={{ letterSpacing: '0.02em' }}>
                 {group.label}
               </p>
               <div className="flex flex-wrap justify-center gap-3">
@@ -65,7 +65,7 @@ const ReferencesSection = () => {
         </div>
 
         <p className="text-center text-sm text-muted-foreground mt-8">
-          (Se CV for mange flere oppdrag og oppdragsgivere.)
+          Se fullstendig oppdragsoversikt i CV
         </p>
       </div>
     </section>
