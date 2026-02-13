@@ -69,11 +69,11 @@ const strukturProjects: ReferenceProject[] = [
     type: "Strukturreform",
     kort: "Ekstern faglig utreder for kommunesammenslutning mellom Vestvågøy og Moskenes.",
     leveranser: [
-      "Utredning av kommunesammenslutning",
+      "Utredning av kommunesammenslutning (Vestvågøy og Moskenes)",
       "Representativ innbyggerundersøkelse",
-      "Intensjonsavtale",
+      "Intensjonsavtale og styringsdokument for gjennomføring",
+      "Saksforberedelser og støtte til Fellesnemnd",
       "Dialog med staten om medfinansiering",
-      "Styringsdokument for gjennomføring",
     ],
   },
   {
@@ -115,7 +115,7 @@ const ProjectCard = ({ project, hidden = false }: { project: ReferenceProject; h
           variant={project.type === "Omstillingsstøtte" ? "default" : "secondary"}
           className="text-[11px] px-2 py-0.5"
         >
-          {project.type}
+          {project.type === "Omstillingsstøtte" ? "Omstilling" : project.type === "Interkommunalt samarbeid" ? "Samarbeid" : project.type}
         </Badge>
       </div>
       <h3 className="text-lg font-bold leading-tight">
@@ -167,9 +167,10 @@ const ReferenceProjectsSection = () => {
 
         {/* Category 1 */}
         <div className="mb-12 md:mb-16">
-          <p className="font-semibold text-primary text-center mb-6 md:mb-8" style={{ fontSize: '0.9375rem', letterSpacing: '0.02em' }}>
+          <p className="font-semibold text-primary text-center mt-8 mb-4" style={{ fontSize: '1.0625rem', letterSpacing: '0.02em' }}>
             Omstillings- og økonomiprosesser
           </p>
+          <div className="mx-auto max-w-xs h-px bg-primary/10 mb-6 md:mb-8" />
           <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-y-10 md:gap-y-12 gap-x-5 lg:gap-x-8">
             {omstillingsProjects.map((project, index) => (
               <ProjectCard key={project.kommune} project={project} hidden={index >= 2} />
@@ -192,9 +193,10 @@ const ReferenceProjectsSection = () => {
 
         {/* Category 2 */}
         <div>
-          <p className="font-semibold text-primary text-center mb-6 md:mb-8" style={{ fontSize: '0.9375rem', letterSpacing: '0.02em' }}>
+          <p className="font-semibold text-primary text-center mt-8 mb-4" style={{ fontSize: '1.0625rem', letterSpacing: '0.02em' }}>
             Strukturreform og interkommunalt samarbeid
           </p>
+          <div className="mx-auto max-w-xs h-px bg-primary/10 mb-6 md:mb-8" />
           <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-y-10 md:gap-y-12 gap-x-5 lg:gap-x-8">
             {strukturProjects.map((project) => (
               <ProjectCard key={project.kommune} project={project} />
@@ -211,7 +213,7 @@ const ReferenceProjectsSection = () => {
               document.getElementById("kontakt")?.scrollIntoView({ behavior: "smooth" })
             }
           >
-            Be om referanseliste
+            Se full referanseliste
             <ArrowRight className="w-4 h-4 ml-1" />
           </Button>
         </div>
