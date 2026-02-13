@@ -62,13 +62,13 @@ const OmOss = () => {
                   className="card-premium p-5 flex items-center gap-4 hover:shadow-md transition-shadow"
                 >
                   <div className="w-10 h-10 bg-secondary/40 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <FileText className="w-5 h-5 text-primary/60" />
+                    <Download className="w-5 h-5 text-primary/60" />
                   </div>
                   <div className="flex-1 min-w-0">
                     <h3 className="text-sm font-semibold text-primary leading-snug">
                       Håvard Moe – CV
                     </h3>
-                    <p className="text-xs text-muted-foreground italic mt-1">PDF kommer snart</p>
+                    <p className="text-xs text-muted-foreground mt-1">Last ned (PDF)</p>
                   </div>
                 </a>
                 <a
