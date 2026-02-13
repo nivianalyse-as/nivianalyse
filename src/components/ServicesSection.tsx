@@ -1,4 +1,3 @@
-import { ArrowRight } from "lucide-react";
 import SectionHeader from "@/components/SectionHeader";
 
 interface Fagomrade {
@@ -48,19 +47,16 @@ const ServicesSection = () => {
           {fagomrader.map((fag) => (
             <div
               key={fag.title}
-              className="group bg-card border border-border/60 p-5 md:p-7 flex flex-col rounded-2xl shadow-[0_2px_12px_rgba(0,0,0,0.05)] transition-all duration-200 cursor-pointer md:hover:-translate-y-1 md:hover:shadow-[0_8px_24px_rgba(0,0,0,0.08)] md:hover:border-primary/40"
+              className="group bg-card border border-border/60 p-5 md:p-7 flex flex-col rounded-2xl shadow-[0_2px_12px_rgba(0,0,0,0.05)] transition-all duration-[250ms] ease-in-out cursor-pointer md:hover:-translate-y-1 md:hover:shadow-[0_12px_32px_rgba(0,0,0,0.10)] md:hover:border-primary/40"
             >
               <h3
-                className="text-primary font-bold leading-tight mb-2"
+                className="text-primary font-bold leading-tight mb-2 group-hover:underline underline-offset-4 decoration-primary/40"
                 style={{ fontSize: '22px', letterSpacing: '-0.2px' }}
               >
                 {fag.title}
               </h3>
-              <p className="leading-snug flex items-center gap-1.5" style={{ fontSize: '15px', color: '#3A4F46' }}>
-                <span>{fag.description}</span>
-                <ArrowRight
-                  className="w-3.5 h-3.5 flex-shrink-0 text-primary/40 group-hover:text-primary group-hover:translate-x-1 transition-all duration-200"
-                />
+              <p className="leading-snug" style={{ fontSize: '15px', color: '#3A4F46' }}>
+                {fag.description}
               </p>
             </div>
           ))}
