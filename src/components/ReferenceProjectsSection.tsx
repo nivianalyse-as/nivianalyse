@@ -69,11 +69,11 @@ const strukturProjects: ReferenceProject[] = [
     type: "Strukturreform",
     kort: "Ekstern faglig utreder for kommunesammenslutning mellom Vestvågøy og Moskenes.",
     leveranser: [
-      "Utredning av kommunesammenslutning (Vestvågøy og Moskenes)",
-      "Representativ innbyggerundersøkelse",
-      "Intensjonsavtale og styringsdokument for gjennomføring",
-      "Saksforberedelser og støtte til Fellesnemnd",
+      "Utredning av kommunesammenslutning (Vestvågøy–Moskenes)",
+      "Innbyggerundersøkelse og kommunikasjonsplan",
+      "Intensjonsavtale og søknad om sammenslutning",
       "Dialog med staten om medfinansiering",
+      "Styrings- og gjennomføringsdokumenter (inkl. Fellesnemnd)",
     ],
   },
   {
@@ -131,7 +131,7 @@ const ProjectCard = ({ project, hidden = false }: { project: ReferenceProject; h
       </p>
       <ul className="space-y-1 md:space-y-2 mb-4">
         {project.leveranser.map((item, i) => (
-          <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground leading-relaxed">
+          <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground leading-snug">
             <span className="w-1 h-1 rounded-full bg-accent mt-2 flex-shrink-0" />
             {item}
           </li>
@@ -161,12 +161,12 @@ const ReferenceProjectsSection = () => {
         <div className="mb-10 md:mb-14">
           <SectionHeader
             title="Utvalgte referanseoppdrag"
-            subtitle="Dokumentert erfaring fra omstilling, kommuneøkonomi og styring i små og store kommuner."
+            subtitle="Dokumentert erfaring fra komplekse omstillings-, struktur- og samarbeidsprosesser i norske kommuner."
           />
         </div>
 
         {/* Category 1 */}
-        <div className="mb-12 md:mb-16">
+        <div className="mb-16 md:mb-20">
           <p className="font-semibold text-primary text-center mt-8 mb-4" style={{ fontSize: '1.0625rem', letterSpacing: '0.02em' }}>
             Omstillings- og økonomiprosesser
           </p>
@@ -205,7 +205,7 @@ const ReferenceProjectsSection = () => {
         </div>
 
         {/* CTA */}
-        <div className="text-center mt-10 md:mt-14">
+        <div className="text-center mt-12 md:mt-16">
           <Button
             variant="cta"
             size="lg"
