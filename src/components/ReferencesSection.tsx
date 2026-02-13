@@ -2,24 +2,38 @@ import SectionHeader from "@/components/SectionHeader";
 
 const ReferencesSection = () => {
   const references = [
-    "Viken fylkeskommune",
-    "Oslo kommune",
-    "Trondheim kommune",
-    "Bergen kommune",
-    "Stavanger kommune",
-    "Drammen kommune",
-    "KS",
-    "Kommunaldepartementet",
-    "Kristiansand kommune",
-    "Tromsø kommune",
-    "Bodø kommune",
-    "Fredrikstad kommune",
-    "Sarpsborg kommune",
-    "Bærum kommune",
     "Asker kommune",
-    "Sandefjord kommune",
+    "Bergen kommune",
+    "Bodø kommune",
+    "Bærum kommune",
+    "Direktoratet for forvaltningsutvikling og IKT",
+    "Direktoratet for strålevern og atomsikkerhet",
+    "Drammen kommune",
+    "Fredrikstad kommune",
+    "Kommunaldepartementet",
+    "Kommunal- og moderniseringsdepartementet",
+    "Kristiansand kommune",
+    "KS",
+    "Listersamarbeidet",
+    "Lofotrådet",
+    "Moskenes kommune",
     "Nordland fylkeskommune",
+    "Nærings- og fiskeridepartementet",
+    "Oslo kommune",
+    "Porsanger kommune",
+    "Sandefjord kommune",
+    "Sarpsborg kommune",
+    "Statsforvalteren i Troms og Finnmark",
+    "Statsforvalteren i Trøndelag",
+    "Statsforvalteren i Østfold, Buskerud, Oslo og Akershus",
+    "Stavanger kommune",
+    "Tana kommune",
+    "Trondheim kommune",
+    "Tromsø kommune",
     "Vestland fylkeskommune",
+    "Vestvågøy kommune",
+    "Viken fylkeskommune",
+    "Østre Agder-samarbeidet",
   ];
 
   return (
@@ -42,6 +56,10 @@ const ReferencesSection = () => {
             </span>
           ))}
         </div>
+
+        <p className="text-center text-sm text-muted-foreground mt-8">
+          (Se CV for mange flere oppdrag og oppdragsgivere.)
+        </p>
       </div>
     </section>
   );
