@@ -186,27 +186,33 @@ export const mediaEntries: MediaEntry[] = [
   },
   {
     id: 11,
-    title: "Kommunene – fortsettelsen av «Podkast uten portefølje»",
+    title: "Kommunene – fortsettelsen",
     slug: "podkast-uten-portefolje-kommunene",
     type: "podcast",
-    source: "Spotify",
-    excerpt: "Episode av Podkast uten portefølje.",
-    keyPoints: [],
-    externalUrl: "https://open.spotify.com/episode/3hvmwuNGwHMPEWKzVDiQC2?si=53273841b08e40e4&nd=1&dlsi=946c3de112c943a6",
+    source: "Podkast uten portefølje",
+    excerpt: "Geir Vinsand diskuterer fremtiden for norske kommuner, samarbeidsmodeller og strukturelle utfordringer i denne episoden av Podkast uten portefølje.",
+    keyPoints: [
+      "Kommunestruktur og samarbeid",
+      "Fremtidsperspektiver for norske kommuner"
+    ],
+    externalUrl: "https://open.spotify.com/episode/3hvmwuNGwHMPEWKzVDiQC2?si=53273841b08e40e4",
     featured: false,
-    tags: ["spotify", "podkast", "kommuner"]
+    tags: ["podkast", "kommuner", "struktur"]
   },
   {
     id: 12,
-    title: "Norske kommuner i stabilt sideleie av «Podkast uten portefølje»",
+    title: "Norske kommuner i stabilt sideleie",
     slug: "podkast-uten-portefolje-stabilt-sideleie",
     type: "podcast",
-    source: "Spotify",
-    excerpt: "Episode av Podkast uten portefølje.",
-    keyPoints: [],
-    externalUrl: "https://open.spotify.com/episode/35fe6t8Mrs395e0FWrTwW6?si=d2402c97bf794006&nd=1&dlsi=9e3b4589fe9b49fb",
+    source: "Podkast uten portefølje",
+    excerpt: "En samtale om kommuneøkonomi, omstillingsbehov og hvorfor mange norske kommuner befinner seg i en tilstand av stabilt sideleie.",
+    keyPoints: [
+      "Kommuneøkonomi og omstilling",
+      "Utfordringer med status quo"
+    ],
+    externalUrl: "https://open.spotify.com/episode/35fe6t8Mrs395e0FWrTwW6?si=d2402c97bf794006&nd=1&dlsi=56d85e2ecba34a34",
     featured: false,
-    tags: ["spotify", "podkast", "kommuner"]
+    tags: ["podkast", "kommuneøkonomi", "omstilling"]
   },
   {
     id: 13,

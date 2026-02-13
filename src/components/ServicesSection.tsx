@@ -1,11 +1,40 @@
 import SectionHeader from "@/components/SectionHeader";
 
-const fagomrader = [
-  "Kommuneøkonomi og omstilling",
-  "Organisasjonsutvikling",
-  "Interkommunalt samarbeid og strukturreformer",
-  "Beredskap og samfunnssikkerhet",
-  "Foredrag og debatt",
+interface Fagomrade {
+  title: string;
+  points?: string[];
+}
+
+const fagomrader: Fagomrade[] = [
+  { title: "Kommuneøkonomi og omstilling" },
+  { title: "Organisasjonsutvikling" },
+  {
+    title: "Interkommunalt samarbeid",
+    points: [
+      "Egen metodikk for kommunevis kartlegging og analyse av formalisert interkommunalt samarbeid",
+      "200+ kommuner kartlagt etter 2019",
+      "Oppdrag for statsforvaltere i åtte fylker",
+      "Prinsipper for langsiktig samarbeid og styringsmodeller",
+    ],
+  },
+  {
+    title: "Strukturreformer",
+    points: [
+      "Kompetanse i alle faser av kommunesammenslåing",
+      "Utredninger, innbyggerundersøkelser, intensjonsavtaler, styringsdokumenter",
+      "Arbeid med nasjonale kriterier, finansieringssystem og kommunesystemets utvikling",
+    ],
+  },
+  {
+    title: "Beredskap og samfunnssikkerhet",
+    points: [
+      "Innbyggerundersøkelser",
+      "Organisering av beredskapsfunksjoner",
+      "Bidrag til DSBs kommunebarometer",
+      "Prosjektlederrolle for Nasjonalt strålevernbarometer",
+    ],
+  },
+  { title: "Foredrag og debatt" },
 ];
 
 const ServicesSection = () => {
@@ -20,17 +49,25 @@ const ServicesSection = () => {
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-y-6 gap-x-5 lg:gap-6 max-w-4xl mx-auto">
-          {fagomrader.map((label) => (
-            <a
-              key={label}
-              href="#"
-              onClick={(e) => e.preventDefault()}
-              className="bg-white border border-black/5 p-4 md:p-8 flex items-center justify-center text-center rounded-md md:rounded-lg shadow-sm transition-all duration-200 md:hover:shadow-md md:hover:-translate-y-1 hover:border-primary/20 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+          {fagomrader.map((fag) => (
+            <div
+              key={fag.title}
+              className="bg-white border border-black/5 p-4 md:p-8 flex flex-col rounded-md md:rounded-lg shadow-sm transition-all duration-200 md:hover:shadow-md md:hover:-translate-y-1 hover:border-primary/20 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
             >
-              <span className="text-primary font-semibold text-base md:text-lg leading-snug">
-                {label}
+              <span className="text-primary font-semibold text-base md:text-lg leading-snug mb-2">
+                {fag.title}
               </span>
-            </a>
+              {fag.points && (
+                <ul className="space-y-1.5 mt-1">
+                  {fag.points.map((point, i) => (
+                    <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground leading-relaxed">
+                      <span className="w-1 h-1 rounded-full bg-accent mt-2 flex-shrink-0" />
+                      {point}
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
           ))}
         </div>
       </div>

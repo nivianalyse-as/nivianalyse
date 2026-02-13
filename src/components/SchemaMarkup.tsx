@@ -146,6 +146,22 @@ export const niviOrganizationSchema: OrganizationSchema & { creator?: { name: st
   },
 };
 
+// ProfessionalService schema for SEO
+export const niviProfessionalServiceSchema = {
+  type: "ProfessionalService" as const,
+  name: "NIVI Analyse AS",
+  url: "https://nivianalyse.lovable.app",
+  description: "Uavhengig analyse og rådgivning innen kommuneøkonomi, interkommunalt samarbeid, strukturreformer og beredskap.",
+  address: {
+    streetAddress: "Solløkkaveien 73",
+    addressLocality: "Sandefjord",
+    postalCode: "3233",
+    addressCountry: "NO",
+  },
+  telephone: "+47 22 12 34 56",
+  email: "post@nivianalyse.no",
+};
+
 export const geirVinsandSchema: PersonSchema = {
   type: "Person",
   name: "Geir Vinsand",

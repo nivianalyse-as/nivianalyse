@@ -48,10 +48,10 @@ const Header = () => {
   const navItems = [
     { name: "Startside", href: "/" },
     { name: "Våre fagområder", href: "/#fagomrader" },
-    { name: "Inspirasjon", href: "/inspirasjon" },
+    { name: "Faglige innsikter", href: "/inspirasjon" },
     { name: "Publikasjoner", href: "/publikasjoner" },
     { name: "Våre oppdragsgivere", href: "/#referanser" },
-    { name: "Om oss", href: "/#eksperter" },
+    { name: "Om oss", href: "/om-oss" },
   ];
 
   const handleNavClick = (href: string) => {

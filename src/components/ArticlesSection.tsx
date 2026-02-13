@@ -36,14 +36,14 @@ const ArticlesSection = () => {
         <div className="mb-10 md:mb-10">
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4">
             <SectionHeader
-              title="Inspirasjon & Faglig påfyll"
-              subtitle="Fagartikler og analyser fra våre eksperter"
+              title="Faglige innsikter"
+              subtitle="Utvalgte faglige refleksjoner og analyser fra våre eksperter"
             />
             <Link
               to="/inspirasjon"
               className="group flex items-center gap-2 text-primary font-medium hover:text-accent transition-colors text-sm"
             >
-              Se alle artikler
+              Se alle innsikter
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
