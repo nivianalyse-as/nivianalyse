@@ -12,6 +12,7 @@ import IMediaDetail from "./pages/IMediaDetail";
 import Personvern from "./pages/Personvern";
 import Cookies from "./pages/Cookies";
 import Publikasjoner from "./pages/Publikasjoner";
+import OmOss from "./pages/OmOss";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -32,6 +33,7 @@ const App = () => (
             <Route path="/personvern" element={<Personvern />} />
             <Route path="/cookies" element={<Cookies />} />
             <Route path="/publikasjoner" element={<Publikasjoner />} />
+            <Route path="/om-oss" element={<OmOss />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

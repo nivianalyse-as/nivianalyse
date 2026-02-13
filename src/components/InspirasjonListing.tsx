@@ -53,8 +53,8 @@ const InspirasjonListing = () => {
         {/* Header */}
         <div className="mb-10 md:mb-12">
           <SectionHeader
-            title="Inspirasjon & Faglig påfyll"
-            subtitle="Analyser, artikler og medieomtaler fra NIVI Analyse. Følg med på våre faglige bidrag til debatten om kommunal sektor."
+            title="Faglige innsikter"
+            subtitle="Utvalgte faglige refleksjoner, prinsipper og analyser om kommunal utvikling, samarbeid, struktur og beredskap."
             as="h1"
           />
         </div>
