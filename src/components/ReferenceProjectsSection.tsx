@@ -17,46 +17,46 @@ const omstillingsProjects: ReferenceProject[] = [
     kommune: "Vinje kommune",
     periode: "2025–2026",
     type: "Omstillingsstøtte",
-    kort: "Kraftinntekter, men vedvarende utfordringer med bærekraftig kommuneøkonomi og ressursbruk.",
+    kort: "Langvarige utfordringer knyttet til bærekraftig kommuneøkonomi og ressursbruk, til tross for kraftinntekter.",
     leveranser: [
-      "Forankring politisk/administrativt + tillitsvalgte",
-      "Kommunekompassevaluering (forvaltningspraksis)",
+      "Forankring mellom politisk og administrativ ledelse",
+      "Kommunekompass-evaluering av forvaltningspraksis",
       "Analyse av kommuneøkonomi og ressursbruk",
-      "Rammesak til kommunestyret (sept 2026)",
+      "Utarbeidelse av rammesak til kommunestyret",
     ],
   },
   {
     kommune: "Karlsøy kommune",
     periode: "2025",
     type: "Omstillingsstøtte",
-    kort: "Høye inntekter fra havbruksfondet inn i drift + investeringspress. Behov for å redusere løpende ressursbruk.",
+    kort: "Høye inntekter fra havbruksfondet kombinert med investeringspress og behov for strammere økonomistyring.",
     leveranser: [
-      "Forankringsprosess (politikk/adm/tillitsvalgte)",
-      "Kommuneøkonomianalyse",
-      "Arbeidsverksteder",
-      "16 arbeidsgrupperapporter som grunnlag for rammesak",
+      "Forankring mellom politisk og administrativ ledelse",
+      "Analyse av kommuneøkonomi",
+      "Gjennomføring av arbeidsverksteder",
+      "Samlet rammegrunnlag basert på 16 arbeidsgrupperapporter",
     ],
   },
   {
     kommune: "Lindesnes kommune",
     periode: "2024–2025",
     type: "Omstillingsstøtte",
-    kort: "«Sammen i utvikling» med identifisert omstillingspotensial på 100 MNOK.",
+    kort: "Helhetlig omstillingsprosess med identifisert potensial på 100 MNOK.",
     leveranser: [
       "Prosjektstyring og ekstern prosjektledelse",
       "Økonomiske analyser",
-      "Ledersamlinger og politiske verksteder",
-      "Styringsgrupper (politisk/administrativ)",
+      "Leder- og politikerverksteder",
+      "Etablering av styringsstruktur mellom politisk og administrativ ledelse",
     ],
   },
   {
     kommune: "Frøya kommune",
     periode: "2022–nå",
     type: "Omstillingsstøtte",
-    kort: "Høye, sårbare inntekter faset inn i drift. Mål: redusere sårbarhet og styrke styring.",
+    kort: "Sårbar driftsøkonomi med mål om å redusere risiko og styrke langsiktig styring.",
     leveranser: [
-      "Analyser og kommunekompassevalueringer",
-      "Ledersamlinger og politiske verksteder",
+      "Analyse og kommunekompass-evaluering",
+      "Leder- og politikerverksteder",
       "Tiltaks- og gevinstrealiseringsplaner",
     ],
   },
@@ -67,37 +67,41 @@ const strukturProjects: ReferenceProject[] = [
     kommune: "Ny kommune i Lofoten",
     periode: "2025",
     type: "Strukturreform",
-    kort: "Ekstern faglig utreder for kommunesammenslutning mellom Vestvågøy og Moskenes.",
+    kort: "Ekstern faglig utreder i prosess for kommunesammenslutning mellom Vestvågøy og Moskenes.",
     leveranser: [
-      "Utredning av kommunesammenslutning (Vestvågøy–Moskenes)",
-      "Innbyggerundersøkelse og kommunikasjonsplan",
-      "Intensjonsavtale og søknad om sammenslutning",
+      "Utredning av kommunesammenslutning",
+      "Representativ innbyggerundersøkelse",
+      "Utarbeidelse av kommunikasjonsplan",
+      "Intensjonsavtale",
       "Dialog med staten om medfinansiering",
-      "Styrings- og gjennomføringsdokumenter (inkl. Fellesnemnd)",
+      "Forberedelse av felles kommunestyremøte",
+      "Søknad om frivillig sammenslutning",
+      "Saksforberedelser til Fellesnemnd",
+      "Styringsdokument for gjennomføring",
     ],
   },
   {
     kommune: "Interkommunalt samarbeid i Østfold",
     periode: "2025",
     type: "Interkommunalt samarbeid",
-    kort: "Kartlegging og analyse på oppdrag for Statsforvalteren.",
+    kort: "Kartlegging og analyse av formalisert interkommunalt samarbeid på oppdrag for Statsforvalteren.",
     leveranser: [
       "Kommunevis kartlegging",
-      "Analyse av samarbeidets omfang og organisering",
-      "Intervjuer med kommunedirektører",
-      "Anbefalinger for videreutvikling",
+      "Analyse av omfang, innhold og organisering",
+      "Erfaringsinnhenting fra kommunedirektører og regionråd",
+      "Anbefalinger om videreutvikling",
     ],
   },
   {
     kommune: "Interkommunalt samarbeid i Agder (25 kommuner)",
     periode: "2024",
     type: "Interkommunalt samarbeid",
-    kort: "Kartlegging og analyse av samarbeid mellom kommuner, fylkeskommune og stat.",
+    kort: "Systematisk gjennomgang av samarbeid mellom kommuner, fylkeskommune og stat.",
     leveranser: [
       "Kartlegging av formalisert samarbeid",
       "Analyse av styring og organisering",
       "Prinsipper for fremtidig samarbeid",
-      "Presentasjon på Statsforvalterens konferanse",
+      "Faglig presentasjon på Statsforvalterens konferanse",
     ],
   },
 ];
@@ -194,7 +198,7 @@ const ReferenceProjectsSection = () => {
         {/* Category 2 */}
         <div>
           <p className="font-semibold text-primary text-center mt-8 mb-4" style={{ fontSize: '1.0625rem', letterSpacing: '0.02em' }}>
-            Strukturreform og interkommunalt samarbeid
+            Struktur og interkommunalt samarbeid
           </p>
           <div className="mx-auto max-w-xs h-px bg-primary/10 mb-6 md:mb-8" />
           <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-y-10 md:gap-y-12 gap-x-5 lg:gap-x-8">
