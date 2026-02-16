@@ -14,6 +14,7 @@ import Cookies from "./pages/Cookies";
 import Publikasjoner from "./pages/Publikasjoner";
 import OmOss from "./pages/OmOss";
 import NotFound from "./pages/NotFound";
+import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -24,6 +25,7 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          <ScrollToTop />
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/inspirasjon" element={<Inspirasjon />} />
