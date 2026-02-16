@@ -251,7 +251,7 @@ export const mediaEntries: MediaEntry[] = [
     slug: "kommunal-rapport-ikke-statens-feil",
     type: "article",
     source: "Kommunal Rapport",
-    date: "2025-11-12",
+    date: "2026-02-16",
     excerpt: "Så lenge Stortinget ikke følger opp de grunnleggende prinsippene for forholdet stat–kommune, blir det ikke orden på økonomien.",
     keyPoints: [
       "Kommuneøkonomi og statlig styring",
