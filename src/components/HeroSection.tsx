@@ -20,7 +20,7 @@ const HeroSection = () => {
             src={heroImage}
             alt=""
             aria-hidden="true"
-            className="absolute inset-0 w-full h-full object-cover object-[72%_28%] hidden md:block"
+            className="absolute inset-0 w-full h-full object-cover object-[72%_center] hidden md:block"
           />
 
           {/* Mobile Background Image */}
@@ -43,18 +43,18 @@ const HeroSection = () => {
             style={{
               background: `linear-gradient(
                 to right,
-                rgba(7, 52, 47, 0.65) 0%,
-                rgba(7, 52, 47, 0.45) 25%,
-                rgba(7, 52, 47, 0.15) 45%,
-                rgba(7, 52, 47, 0) 55%
+                rgba(8, 30, 25, 0.75) 0%,
+                rgba(8, 30, 25, 0.50) 22%,
+                rgba(8, 30, 25, 0.15) 35%,
+                rgba(8, 30, 25, 0) 42%
               )`
             }}
             aria-hidden="true"
           />
 
           {/* Content */}
-          <div className="relative z-10 px-6 md:px-6 lg:px-12 pt-24 md:pt-0 py-16 md:py-32 lg:py-32 max-w-6xl mx-auto w-full flex items-center md:h-full">
-            <div className="max-w-[85%] md:max-w-[560px]">
+          <div className="relative z-10 px-6 md:ml-[8%] md:px-0 md:pr-10 pt-24 md:pt-0 py-16 md:py-32 lg:py-32 w-full flex items-center md:h-full">
+            <div className="max-w-[85%] md:max-w-[520px]">
               {/* Mobile heading - without names */}
               <h1 
                 className="md:hidden font-bold leading-tight text-white animate-fade-in tracking-tight text-3xl"
@@ -64,7 +64,8 @@ const HeroSection = () => {
 
               {/* Desktop heading - with names */}
               <h1 
-                className="hidden md:block text-4xl lg:text-5xl font-bold leading-tight text-white mb-9 animate-fade-in tracking-tight"
+                className="hidden md:block text-4xl lg:text-5xl font-bold text-white mb-9 animate-fade-in tracking-tight"
+                style={{ lineHeight: 1.08 }}
               >
                 Håvard Moe og Geir Vinsand tilbyr spisskompetanse på kommunal utvikling og omstilling
               </h1>
