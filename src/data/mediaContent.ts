@@ -227,7 +227,7 @@ export const mediaEntries: MediaEntry[] = [
       "Viktige lærdommer for fremtidige strukturendringer"
     ],
     pdfUrl: "/docs/de-to-storste-brolapene.pdf",
-    featured: false,
+    featured: true,
     tags: ["kommunal rapport", "kommunestruktur", "sammenslåing"]
   },
   {
@@ -244,11 +244,33 @@ export const mediaEntries: MediaEntry[] = [
     ],
     featured: false,
     tags: ["nrk", "debatt", "kommuneøkonomi"]
+  },
+  {
+    id: 15,
+    title: "Ikke statens feil at kommunene ikke vil",
+    slug: "kommunal-rapport-ikke-statens-feil",
+    type: "article",
+    source: "Kommunal Rapport",
+    date: "2025-11-12",
+    excerpt: "Så lenge Stortinget ikke følger opp de grunnleggende prinsippene for forholdet stat–kommune, blir det ikke orden på økonomien.",
+    keyPoints: [
+      "Kommuneøkonomi og statlig styring",
+      "Prinsippene for forholdet stat–kommune"
+    ],
+    externalUrl: "https://www.kommunal-rapport.no/meninger/ikke-statens-feil-at-kommunene-ikke-vil/836768",
+    featured: false,
+    tags: ["kommunal rapport", "kommuneøkonomi", "debatt"]
   }
 ];
 
 export const getFeaturedMedia = (): MediaEntry[] => {
-  return mediaEntries.filter(entry => entry.featured).slice(0, 3);
+  return mediaEntries
+    .filter(entry => entry.featured)
+    .sort((a, b) => {
+      if (!a.date || !b.date) return 0;
+      return new Date(b.date).getTime() - new Date(a.date).getTime();
+    })
+    .slice(0, 3);
 };
 
 export const getMediaBySlug = (slug: string): MediaEntry | undefined => {
