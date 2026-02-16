@@ -154,7 +154,9 @@ const InspirasjonListing = () => {
                 };
                 type MixedItem = { kind: "article"; data: ArticleContent } | { kind: "media"; data: MediaEntry };
                 const articleItems: MixedItem[] = filteredArticles.map(a => ({ kind: "article", data: a }));
-                const mediaItems: MixedItem[] = sortedMedia.map(m => ({ kind: "media", data: m }));
+                const mediaItems: MixedItem[] = activeFilter === "Alle" || activeFilter === "I media" || activeFilter === "Debatt/NRK"
+                  ? sortedMedia.map(m => ({ kind: "media", data: m }))
+                  : [];
                 const combined = [...articleItems, ...mediaItems].sort((a, b) => {
                   const getDate = (item: MixedItem) => {
                     if (item.kind === "article") return parseNorDate(item.data.date);
