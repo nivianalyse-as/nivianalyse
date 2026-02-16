@@ -8,14 +8,14 @@ export const mediaEntries: MediaEntry[] = [
     type: "debate",
     source: "NRK TV",
     date: "2025-11-11",
-    excerpt: "Geir Vinsand deltok i NRK Debatten om kommuneøkonomi, prioriteringer og tjenestekutt. Debatten tok opp hvordan kommunene må velge mellom skole og eldreomsorg.",
+    excerpt: "Håvard Moe deltok i NRK Debatten om kommuneøkonomi, prioriteringer og tjenestekutt. Debatten tok opp hvordan kommunene må velge mellom skole og eldreomsorg.",
     keyPoints: [
       "Kommunene står overfor stadig tøffere prioriteringer",
       "Behov for strukturelle endringer, ikke bare kutt",
       "Interkommunalt samarbeid som del av løsningen",
       "Politisk vilje til å ta vanskelige valg"
     ],
-    externalUrl: undefined,
+    externalUrl: "https://tv.nrk.no/serie/debatten/sesong/202511/episode/NNFA51111125",
     embedUrl: "https://tv.nrk.no/serie/debatten/sesong/202511/episode/NNFA51111125",
     featured: true,
     tags: ["nrk", "debatt", "kommuneøkonomi"]
