@@ -1,5 +1,5 @@
 import { useParams, Link, Navigate } from "react-router-dom";
-import { ArrowLeft, Calendar, User, Tag } from "lucide-react";
+import { ArrowLeft, Calendar, User, Tag, ExternalLink, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { articles } from "@/data/inspirasjonContent";
 import { mediaEntries } from "@/data/mediaContent";
@@ -69,6 +69,34 @@ const ArticleDetail = () => {
               <div className="flex items-center gap-2 mt-6 text-sm text-white/80">
                 <User className="w-4 h-4" />
                 <span>Av {item.authors.join(" og ")}</span>
+              </div>
+            )}
+
+            {/* External link & PDF buttons */}
+            {(item.externalUrl || item.pdfUrl) && (
+              <div className="flex flex-wrap gap-3 mt-6">
+                {item.externalUrl && (
+                  <a
+                    href={item.externalUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-5 py-2.5 bg-white/20 hover:bg-white/30 rounded-lg text-sm font-medium text-white transition-colors"
+                  >
+                    <ExternalLink className="w-4 h-4" />
+                    Les originalen
+                  </a>
+                )}
+                {item.pdfUrl && (
+                  <a
+                    href={item.pdfUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-5 py-2.5 bg-white/20 hover:bg-white/30 rounded-lg text-sm font-medium text-white transition-colors"
+                  >
+                    <FileText className="w-4 h-4" />
+                    Last ned PDF
+                  </a>
+                )}
               </div>
             )}
           </div>
