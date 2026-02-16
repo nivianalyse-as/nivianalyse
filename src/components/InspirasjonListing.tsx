@@ -140,14 +140,24 @@ const InspirasjonListing = () => {
             {/* "Alle" tab: combined articles + media sorted by date */}
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
               {(() => {
+                const monthMap: Record<string, string> = {
+                  jan: "01", feb: "02", mar: "03", apr: "04", mai: "05", jun: "06",
+                  jul: "07", aug: "08", sep: "09", okt: "10", nov: "11", des: "12"
+                };
+                const parseNorDate = (d: string) => {
+                  const parts = d.replace(/\./g, "").trim().split(/\s+/);
+                  if (parts.length === 3) {
+                    const [day, mon, year] = parts;
+                    return new Date(`${year}-${monthMap[mon.toLowerCase()] || "01"}-${day.padStart(2, "0")}`);
+                  }
+                  return new Date(0);
+                };
                 type MixedItem = { kind: "article"; data: ArticleContent } | { kind: "media"; data: MediaEntry };
                 const articleItems: MixedItem[] = filteredArticles.map(a => ({ kind: "article", data: a }));
-                const mediaItems: MixedItem[] = sortedMedia
-                  .filter(m => activeFilter === "Alle" || true)
-                  .map(m => ({ kind: "media", data: m }));
+                const mediaItems: MixedItem[] = sortedMedia.map(m => ({ kind: "media", data: m }));
                 const combined = [...articleItems, ...mediaItems].sort((a, b) => {
                   const getDate = (item: MixedItem) => {
-                    if (item.kind === "article") return new Date(item.data.date.split(".").reverse().join("-"));
+                    if (item.kind === "article") return parseNorDate(item.data.date);
                     return item.data.date ? new Date(item.data.date) : new Date(0);
                   };
                   return getDate(b).getTime() - getDate(a).getTime();
