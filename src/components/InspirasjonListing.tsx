@@ -6,6 +6,7 @@ import MediaCard from "@/components/MediaCard";
 import { articles } from "@/data/inspirasjonContent";
 import { mediaEntries } from "@/data/mediaContent";
 import { ContentCategory, ArticleContent } from "@/types/content";
+import { MediaEntry } from "@/types/media";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const categories: ContentCategory[] = [
@@ -136,14 +137,27 @@ const InspirasjonListing = () => {
           </>
         ) : (
           <>
-            {/* "Alle" tab: articles first, then media */}
+            {/* "Alle" tab: combined articles + media sorted by date */}
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
-              {filteredArticles.map((item) => (
-                <ArticleCard key={`a-${item.id}`} item={item} />
-              ))}
-              {sortedMedia.map((entry) => (
-                <MediaCard key={`m-${entry.id}`} entry={entry} />
-              ))}
+              {(() => {
+                type MixedItem = { kind: "article"; data: ArticleContent } | { kind: "media"; data: MediaEntry };
+                const articleItems: MixedItem[] = filteredArticles.map(a => ({ kind: "article", data: a }));
+                const mediaItems: MixedItem[] = sortedMedia
+                  .filter(m => activeFilter === "Alle" || true)
+                  .map(m => ({ kind: "media", data: m }));
+                const combined = [...articleItems, ...mediaItems].sort((a, b) => {
+                  const getDate = (item: MixedItem) => {
+                    if (item.kind === "article") return new Date(item.data.date.split(".").reverse().join("-"));
+                    return item.data.date ? new Date(item.data.date) : new Date(0);
+                  };
+                  return getDate(b).getTime() - getDate(a).getTime();
+                });
+                return combined.map((item) =>
+                  item.kind === "media"
+                    ? <MediaCard key={`m-${item.data.id}`} entry={item.data} />
+                    : <ArticleCard key={`a-${item.data.id}`} item={item.data} />
+                );
+              })()}
             </div>
             {filteredArticles.length === 0 && sortedMedia.length === 0 && (
               <div className="text-center py-16">
