@@ -258,6 +258,7 @@ export const mediaEntries: MediaEntry[] = [
       "Prinsippene for forholdet stat–kommune"
     ],
     externalUrl: "https://www.kommunal-rapport.no/meninger/ikke-statens-feil-at-kommunene-ikke-vil/836768",
+    pdfUrl: "/docs/Ikke_statens_feil_at_kommunene_ikke_vil.pdf",
     featured: false,
     tags: ["kommunal rapport", "kommuneøkonomi", "debatt"]
   }
