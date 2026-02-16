@@ -20,7 +20,7 @@ const HeroSection = () => {
             src={heroImage}
             alt=""
             aria-hidden="true"
-            className="absolute inset-0 w-full h-full object-cover object-[72%_center] hidden md:block"
+            className="absolute inset-0 w-full h-full object-cover object-[82%_center] hidden md:block"
           />
 
           {/* Mobile Background Image */}
@@ -43,18 +43,18 @@ const HeroSection = () => {
             style={{
               background: `linear-gradient(
                 to right,
-                rgba(8, 30, 25, 0.75) 0%,
-                rgba(8, 30, 25, 0.50) 22%,
-                rgba(8, 30, 25, 0.15) 35%,
-                rgba(8, 30, 25, 0) 42%
+                rgba(8, 30, 25, 0.80) 0%,
+                rgba(8, 30, 25, 0.55) 18%,
+                rgba(8, 30, 25, 0.15) 30%,
+                rgba(8, 30, 25, 0) 36%
               )`
             }}
             aria-hidden="true"
           />
 
           {/* Content */}
-          <div className="relative z-10 px-6 md:ml-[8%] md:px-0 md:pr-10 pt-24 md:pt-0 py-16 md:py-32 lg:py-32 w-full flex items-center md:h-full">
-            <div className="max-w-[85%] md:max-w-[520px]">
+          <div className="relative z-10 px-6 md:ml-[7%] md:px-0 md:pr-10 pt-24 md:pt-0 py-16 md:py-32 lg:py-32 w-full flex items-center md:h-full">
+            <div className="max-w-[85%] md:max-w-[480px]">
               {/* Mobile heading - without names */}
               <h1 
                 className="md:hidden font-bold leading-tight text-white animate-fade-in tracking-tight text-3xl"
