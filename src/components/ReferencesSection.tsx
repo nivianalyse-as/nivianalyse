@@ -4,12 +4,13 @@ const groups = [
   {
     label: "Kommuner og fylkeskommuner",
     items: [
-      "Asker kommune", "Bergen kommune", "Bodø kommune", "Bærum kommune",
-      "Drammen kommune", "Fredrikstad kommune", "Kristiansand kommune",
-      "Moskenes kommune", "Oslo kommune", "Porsanger kommune",
-      "Sandefjord kommune", "Sarpsborg kommune", "Stavanger kommune",
-      "Tana kommune", "Trondheim kommune", "Tromsø kommune", "Vestvågøy kommune",
-      "Nordland fylkeskommune", "Vestland fylkeskommune", "Viken fylkeskommune",
+      "Asker kommune", "Frøya kommune", "Hole kommune", "Moskenes kommune",
+      "Nesodden kommune", "Porsanger kommune", "Skjervøy kommune",
+      "Steigen kommune", "Tana kommune", "Ullensaker kommune",
+      "Vanylven kommune", "Vestvågøy kommune", "Vinje kommune",
+      "Østre Toten kommune", "Åmot kommune",
+      "Nordland fylkeskommune", "Oppland fylkeskommune",
+      "Vestland fylkeskommune", "Viken fylkeskommune", "Østfold fylkeskommune",
     ],
   },
   {
