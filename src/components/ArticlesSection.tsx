@@ -14,7 +14,7 @@ const ArticlesSection = () => {
   // Combine articles and media, sort by date, take latest 3
   const articleItems: MixedItem[] = articles.map(a => ({ kind: "article", data: a }));
   const mediaItems: MixedItem[] = mediaEntries
-    .filter(e => e.date)
+    .filter(e => e.date && e.slug !== "kommunal-rapport-brolaper")
     .map(m => ({ kind: "media", data: m }));
   
   const allItems = [...articleItems, ...mediaItems];
