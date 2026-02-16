@@ -37,23 +37,24 @@ const HeroSection = () => {
             aria-hidden="true"
           />
 
-          {/* Desktop overlay - original lighter gradient */}
+          {/* Desktop overlay - left-side gradient for text readability */}
           <div 
             className="absolute inset-0 hidden md:block"
             style={{
               background: `linear-gradient(
-                145deg,
-                rgba(7, 52, 47, 0.32) 0%,
-                rgba(7, 52, 47, 0.20) 40%,
-                rgba(7, 52, 47, 0.28) 100%
+                to right,
+                rgba(7, 52, 47, 0.65) 0%,
+                rgba(7, 52, 47, 0.45) 25%,
+                rgba(7, 52, 47, 0.15) 45%,
+                rgba(7, 52, 47, 0) 55%
               )`
             }}
             aria-hidden="true"
           />
 
           {/* Content */}
-          <div className="relative z-10 px-6 md:px-6 lg:px-6 pt-24 md:pt-0 py-16 md:py-32 lg:py-32 max-w-6xl mx-auto w-full flex items-center md:h-full">
-            <div className="max-w-[85%] md:max-w-2xl">
+          <div className="relative z-10 px-6 md:px-6 lg:px-12 pt-24 md:pt-0 py-16 md:py-32 lg:py-32 max-w-6xl mx-auto w-full flex items-center md:h-full">
+            <div className="max-w-[85%] md:max-w-[560px]">
               {/* Mobile heading - without names */}
               <h1 
                 className="md:hidden font-bold leading-tight text-white animate-fade-in tracking-tight text-3xl"
@@ -63,7 +64,7 @@ const HeroSection = () => {
 
               {/* Desktop heading - with names */}
               <h1 
-                className="hidden md:block text-4xl lg:text-5xl font-bold leading-tight text-white mb-7 animate-fade-in tracking-tight"
+                className="hidden md:block text-4xl lg:text-5xl font-bold leading-tight text-white mb-9 animate-fade-in tracking-tight"
               >
                 Håvard Moe og Geir Vinsand tilbyr spisskompetanse på kommunal utvikling og omstilling
               </h1>
@@ -74,7 +75,7 @@ const HeroSection = () => {
               </p>
 
               {/* Desktop paragraph */}
-              <p className="hidden md:block text-[18px] text-white mb-11 leading-[1.65] max-w-[480px] animate-fade-in-delay-1">
+              <p className="hidden md:block text-[18px] text-white mb-14 leading-[1.65] max-w-[480px] animate-fade-in-delay-1">
                 Uavhengig rådgivning for kommuner som vil styrke økonomi, styring og tjenesteutvikling.
               </p>
 
