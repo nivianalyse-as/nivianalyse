@@ -29,26 +29,24 @@ const IMedia = () => {
   const years = getMediaYears();
 
   const filteredEntries = useMemo(() => {
-    return mediaEntries.filter((entry) => {
-      // Search filter
-      const searchLower = searchQuery.toLowerCase();
-      const matchesSearch = 
-        entry.title.toLowerCase().includes(searchLower) ||
-        entry.source.toLowerCase().includes(searchLower) ||
-        entry.excerpt.toLowerCase().includes(searchLower);
-
-      // Type filter
-      const matchesType = typeFilter === "all" || entry.type === typeFilter;
-
-      // Source filter
-      const matchesSource = sourceFilter === "all" || entry.source === sourceFilter;
-
-      // Year filter
-      const entryYear = entry.date?.split("-")[0];
-      const matchesYear = yearFilter === "all" || entryYear === yearFilter;
-
-      return matchesSearch && matchesType && matchesSource && matchesYear;
-    });
+    return mediaEntries
+      .filter((entry) => {
+        const searchLower = searchQuery.toLowerCase();
+        const matchesSearch = 
+          entry.title.toLowerCase().includes(searchLower) ||
+          entry.source.toLowerCase().includes(searchLower) ||
+          entry.excerpt.toLowerCase().includes(searchLower);
+        const matchesType = typeFilter === "all" || entry.type === typeFilter;
+        const matchesSource = sourceFilter === "all" || entry.source === sourceFilter;
+        const entryYear = entry.date?.split("-")[0];
+        const matchesYear = yearFilter === "all" || entryYear === yearFilter;
+        return matchesSearch && matchesType && matchesSource && matchesYear;
+      })
+      .sort((a, b) => {
+        if (!a.date) return 1;
+        if (!b.date) return -1;
+        return new Date(b.date).getTime() - new Date(a.date).getTime();
+      });
   }, [searchQuery, typeFilter, sourceFilter, yearFilter]);
 
   const visibleEntries = filteredEntries.slice(0, visibleCount);
