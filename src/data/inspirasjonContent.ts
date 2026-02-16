@@ -2,6 +2,26 @@ import { ArticleContent } from "@/types/content";
 
 export const articles: ArticleContent[] = [
   {
+    id: "10-rad",
+    type: "article",
+    title: "Håvard Moes 10 råd for bærekraftig kommuneøkonomi",
+    excerpt: "Håvard Moe presenterer ti konkrete råd til kommunepolitikere som vil ta politisk ansvar for en bærekraftig kommuneøkonomi.",
+    date: "14. feb 2026",
+    category: "Kommuneøkonomi",
+    slug: "10-rad-barekraftig-kommuneokonomi",
+    ingress: "Et politisk ansvar – ta det! Håvard Moe gir ti konkrete råd til kommunepolitikere som ønsker å sikre bærekraftig kommuneøkonomi.",
+    sections: [
+      {
+        title: "Ti råd for bærekraftig kommuneøkonomi",
+        content: "Artikkelen presenterer ti konkrete råd for kommunepolitikere som vil ta politisk ansvar for en bærekraftig kommuneøkonomi. Rådene spenner fra budsjettstyring og prioritering til strategisk planlegging og samarbeid."
+      }
+    ],
+    relatedTopics: ["Kommuneøkonomi", "Politisk rådgivning"],
+    authors: ["Håvard Moe"],
+    externalUrl: "https://www.kommunal-rapport.no/nyheter/havard-moes-10-rad-et-politisk-ansvar-ta-det/843308",
+    pdfUrl: "/docs/Havard_Moes_10_rad.pdf"
+  },
+  {
     id: "1",
     type: "article",
     title: "Kommunesamarbeid i praksis",

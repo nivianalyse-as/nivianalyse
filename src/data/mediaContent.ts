@@ -260,24 +260,6 @@ export const mediaEntries: MediaEntry[] = [
     externalUrl: "https://www.kommunal-rapport.no/meninger/ikke-statens-feil-at-kommunene-ikke-vil/836768",
     featured: false,
     tags: ["kommunal rapport", "kommuneøkonomi", "debatt"]
-  },
-  {
-    id: 16,
-    title: "Håvard Moes 10 råd for bærekraftig kommuneøkonomi",
-    slug: "kommunal-rapport-10-rad",
-    type: "article",
-    source: "Kommunal Rapport",
-    date: "2026-02-14",
-    excerpt: "Håvard Moe presenterer ti konkrete råd til kommunepolitikere som vil ta politisk ansvar for en bærekraftig kommuneøkonomi.",
-    keyPoints: [
-      "Ti konkrete råd for bærekraftig kommuneøkonomi",
-      "Politisk ansvar og prioritering",
-      "Praktiske grep for kommunepolitikere"
-    ],
-    externalUrl: "https://www.kommunal-rapport.no/nyheter/havard-moes-10-rad-et-politisk-ansvar-ta-det/843308",
-    pdfUrl: "/docs/Havard_Moes_10_rad.pdf",
-    featured: true,
-    tags: ["kommunal rapport", "kommuneøkonomi", "råd"]
   }
 ];
 

@@ -23,6 +23,8 @@ export interface ArticleContent {
   sections?: ArticleSection[];
   relatedTopics?: string[];
   authors?: string[];
+  externalUrl?: string;
+  pdfUrl?: string;
 }
 
 export interface ArticleSection {
