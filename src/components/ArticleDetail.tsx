@@ -42,7 +42,7 @@ const ArticleDetail = () => {
               className="inline-flex items-center gap-2 text-white/80 hover:text-white mb-6 transition-colors text-sm"
             >
               <ArrowLeft className="w-4 h-4" />
-              Tilbake til Inspirasjon
+              Tilbake til Faglige artikler
             </Link>
             
             <div className="flex flex-wrap items-center gap-3 mb-4">
