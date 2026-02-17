@@ -43,10 +43,10 @@ const HeroSection = () => {
             style={{
               background: `linear-gradient(
                 90deg,
-                rgba(15, 35, 30, 0.80) 0%,
-                rgba(15, 35, 30, 0.60) 25%,
-                rgba(15, 35, 30, 0.25) 40%,
-                rgba(15, 35, 30, 0.0) 55%
+                rgba(15, 35, 30, 0.85) 0%,
+                rgba(15, 35, 30, 0.65) 20%,
+                rgba(15, 35, 30, 0.20) 32%,
+                rgba(15, 35, 30, 0.0) 42%
               )`
             }}
             aria-hidden="true"
@@ -54,7 +54,7 @@ const HeroSection = () => {
 
           {/* Content */}
           <div className="relative z-10 px-6 md:pl-[6vw] md:px-0 pt-24 md:pt-0 py-16 w-full flex md:items-start md:justify-center md:flex-col md:h-full">
-            <div className="max-w-[85%] md:max-w-[520px] text-left">
+            <div className="max-w-[85%] md:max-w-[420px] text-left">
               {/* Mobile heading - without names */}
               <h1 
                 className="md:hidden font-bold leading-tight text-white animate-fade-in tracking-tight text-3xl"
@@ -64,7 +64,7 @@ const HeroSection = () => {
 
               {/* Desktop heading - with names */}
               <h1 
-                className="hidden md:block text-4xl lg:text-5xl font-bold text-white mb-9 animate-fade-in tracking-tight"
+                className="hidden md:block text-3xl lg:text-4xl font-bold text-white mb-9 animate-fade-in tracking-tight"
                 style={{ lineHeight: 1.08 }}
               >
                 Håvard Moe og Geir Vinsand tilbyr spisskompetanse på kommunal utvikling og omstilling
