@@ -38,48 +38,50 @@ const ReferencesSection = () => {
   return (
     <section
       id="referanser"
-      className="py-20 md:py-32 relative overflow-hidden"
-      style={{ backgroundColor: '#F3F8F6' }}
+      className="py-20 md:py-32"
+      style={{
+        background: 'linear-gradient(180deg, #F7FAF8 0%, #EEF5F1 50%, #F7FAF8 100%)',
+      }}
     >
-      {/* Subtle radial depth */}
-      <div
-        className="absolute inset-0 pointer-events-none"
-        aria-hidden="true"
-        style={{
-          background: 'radial-gradient(ellipse at 50% 50%, rgba(7, 52, 47, 0.04) 0%, transparent 70%)',
-        }}
-      />
-
-      <div className="container-narrow relative z-10">
-        <div className="mb-12 md:mb-16">
+      <div className="container-narrow">
+        {/* Header with editorial spacing */}
+        <div className="mb-14 md:mb-20">
           <SectionHeader
             title="Våre oppdragsgivere"
             subtitle="Vi har samarbeidet med kommuner, fylkeskommuner og departementer over hele Norge."
           />
         </div>
 
-        <div className="max-w-4xl mx-auto space-y-10 md:space-y-14">
+        {/* Panels */}
+        <div className="max-w-4xl mx-auto flex flex-col gap-10 md:gap-16">
           {groups.map((group) => (
-            <div key={group.label}>
-              <p
-                className="font-semibold text-center mb-3"
-                style={{ fontSize: '0.9375rem', letterSpacing: '0.02em', color: '#0A3D36' }}
+            <div
+              key={group.label}
+              className="bg-white rounded-xl px-7 py-7 md:px-10 md:py-10"
+              style={{
+                boxShadow: '0 8px 30px rgba(0, 0, 0, 0.04)',
+              }}
+            >
+              <h3
+                className="font-semibold text-primary text-center mb-1"
+                style={{ fontSize: '1.0625rem', letterSpacing: '0.015em' }}
               >
                 {group.label}
-              </p>
+              </h3>
               <div
-                className="mx-auto mb-4"
-                style={{ width: '48px', height: '1px', backgroundColor: 'rgba(7, 52, 47, 0.15)' }}
+                className="mx-auto mt-4 mb-6"
+                style={{ width: '40px', height: '2px', backgroundColor: 'rgba(7, 52, 47, 0.20)', borderRadius: '1px' }}
                 aria-hidden="true"
               />
-              <div className="flex flex-wrap justify-center gap-3">
+              <div className="flex flex-wrap justify-center" style={{ gap: '10px', rowGap: '14px' }}>
                 {group.items.map((ref, i) => (
                   <span
                     key={i}
-                    className="inline-block px-4 py-2 rounded-full bg-white text-primary/80 text-sm font-medium select-none"
+                    className="inline-block rounded-full text-primary/80 text-sm font-medium select-none transition-colors duration-150 hover:bg-[#E9F3EE] cursor-default"
                     style={{
-                      border: '1px solid rgba(7, 52, 47, 0.10)',
-                      boxShadow: '0 1px 2px rgba(0,0,0,0.03)',
+                      padding: '8px 18px',
+                      backgroundColor: '#F8FBF9',
+                      border: '1px solid rgba(7, 52, 47, 0.08)',
                     }}
                   >
                     {ref}
@@ -90,7 +92,10 @@ const ReferencesSection = () => {
           ))}
         </div>
 
-        <p className="text-center text-sm text-muted-foreground mt-10 hover:underline cursor-default transition-all">
+        <p
+          className="text-center text-sm mt-10 md:mt-14 cursor-default transition-all hover:underline"
+          style={{ color: '#2A5C52', textUnderlineOffset: '4px' }}
+        >
           Se fullstendig oppdragsoversikt i CV
         </p>
       </div>
