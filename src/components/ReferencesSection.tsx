@@ -41,7 +41,7 @@ const ReferencesSection = () => {
       style={{
         paddingTop: '120px',
         paddingBottom: '120px',
-        background: 'linear-gradient(180deg, #F0F7F3 0%, #E8F0EB 100%)',
+        background: 'linear-gradient(180deg, #E4EDE8 0%, #EDF4F0 100%)',
       }}
     >
       <div className="container-narrow">
@@ -59,10 +59,10 @@ const ReferencesSection = () => {
               key={group.label}
               className="bg-white"
               style={{
-                borderRadius: '20px',
-                padding: '48px 40px',
-                boxShadow: '0 20px 50px rgba(0, 0, 0, 0.06), 0 4px 12px rgba(0, 0, 0, 0.03)',
-                border: '1px solid rgba(0, 0, 0, 0.04)',
+                borderRadius: '12px',
+                padding: '54px 46px',
+                boxShadow: '0 2px 8px rgba(0, 0, 0, 0.03)',
+                border: '1px solid rgba(0, 0, 0, 0.06)',
               }}
             >
               <h3
@@ -87,7 +87,7 @@ const ReferencesSection = () => {
                 {group.items.map((ref, i) => (
                   <span
                     key={i}
-                    className="inline-block rounded-full select-none cursor-default transition-all duration-200 hover:text-white hover:-translate-y-0.5"
+                    className="inline-block rounded-full select-none cursor-default transition-colors duration-150"
                     style={{
                       padding: '8px 16px',
                       fontSize: '14px',
@@ -97,18 +97,10 @@ const ReferencesSection = () => {
                       border: '1px solid #DCE5E1',
                     }}
                     onMouseEnter={(e) => {
-                      const el = e.currentTarget;
-                      el.style.backgroundColor = 'hsl(168, 79%, 11%)';
-                      el.style.color = '#FFFFFF';
-                      el.style.borderColor = 'hsl(168, 79%, 11%)';
-                      el.style.boxShadow = '0 6px 14px rgba(20, 60, 50, 0.15)';
+                      e.currentTarget.style.backgroundColor = '#EEF2F0';
                     }}
                     onMouseLeave={(e) => {
-                      const el = e.currentTarget;
-                      el.style.backgroundColor = '#F6F8F7';
-                      el.style.color = 'hsl(168, 79%, 11%)';
-                      el.style.borderColor = '#DCE5E1';
-                      el.style.boxShadow = 'none';
+                      e.currentTarget.style.backgroundColor = '#F6F8F7';
                     }}
                   >
                     {ref}
