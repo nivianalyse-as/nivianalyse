@@ -77,10 +77,10 @@ const ReferencesSection = () => {
               >
                 {group.label}
               </h3>
-              {/* Green accent line matching SectionHeader */}
+              {/* Accent line matching SectionHeader */}
               <div
                 className="mx-auto rounded-full"
-                style={{ height: '2px', width: '40px', backgroundColor: 'hsl(168, 79%, 11%, 0.20)', margin: '12px auto 28px auto' }}
+                style={{ height: '2px', width: '48px', backgroundColor: 'hsl(17, 90%, 45%)', margin: '16px auto 24px auto' }}
                 aria-hidden="true"
               />
               <div className="flex flex-wrap justify-center" style={{ gap: '10px', rowGap: '14px' }}>
