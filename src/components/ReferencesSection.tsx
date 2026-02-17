@@ -40,7 +40,7 @@ const ReferencesSection = () => {
       id="referanser"
       className="py-14 md:py-24"
       style={{
-        background: 'linear-gradient(180deg, #EDF4F0 0%, #E4EDE8 100%)',
+        background: 'linear-gradient(180deg, #F0F7F3 0%, #E8F0EB 100%)',
       }}
     >
       <div className="container-narrow">
@@ -58,9 +58,9 @@ const ReferencesSection = () => {
               key={group.label}
               className="bg-white"
               style={{
-                borderRadius: '18px',
+                borderRadius: '20px',
                 padding: '48px 40px',
-                boxShadow: '0 16px 40px rgba(0, 0, 0, 0.07)',
+                boxShadow: '0 20px 50px rgba(0, 0, 0, 0.06), 0 4px 12px rgba(0, 0, 0, 0.03)',
                 border: '1px solid rgba(0, 0, 0, 0.04)',
               }}
             >
@@ -79,7 +79,7 @@ const ReferencesSection = () => {
               {/* Green accent line matching SectionHeader */}
               <div
                 className="mx-auto rounded-full"
-                style={{ height: '2px', width: '40px', backgroundColor: 'hsl(168, 79%, 11%, 0.25)', margin: '12px auto 28px auto' }}
+                style={{ height: '2px', width: '40px', backgroundColor: 'hsl(168, 79%, 11%, 0.20)', margin: '12px auto 28px auto' }}
                 aria-hidden="true"
               />
               <div className="flex flex-wrap justify-center" style={{ gap: '10px', rowGap: '14px' }}>

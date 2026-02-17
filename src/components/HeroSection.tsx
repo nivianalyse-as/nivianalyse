@@ -43,18 +43,18 @@ const HeroSection = () => {
             style={{
               background: `linear-gradient(
                 90deg,
-                rgba(15, 35, 30, 0.85) 0%,
-                rgba(15, 35, 30, 0.65) 20%,
-                rgba(15, 35, 30, 0.20) 32%,
-                rgba(15, 35, 30, 0.0) 42%
+                rgba(15, 35, 30, 0.92) 0%,
+                rgba(15, 35, 30, 0.72) 22%,
+                rgba(15, 35, 30, 0.35) 38%,
+                rgba(15, 35, 30, 0.0) 52%
               )`
             }}
             aria-hidden="true"
           />
 
           {/* Content */}
-          <div className="relative z-10 px-6 md:pl-[6vw] md:px-0 pt-24 md:pt-0 py-16 w-full flex md:items-start md:justify-center md:flex-col md:h-full">
-            <div className="max-w-[85%] md:max-w-[380px] text-left">
+          <div className="relative z-10 px-6 md:pl-[6vw] md:px-0 pt-24 md:pt-0 py-16 md:py-24 w-full flex md:items-start md:justify-center md:flex-col md:h-full">
+            <div className="max-w-[85%] md:max-w-[620px] text-left">
               {/* Mobile heading - without names */}
               <h1 
                 className="md:hidden font-bold leading-tight text-white animate-fade-in tracking-tight text-3xl"
@@ -65,7 +65,7 @@ const HeroSection = () => {
               {/* Desktop heading - with names */}
               <h1 
                 className="hidden md:block text-2xl lg:text-3xl font-bold text-white mb-7 animate-fade-in tracking-tight"
-                style={{ lineHeight: 1.08 }}
+                style={{ lineHeight: 1.18 }}
               >
                 Håvard Moe og Geir&nbsp;Vinsand tilbyr spisskompetanse på kommunal utvikling og omstilling
               </h1>
