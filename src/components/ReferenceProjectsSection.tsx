@@ -117,7 +117,7 @@ const ProjectCard = ({ project, hidden = false }: { project: ReferenceProject; h
         </span>
         <Badge
           variant={project.type === "Omstillingsstøtte" ? "default" : "secondary"}
-          className="text-[11px] px-2 py-0.5 bg-primary/90 text-primary-foreground"
+          className="text-[11px] px-2 py-0.5 bg-primary text-primary-foreground"
         >
           {project.type === "Omstillingsstøtte" ? "Omstilling" : project.type === "Interkommunalt samarbeid" ? "Samarbeid" : project.type}
         </Badge>
@@ -171,11 +171,11 @@ const ReferenceProjectsSection = () => {
 
         {/* Category 1 */}
         <div className="mb-16 md:mb-20">
-          <p className="font-semibold text-primary text-center mt-8 mb-4" style={{ fontSize: '1.0625rem', letterSpacing: '0.02em' }}>
+           <p className="font-semibold text-primary text-center mt-8 mb-5" style={{ fontSize: '1.0625rem', letterSpacing: '0.02em' }}>
             Omstillings- og økonomiprosesser
           </p>
-          <div className="mx-auto max-w-xs h-px bg-primary/10 mb-6 md:mb-8" />
-          <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-y-12 md:gap-y-14 gap-x-6 lg:gap-x-10">
+          <div className="mx-auto max-w-xs h-px bg-primary/10 mb-7 md:mb-9" />
+        <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-y-14 md:gap-y-16 gap-x-6 lg:gap-x-10">
             {omstillingsProjects.map((project, index) => (
               <ProjectCard key={project.kommune} project={project} hidden={index >= 2} />
             ))}
@@ -197,11 +197,11 @@ const ReferenceProjectsSection = () => {
 
         {/* Category 2 */}
         <div>
-          <p className="font-semibold text-primary text-center mt-8 mb-4" style={{ fontSize: '1.0625rem', letterSpacing: '0.02em' }}>
+          <p className="font-semibold text-primary text-center mt-8 mb-5" style={{ fontSize: '1.0625rem', letterSpacing: '0.02em' }}>
             Struktur og interkommunalt samarbeid
           </p>
-          <div className="mx-auto max-w-xs h-px bg-primary/10 mb-6 md:mb-8" />
-          <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-y-12 md:gap-y-14 gap-x-6 lg:gap-x-10">
+          <div className="mx-auto max-w-xs h-px bg-primary/10 mb-7 md:mb-9" />
+          <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-y-14 md:gap-y-16 gap-x-6 lg:gap-x-10">
             {strukturProjects.map((project) => (
               <ProjectCard key={project.kommune} project={project} />
             ))}
