@@ -38,14 +38,13 @@ const ReferencesSection = () => {
   return (
     <section
       id="referanser"
+      className="py-14 md:py-24"
       style={{
-        paddingTop: '120px',
-        paddingBottom: '120px',
         background: 'linear-gradient(180deg, #F0F7F3 0%, #E8F0EB 100%)',
       }}
     >
       <div className="container-narrow">
-        <div style={{ marginBottom: '64px' }}>
+        <div className="mb-10 md:mb-16">
           <SectionHeader
             title="Våre oppdragsgivere"
             subtitle="Vi har samarbeidet med kommuner, fylkeskommuner og departementer over hele Norge."
@@ -69,8 +68,7 @@ const ReferencesSection = () => {
                 className="text-center"
                 style={{
                   fontWeight: 600,
-                  fontSize: '17px',
-                  lineHeight: 1.3,
+                  fontSize: '18px',
                   letterSpacing: '0.3px',
                   color: 'hsl(168, 79%, 11%)',
                   marginBottom: '0',

@@ -88,9 +88,9 @@ const experts: Expert[] = [
 
 const ExpertsSection = () => {
   return (
-    <section id="eksperter" style={{ backgroundColor: 'hsl(150 10% 97%)', paddingTop: '120px', paddingBottom: '120px' }}>
+    <section id="eksperter" className="py-16 md:py-24" style={{ backgroundColor: 'hsl(150 10% 97%)' }}>
       <div className="container-narrow">
-        <div style={{ marginBottom: '64px' }}>
+        <div className="mb-12 md:mb-16">
           <SectionHeader
             title="Møt ekspertene"
             subtitle="Over 60 års samlet erfaring fra kommunesektoren."
@@ -111,7 +111,7 @@ const ExpertsSection = () => {
                 />
               </div>
               <div className="p-6 md:p-8 flex flex-col flex-1">
-                <h3 className="text-xl md:text-2xl" style={{ fontWeight: 600, lineHeight: 1.3, marginBottom: '4px' }}>
+                <h3 className="text-xl md:text-2xl font-bold mb-1">
                   {expert.name}
                 </h3>
                 <p className="text-primary/70 font-medium mb-4 text-sm">
@@ -129,7 +129,7 @@ const ExpertsSection = () => {
                   ))}
                 </div>
                 
-                <p className="text-sm flex-1 line-clamp-5" style={{ lineHeight: 1.65, color: 'hsl(168, 30%, 30%)', marginBottom: '16px' }}>
+                <p className="text-muted-foreground text-sm leading-relaxed mb-4 flex-1 line-clamp-5">
                   {expert.description}
                 </p>
 

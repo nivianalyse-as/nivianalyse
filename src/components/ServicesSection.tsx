@@ -34,9 +34,9 @@ const fagomrader: Fagomrade[] = [
 
 const ServicesSection = () => {
   return (
-    <section id="fagomrader" className="bg-[#F5F5F3] md:bg-background" style={{ paddingTop: '120px', paddingBottom: '120px' }}>
+    <section id="fagomrader" className="pt-20 pb-16 md:pt-28 md:pb-24 bg-[#F5F5F3] md:bg-background">
       <div className="mx-auto px-5 sm:px-6 lg:px-8" style={{ maxWidth: '1100px' }}>
-        <div style={{ marginBottom: '64px' }}>
+        <div className="mb-14 md:mb-16">
           <SectionHeader
             title="Våre fagområder"
             subtitle="Skreddersydd rådgivning basert på tiår med erfaring fra norsk kommunesektor."
@@ -50,12 +50,12 @@ const ServicesSection = () => {
               className="group bg-card border border-border/60 p-5 md:p-7 flex flex-col rounded-2xl shadow-[0_2px_12px_rgba(0,0,0,0.05)] transition-all duration-[250ms] ease-in-out cursor-pointer md:hover:-translate-y-1 md:hover:shadow-[0_12px_32px_rgba(0,0,0,0.10)] md:hover:border-primary/40"
             >
               <h3
-                className="text-primary group-hover:underline underline-offset-4 decoration-primary/40"
-                style={{ fontSize: '22px', fontWeight: 600, lineHeight: 1.3, letterSpacing: '-0.2px', marginBottom: '12px' }}
+                className="text-primary font-bold leading-tight mb-2 group-hover:underline underline-offset-4 decoration-primary/40"
+                style={{ fontSize: '22px', letterSpacing: '-0.2px' }}
               >
                 {fag.title}
               </h3>
-              <p style={{ fontSize: '15px', lineHeight: 1.65, color: 'hsl(168, 30%, 30%)' }}>
+              <p className="leading-snug" style={{ fontSize: '15px', color: '#3A4F46' }}>
                 {fag.description}
               </p>
             </div>

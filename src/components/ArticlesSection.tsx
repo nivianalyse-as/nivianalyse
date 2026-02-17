@@ -31,9 +31,9 @@ const ArticlesSection = () => {
     .slice(0, 3);
 
   return (
-    <section id="inspirasjon" className="bg-[#F7F7F5]" style={{ paddingTop: '120px', paddingBottom: '120px' }}>
+    <section id="inspirasjon" className="py-16 md:py-24 pb-16 bg-[#F7F7F5]">
       <div className="container-narrow">
-        <div style={{ marginBottom: '64px' }}>
+        <div className="mb-10 md:mb-10">
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4">
             <SectionHeader
               title="Faglige innsikter"
@@ -71,10 +71,10 @@ const ArticlesSection = () => {
                       </span>
                     )}
                   </div>
-                <h3 className="text-base md:text-lg group-hover:text-accent transition-colors line-clamp-2" style={{ fontWeight: 600, lineHeight: 1.3, marginBottom: '12px' }}>
+                  <h3 className="text-base md:text-lg font-semibold mb-2 group-hover:text-accent transition-colors line-clamp-2">
                     {m.title}
                   </h3>
-                  <p className="text-sm line-clamp-2 md:line-clamp-3" style={{ lineHeight: 1.65, color: 'hsl(168, 30%, 30%)' }}>
+                  <p className="text-muted-foreground text-sm leading-relaxed line-clamp-2 md:line-clamp-3">
                     {m.excerpt}
                   </p>
                 </Link>
@@ -97,10 +97,10 @@ const ArticlesSection = () => {
                     {a.date}
                   </span>
                 </div>
-                <h3 className="text-base md:text-lg group-hover:text-accent transition-colors line-clamp-2" style={{ fontWeight: 600, lineHeight: 1.3, marginBottom: '12px' }}>
+                <h3 className="text-base md:text-lg font-semibold mb-2 group-hover:text-accent transition-colors line-clamp-2">
                   {a.title}
                 </h3>
-                <p className="text-sm line-clamp-2 md:line-clamp-3" style={{ lineHeight: 1.65, color: 'hsl(168, 30%, 30%)' }}>
+                <p className="text-muted-foreground text-sm leading-relaxed line-clamp-2 md:line-clamp-3">
                   {a.excerpt}
                 </p>
               </Link>

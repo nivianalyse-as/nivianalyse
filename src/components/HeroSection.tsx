@@ -57,34 +57,33 @@ const HeroSection = () => {
             <div className="max-w-[85%] md:max-w-[620px] text-left">
               {/* Mobile heading - without names */}
               <h1 
-                className="md:hidden text-white animate-fade-in text-3xl"
-                style={{ fontWeight: 700, lineHeight: 1.18, letterSpacing: '-0.01em' }}
+                className="md:hidden font-bold leading-tight text-white animate-fade-in tracking-tight text-3xl"
               >
                 Spisskompetanse på kommunal utvikling og omstilling
               </h1>
 
               {/* Desktop heading - with names */}
               <h1 
-                className="hidden md:block text-2xl lg:text-3xl text-white animate-fade-in"
-                style={{ fontWeight: 700, lineHeight: 1.18, letterSpacing: '-0.01em', marginBottom: '24px' }}
+                className="hidden md:block text-2xl lg:text-3xl font-bold text-white mb-7 animate-fade-in tracking-tight"
+                style={{ lineHeight: 1.18 }}
               >
                 Håvard Moe og Geir&nbsp;Vinsand tilbyr spisskompetanse på kommunal utvikling og omstilling
               </h1>
 
               {/* Mobile paragraph - includes names */}
-              <p className="md:hidden text-base text-white animate-fade-in-delay-1" style={{ lineHeight: 1.65, marginTop: '24px' }}>
+              <p className="md:hidden text-base text-white leading-relaxed animate-fade-in-delay-1 mt-4">
                 Håvard Moe og Geir Vinsand tilbyr uavhengig rådgivning for kommuner som vil styrke økonomi, styring og tjenesteutvikling.
               </p>
 
               {/* Desktop paragraph */}
-              <p className="hidden md:block text-[16px] text-white max-w-[360px] animate-fade-in-delay-1" style={{ lineHeight: 1.65, marginBottom: '40px' }}>
+              <p className="hidden md:block text-[16px] text-white mb-10 leading-[1.6] max-w-[360px] animate-fade-in-delay-1">
                 Uavhengig rådgivning for kommuner som vil styrke økonomi, styring og tjenesteutvikling.
               </p>
 
               <div className="flex flex-col gap-4 md:flex-row md:gap-6 animate-fade-in-delay-2 mt-6 md:mt-0">
                 <Button 
                   size="lg" 
-                  className="w-full md:w-auto bg-accent hover:bg-accent/95 text-accent-foreground font-medium shadow-md hover:shadow-lg px-8 py-4 h-auto text-[15px] rounded-lg transition-all duration-200"
+                  className="w-full md:w-auto bg-accent hover:bg-accent/95 text-accent-foreground font-medium shadow-md hover:shadow-lg px-8 py-4 h-auto text-[15px] rounded-xl transition-all duration-200"
                   onClick={() => scrollToSection("#kontakt")}
                 >
                   Kontakt oss
@@ -92,7 +91,7 @@ const HeroSection = () => {
                 <Button 
                   variant="outline" 
                   size="lg" 
-                  className="w-full md:w-auto border border-white/60 text-white bg-transparent hover:bg-white/15 hover:border-white font-medium px-6 py-3 md:px-8 md:py-4 h-auto text-[15px] rounded-lg transition-all duration-200"
+                  className="w-full md:w-auto border border-white/60 text-white bg-transparent hover:bg-white/15 hover:border-white font-medium px-6 py-3 md:px-8 md:py-4 h-auto text-[15px] rounded-xl transition-all duration-200"
                   onClick={() => scrollToSection("#fagomrader")}
                 >
                   Se våre fagområder
