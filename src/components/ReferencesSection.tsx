@@ -41,7 +41,7 @@ const ReferencesSection = () => {
       style={{
         paddingTop: '120px',
         paddingBottom: '120px',
-        background: 'linear-gradient(180deg, #E4EDE8 0%, #EDF4F0 100%)',
+        background: 'linear-gradient(180deg, #E6EEE9 0%, #EFF5F1 100%)',
       }}
     >
       <div className="container-narrow">
@@ -79,8 +79,8 @@ const ReferencesSection = () => {
               </h3>
               {/* Accent line matching SectionHeader */}
               <div
-                className="mx-auto rounded-full"
-                style={{ height: '2px', width: '48px', backgroundColor: 'hsl(17, 90%, 45%)', margin: '16px auto 24px auto' }}
+                className="mx-auto rounded-full bg-accent/80"
+                style={{ height: '2px', width: '40px', margin: '16px auto 24px auto' }}
                 aria-hidden="true"
               />
               <div className="flex flex-wrap justify-center" style={{ gap: '10px', rowGap: '14px' }}>

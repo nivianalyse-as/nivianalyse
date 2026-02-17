@@ -47,20 +47,20 @@ const MediaCard = ({ entry }: MediaCardProps) => {
         href={entry.externalUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="group block bg-card rounded-2xl p-6 md:p-7 transition-all duration-200"
+        className="group block bg-card rounded-xl p-6 md:p-7 transition-all duration-200"
         style={{
-          border: '1px solid hsl(168 40% 20% / 0.12)',
-          boxShadow: 'var(--shadow-soft)',
+          border: '1px solid hsl(168 40% 20% / 0.10)',
+          boxShadow: '0 2px 10px rgba(0,0,0,0.04)',
         }}
         onMouseEnter={(e) => {
-          e.currentTarget.style.transform = 'translateY(-2px)';
-          e.currentTarget.style.boxShadow = 'var(--shadow-hover)';
-          e.currentTarget.style.borderColor = 'hsl(168 40% 20% / 0.20)';
+          e.currentTarget.style.transform = 'translateY(-4px)';
+          e.currentTarget.style.boxShadow = '0 8px 24px rgba(0,0,0,0.08)';
+          e.currentTarget.style.borderColor = 'hsl(168 40% 20% / 0.18)';
         }}
         onMouseLeave={(e) => {
           e.currentTarget.style.transform = 'translateY(0)';
-          e.currentTarget.style.boxShadow = 'var(--shadow-soft)';
-          e.currentTarget.style.borderColor = 'hsl(168 40% 20% / 0.12)';
+          e.currentTarget.style.boxShadow = '0 2px 10px rgba(0,0,0,0.04)';
+          e.currentTarget.style.borderColor = 'hsl(168 40% 20% / 0.10)';
         }}
       >
         <div className="flex items-center gap-2.5 mb-4">
@@ -98,20 +98,20 @@ const MediaCard = ({ entry }: MediaCardProps) => {
   return (
     <Link
       to={`/i-media/${entry.slug}`}
-      className="group block bg-card rounded-2xl p-6 md:p-7 transition-all duration-200"
+      className="group block bg-card rounded-xl p-6 md:p-7 transition-all duration-200"
       style={{
-        border: '1px solid hsl(168 40% 20% / 0.12)',
-        boxShadow: 'var(--shadow-soft)',
+        border: '1px solid hsl(168 40% 20% / 0.10)',
+        boxShadow: '0 2px 10px rgba(0,0,0,0.04)',
       }}
       onMouseEnter={(e) => {
-        e.currentTarget.style.transform = 'translateY(-2px)';
-        e.currentTarget.style.boxShadow = 'var(--shadow-hover)';
-        e.currentTarget.style.borderColor = 'hsl(168 40% 20% / 0.20)';
+        e.currentTarget.style.transform = 'translateY(-4px)';
+        e.currentTarget.style.boxShadow = '0 8px 24px rgba(0,0,0,0.08)';
+        e.currentTarget.style.borderColor = 'hsl(168 40% 20% / 0.18)';
       }}
       onMouseLeave={(e) => {
         e.currentTarget.style.transform = 'translateY(0)';
-        e.currentTarget.style.boxShadow = 'var(--shadow-soft)';
-        e.currentTarget.style.borderColor = 'hsl(168 40% 20% / 0.12)';
+        e.currentTarget.style.boxShadow = '0 2px 10px rgba(0,0,0,0.04)';
+        e.currentTarget.style.borderColor = 'hsl(168 40% 20% / 0.10)';
       }}
     >
       <div className="flex items-center gap-2.5 mb-4">

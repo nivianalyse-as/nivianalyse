@@ -13,7 +13,7 @@ const SectionHeader = ({ title, subtitle, as: Tag = "h2" }: SectionHeaderProps) 
       >
         {title}
       </Tag>
-      <div className="mx-auto h-[2px] w-12 bg-accent rounded-full" style={{ marginTop: '16px', marginBottom: '24px' }} />
+      <div className="mx-auto h-[2px] w-10 bg-accent/80 rounded-full" style={{ marginTop: '16px', marginBottom: '24px' }} />
       {subtitle && (
         <p className="max-w-[720px] mx-auto text-muted-foreground" style={{ fontSize: '1.065rem', lineHeight: 1.6, color: 'hsl(168, 30%, 30%)' }}>
           {subtitle}
