@@ -38,13 +38,14 @@ const ReferencesSection = () => {
   return (
     <section
       id="referanser"
-      className="py-14 md:py-24"
       style={{
+        paddingTop: '120px',
+        paddingBottom: '120px',
         background: 'linear-gradient(180deg, #F0F7F3 0%, #E8F0EB 100%)',
       }}
     >
       <div className="container-narrow">
-        <div className="mb-10 md:mb-16">
+        <div style={{ marginBottom: '64px' }}>
           <SectionHeader
             title="Våre oppdragsgivere"
             subtitle="Vi har samarbeidet med kommuner, fylkeskommuner og departementer over hele Norge."
@@ -52,7 +53,7 @@ const ReferencesSection = () => {
         </div>
 
         {/* Panels */}
-        <div className="max-w-4xl mx-auto flex flex-col" style={{ gap: '64px' }}>
+        <div className="max-w-4xl mx-auto flex flex-col" style={{ gap: '56px' }}>
           {groups.map((group) => (
             <div
               key={group.label}

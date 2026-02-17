@@ -108,7 +108,8 @@ const strukturProjects: ReferenceProject[] = [
 
 const ProjectCard = ({ project, hidden = false }: { project: ReferenceProject; hidden?: boolean }) => (
   <div
-    className={`card-premium p-5 md:p-8 flex flex-col shadow-sm rounded-md md:rounded-lg ${hidden ? 'hidden md:flex' : ''}`}
+    className={`card-premium p-6 md:p-9 flex flex-col rounded-md md:rounded-lg ${hidden ? 'hidden md:flex' : ''}`}
+    style={{ boxShadow: '0 4px 20px rgba(0,0,0,0.04)' }}
   >
     <div className="mb-3">
       <div className="flex items-center justify-between gap-2 mb-2">
@@ -117,16 +118,16 @@ const ProjectCard = ({ project, hidden = false }: { project: ReferenceProject; h
         </span>
         <Badge
           variant={project.type === "Omstillingsstøtte" ? "default" : "secondary"}
-          className="text-[11px] px-2 py-0.5 bg-primary text-primary-foreground"
+          className="text-[10px] px-2 py-0.5 bg-primary text-primary-foreground"
         >
           {project.type === "Omstillingsstøtte" ? "Omstilling" : project.type === "Interkommunalt samarbeid" ? "Samarbeid" : project.type}
         </Badge>
       </div>
-      <h3 className="text-lg font-bold leading-tight">
+      <h3 className="text-lg font-semibold" style={{ lineHeight: 1.3 }}>
         {project.kommune}
       </h3>
     </div>
-    <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+    <p className="text-sm mb-4" style={{ color: 'hsl(168, 20%, 28%)', lineHeight: 1.65 }}>
       {project.kort}
     </p>
     <div className="flex-1">
@@ -135,7 +136,7 @@ const ProjectCard = ({ project, hidden = false }: { project: ReferenceProject; h
       </p>
       <ul className="space-y-1 md:space-y-2 mb-4">
         {project.leveranser.map((item, i) => (
-          <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground leading-relaxed">
+          <li key={i} className="flex items-start gap-2 text-sm" style={{ color: 'hsl(168, 20%, 28%)', lineHeight: 1.65 }}>
             <span className="w-1 h-1 rounded-full bg-accent mt-2 flex-shrink-0" />
             {item}
           </li>
@@ -160,9 +161,9 @@ const ProjectCard = ({ project, hidden = false }: { project: ReferenceProject; h
 
 const ReferenceProjectsSection = () => {
   return (
-    <section id="referanseoppdrag" className="py-16 md:py-24" style={{ backgroundColor: '#FFFFFF' }}>
+    <section id="referanseoppdrag" style={{ backgroundColor: '#FFFFFF', paddingTop: '120px', paddingBottom: '120px' }}>
       <div className="container-narrow">
-        <div className="mb-10 md:mb-14">
+        <div style={{ marginBottom: '64px' }}>
           <SectionHeader
             title="Utvalgte referanseoppdrag"
             subtitle="Dokumentert erfaring fra komplekse omstillings-, struktur- og samarbeidsprosesser i norske kommuner."
