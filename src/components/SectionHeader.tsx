@@ -7,12 +7,15 @@ interface SectionHeaderProps {
 const SectionHeader = ({ title, subtitle, as: Tag = "h2" }: SectionHeaderProps) => {
   return (
     <div className="max-w-6xl mx-auto px-6 text-center">
-      <Tag className="text-4xl md:text-5xl font-semibold text-primary">
+      <Tag
+        className="text-primary font-semibold"
+        style={{ fontSize: 'clamp(1.75rem, 4vw, 2.75rem)', lineHeight: 1.25 }}
+      >
         {title}
       </Tag>
-      <div className="mx-auto mt-4 mb-6 h-[2px] w-16 bg-primary/60 rounded-full" />
+      <div className="mx-auto h-[2px] w-16 bg-primary/60 rounded-full" style={{ marginTop: '16px', marginBottom: '24px' }} />
       {subtitle && (
-        <p className="max-w-2xl mx-auto mt-8 text-lg text-muted-foreground leading-relaxed">
+        <p className="mx-auto text-lg leading-relaxed" style={{ maxWidth: '720px', lineHeight: 1.6, color: 'hsl(168, 30%, 30%)' }}>
           {subtitle}
         </p>
       )}
