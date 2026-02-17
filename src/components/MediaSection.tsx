@@ -8,10 +8,10 @@ const MediaSection = () => {
   const featuredMedia = getFeaturedMedia();
 
   return (
-    <section className="py-16 md:py-24 bg-background">
+    <section className="bg-background" style={{ paddingTop: '120px', paddingBottom: '120px' }}>
       <div className="container-narrow">
         {/* Header */}
-        <div className="mb-12">
+        <div style={{ marginBottom: '64px' }}>
           <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between gap-4">
             <SectionHeader
               title="I media"
