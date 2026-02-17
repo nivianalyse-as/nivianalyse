@@ -4,7 +4,7 @@ import SectionHeader from "@/components/SectionHeader";
 
 const ContactSection = () => {
   return (
-    <section id="kontakt" className="py-16 pb-20 md:py-24 bg-background">
+    <section id="kontakt" className="bg-background" style={{ paddingTop: '120px', paddingBottom: '120px' }}>
       <div className="container-narrow">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20">
           {/* Left column - Info */}

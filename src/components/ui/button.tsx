@@ -16,7 +16,7 @@ const buttonVariants = cva(
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
         // Nivi Analyse custom variants
-        cta: "bg-accent text-accent-foreground hover:bg-accent/90 shadow-md hover:shadow-lg",
+        cta: "bg-accent text-accent-foreground hover:bg-accent/90 shadow-md hover:shadow-lg rounded-lg",
         heroOutline: "border-2 border-primary-foreground bg-transparent text-primary-foreground hover:bg-primary-foreground/10",
         heroCta: "bg-accent text-accent-foreground hover:bg-accent/90 shadow-lg hover:shadow-xl",
       },
