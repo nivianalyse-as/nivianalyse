@@ -101,7 +101,7 @@ const ExpertsSection = () => {
           {experts.map((expert) => (
             <div
               key={expert.name}
-              className="card-premium overflow-hidden flex flex-col shadow-sm hover:shadow-md transition-all duration-200"
+              className="card-premium overflow-hidden flex flex-col transition-all duration-200"
             >
               <div className="aspect-[4/5] md:aspect-[3/4] overflow-hidden">
                 <img

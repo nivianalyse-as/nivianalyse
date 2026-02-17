@@ -47,7 +47,7 @@ const ServicesSection = () => {
           {fagomrader.map((fag) => (
             <div
               key={fag.title}
-              className="group bg-card border border-border/60 p-5 md:p-7 flex flex-col rounded-2xl shadow-[0_2px_12px_rgba(0,0,0,0.05)] transition-all duration-[250ms] ease-in-out cursor-pointer md:hover:-translate-y-1 md:hover:shadow-[0_12px_32px_rgba(0,0,0,0.10)] md:hover:border-primary/40"
+              className="group bg-card border border-border/50 p-5 md:p-7 flex flex-col rounded-xl shadow-[0_2px_10px_rgba(0,0,0,0.04)] transition-all duration-200 ease-in-out cursor-pointer md:hover:-translate-y-1 md:hover:shadow-[0_8px_24px_rgba(0,0,0,0.08)] md:hover:border-primary/30"
             >
               <h3
                 className="text-primary font-semibold group-hover:underline underline-offset-4 decoration-primary/40"
