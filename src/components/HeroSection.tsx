@@ -67,7 +67,7 @@ const HeroSection = () => {
                 className="hidden md:block text-2xl lg:text-3xl font-bold text-white mb-7 animate-fade-in tracking-tight"
                 style={{ lineHeight: 1.08 }}
               >
-                Håvard Moe og Geir Vinsand tilbyr spisskompetanse på kommunal utvikling og omstilling
+                Håvard Moe og Geir&nbsp;Vinsand tilbyr spisskompetanse på kommunal utvikling og omstilling
               </h1>
 
               {/* Mobile paragraph - includes names */}
