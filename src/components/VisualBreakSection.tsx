@@ -8,7 +8,7 @@ const VisualBreakSection = () => {
           <img
             src={visualBreakImage}
             alt="Håvard Moe og Geir Vinsand i møterom – NIVI Analyse"
-            className="w-full h-auto object-cover"
+            className="w-full h-[400px] md:h-[500px] object-cover object-[85%_center]"
             loading="lazy"
           />
         </div>
