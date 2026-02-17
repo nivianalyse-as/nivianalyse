@@ -54,7 +54,7 @@ const HeroSection = () => {
 
           {/* Content */}
           <div className="relative z-10 px-6 md:pl-[6vw] md:px-0 pt-24 md:pt-0 py-16 w-full flex md:items-start md:justify-center md:flex-col md:h-full">
-            <div className="max-w-[85%] md:max-w-[420px] text-left">
+            <div className="max-w-[85%] md:max-w-[380px] text-left">
               {/* Mobile heading - without names */}
               <h1 
                 className="md:hidden font-bold leading-tight text-white animate-fade-in tracking-tight text-3xl"
@@ -64,7 +64,7 @@ const HeroSection = () => {
 
               {/* Desktop heading - with names */}
               <h1 
-                className="hidden md:block text-3xl lg:text-4xl font-bold text-white mb-9 animate-fade-in tracking-tight"
+                className="hidden md:block text-2xl lg:text-3xl font-bold text-white mb-7 animate-fade-in tracking-tight"
                 style={{ lineHeight: 1.08 }}
               >
                 Håvard Moe og Geir Vinsand tilbyr spisskompetanse på kommunal utvikling og omstilling
@@ -76,7 +76,7 @@ const HeroSection = () => {
               </p>
 
               {/* Desktop paragraph */}
-              <p className="hidden md:block text-[18px] text-white mb-14 leading-[1.65] max-w-[480px] animate-fade-in-delay-1">
+              <p className="hidden md:block text-[16px] text-white mb-10 leading-[1.6] max-w-[360px] animate-fade-in-delay-1">
                 Uavhengig rådgivning for kommuner som vil styrke økonomi, styring og tjenesteutvikling.
               </p>
 
