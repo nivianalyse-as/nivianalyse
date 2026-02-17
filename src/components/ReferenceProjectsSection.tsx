@@ -117,7 +117,7 @@ const ProjectCard = ({ project, hidden = false }: { project: ReferenceProject; h
         </span>
         <Badge
           variant={project.type === "Omstillingsstøtte" ? "default" : "secondary"}
-          className="text-[11px] px-2 py-0.5"
+          className="text-[11px] px-2 py-0.5 bg-primary/90 text-primary-foreground"
         >
           {project.type === "Omstillingsstøtte" ? "Omstilling" : project.type === "Interkommunalt samarbeid" ? "Samarbeid" : project.type}
         </Badge>
@@ -135,7 +135,7 @@ const ProjectCard = ({ project, hidden = false }: { project: ReferenceProject; h
       </p>
       <ul className="space-y-1 md:space-y-2 mb-4">
         {project.leveranser.map((item, i) => (
-          <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground leading-snug">
+          <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground leading-relaxed">
             <span className="w-1 h-1 rounded-full bg-accent mt-2 flex-shrink-0" />
             {item}
           </li>
@@ -160,7 +160,7 @@ const ProjectCard = ({ project, hidden = false }: { project: ReferenceProject; h
 
 const ReferenceProjectsSection = () => {
   return (
-    <section id="referanseoppdrag" className="py-16 md:py-24 bg-background">
+    <section id="referanseoppdrag" className="py-16 md:py-24" style={{ backgroundColor: '#FFFFFF' }}>
       <div className="container-narrow">
         <div className="mb-10 md:mb-14">
           <SectionHeader
@@ -175,7 +175,7 @@ const ReferenceProjectsSection = () => {
             Omstillings- og økonomiprosesser
           </p>
           <div className="mx-auto max-w-xs h-px bg-primary/10 mb-6 md:mb-8" />
-          <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-y-10 md:gap-y-12 gap-x-5 lg:gap-x-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-y-12 md:gap-y-14 gap-x-6 lg:gap-x-10">
             {omstillingsProjects.map((project, index) => (
               <ProjectCard key={project.kommune} project={project} hidden={index >= 2} />
             ))}
@@ -201,7 +201,7 @@ const ReferenceProjectsSection = () => {
             Struktur og interkommunalt samarbeid
           </p>
           <div className="mx-auto max-w-xs h-px bg-primary/10 mb-6 md:mb-8" />
-          <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-y-10 md:gap-y-12 gap-x-5 lg:gap-x-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-y-12 md:gap-y-14 gap-x-6 lg:gap-x-10">
             {strukturProjects.map((project) => (
               <ProjectCard key={project.kommune} project={project} />
             ))}

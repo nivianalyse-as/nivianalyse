@@ -1,3 +1,5 @@
+import SectionHeader from "@/components/SectionHeader";
+
 const groups = [
   {
     label: "Kommuner og fylkeskommuner",
@@ -36,24 +38,17 @@ const ReferencesSection = () => {
   return (
     <section
       id="referanser"
-      className="py-20 md:py-32"
+      className="py-14 md:py-24"
       style={{
-        background: 'linear-gradient(180deg, #E7F0EC 0%, #DEEAE5 100%)',
+        background: 'linear-gradient(180deg, #EDF4F0 0%, #E4EDE8 100%)',
       }}
     >
       <div className="container-narrow">
-        {/* Custom header with orange accent line */}
-        <div className="max-w-6xl mx-auto px-6 text-center mb-14 md:mb-20">
-          <h2 className="text-4xl md:text-5xl font-semibold text-primary">
-            Våre oppdragsgivere
-          </h2>
-          <div
-            className="mx-auto rounded-sm"
-            style={{ width: '60px', height: '3px', background: '#E6541F', margin: '16px auto 24px auto' }}
+        <div className="mb-10 md:mb-16">
+          <SectionHeader
+            title="Våre oppdragsgivere"
+            subtitle="Vi har samarbeidet med kommuner, fylkeskommuner og departementer over hele Norge."
           />
-          <p className="max-w-2xl mx-auto text-lg text-muted-foreground leading-relaxed">
-            Vi har samarbeidet med kommuner, fylkeskommuner og departementer over hele Norge.
-          </p>
         </div>
 
         {/* Panels */}
@@ -65,7 +60,7 @@ const ReferencesSection = () => {
               style={{
                 borderRadius: '18px',
                 padding: '48px 40px',
-                boxShadow: '0 12px 30px rgba(0, 0, 0, 0.06)',
+                boxShadow: '0 16px 40px rgba(0, 0, 0, 0.07)',
                 border: '1px solid rgba(0, 0, 0, 0.04)',
               }}
             >
@@ -75,16 +70,16 @@ const ReferencesSection = () => {
                   fontWeight: 600,
                   fontSize: '18px',
                   letterSpacing: '0.3px',
-                  color: '#143C32',
+                  color: 'hsl(168, 79%, 11%)',
                   marginBottom: '0',
                 }}
               >
                 {group.label}
               </h3>
-              {/* Orange accent line */}
+              {/* Green accent line matching SectionHeader */}
               <div
-                className="mx-auto rounded-sm"
-                style={{ height: '2px', width: '40px', background: '#E6541F', margin: '12px auto 28px auto' }}
+                className="mx-auto rounded-full"
+                style={{ height: '2px', width: '40px', backgroundColor: 'hsl(168, 79%, 11%, 0.25)', margin: '12px auto 28px auto' }}
                 aria-hidden="true"
               />
               <div className="flex flex-wrap justify-center" style={{ gap: '10px', rowGap: '14px' }}>
@@ -97,20 +92,20 @@ const ReferencesSection = () => {
                       fontSize: '14px',
                       fontWeight: 500,
                       backgroundColor: '#F6F8F7',
-                      color: '#143C32',
+                      color: 'hsl(168, 79%, 11%)',
                       border: '1px solid #DCE5E1',
                     }}
                     onMouseEnter={(e) => {
                       const el = e.currentTarget;
-                      el.style.backgroundColor = '#143C32';
+                      el.style.backgroundColor = 'hsl(168, 79%, 11%)';
                       el.style.color = '#FFFFFF';
-                      el.style.borderColor = '#143C32';
+                      el.style.borderColor = 'hsl(168, 79%, 11%)';
                       el.style.boxShadow = '0 6px 14px rgba(20, 60, 50, 0.15)';
                     }}
                     onMouseLeave={(e) => {
                       const el = e.currentTarget;
                       el.style.backgroundColor = '#F6F8F7';
-                      el.style.color = '#143C32';
+                      el.style.color = 'hsl(168, 79%, 11%)';
                       el.style.borderColor = '#DCE5E1';
                       el.style.boxShadow = 'none';
                     }}
@@ -125,7 +120,7 @@ const ReferencesSection = () => {
 
         <p
           className="text-center text-sm mt-10 md:mt-14 cursor-default transition-all hover:underline"
-          style={{ color: '#2A5C52', textUnderlineOffset: '4px' }}
+          style={{ color: 'hsl(168, 50%, 25%)', textUnderlineOffset: '4px' }}
         >
           Se fullstendig oppdragsoversikt i CV
         </p>

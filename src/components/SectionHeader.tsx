@@ -10,7 +10,7 @@ const SectionHeader = ({ title, subtitle, as: Tag = "h2" }: SectionHeaderProps) 
       <Tag className="text-4xl md:text-5xl font-semibold text-primary">
         {title}
       </Tag>
-      <div className="mx-auto mt-6 h-[2px] w-24 bg-primary/20" />
+      <div className="mx-auto mt-4 mb-6 h-[2px] w-16 bg-primary/60 rounded-full" />
       {subtitle && (
         <p className="max-w-2xl mx-auto mt-8 text-lg text-muted-foreground leading-relaxed">
           {subtitle}
