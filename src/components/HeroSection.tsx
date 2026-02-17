@@ -43,18 +43,18 @@ const HeroSection = () => {
             style={{
               background: `linear-gradient(
                 90deg,
-                rgba(15, 35, 30, 0.92) 0%,
-                rgba(15, 35, 30, 0.72) 22%,
-                rgba(15, 35, 30, 0.35) 38%,
-                rgba(15, 35, 30, 0.0) 52%
+                rgba(10, 30, 25, 0.93) 0%,
+                rgba(10, 30, 25, 0.78) 20%,
+                rgba(10, 30, 25, 0.40) 38%,
+                rgba(10, 30, 25, 0.0) 54%
               )`
             }}
             aria-hidden="true"
           />
 
           {/* Content */}
-          <div className="relative z-10 px-6 md:pl-[6vw] md:px-0 pt-24 md:pt-0 py-16 md:py-24 w-full flex md:items-start md:justify-center md:flex-col md:h-full">
-            <div className="max-w-[85%] md:max-w-[620px] text-left">
+          <div className="relative z-10 px-6 md:pl-[72px] md:pr-0 pt-24 md:pt-0 py-16 md:py-24 w-full flex md:items-start md:justify-center md:flex-col md:h-full">
+            <div className="max-w-[85%] md:max-w-[560px] text-left">
               {/* Mobile heading - without names */}
               <h1 
                 className="md:hidden text-3xl font-bold text-white animate-fade-in"
