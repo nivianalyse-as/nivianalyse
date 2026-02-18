@@ -20,7 +20,7 @@ const HeroSection = () => {
             src={heroImage}
             alt=""
             aria-hidden="true"
-            className="absolute inset-0 w-full h-full object-cover object-[80%_center] hidden md:block"
+            className="absolute inset-0 w-full h-full object-cover object-[40%_center] hidden md:block"
           />
 
           {/* Mobile Background Image */}
