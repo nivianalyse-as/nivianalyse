@@ -218,6 +218,42 @@ const Rapportarkiv = () => {
           </div>
         </section>
 
+        {/* Year navigation */}
+        <nav className="bg-background border-b border-border/40" aria-label="Årsnavigasjon">
+          <div className="container-narrow">
+            <div className="overflow-x-auto" style={{ WebkitOverflowScrolling: "touch" }}>
+              <div className="flex items-center gap-1 py-4 whitespace-nowrap">
+                {years.map((y, i) => (
+                  <span key={y} className="flex items-center">
+                    <button
+                      onClick={() => {
+                        // Toggle: if already selected alone, clear; otherwise set
+                        if (selectedYears.length === 1 && selectedYears[0] === y) {
+                          updateParams("year", []);
+                        } else {
+                          updateParams("year", [y]);
+                        }
+                        // Smooth scroll to results
+                        document.getElementById("rapport-results")?.scrollIntoView({ behavior: "smooth", block: "start" });
+                      }}
+                      className={`text-sm transition-colors px-1 ${
+                        selectedYears.length === 1 && selectedYears[0] === y
+                          ? "text-primary font-semibold underline underline-offset-4 decoration-accent"
+                          : "text-muted-foreground hover:text-primary"
+                      }`}
+                    >
+                      {y}
+                    </button>
+                    {i < years.length - 1 && (
+                      <span className="text-muted-foreground/40 mx-1.5 select-none">·</span>
+                    )}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </nav>
+
         {/* Content */}
         <section className="bg-background" style={{ paddingBottom: "96px" }}>
           <div className="container-narrow">
@@ -252,7 +288,7 @@ const Rapportarkiv = () => {
               )}
 
               {/* Results */}
-              <div className="flex-1 min-w-0">
+              <div id="rapport-results" className="flex-1 min-w-0">
                 <p className="text-sm text-muted-foreground mb-6">
                   {filtered.length} {filtered.length === 1 ? "rapport" : "rapporter"}
                   {hasActiveFilters && " (filtrert)"}
@@ -326,7 +362,9 @@ const Rapportarkiv = () => {
 
                 {filtered.length === 0 && (
                   <div className="text-center py-16">
-                    <p className="text-muted-foreground">Ingen rapporter funnet med valgte filtre.</p>
+                    <p className="text-muted-foreground">
+                      {selectedYears.length === 1 ? `Ingen publikasjoner funnet for ${selectedYears[0]}.` : "Ingen rapporter funnet med valgte filtre."}
+                    </p>
                     <button onClick={clearAll} className="text-accent hover:text-accent/80 text-sm font-medium mt-2">
                       Nullstill filtre
                     </button>
