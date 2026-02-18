@@ -39,9 +39,9 @@ const ReferencesSection = () => {
     <section
       id="referanser"
       style={{
-        paddingTop: '120px',
-        paddingBottom: '120px',
-        background: 'linear-gradient(180deg, #E6EEE9 0%, #EFF5F1 100%)',
+        paddingTop: '132px',
+        paddingBottom: '132px',
+        backgroundColor: '#E3ECE8',
       }}
     >
       <div className="container-narrow">

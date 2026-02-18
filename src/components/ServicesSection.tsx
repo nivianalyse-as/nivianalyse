@@ -34,7 +34,7 @@ const fagomrader: Fagomrade[] = [
 
 const ServicesSection = () => {
   return (
-    <section id="fagomrader" className="bg-[#F5F5F3] md:bg-background" style={{ paddingTop: '120px', paddingBottom: '120px' }}>
+    <section id="fagomrader" className="md:bg-background" style={{ paddingTop: '128px', paddingBottom: '128px', backgroundColor: '#F1F5F3' }}>
       <div className="mx-auto px-5 sm:px-6 lg:px-8" style={{ maxWidth: '1100px' }}>
         <div style={{ marginBottom: '64px' }}>
           <SectionHeader
