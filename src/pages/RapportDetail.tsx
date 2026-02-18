@@ -234,12 +234,17 @@ const RapportDetail = () => {
 
             {/* Download */}
             {rapport.pdfUrl ? (
-              <a href={rapport.pdfUrl} target="_blank" rel="noopener noreferrer">
-                <Button variant="cta" size="lg" className="gap-2">
-                  <Download className="w-5 h-5" />
-                  Last ned rapport (PDF)
-                </Button>
-              </a>
+              <>
+                <a href={rapport.pdfUrl} target="_blank" rel="noopener">
+                  <Button variant="cta" size="lg" className="gap-2">
+                    <Download className="w-5 h-5" />
+                    Last ned rapport (PDF)
+                  </Button>
+                </a>
+                <p className="text-sm text-muted-foreground mt-4">
+                  Rapporten kan også leses som strukturert sammendrag på denne siden.
+                </p>
+              </>
             ) : (
               <p className="text-sm text-muted-foreground italic">
                 PDF er ikke tilgjengelig for denne rapporten ennå.
