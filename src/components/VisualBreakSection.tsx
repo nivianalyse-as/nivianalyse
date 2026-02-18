@@ -2,7 +2,7 @@ import visualBreakImage from "@/assets/nivi-visual-break.jpg";
 
 const VisualBreakSection = () => {
   return (
-    <section className="w-full bg-background" style={{ paddingTop: '80px', paddingBottom: '80px' }}>
+    <section className="w-full bg-background" style={{ paddingTop: '88px', paddingBottom: '88px' }}>
       <div className="max-w-6xl mx-auto px-6">
         <div className="rounded-2xl overflow-hidden shadow-sm">
           <img

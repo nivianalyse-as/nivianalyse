@@ -161,7 +161,7 @@ const ProjectCard = ({ project, hidden = false }: { project: ReferenceProject; h
 
 const ReferenceProjectsSection = () => {
   return (
-    <section id="referanseoppdrag" style={{ backgroundColor: '#FFFFFF', paddingTop: '120px', paddingBottom: '120px' }}>
+    <section id="referanseoppdrag" style={{ backgroundColor: '#FFFFFF', paddingTop: '132px', paddingBottom: '132px' }}>
       <div className="container-narrow">
         <div style={{ marginBottom: '64px' }}>
           <SectionHeader
