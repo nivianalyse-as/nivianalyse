@@ -32,7 +32,9 @@ const RapportDetail = () => {
     );
   }
 
-  // JSON-LD Report schema
+  const resolvedSlug = param || slug;
+  const canonicalUrl = `https://nivianalyse.no/publikasjoner/${resolvedSlug}`;
+
   const reportSchema = {
     "@context": "https://schema.org",
     "@type": "Report",
@@ -42,8 +44,16 @@ const RapportDetail = () => {
     author: rapport.authors.map((a) => ({ "@type": "Person", name: a })),
     publisher: { "@type": "Organization", name: "NIVI Analyse AS" },
     about: rapport.themes.map((t) => ({ "@type": "Thing", name: t })),
-    url: `https://nivianalyse.lovable.app/publikasjoner/${rapport.slug}`,
-    ...(rapport.pdfUrl ? { encoding: { "@type": "MediaObject", contentUrl: rapport.pdfUrl, encodingFormat: "application/pdf" } } : {}),
+    url: canonicalUrl,
+    ...(rapport.pdfUrl
+      ? {
+          encoding: {
+            "@type": "MediaObject",
+            contentUrl: `https://nivianalyse.no${rapport.pdfUrl}`,
+            encodingFormat: "application/pdf",
+          },
+        }
+      : {}),
   };
 
   return (
@@ -54,8 +64,8 @@ const RapportDetail = () => {
         type="article"
         author={rapport.authors.join(", ")}
         publishedTime={`${rapport.year}-01-01`}
+        canonical={`https://nivianalyse.no/publikasjoner/${rapport.slug}`}
       />
-      {/* Inject Report schema directly */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(reportSchema) }}

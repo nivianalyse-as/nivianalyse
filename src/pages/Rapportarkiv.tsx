@@ -189,13 +189,14 @@ const Rapportarkiv = () => {
     <div className="min-h-screen">
       <SEOHead
         title="Publikasjoner | NIVI Analyse"
-        description="Utredninger og analyser om interkommunalt samarbeid, kommunereform og regional utvikling."
+        description="Utredninger og analyser om interkommunalt samarbeid, kommunereform og regional utvikling fra NIVI Analyse. Arkiv med rapporter, notater og samarbeidsrapporter fra 2006 til i dag."
+        canonical="https://nivianalyse.no/publikasjoner"
       />
       <SchemaMarkup
         schema={{
           type: "Organization",
           name: "NIVI Analyse AS",
-          url: "https://nivianalyse.lovable.app/publikasjoner",
+          url: "https://nivianalyse.no/publikasjoner",
           description: "Publikasjoner fra NIVI Analyse – utredninger om interkommunalt samarbeid, kommunestruktur og regional utvikling.",
         }}
       />
@@ -208,8 +209,11 @@ const Rapportarkiv = () => {
               Publikasjoner
             </h1>
             <div className="mx-auto h-[2px] w-10 bg-accent/80 rounded-full mt-4 mb-5 mr-auto ml-0" />
-            <p className="text-muted-foreground max-w-[680px]" style={{ fontSize: "1.05rem", lineHeight: 1.65 }}>
-              Utredninger og analyser om interkommunalt samarbeid, kommunereform og regional utvikling.
+            <p className="text-muted-foreground max-w-[680px] mb-4" style={{ fontSize: "1.05rem", lineHeight: 1.65 }}>
+              NIVI Analyse er et av Norges ledende fagmiljøer innen utredning av kommunal organisering, interkommunalt samarbeid og forvaltningsstruktur. Siden 2006 har vi kartlagt, analysert og dokumentert samarbeidsordninger, kommunestruktur og styringsmodeller på oppdrag fra departementer, statsforvaltere, fylkeskommuner og kommuner over hele landet.
+            </p>
+            <p className="text-muted-foreground max-w-[680px]" style={{ fontSize: "0.95rem", lineHeight: 1.65 }}>
+              Arkivet inneholder {rapporter.length} publikasjoner som dekker temaer som interkommunalt samarbeid, kommunereform, regional utvikling, beredskap, demokrati og styring.
             </p>
           </div>
         </section>
