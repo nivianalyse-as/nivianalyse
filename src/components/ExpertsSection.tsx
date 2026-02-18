@@ -88,7 +88,7 @@ const experts: Expert[] = [
 
 const ExpertsSection = () => {
   return (
-    <section id="eksperter" style={{ backgroundColor: 'hsl(150 10% 97%)', paddingTop: '120px', paddingBottom: '120px' }}>
+    <section id="eksperter" style={{ backgroundColor: 'hsl(150 10% 97%)', paddingTop: '136px', paddingBottom: '120px' }}>
       <div className="container-narrow">
         <div style={{ marginBottom: '64px' }}>
           <SectionHeader
