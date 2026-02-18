@@ -19,6 +19,7 @@ export interface Rapport {
   problemstilling?: string;
   bakgrunn?: string;
   hovedfunn?: string;
+  metodikk?: string[];
 }
 
 export const ALL_THEMES = [

@@ -1,5 +1,5 @@
 import { useParams, Link } from "react-router-dom";
-import { ArrowLeft, Download, Calendar, FileText, Building2 } from "lucide-react";
+import { ArrowLeft, Download, Calendar, FileText, Building2, ArrowRight } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
@@ -7,15 +7,25 @@ import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import { rapporter } from "@/data/rapporter";
 import { themeToSlug } from "@/types/rapport";
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
 
 const RapportDetail = () => {
   const { slug, param } = useParams<{ slug?: string; param?: string }>();
-  const rapport = rapporter.find((r) => r.slug === (param || slug));
+  const resolvedSlug = param || slug;
+  const rapport = rapporter.find((r) => r.slug === resolvedSlug);
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [slug]);
+  }, [resolvedSlug]);
+
+  // Related publications: share at least one theme, max 3
+  const related = useMemo(() => {
+    if (!rapport) return [];
+    return rapporter
+      .filter((r) => r.id !== rapport.id && r.themes.some((t) => rapport.themes.includes(t)))
+      .sort((a, b) => b.year - a.year)
+      .slice(0, 3);
+  }, [rapport]);
 
   if (!rapport) {
     return (
@@ -32,7 +42,6 @@ const RapportDetail = () => {
     );
   }
 
-  const resolvedSlug = param || slug;
   const canonicalUrl = `https://nivianalyse.no/publikasjoner/${resolvedSlug}`;
 
   const reportSchema = {
@@ -56,15 +65,23 @@ const RapportDetail = () => {
       : {}),
   };
 
+  // Parse hovedfunn into bullet points if it contains newlines or bullet markers
+  const hovedfunnItems = rapport.hovedfunn
+    ? rapport.hovedfunn
+        .split(/\n|•|–/)
+        .map((s) => s.trim())
+        .filter(Boolean)
+    : [];
+
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-background">
       <SEOHead
         title={rapport.seoTitle}
         description={rapport.seoDescription}
         type="article"
         author={rapport.authors.join(", ")}
         publishedTime={`${rapport.year}-01-01`}
-        canonical={`https://nivianalyse.no/publikasjoner/${rapport.slug}`}
+        canonical={canonicalUrl}
       />
       <script
         type="application/ld+json"
@@ -73,78 +90,139 @@ const RapportDetail = () => {
       />
       <Header />
       <main id="main-content">
-        <article className="bg-background" style={{ paddingTop: "72px", paddingBottom: "96px" }}>
-          <div className="container-content">
+        <article style={{ paddingTop: "72px", paddingBottom: "96px" }}>
+          <div className="mx-auto max-w-[860px] px-5 md:px-8">
             {/* Back link */}
             <Link
               to="/publikasjoner"
-              className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-primary transition-colors mb-8"
+              className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-primary transition-colors mb-10"
             >
               <ArrowLeft className="w-4 h-4" />
               Tilbake til publikasjoner
             </Link>
 
-            {/* Header */}
-            <h1 className="text-2xl md:text-3xl font-semibold text-primary mb-4" style={{ lineHeight: 1.25 }}>
+            {/* H1 */}
+            <h1
+              className="text-2xl md:text-3xl font-semibold text-primary mb-4"
+              style={{ lineHeight: 1.25 }}
+            >
               {rapport.title}
             </h1>
 
-            {/* Meta */}
-            <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground mb-6">
+            {/* Meta line */}
+            <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-muted-foreground mb-6">
               <span className="inline-flex items-center gap-1.5">
                 <Calendar className="w-4 h-4" />
                 {rapport.year}
               </span>
+              <span aria-hidden="true">·</span>
               <span className="inline-flex items-center gap-1.5">
                 <FileText className="w-4 h-4" />
                 {rapport.type}
               </span>
               {rapport.client !== "Eget initiativ" && (
-                <span className="inline-flex items-center gap-1.5">
-                  <Building2 className="w-4 h-4" />
-                  {rapport.client}
-                </span>
+                <>
+                  <span aria-hidden="true">·</span>
+                  <span className="inline-flex items-center gap-1.5">
+                    <Building2 className="w-4 h-4" />
+                    {rapport.client}
+                  </span>
+                </>
               )}
             </div>
 
             <div className="h-px bg-border mb-8" />
 
-            {/* Summary / Ingress */}
-            <p className="text-base text-foreground leading-relaxed mb-8" style={{ fontSize: "1.05rem" }}>
+            {/* Ingress / Summary */}
+            <p
+              className="text-foreground leading-relaxed mb-10"
+              style={{ fontSize: "1.08rem", lineHeight: 1.7 }}
+            >
               {rapport.summary}
             </p>
 
             {/* Problemstilling */}
             {rapport.problemstilling && (
-              <section className="mb-8">
+              <section className="mb-10">
                 <h2 className="text-lg font-semibold text-primary mb-3">Problemstilling</h2>
-                <p className="text-muted-foreground leading-relaxed">{rapport.problemstilling}</p>
+                <p className="text-muted-foreground" style={{ lineHeight: 1.7 }}>
+                  {rapport.problemstilling}
+                </p>
               </section>
             )}
 
-            {/* Bakgrunn */}
+            {/* Bakgrunn og kontekst */}
             {rapport.bakgrunn && (
-              <section className="mb-8">
+              <section className="mb-10">
                 <h2 className="text-lg font-semibold text-primary mb-3">Bakgrunn og kontekst</h2>
-                <p className="text-muted-foreground leading-relaxed">{rapport.bakgrunn}</p>
+                <p className="text-muted-foreground" style={{ lineHeight: 1.7 }}>
+                  {rapport.bakgrunn}
+                </p>
               </section>
             )}
 
             {/* Hovedfunn */}
-            {rapport.hovedfunn && (
-              <section className="mb-8">
+            {hovedfunnItems.length > 0 && (
+              <section className="mb-10">
                 <h2 className="text-lg font-semibold text-primary mb-3">Hovedfunn</h2>
-                <p className="text-muted-foreground leading-relaxed">{rapport.hovedfunn}</p>
+                {hovedfunnItems.length === 1 ? (
+                  <p className="text-muted-foreground" style={{ lineHeight: 1.7 }}>
+                    {hovedfunnItems[0]}
+                  </p>
+                ) : (
+                  <ul className="space-y-2 text-muted-foreground" style={{ lineHeight: 1.7 }}>
+                    {hovedfunnItems.map((item, i) => (
+                      <li key={i} className="flex gap-2">
+                        <span className="text-accent mt-1 shrink-0">•</span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </section>
+            )}
+
+            {/* Metodisk tilnærming */}
+            {rapport.metodikk && rapport.metodikk.length > 0 && (
+              <section className="mb-10">
+                <h2 className="text-lg font-semibold text-primary mb-3">Metodisk tilnærming</h2>
+                <ul className="space-y-1.5 text-muted-foreground" style={{ lineHeight: 1.7 }}>
+                  {rapport.metodikk.map((m, i) => (
+                    <li key={i} className="flex gap-2">
+                      <span className="text-accent mt-1 shrink-0">•</span>
+                      <span>{m}</span>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            )}
+
+            {/* Geography */}
+            {rapport.geography.length > 0 && (
+              <section className="mb-10">
+                <h2 className="text-lg font-semibold text-primary mb-3">Geografi</h2>
+                <p className="text-muted-foreground">{rapport.geography.join(", ")}</p>
+              </section>
+            )}
+
+            {/* Authors */}
+            {rapport.authors.length > 0 && (
+              <section className="mb-10">
+                <h2 className="text-lg font-semibold text-primary mb-3">Forfattere</h2>
+                <p className="text-muted-foreground">{rapport.authors.join(", ")}</p>
               </section>
             )}
 
             {/* Themes */}
-            <section className="mb-8">
+            <section className="mb-10">
               <h2 className="text-lg font-semibold text-primary mb-3">Relevante tema</h2>
               <div className="flex flex-wrap gap-2">
                 {rapport.themes.map((t) => (
                   <Link key={t} to={`/tema/${themeToSlug(t)}`}>
-                    <Badge variant="secondary" className="text-sm hover:bg-secondary/80 cursor-pointer">
+                    <Badge
+                      variant="secondary"
+                      className="text-sm hover:bg-secondary/80 cursor-pointer"
+                    >
                       {t}
                     </Badge>
                   </Link>
@@ -152,34 +230,54 @@ const RapportDetail = () => {
               </div>
             </section>
 
-            {/* Authors */}
-            {rapport.authors.length > 0 && (
-              <section className="mb-8">
-                <h2 className="text-lg font-semibold text-primary mb-3">Forfattere</h2>
-                <p className="text-muted-foreground">{rapport.authors.join(", ")}</p>
-              </section>
-            )}
-
-            {/* Geography */}
-            {rapport.geography.length > 0 && (
-              <section className="mb-8">
-                <h2 className="text-lg font-semibold text-primary mb-3">Geografi</h2>
-                <p className="text-muted-foreground">{rapport.geography.join(", ")}</p>
-              </section>
-            )}
-
-            <div className="h-px bg-border mb-8" />
+            <div className="h-px bg-border mb-10" />
 
             {/* Download */}
             {rapport.pdfUrl ? (
-              <a href={rapport.pdfUrl} download>
+              <a href={rapport.pdfUrl} target="_blank" rel="noopener noreferrer">
                 <Button variant="cta" size="lg" className="gap-2">
                   <Download className="w-5 h-5" />
-                  Last ned PDF
+                  Last ned rapport (PDF)
                 </Button>
               </a>
             ) : (
-              <p className="text-sm text-muted-foreground italic">PDF er ikke tilgjengelig for denne rapporten ennå.</p>
+              <p className="text-sm text-muted-foreground italic">
+                PDF er ikke tilgjengelig for denne rapporten ennå.
+              </p>
+            )}
+
+            {/* Related publications */}
+            {related.length > 0 && (
+              <section className="mt-16">
+                <div className="h-px bg-border mb-10" />
+                <h2 className="text-lg font-semibold text-primary mb-6">
+                  Relaterte publikasjoner
+                </h2>
+                <div className="space-y-4">
+                  {related.map((r) => (
+                    <article key={r.id} className="card-premium p-5">
+                      <Link
+                        to={`/publikasjoner/${r.slug}`}
+                        className="text-base font-semibold text-primary hover:text-accent transition-colors leading-snug block mb-1.5"
+                      >
+                        {r.title}
+                      </Link>
+                      <p className="text-xs text-muted-foreground mb-2">
+                        {r.year} · {r.type}
+                      </p>
+                      <p className="text-sm text-muted-foreground leading-relaxed line-clamp-2 mb-3">
+                        {r.summary}
+                      </p>
+                      <Link
+                        to={`/publikasjoner/${r.slug}`}
+                        className="inline-flex items-center gap-1.5 text-xs font-medium text-primary hover:text-accent transition-colors"
+                      >
+                        Les mer <ArrowRight className="w-3 h-3" />
+                      </Link>
+                    </article>
+                  ))}
+                </div>
+              </section>
             )}
           </div>
         </article>
