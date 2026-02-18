@@ -91,7 +91,7 @@ const AarsPage = () => {
                       Les mer <ArrowRight className="w-3 h-3" />
                     </Link>
                     {r.pdfUrl && (
-                      <a href={r.pdfUrl} download className="inline-flex items-center gap-1.5 text-xs font-medium text-accent hover:text-accent/80 transition-colors">
+                      <a href={r.pdfUrl} target="_blank" rel="noopener" className="inline-flex items-center gap-1.5 text-xs font-medium text-accent hover:text-accent/80 transition-colors">
                         <Download className="w-3 h-3" />
                         Last ned PDF
                       </a>
