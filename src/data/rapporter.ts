@@ -12,7 +12,7 @@ export const rapporter: Rapport[] = [
     geography: ["Østfold"],
     client: "Statsforvalteren i Østfold, Buskerud, Oslo og Akershus",
     authors: ["Geir Vinsand"],
-    pdfUrl: "/docs/NIVI-Rapport-2025_1-Interkommunalt-samarbeid-i-Ostfold.pdf",
+    pdfUrl: "/publikasjoner/2025/interkommunalt-samarbeid-i-ostfold-2025.pdf",
     slug: "interkommunalt-samarbeid-ostfold-2025",
     seoTitle: "Interkommunalt samarbeid i Østfold | NIVI Analyse",
     seoDescription: "Kartlegging av det formaliserte interkommunale samarbeidet i Østfold, gjennomført av NIVI Analyse for Statsforvalteren.",
