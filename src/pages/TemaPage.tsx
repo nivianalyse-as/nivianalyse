@@ -80,7 +80,7 @@ const TemaPage = () => {
               {themeRapporter.map((r) => (
                 <article key={r.id} className="card-premium p-5 md:p-6">
                   <Link
-                    to={`/rapport/${r.slug}`}
+                    to={`/publikasjoner/${r.slug}`}
                     className="text-base font-semibold text-primary hover:text-accent transition-colors leading-snug block mb-1.5"
                   >
                     {r.title}
@@ -105,7 +105,7 @@ const TemaPage = () => {
                   </div>
                   <div className="flex items-center gap-4">
                     <Link
-                      to={`/rapport/${r.slug}`}
+                      to={`/publikasjoner/${r.slug}`}
                       className="inline-flex items-center gap-1.5 text-xs font-medium text-primary hover:text-accent transition-colors"
                     >
                       Les mer <ArrowRight className="w-3 h-3" />

@@ -42,7 +42,7 @@ const RapportDetail = () => {
     author: rapport.authors.map((a) => ({ "@type": "Person", name: a })),
     publisher: { "@type": "Organization", name: "NIVI Analyse AS" },
     about: rapport.themes.map((t) => ({ "@type": "Thing", name: t })),
-    url: `https://nivianalyse.lovable.app/rapport/${rapport.slug}`,
+    url: `https://nivianalyse.lovable.app/publikasjoner/${rapport.slug}`,
     ...(rapport.pdfUrl ? { encoding: { "@type": "MediaObject", contentUrl: rapport.pdfUrl, encodingFormat: "application/pdf" } } : {}),
   };
 

@@ -272,7 +272,7 @@ const Rapportarkiv = () => {
                           <div className="flex items-start justify-between gap-4">
                             <div className="flex-1 min-w-0">
                               <Link
-                                to={`/rapport/${r.slug}`}
+                                to={`/publikasjoner/${r.slug}`}
                                 className="text-base font-semibold text-primary hover:text-accent transition-colors leading-snug block mb-1.5"
                               >
                                 {r.title}
@@ -295,7 +295,7 @@ const Rapportarkiv = () => {
                               </div>
                               <div className="flex items-center gap-4">
                                 <Link
-                                  to={`/rapport/${r.slug}`}
+                                  to={`/publikasjoner/${r.slug}`}
                                   className="inline-flex items-center gap-1.5 text-xs font-medium text-primary hover:text-accent transition-colors"
                                 >
                                   Les mer
