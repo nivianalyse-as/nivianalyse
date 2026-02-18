@@ -53,8 +53,8 @@ const HeroSection = () => {
           />
 
           {/* Content */}
-          <div className="relative z-10 px-6 md:pl-[72px] md:pr-0 pt-24 md:pt-0 py-16 md:pb-[8vh] w-full flex md:items-end md:justify-end md:flex-col md:h-full">
-            <div className="max-w-[85%] md:max-w-[560px] text-left">
+          <div className="relative z-10 px-6 md:pl-[72px] md:pr-0 pt-24 md:pt-0 py-16 md:pb-[6vh] w-full flex md:items-start md:justify-end md:flex-col md:h-full">
+            <div className="max-w-[85%] md:max-w-[560px] text-left md:mt-[8vh]">
               {/* Mobile heading - without names */}
               <h1 
                 className="md:hidden text-3xl font-bold text-white animate-fade-in"
