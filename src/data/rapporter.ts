@@ -204,25 +204,6 @@ export const rapporter: Rapport[] = [
 
   // ===== 2022 =====
   {
-    id: "2022-01",
-    title: "Interkommunalt samarbeid i Trøndelag",
-    year: 2022,
-    type: "Rapport",
-    summary: "Kartlegging av det formaliserte interkommunale samarbeidet i Trøndelag, med analyse av samarbeidsmønstre og organisatoriske løsninger.",
-    themes: ["Interkommunalt samarbeid", "Forvaltningsstruktur"],
-    geography: ["Trøndelag"],
-    client: "Statsforvalteren i Trøndelag",
-    authors: ["Geir Vinsand"],
-    pdfUrl: "",
-    slug: "interkommunalt-samarbeid-trondelag-2022",
-    seoTitle: "Interkommunalt samarbeid i Trøndelag | NIVI Analyse",
-    seoDescription: "Kartlegging av interkommunalt samarbeid i Trøndelag gjennomført av NIVI Analyse.",
-    keywords: ["interkommunalt samarbeid", "Trøndelag", "kartlegging"],
-    problemstilling: "Hva er omfanget og organiseringen av interkommunalt samarbeid i Trøndelag?",
-    bakgrunn: "Trøndelag er ett av landets største fylker med betydelig variasjon i kommunestørrelse og struktur. Kartleggingen gir oversikt over formaliserte samarbeid.",
-    hovedfunn: "Det er identifisert et omfattende nettverk av interkommunale samarbeid i Trøndelag, med tydelige regionale knutepunkter.",
-  },
-  {
     id: "2022-02",
     title: "Beredskap og samfunnssikkerhet i norske kommuner",
     year: 2022,
