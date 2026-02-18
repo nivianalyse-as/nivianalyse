@@ -8,6 +8,7 @@ interface SEOHeadProps {
   url?: string;
   author?: string;
   publishedTime?: string;
+  canonical?: string;
 }
 
 const SEOHead = ({
@@ -18,12 +19,11 @@ const SEOHead = ({
   url,
   author,
   publishedTime,
+  canonical,
 }: SEOHeadProps) => {
   useEffect(() => {
-    // Update document title
     document.title = title;
 
-    // Update meta tags
     const updateMeta = (name: string, content: string, isProperty = false) => {
       const attr = isProperty ? "property" : "name";
       let element = document.querySelector(`meta[${attr}="${name}"]`);
@@ -51,7 +51,28 @@ const SEOHead = ({
 
     if (author) updateMeta("author", author);
     if (publishedTime) updateMeta("article:published_time", publishedTime, true);
-  }, [title, description, type, image, url, author, publishedTime]);
+
+    // Canonical link
+    if (canonical) {
+      let link = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
+      if (link) {
+        link.href = canonical;
+      } else {
+        link = document.createElement("link");
+        link.rel = "canonical";
+        link.href = canonical;
+        document.head.appendChild(link);
+      }
+    }
+
+    return () => {
+      // Clean up canonical on unmount
+      if (canonical) {
+        const link = document.querySelector('link[rel="canonical"]');
+        if (link) link.remove();
+      }
+    };
+  }, [title, description, type, image, url, author, publishedTime, canonical]);
 
   return null;
 };
