@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-consultants.jpg";
-import heroMobileImage from "@/assets/hero-mobile.png";
+import geirThumb from "@/assets/geir-vinsand.jpg";
+import havardThumb from "@/assets/havard-moe.jpg";
 
 const HeroSection = () => {
   const scrollToSection = (href: string) => {
@@ -11,9 +12,9 @@ const HeroSection = () => {
   };
 
   return (
-    <section id="top" className="relative bg-black">
-      {/* Desktop + iPad: 2-column grid */}
-      <div className="hidden md:grid md:grid-cols-[60%_40%] md:h-[85vh] lg:h-[85vh]">
+    <section id="top" className="relative">
+      {/* Desktop (>=1024px): 2-column grid, min-height 70vh */}
+      <div className="hidden lg:grid lg:grid-cols-[60%_40%]" style={{ minHeight: '70vh' }}>
         {/* Left column – content */}
         <div className="flex items-center justify-center bg-background px-12 lg:px-20">
           <div className="max-w-[600px] text-left">
@@ -61,33 +62,26 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Mobile layout – unchanged */}
-      <div className="md:hidden relative overflow-hidden aspect-[4/5]">
-        <img
-          src={heroMobileImage}
-          alt=""
-          aria-hidden="true"
-          className="absolute inset-0 w-full h-full object-cover object-center"
-        />
-        <div
-          className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/30 to-transparent"
-          aria-hidden="true"
-        />
-        <div className="relative z-10 px-6 pt-24 py-16 w-full flex flex-col justify-end h-full">
-          <div className="max-w-[85%] text-left">
+      {/* Tablet (768px–1023px): vertical stack */}
+      <div className="hidden md:flex md:flex-col lg:hidden bg-background">
+        <div className="flex items-center justify-center px-10 py-16">
+          <div className="max-w-[560px] text-left">
             <h1
-              className="text-3xl font-bold text-white animate-fade-in"
-              style={{ lineHeight: 1.18, letterSpacing: '-0.01em' }}
+              className="text-3xl font-semibold text-foreground animate-fade-in"
+              style={{ lineHeight: 1.2, letterSpacing: '-0.01em' }}
             >
-              Spisskompetanse på kommunal utvikling og omstilling
+              Håvard Moe og Geir&nbsp;Vinsand tilbyr spisskompetanse på kommunal utvikling og omstilling
             </h1>
-            <p className="text-base text-white animate-fade-in-delay-1" style={{ lineHeight: 1.6, marginTop: '24px' }}>
-              Håvard Moe og Geir Vinsand tilbyr uavhengig rådgivning for kommuner som vil styrke økonomi, styring og tjenesteutvikling.
+            <p
+              className="text-base text-muted-foreground max-w-[460px] animate-fade-in-delay-1"
+              style={{ lineHeight: 1.65, marginTop: '32px' }}
+            >
+              Uavhengig rådgivning for kommuner som vil styrke økonomi, styring og tjenesteutvikling.
             </p>
-            <div className="flex flex-col gap-4 animate-fade-in-delay-2 mt-6">
+            <div className="flex gap-5 animate-fade-in-delay-2 mt-8">
               <Button
                 size="lg"
-                className="w-full bg-accent hover:bg-accent/95 text-accent-foreground font-medium shadow-md hover:shadow-lg px-8 py-4 h-auto text-[15px] rounded-lg transition-all duration-200"
+                className="bg-accent hover:bg-accent/95 text-accent-foreground font-medium shadow-md px-7 py-3.5 h-auto text-[15px] rounded-lg transition-all duration-200"
                 onClick={() => scrollToSection("#kontakt")}
               >
                 Kontakt oss
@@ -95,10 +89,62 @@ const HeroSection = () => {
               <Button
                 variant="outline"
                 size="lg"
-                className="w-full border border-white/60 text-white bg-transparent hover:bg-white/20 hover:border-white font-medium px-6 py-3 h-auto text-[15px] rounded-lg transition-all duration-200"
+                className="border border-border text-foreground bg-transparent hover:bg-muted font-medium px-7 py-3.5 h-auto text-[15px] rounded-lg transition-all duration-200"
                 onClick={() => scrollToSection("#fagomrader")}
               >
                 Se våre fagområder
+              </Button>
+            </div>
+          </div>
+        </div>
+        <div className="relative overflow-hidden" style={{ maxHeight: '420px' }}>
+          <img
+            src={heroImage}
+            alt="NIVI Analyse konsulenter"
+            className="w-full h-full object-cover object-[center_40%]"
+            style={{ height: '420px' }}
+          />
+        </div>
+      </div>
+
+      {/* Mobile (<768px): clean text-only hero */}
+      <div className="md:hidden bg-background">
+        <div className="flex flex-col items-center text-center px-6 pt-24 pb-16">
+          <div className="max-w-[340px]">
+            <h1
+              className="text-2xl font-semibold text-foreground animate-fade-in"
+              style={{ lineHeight: 1.2, letterSpacing: '-0.01em' }}
+            >
+              Spisskompetanse på kommunal utvikling og omstilling
+            </h1>
+            <p
+              className="text-[15px] text-muted-foreground animate-fade-in-delay-1"
+              style={{ lineHeight: 1.65, marginTop: '20px' }}
+            >
+              Håvard Moe og Geir&nbsp;Vinsand tilbyr uavhengig rådgivning for kommuner som vil styrke økonomi, styring og tjenesteutvikling.
+            </p>
+
+            {/* Expert thumbnails */}
+            <div className="flex justify-center gap-3 mt-8 animate-fade-in-delay-1">
+              <img
+                src={havardThumb}
+                alt="Håvard Moe"
+                className="w-20 h-20 rounded-full object-cover object-top border-2 border-border"
+              />
+              <img
+                src={geirThumb}
+                alt="Geir Vinsand"
+                className="w-20 h-20 rounded-full object-cover object-top border-2 border-border"
+              />
+            </div>
+
+            <div className="animate-fade-in-delay-2 mt-8">
+              <Button
+                size="lg"
+                className="w-full bg-accent hover:bg-accent/95 text-accent-foreground font-medium shadow-md px-8 py-4 h-auto text-[15px] rounded-lg transition-all duration-200"
+                onClick={() => scrollToSection("#kontakt")}
+              >
+                Kontakt oss
               </Button>
             </div>
           </div>
