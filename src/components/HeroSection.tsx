@@ -14,13 +14,13 @@ const HeroSection = () => {
     <section id="top" className="relative py-0 bg-background">
       <div>
         {/* Premium frame container */}
-        <div className="relative overflow-hidden aspect-[4/5] md:aspect-auto md:h-[720px] md:min-h-[720px] md:max-h-[720px]">
+        <div className="relative overflow-hidden aspect-[4/5] md:aspect-video">
           {/* Desktop Background Image */}
           <img
             src={heroImage}
             alt=""
             aria-hidden="true"
-            className="absolute inset-0 w-full h-full object-cover object-[40%_center] hidden md:block"
+            className="absolute inset-0 w-full h-full object-cover object-center hidden md:block"
           />
 
           {/* Mobile Background Image */}
@@ -43,10 +43,10 @@ const HeroSection = () => {
             style={{
               background: `linear-gradient(
                 90deg,
-                rgba(10, 30, 25, 0.93) 0%,
-                rgba(10, 30, 25, 0.78) 20%,
-                rgba(10, 30, 25, 0.40) 38%,
-                rgba(10, 30, 25, 0.0) 54%
+                rgba(10, 30, 25, 0.65) 0%,
+                rgba(10, 30, 25, 0.45) 18%,
+                rgba(10, 30, 25, 0.15) 35%,
+                rgba(10, 30, 25, 0.0) 45%
               )`
             }}
             aria-hidden="true"
