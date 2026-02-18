@@ -50,6 +50,7 @@ const Header = () => {
     { name: "Våre fagområder", href: "/#fagomrader" },
     { name: "Faglige innsikter", href: "/inspirasjon" },
     { name: "Publikasjoner", href: "/publikasjoner" },
+    { name: "Rapportarkiv", href: "/rapportarkiv" },
     { name: "Våre oppdragsgivere", href: "/#referanser" },
     { name: "Om oss", href: "/om-oss" },
   ];
