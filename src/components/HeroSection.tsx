@@ -14,7 +14,7 @@ const HeroSection = () => {
     <section id="top" className="relative py-0 bg-background">
       <div>
         {/* Premium frame container */}
-        <div className="relative overflow-hidden aspect-[4/5] md:aspect-video">
+        <div className="relative overflow-hidden aspect-[4/5] md:h-[75vh] lg:h-[85vh]">
           {/* Desktop Background Image */}
           <img
             src={heroImage}
@@ -53,7 +53,7 @@ const HeroSection = () => {
           />
 
           {/* Content */}
-          <div className="relative z-10 px-6 md:pl-[72px] md:pr-0 pt-24 md:pt-0 py-16 md:py-24 w-full flex md:items-start md:justify-center md:flex-col md:h-full">
+          <div className="relative z-10 px-6 md:pl-[72px] md:pr-0 pt-24 md:pt-0 w-full flex md:items-end md:justify-start md:flex-col md:h-full" style={{ paddingBottom: '10%' }}>
             <div className="max-w-[85%] md:max-w-[560px] text-left">
               {/* Mobile heading - without names */}
               <h1 
