@@ -16,17 +16,17 @@ const HeroSection = () => {
       <div className="hidden md:grid md:grid-cols-[60%_40%] md:h-[85vh] lg:h-[85vh]">
         {/* Left column – content */}
         <div className="flex items-center justify-center bg-background px-12 lg:px-20">
-          <div className="max-w-[650px] text-left">
+          <div className="max-w-[600px] text-left">
             <h1
-              className="text-3xl lg:text-4xl font-bold text-foreground animate-fade-in"
-              style={{ lineHeight: 1.18, letterSpacing: '-0.01em' }}
+              className="text-3xl lg:text-4xl font-semibold text-foreground animate-fade-in"
+              style={{ lineHeight: 1.2, letterSpacing: '-0.01em' }}
             >
               Håvard Moe og Geir&nbsp;Vinsand tilbyr spisskompetanse på kommunal utvikling og omstilling
             </h1>
 
             <p
               className="text-base lg:text-lg text-muted-foreground max-w-[480px] animate-fade-in-delay-1"
-              style={{ lineHeight: 1.65, marginTop: '32px' }}
+              style={{ lineHeight: 1.65, marginTop: '44px' }}
             >
               Uavhengig rådgivning for kommuner som vil styrke økonomi, styring og tjenesteutvikling.
             </p>
