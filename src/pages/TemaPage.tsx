@@ -34,8 +34,8 @@ const TemaPage = () => {
         <Header />
         <main className="container-narrow section-padding text-center">
           <h1 className="text-2xl font-semibold text-primary mb-4">Tema ikke funnet</h1>
-          <Link to="/rapportarkiv" className="text-accent hover:text-accent/80">
-            ← Tilbake til rapportarkivet
+           <Link to="/publikasjoner" className="text-accent hover:text-accent/80">
+            ← Tilbake til publikasjoner
           </Link>
         </main>
         <Footer />
@@ -57,7 +57,7 @@ const TemaPage = () => {
         <section className="bg-background" style={{ paddingTop: "72px", paddingBottom: "96px" }}>
           <div className="container-narrow">
             <Link
-              to="/rapportarkiv"
+              to="/publikasjoner"
               className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-primary transition-colors mb-8"
             >
               <ArrowLeft className="w-4 h-4" />

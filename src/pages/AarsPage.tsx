@@ -19,8 +19,8 @@ const AarsPage = () => {
         <Header />
         <main className="container-narrow section-padding text-center">
           <h1 className="text-2xl font-semibold text-primary mb-4">Ingen rapporter for {year}</h1>
-          <Link to="/rapportarkiv" className="text-accent hover:text-accent/80">
-            ← Tilbake til rapportarkivet
+          <Link to="/publikasjoner" className="text-accent hover:text-accent/80">
+            ← Tilbake til publikasjoner
           </Link>
         </main>
         <Footer />
@@ -44,11 +44,11 @@ const AarsPage = () => {
         <section className="bg-background" style={{ paddingTop: "72px", paddingBottom: "96px" }}>
           <div className="container-narrow">
             <Link
-              to="/rapportarkiv"
+              to="/publikasjoner"
               className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-primary transition-colors mb-8"
             >
               <ArrowLeft className="w-4 h-4" />
-              Tilbake til rapportarkivet
+              Tilbake til publikasjoner
             </Link>
 
             <h1 className="text-2xl md:text-3xl font-semibold text-primary mb-4" style={{ lineHeight: 1.25 }}>
@@ -104,12 +104,12 @@ const AarsPage = () => {
             {/* Year navigation */}
             <div className="flex items-center justify-between mt-12 max-w-4xl">
               {prevYear ? (
-                <Link to={`/rapportarkiv/${prevYear}`} className="text-sm text-primary hover:text-accent transition-colors">
+                <Link to={`/publikasjoner/${prevYear}`} className="text-sm text-primary hover:text-accent transition-colors">
                   ← {prevYear}
                 </Link>
               ) : <div />}
               {nextYear ? (
-                <Link to={`/rapportarkiv/${nextYear}`} className="text-sm text-primary hover:text-accent transition-colors">
+                <Link to={`/publikasjoner/${nextYear}`} className="text-sm text-primary hover:text-accent transition-colors">
                   {nextYear} →
                 </Link>
               ) : <div />}

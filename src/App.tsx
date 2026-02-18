@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { ThemeProvider } from "next-themes";
 import Index from "./pages/Index";
 import Inspirasjon from "./pages/Inspirasjon";
@@ -11,8 +11,7 @@ import IMedia from "./pages/IMedia";
 import IMediaDetail from "./pages/IMediaDetail";
 import Personvern from "./pages/Personvern";
 import Cookies from "./pages/Cookies";
-import Publikasjoner from "./pages/Publikasjoner";
-import Rapportarkiv from "./pages/Rapportarkiv";
+import Publikasjoner from "./pages/Rapportarkiv";
 import RapportDetail from "./pages/RapportDetail";
 import TemaPage from "./pages/TemaPage";
 import AarsPage from "./pages/AarsPage";
@@ -21,6 +20,11 @@ import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
+
+const RedirectRapportarkivYear = () => {
+  const year = window.location.pathname.split("/").pop();
+  return <Navigate to={`/publikasjoner/${year}`} replace />;
+};
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
@@ -39,10 +43,12 @@ const App = () => (
             <Route path="/personvern" element={<Personvern />} />
             <Route path="/cookies" element={<Cookies />} />
             <Route path="/publikasjoner" element={<Publikasjoner />} />
-            <Route path="/rapportarkiv" element={<Rapportarkiv />} />
-            <Route path="/rapportarkiv/:year" element={<AarsPage />} />
+            <Route path="/publikasjoner/:year" element={<AarsPage />} />
             <Route path="/rapport/:slug" element={<RapportDetail />} />
             <Route path="/tema/:slug" element={<TemaPage />} />
+            {/* 301-style redirects from old /rapportarkiv paths */}
+            <Route path="/rapportarkiv" element={<Navigate to="/publikasjoner" replace />} />
+            <Route path="/rapportarkiv/:year" element={<RedirectRapportarkivYear />} />
             <Route path="/om-oss" element={<OmOss />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />

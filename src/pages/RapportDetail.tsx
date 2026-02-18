@@ -23,8 +23,8 @@ const RapportDetail = () => {
         <Header />
         <main className="container-narrow section-padding text-center">
           <h1 className="text-2xl font-semibold text-primary mb-4">Rapport ikke funnet</h1>
-          <Link to="/rapportarkiv" className="text-accent hover:text-accent/80">
-            ← Tilbake til rapportarkivet
+          <Link to="/publikasjoner" className="text-accent hover:text-accent/80">
+            ← Tilbake til publikasjoner
           </Link>
         </main>
         <Footer />
@@ -67,11 +67,11 @@ const RapportDetail = () => {
           <div className="container-content">
             {/* Back link */}
             <Link
-              to="/rapportarkiv"
+              to="/publikasjoner"
               className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-primary transition-colors mb-8"
             >
               <ArrowLeft className="w-4 h-4" />
-              Tilbake til rapportarkivet
+              Tilbake til publikasjoner
             </Link>
 
             {/* Header */}
