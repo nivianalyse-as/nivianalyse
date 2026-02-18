@@ -57,10 +57,10 @@ const Index = () => {
         <HeroSection />
         <TrustStrip />
         <ServicesSection />
-        <ArticlesSection />
+        <ReferenceProjectsSection />
         <MediaSection />
         <ReferencesSection />
-        <ReferenceProjectsSection />
+        <ArticlesSection />
         <VisualBreakSection />
         <ExpertsSection />
         <ContactSection />
