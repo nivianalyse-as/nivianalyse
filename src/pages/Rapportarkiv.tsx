@@ -188,15 +188,15 @@ const Rapportarkiv = () => {
   return (
     <div className="min-h-screen">
       <SEOHead
-        title="Rapportarkiv | NIVI Analyse"
-        description="NIVI Analyse har siden 2008 levert utredninger om interkommunalt samarbeid, forvaltningsstruktur, kommunereform og regional utvikling."
+        title="Publikasjoner | NIVI Analyse"
+        description="Utredninger og analyser om interkommunalt samarbeid, kommunereform og regional utvikling."
       />
       <SchemaMarkup
         schema={{
           type: "Organization",
           name: "NIVI Analyse AS",
-          url: "https://nivianalyse.lovable.app/rapportarkiv",
-          description: "Rapportarkiv for NIVI Analyse – utredninger om interkommunalt samarbeid, kommunestruktur og regional utvikling.",
+          url: "https://nivianalyse.lovable.app/publikasjoner",
+          description: "Publikasjoner fra NIVI Analyse – utredninger om interkommunalt samarbeid, kommunestruktur og regional utvikling.",
         }}
       />
       <Header />
@@ -205,11 +205,11 @@ const Rapportarkiv = () => {
         <section className="bg-background" style={{ paddingTop: "72px", paddingBottom: "48px" }}>
           <div className="container-narrow">
             <h1 className="text-3xl md:text-4xl font-semibold text-primary" style={{ lineHeight: 1.2 }}>
-              Rapportarkiv
+              Publikasjoner
             </h1>
             <div className="mx-auto h-[2px] w-10 bg-accent/80 rounded-full mt-4 mb-5 mr-auto ml-0" />
             <p className="text-muted-foreground max-w-[680px]" style={{ fontSize: "1.05rem", lineHeight: 1.65 }}>
-              NIVI Analyse har siden 2008 levert utredninger om interkommunalt samarbeid, forvaltningsstruktur, kommunereform og regional utvikling.
+              Utredninger og analyser om interkommunalt samarbeid, kommunereform og regional utvikling.
             </p>
           </div>
         </section>
@@ -259,7 +259,7 @@ const Rapportarkiv = () => {
                     <div className="flex items-center gap-3 mb-4">
                       <h2 className="text-xl font-semibold text-primary">{year}</h2>
                       <Link
-                        to={`/rapportarkiv/${year}`}
+                        to={`/publikasjoner/${year}`}
                         className="text-xs text-muted-foreground hover:text-accent transition-colors"
                       >
                         Se alle fra {year} →
