@@ -190,13 +190,13 @@ const Rapportarkiv = () => {
       <SEOHead
         title="Publikasjoner | NIVI Analyse"
         description="Utredninger og analyser om interkommunalt samarbeid, kommunereform og regional utvikling fra NIVI Analyse. Arkiv med rapporter, notater og samarbeidsrapporter fra 2006 til i dag."
-        canonical="https://nivianalyse.no/publikasjoner"
+        canonical="https://nivi.no/publikasjoner"
       />
       <SchemaMarkup
         schema={{
           type: "Organization",
           name: "NIVI Analyse AS",
-          url: "https://nivianalyse.no/publikasjoner",
+          url: "https://nivi.no/publikasjoner",
           description: "Publikasjoner fra NIVI Analyse – utredninger om interkommunalt samarbeid, kommunestruktur og regional utvikling.",
         }}
       />

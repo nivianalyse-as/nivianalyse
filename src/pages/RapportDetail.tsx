@@ -42,7 +42,7 @@ const RapportDetail = () => {
     );
   }
 
-  const canonicalUrl = `https://nivianalyse.no/publikasjoner/${resolvedSlug}`;
+  const canonicalUrl = `https://nivi.no/publikasjoner/${resolvedSlug}`;
 
   const reportSchema = {
     "@context": "https://schema.org",
@@ -58,7 +58,7 @@ const RapportDetail = () => {
       ? {
           encoding: {
             "@type": "MediaObject",
-            contentUrl: `https://nivianalyse.no${rapport.pdfUrl}`,
+            contentUrl: `https://nivi.no${rapport.pdfUrl}`,
             encodingFormat: "application/pdf",
           },
         }
