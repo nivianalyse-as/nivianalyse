@@ -26,6 +26,11 @@ const RedirectRapportarkivYear = () => {
   return <Navigate to={`/publikasjoner/${year}`} replace />;
 };
 
+const RedirectRapportSlug = () => {
+  const slug = window.location.pathname.split("/").pop();
+  return <Navigate to={`/publikasjoner/${slug}`} replace />;
+};
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
@@ -44,7 +49,9 @@ const App = () => (
             <Route path="/cookies" element={<Cookies />} />
             <Route path="/publikasjoner" element={<Publikasjoner />} />
             <Route path="/publikasjoner/:year" element={<AarsPage />} />
-            <Route path="/rapport/:slug" element={<RapportDetail />} />
+            <Route path="/publikasjoner/:slug" element={<RapportDetail />} />
+            {/* Redirect old /rapport/:slug to /publikasjoner/:slug */}
+            <Route path="/rapport/:slug" element={<RedirectRapportSlug />} />
             <Route path="/tema/:slug" element={<TemaPage />} />
             {/* 301-style redirects from old /rapportarkiv paths */}
             <Route path="/rapportarkiv" element={<Navigate to="/publikasjoner" replace />} />
