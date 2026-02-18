@@ -11,93 +11,95 @@ const HeroSection = () => {
   };
 
   return (
-    <section id="top" className="relative py-0 bg-black">
-      <div>
-        {/* Premium frame container */}
-        <div className="relative overflow-hidden aspect-[4/5] md:aspect-auto md:h-[95vh]">
-          {/* Desktop Background Image */}
+    <section id="top" className="relative bg-black">
+      {/* Desktop + iPad: 2-column grid */}
+      <div className="hidden md:grid md:grid-cols-[60%_40%] md:h-[85vh] lg:h-[85vh]">
+        {/* Left column – content */}
+        <div className="flex items-center justify-center bg-background px-12 lg:px-20">
+          <div className="max-w-[650px] text-left">
+            <h1
+              className="text-3xl lg:text-4xl font-bold text-foreground animate-fade-in"
+              style={{ lineHeight: 1.18, letterSpacing: '-0.01em' }}
+            >
+              Håvard Moe og Geir&nbsp;Vinsand tilbyr spisskompetanse på kommunal utvikling og omstilling
+            </h1>
+
+            <p
+              className="text-base lg:text-lg text-muted-foreground max-w-[480px] animate-fade-in-delay-1"
+              style={{ lineHeight: 1.65, marginTop: '32px' }}
+            >
+              Uavhengig rådgivning for kommuner som vil styrke økonomi, styring og tjenesteutvikling.
+            </p>
+
+            <div className="flex gap-6 animate-fade-in-delay-2 mt-10">
+              <Button
+                size="lg"
+                className="bg-accent hover:bg-accent/95 text-accent-foreground font-medium shadow-md hover:shadow-lg px-8 py-4 h-auto text-[15px] rounded-lg transition-all duration-200"
+                onClick={() => scrollToSection("#kontakt")}
+              >
+                Kontakt oss
+              </Button>
+              <Button
+                variant="outline"
+                size="lg"
+                className="border border-border text-foreground bg-transparent hover:bg-muted font-medium px-8 py-4 h-auto text-[15px] rounded-lg transition-all duration-200"
+                onClick={() => scrollToSection("#fagomrader")}
+              >
+                Se våre fagområder
+              </Button>
+            </div>
+          </div>
+        </div>
+
+        {/* Right column – image */}
+        <div className="relative overflow-hidden">
           <img
             src={heroImage}
-            alt=""
-            aria-hidden="true"
-            className="absolute inset-0 w-full h-full object-cover object-[center_25%] hidden md:block"
+            alt="NIVI Analyse konsulenter"
+            className="absolute inset-0 w-full h-full object-cover object-center"
           />
+        </div>
+      </div>
 
-          {/* Mobile Background Image */}
-          <img
-            src={heroMobileImage}
-            alt=""
-            aria-hidden="true"
-            className="absolute inset-0 w-full h-full object-cover object-center md:hidden"
-          />
-
-          {/* Mobile overlay - gradient for readability */}
-          <div 
-            className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/30 to-transparent md:hidden"
-            aria-hidden="true"
-          />
-
-          {/* Desktop overlay - left-side gradient for text readability */}
-          <div 
-            className="absolute inset-0 hidden md:block"
-            style={{
-              background: `linear-gradient(
-                90deg,
-                rgba(10, 30, 25, 0.65) 0%,
-                rgba(10, 30, 25, 0.45) 18%,
-                rgba(10, 30, 25, 0.15) 35%,
-                rgba(10, 30, 25, 0.0) 45%
-              )`
-            }}
-            aria-hidden="true"
-          />
-
-          {/* Content */}
-          <div className="relative z-10 px-6 md:pl-[72px] md:pr-0 pt-24 md:pt-0 py-16 md:pb-[6vh] w-full flex md:items-start md:justify-end md:flex-col md:h-full">
-            <div className="max-w-[85%] md:max-w-[560px] text-left md:mt-[8vh]">
-              {/* Mobile heading - without names */}
-              <h1 
-                className="md:hidden text-3xl font-bold text-white animate-fade-in"
-                style={{ lineHeight: 1.18, letterSpacing: '-0.01em' }}
+      {/* Mobile layout – unchanged */}
+      <div className="md:hidden relative overflow-hidden aspect-[4/5]">
+        <img
+          src={heroMobileImage}
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 w-full h-full object-cover object-center"
+        />
+        <div
+          className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/30 to-transparent"
+          aria-hidden="true"
+        />
+        <div className="relative z-10 px-6 pt-24 py-16 w-full flex flex-col justify-end h-full">
+          <div className="max-w-[85%] text-left">
+            <h1
+              className="text-3xl font-bold text-white animate-fade-in"
+              style={{ lineHeight: 1.18, letterSpacing: '-0.01em' }}
+            >
+              Spisskompetanse på kommunal utvikling og omstilling
+            </h1>
+            <p className="text-base text-white animate-fade-in-delay-1" style={{ lineHeight: 1.6, marginTop: '24px' }}>
+              Håvard Moe og Geir Vinsand tilbyr uavhengig rådgivning for kommuner som vil styrke økonomi, styring og tjenesteutvikling.
+            </p>
+            <div className="flex flex-col gap-4 animate-fade-in-delay-2 mt-6">
+              <Button
+                size="lg"
+                className="w-full bg-accent hover:bg-accent/95 text-accent-foreground font-medium shadow-md hover:shadow-lg px-8 py-4 h-auto text-[15px] rounded-lg transition-all duration-200"
+                onClick={() => scrollToSection("#kontakt")}
               >
-                Spisskompetanse på kommunal utvikling og omstilling
-              </h1>
-
-              {/* Desktop heading - with names */}
-              <h1 
-                className="hidden md:block text-2xl lg:text-3xl font-bold text-white animate-fade-in"
-                style={{ lineHeight: 1.18, letterSpacing: '-0.01em', marginBottom: '24px' }}
+                Kontakt oss
+              </Button>
+              <Button
+                variant="outline"
+                size="lg"
+                className="w-full border border-white/60 text-white bg-transparent hover:bg-white/20 hover:border-white font-medium px-6 py-3 h-auto text-[15px] rounded-lg transition-all duration-200"
+                onClick={() => scrollToSection("#fagomrader")}
               >
-                Håvard Moe og Geir&nbsp;Vinsand tilbyr spisskompetanse på kommunal utvikling og omstilling
-              </h1>
-
-              {/* Mobile paragraph - includes names */}
-              <p className="md:hidden text-base text-white animate-fade-in-delay-1" style={{ lineHeight: 1.6, marginTop: '24px' }}>
-                Håvard Moe og Geir Vinsand tilbyr uavhengig rådgivning for kommuner som vil styrke økonomi, styring og tjenesteutvikling.
-              </p>
-
-              {/* Desktop paragraph */}
-              <p className="hidden md:block text-[16px] text-white max-w-[360px] animate-fade-in-delay-1" style={{ lineHeight: 1.65, marginBottom: '40px' }}>
-                Uavhengig rådgivning for kommuner som vil styrke økonomi, styring og tjenesteutvikling.
-              </p>
-
-              <div className="flex flex-col gap-4 md:flex-row md:gap-6 animate-fade-in-delay-2 mt-6 md:mt-0">
-                <Button 
-                  size="lg" 
-                  className="w-full md:w-auto bg-accent hover:bg-accent/95 text-accent-foreground font-medium shadow-md hover:shadow-lg px-8 py-4 h-auto text-[15px] rounded-lg transition-all duration-200"
-                  onClick={() => scrollToSection("#kontakt")}
-                >
-                  Kontakt oss
-                </Button>
-                <Button 
-                  variant="outline" 
-                  size="lg" 
-                  className="w-full md:w-auto border border-white/60 text-white bg-transparent hover:bg-white/20 hover:border-white font-medium px-6 py-3 md:px-8 md:py-4 h-auto text-[15px] rounded-lg transition-all duration-200"
-                  onClick={() => scrollToSection("#fagomrader")}
-                >
-                  Se våre fagområder
-                </Button>
-              </div>
+                Se våre fagområder
+              </Button>
             </div>
           </div>
         </div>
