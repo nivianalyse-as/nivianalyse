@@ -11,7 +11,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section id="top" className="relative py-0 bg-background">
+    <section id="top" className="relative py-0 bg-black">
       <div>
         {/* Premium frame container */}
         <div className="relative overflow-hidden aspect-[4/5] md:aspect-auto md:h-[95vh]">
