@@ -10,8 +10,8 @@ import { themeToSlug } from "@/types/rapport";
 import { useEffect } from "react";
 
 const RapportDetail = () => {
-  const { slug } = useParams<{ slug: string }>();
-  const rapport = rapporter.find((r) => r.slug === slug);
+  const { slug, param } = useParams<{ slug?: string; param?: string }>();
+  const rapport = rapporter.find((r) => r.slug === (param || slug));
 
   useEffect(() => {
     window.scrollTo(0, 0);

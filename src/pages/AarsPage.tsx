@@ -8,8 +8,8 @@ import { rapporter } from "@/data/rapporter";
 import { themeToSlug } from "@/types/rapport";
 
 const AarsPage = () => {
-  const { year } = useParams<{ year: string }>();
-  const yearNum = Number(year);
+  const { year, param } = useParams<{ year?: string; param?: string }>();
+  const yearNum = Number(param || year);
 
   const yearRapporter = rapporter.filter((r) => r.year === yearNum).sort((a, b) => a.title.localeCompare(b.title));
 

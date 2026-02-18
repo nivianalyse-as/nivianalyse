@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate, useParams } from "react-router-dom";
 import { ThemeProvider } from "next-themes";
 import Index from "./pages/Index";
 import Inspirasjon from "./pages/Inspirasjon";
@@ -31,6 +31,15 @@ const RedirectRapportSlug = () => {
   return <Navigate to={`/publikasjoner/${slug}`} replace />;
 };
 
+// Disambiguate /publikasjoner/:param — year (4 digits) vs slug
+const PublikasjonerParam = () => {
+  const { param } = useParams<{ param: string }>();
+  if (param && /^\d{4}$/.test(param)) {
+    return <AarsPage />;
+  }
+  return <RapportDetail />;
+};
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
@@ -48,9 +57,7 @@ const App = () => (
             <Route path="/personvern" element={<Personvern />} />
             <Route path="/cookies" element={<Cookies />} />
             <Route path="/publikasjoner" element={<Publikasjoner />} />
-            <Route path="/publikasjoner/:year" element={<AarsPage />} />
-            <Route path="/publikasjoner/:slug" element={<RapportDetail />} />
-            {/* Redirect old /rapport/:slug to /publikasjoner/:slug */}
+            <Route path="/publikasjoner/:param" element={<PublikasjonerParam />} />
             <Route path="/rapport/:slug" element={<RedirectRapportSlug />} />
             <Route path="/tema/:slug" element={<TemaPage />} />
             {/* 301-style redirects from old /rapportarkiv paths */}
