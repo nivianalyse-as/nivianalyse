@@ -56,7 +56,7 @@ const HeroSection = () => {
           <img
             src={heroImage}
             alt="NIVI Analyse konsulenter"
-            className="absolute inset-0 w-full h-full object-cover object-center"
+            className="absolute inset-0 w-full h-full object-cover object-[70%_center]"
           />
         </div>
       </div>
