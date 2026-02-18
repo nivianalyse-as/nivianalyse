@@ -7,7 +7,7 @@ import ArticlesSection from "@/components/ArticlesSection";
 import MediaSection from "@/components/MediaSection";
 import ReferencesSection from "@/components/ReferencesSection";
 import ReferenceProjectsSection from "@/components/ReferenceProjectsSection";
-import VisualBreakSection from "@/components/VisualBreakSection";
+
 import ExpertsSection from "@/components/ExpertsSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
@@ -61,12 +61,11 @@ const Index = () => {
         <MediaSection />
         <ReferencesSection />
         <ArticlesSection />
-        <VisualBreakSection />
         <ExpertsSection />
         <ContactSection />
       </main>
-      {/* Soft gradient transition to footer (mobile) */}
-      <div className="h-8 bg-gradient-to-b from-background to-[#0E3B32] md:hidden" aria-hidden="true" />
+      <div className="h-10 md:hidden bg-gradient-to-b from-background to-[#0E3B32]" aria-hidden="true" />
+      <div style={{ height: '32px', backgroundColor: 'hsl(var(--background))' }} className="hidden md:block" aria-hidden="true" />
       <Footer />
       <CookieConsent />
     </div>
