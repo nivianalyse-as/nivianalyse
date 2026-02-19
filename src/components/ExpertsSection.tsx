@@ -21,6 +21,7 @@ interface ExpertCV {
 interface Expert {
   name: string;
   title: string;
+  secondaryRole: string;
   image: string;
   expertise: string[];
   description: string;
@@ -31,17 +32,18 @@ interface Expert {
 const experts: Expert[] = [
   {
     name: "Geir Vinsand",
-    title: "Styreformann og partner",
+    title: "Partner",
+    secondaryRole: "Styreformann",
     image: geirImage,
     expertise: [
       "Interkommunalt samarbeid",
       "Kommunestruktur og -reform",
       "Offentlig forvaltning og styring",
-      "Kommunal organisering",
       "Kartlegging og utredning",
+      "Beredskap og samfunnssikkerhet",
     ],
     description:
-      "Over 30 års erfaring med analyse og rådgivning for kommunesektoren. En av Norges fremste eksperter på interkommunalt samarbeid og kommunestruktur, med oppdrag for departementer, KS og et stort antall kommuner og regioner.",
+      "Over 30 års erfaring med analyse og rådgivning i kommunesektoren. En av Norges mest erfarne eksperter på interkommunalt samarbeid og kommunestruktur, med oppdrag for departementer, KS og et stort antall kommuner og regioner.",
     cv: {
       intro:
         "Geir Vinsand er ressursøkonom fra NMBU og en av Norges mest erfarne eksperter på kommunestruktur og interkommunalt samarbeid. Han har bakgrunn fra Næringsdepartementet og Kommunaldepartementet, og har vært sentral i flere av de viktigste utredningene om norsk kommunesektor.",
@@ -60,7 +62,8 @@ const experts: Expert[] = [
   },
   {
     name: "Håvard Moe",
-    title: "Daglig leder og partner",
+    title: "Partner",
+    secondaryRole: "Daglig leder",
     image: havardImage,
     expertise: [
       "Kommuneøkonomi og ressursbruk",
@@ -70,7 +73,7 @@ const experts: Expert[] = [
       "Tjenesteanalyse",
     ],
     description:
-      "Erfaren analytiker med bred kompetanse innen økonomi, organisasjon og tjenesteutvikling. Har bistått over 100 kommuner med økonomiske analyser, omstillingsprosjekter og strategisk rådgivning.",
+      "Erfaren rådgiver innen kommunal økonomi, organisasjon og styring. Har bistått over 300 kommuner med økonomiske analyser, omstillingsprosesser og strategisk utvikling.",
     cv: {
       intro:
         "Håvard Moe har vært konsulent i kommunesektoren siden 2003, med 23 år i KS Konsulent før han ble daglig leder og partner i NIVI Analyse. Han har gjennomført oppdrag i over 300 kommuner direkte, og nådd enda flere gjennom nettverk og konferanser.",
@@ -114,11 +117,14 @@ const ExpertsSection = () => {
                 />
               </div>
               <div className="p-6 md:p-8 flex flex-col flex-1">
-                <h3 className="text-xl md:text-2xl font-semibold mb-1" style={{ lineHeight: 1.3 }}>
+                <h3 className="text-xl md:text-2xl font-semibold mb-0.5" style={{ lineHeight: 1.3 }}>
                   {expert.name}
                 </h3>
-                <p className="text-primary/70 font-medium mb-4 text-sm">
+                <p className="text-primary font-semibold text-sm mb-0.5">
                   {expert.title}
+                </p>
+                <p className="text-primary/60 text-xs mb-4">
+                  {expert.secondaryRole}
                 </p>
                 
                 <div className="flex flex-wrap gap-2 mb-4">
@@ -139,7 +145,7 @@ const ExpertsSection = () => {
                 <div className="flex flex-col gap-2">
                   <Dialog>
                     <DialogTrigger asChild>
-                      <Button variant="outline" size="sm" className="gap-2 w-full sm:w-auto">
+                      <Button variant="default" size="sm" className="gap-2 w-full sm:w-auto">
                         <FileText className="w-3.5 h-3.5" />
                         Les CV
                       </Button>
