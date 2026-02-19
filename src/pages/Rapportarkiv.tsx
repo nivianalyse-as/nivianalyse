@@ -114,14 +114,6 @@ const Rapportarkiv = () => {
 
   const FilterSidebar = ({ className = "" }: { className?: string }) => (
     <div className={className}>
-      {/* Intro */}
-      <div className="mb-8">
-        <h2 className="text-lg font-semibold text-primary mb-2">Publikasjoner 2008–2025</h2>
-        <p className="text-sm text-muted-foreground leading-relaxed">
-          NIVI Analyse har siden 2008 levert analyser og utredninger om kommunestruktur, interkommunalt samarbeid, regional styring og offentlig forvaltning. Arkivet dokumenterer sentrale utviklingsløp i norsk kommunesektor gjennom nesten to tiår – fra samkommune- og NAV-modeller til kommunereform, fylkesstruktur og transportorganisering.
-        </p>
-      </div>
-
       {/* Search */}
       <div className="mb-8">
         <label className="text-xs font-semibold text-primary/70 uppercase tracking-wide mb-2 block">Søk</label>
@@ -218,10 +210,10 @@ const Rapportarkiv = () => {
             </h1>
             <div className="mx-auto h-[2px] w-10 bg-accent/80 rounded-full mt-4 mb-5 mr-auto ml-0" />
             <p className="text-muted-foreground max-w-[680px] mb-4" style={{ fontSize: "1.05rem", lineHeight: 1.65 }}>
-              NIVI Analyse er et av Norges ledende fagmiljøer innen utredning av kommunal organisering, interkommunalt samarbeid og forvaltningsstruktur. Siden 2006 har vi kartlagt, analysert og dokumentert samarbeidsordninger, kommunestruktur og styringsmodeller på oppdrag fra departementer, statsforvaltere, fylkeskommuner og kommuner over hele landet.
+              NIVI Analyse er et fagmiljø innen utredning av kommunal organisering, interkommunalt samarbeid og forvaltningsstruktur. Siden 2006 har vi analysert og dokumentert utviklingsløp i norsk kommunesektor på oppdrag fra departementer, statsforvaltere, fylkeskommuner og kommuner over hele landet.
             </p>
             <p className="text-muted-foreground max-w-[680px]" style={{ fontSize: "0.95rem", lineHeight: 1.65 }}>
-              Arkivet inneholder {rapporter.length} publikasjoner som dekker temaer som interkommunalt samarbeid, kommunereform, regional utvikling, beredskap, demokrati og styring.
+              Publikasjonsarkivet samler analyser og utredninger publisert fra 2008 til 2025. Materialet dokumenterer sentrale reformer og utviklingsprosesser, inkludert kommunereform, samkommunemodeller, NAV-organisering, regional styring og transportforvaltning.
             </p>
           </div>
         </section>
