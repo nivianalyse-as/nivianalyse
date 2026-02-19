@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import TrustStrip from "@/components/TrustStrip";
+import PublikasjonAutoritet from "@/components/PublikasjonAutoritet";
 import ServicesSection from "@/components/ServicesSection";
 import ArticlesSection from "@/components/ArticlesSection";
 import MediaSection from "@/components/MediaSection";
@@ -56,6 +57,7 @@ const Index = () => {
       <main id="main-content">
         <HeroSection />
         <TrustStrip />
+        <PublikasjonAutoritet />
         <ServicesSection />
         <ReferenceProjectsSection />
         <MediaSection />
