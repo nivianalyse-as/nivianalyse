@@ -5,7 +5,7 @@ const Footer = () => {
   const menuLinks = [
     { label: "Startside", href: "/" },
     { label: "Våre fagområder", href: "/#fagomrader" },
-    { label: "Inspirasjon", href: "/inspirasjon" },
+    { label: "Faglige innsikter", href: "/inspirasjon" },
     { label: "Referanser", href: "/#referanser" },
     { label: "Om oss", href: "/#eksperter" },
   ];
