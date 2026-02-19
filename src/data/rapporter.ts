@@ -2371,9 +2371,9 @@ export const rapporter: Rapport[] = [
     seoTitle: "Samarbeidsstrategi i Midtre Namdal | NIVI Analyse",
     seoDescription: "Drøfting av samarbeidsstrategi og samarbeidsmodeller i Midtre Namdal.",
     keywords: ["Midtre Namdal", "samarbeidsstrategi", "samarbeidsmodell", "interkommunalt samarbeid"],
-    problemstilling: "Problemstillingen er hvilke samarbeidsstrategier og organisatoriske modeller Midtre Namdal bør velge for videre utvikling av det interkommunale samarbeidet. Spørsmålet gjelder både styringsstruktur, oppgavefordeling og langsiktig institusjonell bærekraft.",
+    problemstilling: "Problemstillingen er hvilke samarbeidsstrategier og organisatoriske modeller Midtre Namdal bør velge for videre utvikling av det interkommunale samarbeidet i regionen. Spørsmålet gjelder både styringsstruktur, oppgavefordeling og langsiktig institusjonell bærekraft.",
     bakgrunn: "Kommunene i Midtre Namdal sto overfor et strategisk valg om videre retning for samarbeidet etter erfaringene med samkommunemodellen. Det var behov for å vurdere om samarbeidet burde forsterkes, justeres eller erstattes av alternative organisasjonsformer, herunder tettere integrasjon eller sammenslåing.\n\nUtredningen ble gjennomført for å gi et beslutningsgrunnlag basert på erfaringer, organisatorisk funksjonsevne og framtidige utviklingsbehov.",
-    hovedfunn: "Flere strategiske alternativer ble vurdert, fra videreføring og styrking av eksisterende samarbeid til mer omfattende strukturelle endringer.\nSamkommunemodellen vurderes som et egnet rammeverk for videre samarbeid, men med behov for tydeligere ansvarsdeling, styringsstruktur og politisk forankring.\nKommunenes ulike størrelse, økonomi og administrative kapasitet påvirker valg av modell og stiller krav til fleksible løsninger innenfor en felles struktur.",
+    hovedfunn: "Flere strategiske alternativer ble vurdert, fra videreføring og styrking av eksisterende samarbeid til mer omfattende strukturelle endringer.\nSamkommunemodellen vurderes som et egnet rammeverk for videre samarbeid, men forutsetter tydeligere ansvarsdeling, styringsstruktur og politisk forankring.\nKommunenes ulike størrelse, økonomi og administrative kapasitet påvirker valg av modell og stiller krav til fleksible løsninger innenfor en felles struktur.",
   },
   {
     id: "2008-n02",
