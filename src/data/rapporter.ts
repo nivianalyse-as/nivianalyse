@@ -17,9 +17,9 @@ export const rapporter: Rapport[] = [
     seoTitle: "Interkommunalt samarbeid i Østfold | NIVI Analyse",
     seoDescription: "Kartlegging av det formaliserte interkommunale samarbeidet i Østfold, gjennomført av NIVI Analyse for Statsforvalteren.",
     keywords: ["interkommunalt samarbeid", "Østfold", "kartlegging", "statsforvalteren"],
-    problemstilling: "Hvordan er det interkommunale samarbeidet i Østfold organisert, og hvilke samarbeid eksisterer på tvers av kommunegrensene?",
+    problemstilling: "Hvordan er det interkommunale samarbeidet i Østfold organisert, og hvilke samarbeid eksisterer på tvers av kommunegrensene? Spørsmålet er aktuelt etter reverseringen av fylkessammenslåingen med Akershus og Buskerud, som gjør det nødvendig å kartlegge samarbeidsstrukturer i det gjenopprettede Østfold fylke.",
     bakgrunn: "Etter regionreformen og reverseringen av fylkessammenslåingen er det behov for oppdatert kunnskap om samarbeidsstrukturer i det gjenopprettede Østfold fylke. NIVI Analyse har benyttet sin kartleggingsmetodikk som er brukt i flere andre fylker.",
-    hovedfunn: "Kartleggingen viser et omfattende formalisert samarbeid mellom kommunene i Østfold, med regionale variasjoner i samarbeidsmønstre og organisasjonsformer.",
+    hovedfunn: "Kartleggingen identifiserer et omfattende formalisert interkommunalt samarbeid i Østfold. Kommunene deltar i til sammen over 100 samarbeidsordninger som spenner fra tekniske driftsoppgaver til strategisk samfunnsutvikling. Organisasjonsformene varierer fra interkommunale selskap og kommunale oppgavefellesskap til vertskommuneordninger og aksjeselskap.",
   },
   {
     id: "2025-02",
