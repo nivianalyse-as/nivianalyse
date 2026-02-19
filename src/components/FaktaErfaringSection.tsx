@@ -2,24 +2,18 @@ const fakta = [
   { tall: "60+", beskrivelse: "Års samlet erfaring" },
   { tall: "200+", beskrivelse: "Utredninger og analyser" },
   { tall: "300+", beskrivelse: "Kommuner bistått" },
-  { tall: "Oppdrag for", beskrivelse: "Departementer, statsforvaltere og KS" },
 ];
 
 const FaktaErfaringSection = () => {
   return (
     <section className="bg-background" style={{ paddingTop: '140px', paddingBottom: '140px' }}>
       <div className="mx-auto px-5 sm:px-6 lg:px-8" style={{ maxWidth: '1100px' }}>
-        {/* Grafisk anker: tynn linje med asymmetrisk sirkel */}
+        {/* Grafisk anker */}
         <div className="relative" style={{ marginBottom: '48px' }}>
           <div className="w-full" style={{ height: '1px', backgroundColor: 'hsl(210, 15%, 90%)' }} />
           <div
             className="absolute bg-accent rounded-full"
-            style={{
-              width: '8px',
-              height: '8px',
-              top: '-3.5px',
-              left: '20%',
-            }}
+            style={{ width: '8px', height: '8px', top: '-3.5px', left: '20%' }}
           />
         </div>
 
@@ -35,7 +29,7 @@ const FaktaErfaringSection = () => {
             className="text-muted-foreground"
             style={{ fontSize: '1.065rem', lineHeight: 1.6, color: 'hsl(168, 30%, 30%)' }}
           >
-            Dokumentert analysekapasitet i kommunesektoren siden 2006.
+            Analyse- og utredningsvirksomhet i kommunesektoren siden 2006.
           </p>
         </div>
 
@@ -45,18 +39,40 @@ const FaktaErfaringSection = () => {
             <div key={item.beskrivelse}>
               <div
                 className="text-primary font-bold"
-                style={{ fontSize: '2.5rem', lineHeight: 1.1, marginBottom: '8px' }}
+                style={{ fontSize: '2.875rem', lineHeight: 1.1, marginBottom: '8px' }}
               >
                 {item.tall}
               </div>
               <p
                 className="text-muted-foreground"
-                style={{ fontSize: '0.95rem', lineHeight: 1.5, color: 'hsl(168, 30%, 38%)' }}
+                style={{ fontSize: '0.875rem', lineHeight: 1.5, color: 'hsl(168, 30%, 38%)' }}
               >
                 {item.beskrivelse}
               </p>
             </div>
           ))}
+
+          {/* Siste blokk: Nasjonale oppdragsgivere */}
+          <div>
+            <div
+              className="text-primary font-semibold"
+              style={{ fontSize: '1.5rem', lineHeight: 1.25, marginBottom: '4px' }}
+            >
+              Nasjonale
+            </div>
+            <div
+              className="text-primary font-semibold"
+              style={{ fontSize: '1.5rem', lineHeight: 1.25, marginBottom: '8px' }}
+            >
+              oppdragsgivere
+            </div>
+            <p
+              className="text-muted-foreground"
+              style={{ fontSize: '0.875rem', lineHeight: 1.5, color: 'hsl(168, 30%, 38%)' }}
+            >
+              Departementer, statsforvaltere og KS
+            </p>
+          </div>
         </div>
       </div>
     </section>
