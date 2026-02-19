@@ -6,7 +6,7 @@ const fakta = [
 
 const FaktaErfaringSection = () => {
   return (
-    <section style={{ paddingTop: '120px', paddingBottom: '120px', backgroundColor: '#F5F8F7' }}>
+    <section style={{ paddingTop: '120px', paddingBottom: '110px', backgroundColor: '#EEF3F1' }}>
       <div className="mx-auto px-5 sm:px-6 lg:px-8" style={{ maxWidth: '1100px' }}>
         {/* Grafisk anker */}
         <div className="relative" style={{ marginBottom: '48px' }}>
