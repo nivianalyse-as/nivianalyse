@@ -114,6 +114,14 @@ const Rapportarkiv = () => {
 
   const FilterSidebar = ({ className = "" }: { className?: string }) => (
     <div className={className}>
+      {/* Intro */}
+      <div className="mb-8">
+        <h2 className="text-lg font-semibold text-primary mb-2">Publikasjoner 2008–2025</h2>
+        <p className="text-sm text-muted-foreground leading-relaxed">
+          NIVI Analyse har siden 2008 levert analyser og utredninger om kommunestruktur, interkommunalt samarbeid, regional styring og offentlig forvaltning. Arkivet dokumenterer sentrale utviklingsløp i norsk kommunesektor gjennom nesten to tiår – fra samkommune- og NAV-modeller til kommunereform, fylkesstruktur og transportorganisering.
+        </p>
+      </div>
+
       {/* Search */}
       <div className="mb-8">
         <label className="text-xs font-semibold text-primary/70 uppercase tracking-wide mb-2 block">Søk</label>
@@ -282,7 +290,7 @@ const Rapportarkiv = () => {
                   </button>
                   <FilterSidebar />
                   <Button className="w-full mt-6" onClick={() => setMobileFiltersOpen(false)}>
-                    Vis {filtered.length} rapporter
+                    Vis {filtered.length} publikasjoner (2008–2025)
                   </Button>
                 </div>
               )}
