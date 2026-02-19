@@ -39,11 +39,10 @@ const experts: Expert[] = [
       "Interkommunalt samarbeid",
       "Kommunestruktur og -reform",
       "Offentlig forvaltning og styring",
-      "Kartlegging og utredning",
       "Beredskap og samfunnssikkerhet",
     ],
     description:
-      "Over 30 års erfaring med analyse og rådgivning i kommunesektoren. En av Norges mest erfarne eksperter på interkommunalt samarbeid og kommunestruktur, med oppdrag for departementer, KS og et stort antall kommuner og regioner.",
+      "Over 30 års erfaring med analyse og rådgivning i kommunesektoren. Blant Norges mest erfarne eksperter på interkommunalt samarbeid og kommunestruktur, med oppdrag for departementer, KS og et stort antall kommuner og regioner.",
     cv: {
       intro:
         "Geir Vinsand er ressursøkonom fra NMBU og en av Norges mest erfarne eksperter på kommunestruktur og interkommunalt samarbeid. Han har bakgrunn fra Næringsdepartementet og Kommunaldepartementet, og har vært sentral i flere av de viktigste utredningene om norsk kommunesektor.",
@@ -70,10 +69,9 @@ const experts: Expert[] = [
       "Organisasjonsgjennomgang",
       "Strategisk planlegging",
       "Økonomisk analyse og benchmarking",
-      "Tjenesteanalyse",
     ],
     description:
-      "Erfaren rådgiver innen kommunal økonomi, organisasjon og styring. Har bistått over 300 kommuner med økonomiske analyser, omstillingsprosesser og strategisk utvikling.",
+      "Seniorrådgiver innen kommunal økonomi, organisasjon og styring. Har bistått over 300 kommuner med økonomiske analyser, omstillingsprosesser og strategisk utvikling.",
     cv: {
       intro:
         "Håvard Moe har vært konsulent i kommunesektoren siden 2003, med 23 år i KS Konsulent før han ble daglig leder og partner i NIVI Analyse. Han har gjennomført oppdrag i over 300 kommuner direkte, og nådd enda flere gjennom nettverk og konferanser.",
