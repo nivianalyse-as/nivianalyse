@@ -247,7 +247,7 @@ const RapportDetail = () => {
               </>
             ) : (
               <p className="text-sm text-muted-foreground italic">
-                PDF er ikke tilgjengelig for denne rapporten ennå.
+                Full rapport er ikke digitalt tilgjengelig i arkivet. Ta kontakt for tilgang.
               </p>
             )}
 
