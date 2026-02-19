@@ -165,7 +165,7 @@ export const niviProfessionalServiceSchema = {
 export const geirVinsandSchema: PersonSchema = {
   type: "Person",
   name: "Geir Vinsand",
-  jobTitle: "Seniorrådgiver",
+   jobTitle: "Partner",
   worksFor: "NIVI Analyse AS",
   description: "Over 30 års erfaring med kommunal forvaltning. En av landets fremste eksperter på interkommunalt samarbeid.",
 };
@@ -173,7 +173,7 @@ export const geirVinsandSchema: PersonSchema = {
 export const havardMoeSchema: PersonSchema = {
   type: "Person",
   name: "Håvard Moe",
-  jobTitle: "Seniorrådgiver",
+  jobTitle: "Partner",
   worksFor: "NIVI Analyse AS",
   description: "Erfaren analytiker med bred kompetanse. Har bistått over 100 kommuner med økonomiske analyser.",
 };

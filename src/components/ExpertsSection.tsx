@@ -10,7 +10,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import { FileText } from "lucide-react";
+import { FileText, Download } from "lucide-react";
 
 interface ExpertCV {
   intro: string;
@@ -25,12 +25,13 @@ interface Expert {
   expertise: string[];
   description: string;
   cv: ExpertCV;
+  cvPdf: string;
 }
 
 const experts: Expert[] = [
   {
     name: "Geir Vinsand",
-    title: "Styreformann og seniorrådgiver",
+    title: "Styreformann og partner",
     image: geirImage,
     expertise: [
       "Interkommunalt samarbeid",
@@ -55,10 +56,11 @@ const experts: Expert[] = [
       ],
       education: "Ressursøkonom, Norges miljø- og biovitenskapelige universitet (NMBU)",
     },
+    cvPdf: "/cv/geir-vinsand-cv.pdf",
   },
   {
     name: "Håvard Moe",
-    title: "Daglig leder og seniorrådgiver",
+    title: "Daglig leder og partner",
     image: havardImage,
     expertise: [
       "Kommuneøkonomi og ressursbruk",
@@ -83,6 +85,7 @@ const experts: Expert[] = [
       ],
       education: "Cand.mag. Universitetet i Oslo, Master of Management BI",
     },
+    cvPdf: "/cv/havard-moe-cv.pdf",
   },
 ];
 
@@ -133,51 +136,60 @@ const ExpertsSection = () => {
                   {expert.description}
                 </p>
 
-                <Dialog>
-                  <DialogTrigger asChild>
-                    <Button variant="outline" size="sm" className="gap-2">
-                      <FileText className="w-3.5 h-3.5" />
-                      Les CV
-                    </Button>
-                  </DialogTrigger>
-                  <DialogContent className="max-w-lg max-h-[85vh] overflow-y-auto">
-                    <DialogHeader>
-                      <DialogTitle className="text-xl font-bold">
-                        {expert.name}
-                      </DialogTitle>
-                      <p className="text-sm text-muted-foreground">{expert.title}</p>
-                    </DialogHeader>
+                <div className="flex flex-col gap-2">
+                  <Dialog>
+                    <DialogTrigger asChild>
+                      <Button variant="outline" size="sm" className="gap-2 w-full sm:w-auto">
+                        <FileText className="w-3.5 h-3.5" />
+                        Les CV
+                      </Button>
+                    </DialogTrigger>
+                    <DialogContent className="max-w-lg max-h-[85vh] overflow-y-auto">
+                      <DialogHeader>
+                        <DialogTitle className="text-xl font-bold">
+                          {expert.name}
+                        </DialogTitle>
+                        <p className="text-sm text-muted-foreground">{expert.title}</p>
+                      </DialogHeader>
 
-                    <div className="space-y-5 mt-4">
-                      <p className="text-sm text-foreground leading-relaxed">
-                        {expert.cv.intro}
-                      </p>
-
-                      <div>
-                        <h4 className="text-sm font-semibold text-foreground mb-2.5">
-                          Nøkkelerfaring
-                        </h4>
-                        <ul className="space-y-2">
-                          {expert.cv.keyExperience.map((point, i) => (
-                            <li key={i} className="flex items-start gap-2.5 text-sm text-muted-foreground leading-relaxed">
-                              <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-accent mt-1.5" />
-                              {point}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-
-                      <div className="pt-3 border-t border-border">
-                        <h4 className="text-sm font-semibold text-foreground mb-1">
-                          Utdanning
-                        </h4>
-                        <p className="text-sm text-muted-foreground">
-                          {expert.cv.education}
+                      <div className="space-y-5 mt-4">
+                        <p className="text-sm text-foreground leading-relaxed">
+                          {expert.cv.intro}
                         </p>
+
+                        <div>
+                          <h4 className="text-sm font-semibold text-foreground mb-2.5">
+                            Nøkkelerfaring
+                          </h4>
+                          <ul className="space-y-2">
+                            {expert.cv.keyExperience.map((point, i) => (
+                              <li key={i} className="flex items-start gap-2.5 text-sm text-muted-foreground leading-relaxed">
+                                <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-accent mt-1.5" />
+                                {point}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+
+                        <div className="pt-3 border-t border-border">
+                          <h4 className="text-sm font-semibold text-foreground mb-1">
+                            Utdanning
+                          </h4>
+                          <p className="text-sm text-muted-foreground">
+                            {expert.cv.education}
+                          </p>
+                        </div>
                       </div>
-                    </div>
-                  </DialogContent>
-                </Dialog>
+                    </DialogContent>
+                  </Dialog>
+
+                  <a href={expert.cvPdf} target="_blank" rel="noopener noreferrer">
+                    <Button variant="outline" size="sm" className="gap-2 w-full sm:w-auto">
+                      <Download className="w-3.5 h-3.5" />
+                      Last ned full CV (PDF)
+                    </Button>
+                  </a>
+                </div>
               </div>
             </div>
           ))}
