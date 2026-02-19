@@ -6,8 +6,9 @@ const Footer = () => {
     { label: "Startside", href: "/" },
     { label: "Våre fagområder", href: "/#fagomrader" },
     { label: "Faglige innsikter", href: "/inspirasjon" },
-    { label: "Referanser", href: "/#referanser" },
-    { label: "Om oss", href: "/#eksperter" },
+    { label: "Publikasjoner", href: "/publikasjoner" },
+    { label: "Våre oppdragsgivere", href: "/#referanser" },
+    { label: "Om oss", href: "/om-oss" },
   ];
 
   return (
