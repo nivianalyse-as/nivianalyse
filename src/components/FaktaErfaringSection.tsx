@@ -8,13 +8,18 @@ const FaktaErfaringSection = () => {
   return (
     <section style={{ paddingTop: '120px', paddingBottom: '110px', backgroundColor: '#EEF3F1' }}>
       <div className="mx-auto px-5 sm:px-6 lg:px-8" style={{ maxWidth: '1100px' }}>
-        {/* Grafisk anker */}
-        <div className="relative" style={{ marginBottom: '48px' }}>
-          <div className="w-full" style={{ height: '1px', backgroundColor: 'hsl(210, 15%, 90%)' }} />
-          <div
-            className="absolute bg-accent rounded-full"
-            style={{ width: '8px', height: '8px', top: '-3.5px', left: '20%' }}
-          />
+        {/* Tidslinje 2006–2026 */}
+        <div style={{ marginBottom: '40px' }}>
+          <div className="relative w-full" style={{ height: '2px', backgroundColor: 'hsl(210, 15%, 88%)' }}>
+            <div
+              className="absolute right-0 top-0"
+              style={{ width: '10%', height: '2px', backgroundColor: 'hsl(17, 90%, 45%)' }}
+            />
+          </div>
+          <div className="flex justify-between" style={{ marginTop: '6px' }}>
+            <span style={{ fontSize: '0.7rem', lineHeight: 1, color: 'hsl(168, 15%, 55%)' }}>2006</span>
+            <span style={{ fontSize: '0.7rem', lineHeight: 1, color: 'hsl(168, 15%, 55%)' }}>2026</span>
+          </div>
         </div>
 
         {/* Overskrift og undertekst */}
