@@ -8,7 +8,7 @@ const fakta = [
 
 const FaktaErfaringSection = () => {
   return (
-    <section className="relative overflow-hidden" style={{ paddingTop: '120px', paddingBottom: '110px' }}>
+    <section className="relative overflow-hidden" style={{ paddingTop: '150px', paddingBottom: '110px' }}>
       {/* Background image – near-sharp */}
       <div
         className="absolute inset-0"
@@ -24,7 +24,7 @@ const FaktaErfaringSection = () => {
       <div
         className="absolute inset-0"
         style={{
-          background: 'linear-gradient(to right, rgba(9, 40, 34, 0.78) 0%, rgba(9, 40, 34, 0.5) 35%, rgba(9, 40, 34, 0) 60%)',
+          background: 'linear-gradient(to right, rgba(9, 40, 34, 0.65) 0%, rgba(9, 40, 34, 0.4) 40%, rgba(9, 40, 34, 0) 70%)',
         }}
       />
 
@@ -65,7 +65,7 @@ const FaktaErfaringSection = () => {
             <div key={item.beskrivelse}>
               <div
                 className="font-bold"
-                style={{ fontSize: '2.875rem', lineHeight: 1.1, marginBottom: '8px', color: 'hsl(0, 0%, 100%)' }}
+                style={{ fontSize: '2.875rem', lineHeight: 1.1, marginBottom: '8px', color: 'hsl(0, 0%, 100%)', textShadow: '0 1px 4px rgba(0,0,0,0.3)' }}
               >
                 {item.tall}
               </div>
