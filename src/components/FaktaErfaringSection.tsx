@@ -21,10 +21,19 @@ const FaktaErfaringSection = () => {
           transform: 'scale(1.03)',
         }}
       />
-      {/* Dark green overlay */}
+      {/* Overlay: radial mask lighter around faces (right-center) */}
       <div
         className="absolute inset-0"
-        style={{ backgroundColor: 'hsl(168, 70%, 11%)', opacity: 0.52 }}
+        style={{
+          background: 'radial-gradient(ellipse 50% 70% at 65% 45%, hsla(168, 70%, 11%, 0.42), hsla(168, 70%, 11%, 0.54))',
+        }}
+      />
+      {/* Subtle dark gradient behind text area (left side) */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background: 'linear-gradient(to right, hsla(168, 70%, 11%, 0.18) 0%, hsla(168, 70%, 11%, 0) 60%)',
+        }}
       />
 
       {/* Content */}
