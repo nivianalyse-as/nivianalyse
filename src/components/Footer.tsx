@@ -84,6 +84,9 @@ const Footer = () => {
                   3233 Sandefjord
                 </span>
               </div>
+              <div className="text-white/85 text-[15px] leading-[1.5] pl-[26px]">
+                Organisasjonsnummer: 937 186 037
+              </div>
             </div>
           </div>
         </div>

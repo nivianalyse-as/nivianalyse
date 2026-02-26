@@ -112,10 +112,10 @@ const ReferencesSection = () => {
         </div>
 
         <p
-          className="text-center text-sm mt-10 md:mt-14 cursor-default transition-all hover:underline"
-          style={{ color: 'hsl(168, 50%, 25%)', textUnderlineOffset: '4px' }}
+          className="text-center text-sm mt-10 md:mt-14 cursor-default"
+          style={{ color: 'hsl(168, 50%, 25%)' }}
         >
-          Se fullstendig oppdragsoversikt i CV
+          Fullstendig oppdragsoversikt i CV
         </p>
       </div>
     </section>

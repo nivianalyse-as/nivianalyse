@@ -81,6 +81,8 @@ const Rapportarkiv = () => {
   // Filter logic (AND)
   const filtered = useMemo(() => {
     return rapporter.filter((r) => {
+      // Hide entries without PDF when Kommuneøkonomi filter is active
+      if (selectedThemes.includes("Kommuneøkonomi") && !r.pdfUrl) return false;
       if (selectedYears.length && !selectedYears.includes(r.year)) return false;
       if (selectedTypes.length && !selectedTypes.includes(r.type)) return false;
       if (selectedThemes.length && !selectedThemes.some((t) => r.themes.includes(t))) return false;
