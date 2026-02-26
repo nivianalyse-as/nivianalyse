@@ -3,6 +3,62 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import SectionHeader from "@/components/SectionHeader";
 
+interface DetailedReference {
+  kommune: string;
+  periode: string;
+  beskrivelse: string;
+  referanse: {
+    navn: string;
+    tittel: string;
+    epost: string;
+  };
+}
+
+const detailedReferences: DetailedReference[] = [
+  {
+    kommune: "Lindesnes kommune – Omstillingsstøtte",
+    periode: "2024–2025",
+    beskrivelse: "Prosjektet Sammen i Utvikling i Lindesnes kommune har arbeidet med å identifisere et omstillingspotensial på 100 millioner kroner. Håvard Moe har vært ekstern prosjektleder og hatt ansvar for prosjektstyring, økonomiske analyser, ledersamlinger, politiske verksteder og styringsgrupper.",
+    referanse: { navn: "Sonja Svardal", tittel: "Økonomisjef", epost: "Sonja.Svardal@lindesnes.kommune.no" },
+  },
+  {
+    kommune: "Frøya kommune – Omstillingsstøtte",
+    periode: "2022–dd",
+    beskrivelse: "Prosjektet Effektivitet '24 har som mål å redusere ressursbruken og gjøre kommuneøkonomien mindre sårbar for svingninger i inntektsgrunnlaget. Arbeidet har omfattet analyser, kommunekompassevalueringer, ledersamlinger, politiske verksteder, tiltaksplaner og gevinstrealiseringsplaner.",
+    referanse: { navn: "Roger A. Antonsen", tittel: "Økonomisjef / Assisterende kommunedirektør", epost: "RogerAnsgar.Antonsen@froya.kommune.no" },
+  },
+  {
+    kommune: "Lillehammer kommune – Omstillingsstøtte – Balanse '24",
+    periode: "2020–2022",
+    beskrivelse: "Prosjektet Balanse '24 ble initiert for å skape bedre balanse mellom inntekter og utgifter. Kommunen gikk fra negativt netto driftsresultat i 2019 til 2,2 % i 2022.",
+    referanse: { navn: "Tord Buer Olsen", tittel: "Kommunedirektør", epost: "Tord.Buer.Olsen@lillehammer.kommune.no" },
+  },
+  {
+    kommune: "Karasjok kommune – Omstillingsstøtte",
+    periode: "2018–2022",
+    beskrivelse: "Et omfattende omstillingsprosjekt finansiert via KMD. Resultatet ble en snuoperasjon fra minus 12 millioner til pluss 18 millioner.",
+    referanse: { navn: "Elisabeth Larsen", tittel: "Ass. kommunedirektør", epost: "Elisabeth.Larsen@karasjok.kommune.no" },
+  },
+  {
+    kommune: "Tysvær kommune – Utviklingsstøtte",
+    periode: "2020–2022",
+    beskrivelse: "Prosjektet Tysvær Kommune 2030. Analysearbeid, folkevalgtopplæring og strategisk utvikling.",
+    referanse: { navn: "Sigurd Eikje", tittel: "Rådmann", epost: "sigurd.eikje@tysver.kommune.no" },
+  },
+  {
+    kommune: "Røros kommune – Utviklingsstøtte",
+    periode: "2014–2022",
+    beskrivelse: "Langsiktig utviklingsarbeid innen økonomi, styring og organisasjon.",
+    referanse: { navn: "Kjersti Forbord Jensås", tittel: "Kommunedirektør", epost: "kjersti.forbord.jensas@roros.kommune.no" },
+  },
+  {
+    kommune: "Longyearbyen lokalstyre – Utviklingsstøtte",
+    periode: "2013–2024",
+    beskrivelse: "Evalueringer, organisasjonsutvikling og forbedring av forvaltningspraksis.",
+    referanse: { navn: "Sissel Hultgren", tittel: "Personalsjef", epost: "sissel.hultgren@lokalstyre.no" },
+  },
+];
+
 interface ReferenceProject {
   kommune: string;
   periode: string;
@@ -221,6 +277,32 @@ const ReferenceProjectsSection = () => {
             Se full referanseliste
             <ArrowRight className="w-4 h-4 ml-1" />
           </Button>
+        </div>
+
+        {/* Detailed reference list */}
+        <div className="max-w-3xl mx-auto mt-16 md:mt-20">
+          <div className="space-y-10 md:space-y-12">
+            {detailedReferences.map((ref) => (
+              <div key={ref.kommune}>
+                <p className="text-xs text-muted-foreground font-medium mb-1">
+                  {ref.periode}
+                </p>
+                <h3 className="text-base font-semibold text-primary mb-2" style={{ lineHeight: 1.3 }}>
+                  {ref.kommune}
+                </h3>
+                <p className="text-sm mb-3" style={{ color: 'hsl(168, 20%, 28%)', lineHeight: 1.65 }}>
+                  {ref.beskrivelse}
+                </p>
+                <div className="text-sm" style={{ color: 'hsl(168, 20%, 28%)', lineHeight: 1.65 }}>
+                  <p className="text-xs text-muted-foreground font-medium mb-0.5">Referanse:</p>
+                  <p>{ref.referanse.navn}, {ref.referanse.tittel}</p>
+                  <a href={`mailto:${ref.referanse.epost}`} className="text-sm hover:text-accent transition-colors">
+                    {ref.referanse.epost}
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

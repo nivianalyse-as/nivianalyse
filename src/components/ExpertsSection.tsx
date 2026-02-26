@@ -27,6 +27,8 @@ interface Expert {
   description: string;
   cv: ExpertCV;
   cvPdf: string;
+  phone: string;
+  email: string;
 }
 
 const experts: Expert[] = [
@@ -58,6 +60,8 @@ const experts: Expert[] = [
       education: "Ressursøkonom, Norges miljø- og biovitenskapelige universitet (NMBU)",
     },
     cvPdf: "/cv/geir-vinsand-cv.pdf",
+    phone: "+47 975 25 751",
+    email: "gv@nivianalyse.no",
   },
   {
     name: "Håvard Moe",
@@ -87,6 +91,8 @@ const experts: Expert[] = [
       education: "Cand.mag. Universitetet i Oslo, Master of Management BI",
     },
     cvPdf: "/cv/havard-moe-cv.pdf",
+    phone: "+47 481 48 813",
+    email: "hm@nivianalyse.no",
   },
 ];
 
@@ -139,6 +145,21 @@ const ExpertsSection = () => {
                 <p className="text-sm mb-4 flex-1 line-clamp-5" style={{ color: 'hsl(168, 20%, 28%)', lineHeight: 1.65 }}>
                   {expert.description}
                 </p>
+
+                <div className="text-sm mb-4 space-y-1" style={{ color: 'hsl(168, 20%, 28%)', lineHeight: 1.65 }}>
+                  <p>
+                    Mobil:{" "}
+                    <a href={`tel:${expert.phone.replace(/\s/g, "")}`} className="hover:text-accent transition-colors">
+                      {expert.phone}
+                    </a>
+                  </p>
+                  <p>
+                    E-post:{" "}
+                    <a href={`mailto:${expert.email}`} className="hover:text-accent transition-colors">
+                      {expert.email}
+                    </a>
+                  </p>
+                </div>
 
                 <div className="flex flex-col gap-2">
                   <Dialog>
