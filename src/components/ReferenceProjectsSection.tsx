@@ -191,7 +191,7 @@ const DetailedReferenceList = () => {
         className="mx-auto flex items-center gap-2 text-sm font-semibold tracking-wide uppercase transition-colors"
         style={{ color: 'hsl(17, 90%, 45%)', letterSpacing: '0.05em' }}
       >
-        Se full referanseliste
+        Se utvalgte referanseoppdrag
         <ChevronDown
           className="w-4 h-4 transition-transform duration-200"
           style={{ transform: open ? 'rotate(180deg)' : 'rotate(0deg)' }}
