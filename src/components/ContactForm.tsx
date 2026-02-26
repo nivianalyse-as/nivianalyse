@@ -180,10 +180,14 @@ const ContactForm = () => {
 
   return (
     <form
+      name="kontakt"
+      method="POST"
+      data-netlify="true"
       onSubmit={handleSubmit}
       className="bg-card border border-primary/[0.08] rounded-[20px] p-6 md:p-10 shadow-sm max-w-lg"
       noValidate
     >
+      <input type="hidden" name="form-name" value="kontakt" />
       {/* Honeypot field - hidden from users, bots will fill it */}
       <div className="absolute -left-[9999px]" aria-hidden="true">
         <input
