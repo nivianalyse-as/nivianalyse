@@ -111,19 +111,32 @@ const ContactForm = () => {
     setIsSubmitting(true);
 
     try {
-      // Simulate API call - in production, this would send to an edge function
-      await new Promise((resolve) => setTimeout(resolve, 1500));
+      const body = new URLSearchParams({
+        "form-name": "kontakt",
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        organization: formData.organization,
+        topic: formData.topic,
+        message: formData.message,
+      });
 
-      // For now, we'll just show success
-      // In production: send to edge function that emails post@nivianalyse.no
-      
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: body.toString(),
+      });
+
+      if (!response.ok) {
+        throw new Error(`Server error: ${response.status}`);
+      }
+
       setIsSubmitted(true);
       toast({
         title: "Henvendelse mottatt",
         description: "Takk! Vi svarer normalt innen 1–2 virkedager.",
       });
 
-      // Reset form
       setFormData({
         name: "",
         email: "",
