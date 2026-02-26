@@ -1,6 +1,7 @@
+import { useState } from "react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ChevronDown } from "lucide-react";
 import SectionHeader from "@/components/SectionHeader";
 
 interface DetailedReference {
@@ -162,6 +163,58 @@ const strukturProjects: ReferenceProject[] = [
   },
 ];
 
+const DetailedReferenceList = () => {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <div className="max-w-3xl mx-auto mt-12 md:mt-16">
+      <button
+        onClick={() => setOpen(!open)}
+        className="mx-auto flex items-center gap-2 text-sm font-semibold tracking-wide uppercase transition-colors"
+        style={{ color: 'hsl(17, 90%, 45%)', letterSpacing: '0.05em' }}
+      >
+        Se full referanseliste
+        <ChevronDown
+          className="w-4 h-4 transition-transform duration-200"
+          style={{ transform: open ? 'rotate(180deg)' : 'rotate(0deg)' }}
+        />
+      </button>
+
+      {open && (
+        <div className="mt-10" style={{ display: 'flex', flexDirection: 'column', gap: '36px' }}>
+          {detailedReferences.map((ref) => (
+            <div key={ref.kommune}>
+              <p className="font-semibold text-muted-foreground" style={{ fontSize: '0.8125rem', marginBottom: '4px' }}>
+                {ref.periode}
+              </p>
+              <h4 className="font-semibold text-primary" style={{ fontSize: '1rem', lineHeight: 1.35, marginBottom: '14px' }}>
+                {ref.kommune}
+              </h4>
+              <p className="text-sm" style={{ color: 'hsl(168, 20%, 28%)', lineHeight: 1.7, marginBottom: '16px' }}>
+                {ref.beskrivelse}
+              </p>
+              <div style={{ color: 'hsl(168, 20%, 28%)' }}>
+                <p className="text-xs font-medium text-muted-foreground" style={{ marginBottom: '2px' }}>
+                  Referanse:
+                </p>
+                <p className="text-sm">
+                  {ref.referanse.navn}, {ref.referanse.tittel}
+                </p>
+                <a
+                  href={`mailto:${ref.referanse.epost}`}
+                  className="text-sm hover:text-accent transition-colors"
+                >
+                  {ref.referanse.epost}
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+};
+
 const ProjectCard = ({ project, hidden = false }: { project: ReferenceProject; hidden?: boolean }) => (
   <div
     className={`card-premium p-6 md:p-9 flex flex-col rounded-md md:rounded-lg ${hidden ? 'hidden md:flex' : ''}`}
@@ -265,45 +318,8 @@ const ReferenceProjectsSection = () => {
           </div>
         </div>
 
-        {/* CTA */}
-        <div className="text-center mt-12 md:mt-16">
-          <Button
-            variant="cta"
-            size="lg"
-            onClick={() =>
-              document.getElementById("kontakt")?.scrollIntoView({ behavior: "smooth" })
-            }
-          >
-            Se full referanseliste
-            <ArrowRight className="w-4 h-4 ml-1" />
-          </Button>
-        </div>
-
-        {/* Detailed reference list */}
-        <div className="max-w-3xl mx-auto mt-16 md:mt-20">
-          <div className="space-y-10 md:space-y-12">
-            {detailedReferences.map((ref) => (
-              <div key={ref.kommune}>
-                <p className="text-xs text-muted-foreground font-medium mb-1">
-                  {ref.periode}
-                </p>
-                <h3 className="text-base font-semibold text-primary mb-2" style={{ lineHeight: 1.3 }}>
-                  {ref.kommune}
-                </h3>
-                <p className="text-sm mb-3" style={{ color: 'hsl(168, 20%, 28%)', lineHeight: 1.65 }}>
-                  {ref.beskrivelse}
-                </p>
-                <div className="text-sm" style={{ color: 'hsl(168, 20%, 28%)', lineHeight: 1.65 }}>
-                  <p className="text-xs text-muted-foreground font-medium mb-0.5">Referanse:</p>
-                  <p>{ref.referanse.navn}, {ref.referanse.tittel}</p>
-                  <a href={`mailto:${ref.referanse.epost}`} className="text-sm hover:text-accent transition-colors">
-                    {ref.referanse.epost}
-                  </a>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+        {/* Expand/collapse referanseliste */}
+        <DetailedReferenceList />
       </div>
     </section>
   );
