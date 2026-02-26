@@ -17,7 +17,7 @@ const PublikasjonAutoritet = () => {
 
         <div className="max-w-[720px] mx-auto text-center">
           <p className="text-muted-foreground" style={{ fontSize: '1.065rem', lineHeight: 1.7, color: 'hsl(168, 30%, 30%)' }}>
-            NIVI Analyse har publisert 122 analyser og utredninger fra 2008 til 2025 om kommunestruktur,
+            NIVI Analyse har publisert 122 analyser og utredninger fra 2006 til 2025 om kommunestruktur,
             interkommunalt samarbeid og regional forvaltning. Arkivet dokumenterer sentrale reformer og
             utviklingsløp i norsk kommunesektor gjennom nesten to tiår.
           </p>
