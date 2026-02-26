@@ -25,7 +25,7 @@ const FaktaErfaringSection = () => {
       <div
         className="absolute inset-0"
         style={{
-          background: 'radial-gradient(ellipse 50% 70% at 65% 45%, hsla(168, 70%, 11%, 0.42), hsla(168, 70%, 11%, 0.54))',
+          background: 'radial-gradient(ellipse 50% 70% at 65% 45%, hsla(168, 70%, 11%, 0.37), hsla(168, 70%, 11%, 0.49))',
         }}
       />
       {/* Subtle dark gradient behind text area (left side) */}
@@ -33,6 +33,13 @@ const FaktaErfaringSection = () => {
         className="absolute inset-0"
         style={{
           background: 'linear-gradient(to right, hsla(168, 70%, 11%, 0.18) 0%, hsla(168, 70%, 11%, 0) 60%)',
+        }}
+      />
+      {/* Dark mid-band gradient behind the numbers row */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background: 'linear-gradient(to bottom, hsla(168, 70%, 11%, 0) 55%, hsla(168, 70%, 11%, 0.2) 70%, hsla(168, 70%, 11%, 0.2) 85%, hsla(168, 70%, 11%, 0) 100%)',
         }}
       />
 
