@@ -12,6 +12,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Link } from "react-router-dom";
+import { CheckCircle } from "lucide-react";
 
 interface FormData {
   name: string;
@@ -21,7 +22,7 @@ interface FormData {
   topic: string;
   message: string;
   consent: boolean;
-  honeypot: string; // Spam protection
+  honeypot: string;
 }
 
 interface FormErrors {
@@ -39,6 +40,20 @@ const topics = [
   { value: "annet", label: "Annet" },
 ];
 
+const SuccessMessage = () => (
+  <div className="bg-card border border-primary/[0.08] rounded-[20px] p-6 md:p-10 shadow-sm max-w-lg text-center space-y-5">
+    <CheckCircle className="mx-auto h-12 w-12 text-accent" strokeWidth={1.5} />
+    <h3 className="text-[1.4rem] md:text-[1.6rem] font-semibold text-primary" style={{ lineHeight: 1.3 }}>
+      Takk for din henvendelse
+    </h3>
+    <div className="space-y-3 text-muted-foreground" style={{ fontSize: '0.975rem', lineHeight: 1.7 }}>
+      <p>Tusen takk for at du tok kontakt med NIVI Analyse.</p>
+      <p>Vi har mottatt meldingen din og vil ta kontakt så snart vi har anledning.</p>
+      <p>Dersom henvendelsen gjelder noe som haster, ber vi deg ta direkte kontakt på telefon eller e-post.</p>
+    </div>
+  </div>
+);
+
 const ContactForm = () => {
   const [formData, setFormData] = useState<FormData>({
     name: "",
@@ -51,6 +66,7 @@ const ContactForm = () => {
     honeypot: "",
   });
   const [errors, setErrors] = useState<FormErrors>({});
+  const [submitted, setSubmitted] = useState(false);
 
   const validateEmail = (email: string): boolean => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -86,11 +102,34 @@ const ContactForm = () => {
 
   const handleInputChange = (field: keyof FormData, value: string | boolean) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
-    // Clear error when user starts typing
     if (errors[field as keyof FormErrors]) {
       setErrors((prev) => ({ ...prev, [field]: undefined }));
     }
   };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    if (!validateForm()) return;
+
+    const form = e.currentTarget;
+    const data = new FormData(form);
+
+    try {
+      await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(data as any).toString(),
+      });
+      setSubmitted(true);
+    } catch (error) {
+      console.error("Form submission error:", error);
+    }
+  };
+
+  if (submitted) {
+    return <SuccessMessage />;
+  }
 
   return (
     <form
@@ -98,12 +137,11 @@ const ContactForm = () => {
       method="POST"
       data-netlify="true"
       data-netlify-honeypot="bot-field"
-      action="/takk"
+      onSubmit={handleSubmit}
       className="bg-card border border-primary/[0.08] rounded-[20px] p-6 md:p-10 shadow-sm max-w-lg"
       noValidate
     >
       <input type="hidden" name="form-name" value="kontakt" />
-      {/* Honeypot field - hidden from users, bots will fill it */}
       <div className="absolute -left-[9999px]" aria-hidden="true">
         <input
           type="text"
@@ -123,6 +161,7 @@ const ContactForm = () => {
           </Label>
           <Input
             id="name"
+            name="navn"
             type="text"
             value={formData.name}
             onChange={(e) => handleInputChange("name", e.target.value)}
@@ -134,9 +173,7 @@ const ContactForm = () => {
             aria-invalid={!!errors.name}
           />
           {errors.name && (
-            <p id="name-error" className="text-[13px] text-red-500">
-              {errors.name}
-            </p>
+            <p id="name-error" className="text-[13px] text-red-500">{errors.name}</p>
           )}
         </div>
 
@@ -147,6 +184,7 @@ const ContactForm = () => {
           </Label>
           <Input
             id="email"
+            name="epost"
             type="email"
             value={formData.email}
             onChange={(e) => handleInputChange("email", e.target.value)}
@@ -158,19 +196,18 @@ const ContactForm = () => {
             aria-invalid={!!errors.email}
           />
           {errors.email && (
-            <p id="email-error" className="text-[13px] text-red-500">
-              {errors.email}
-            </p>
+            <p id="email-error" className="text-[13px] text-red-500">{errors.email}</p>
           )}
         </div>
 
-        {/* Phone (optional) */}
+        {/* Phone */}
         <div className="space-y-2">
           <Label htmlFor="phone" className="text-[14px] font-medium text-primary">
             Telefon <span className="text-muted-foreground text-[12px]">(valgfritt)</span>
           </Label>
           <Input
             id="phone"
+            name="telefon"
             type="tel"
             value={formData.phone}
             onChange={(e) => handleInputChange("phone", e.target.value)}
@@ -179,13 +216,14 @@ const ContactForm = () => {
           />
         </div>
 
-        {/* Organization (optional) */}
+        {/* Organization */}
         <div className="space-y-2">
           <Label htmlFor="organization" className="text-[14px] font-medium text-primary">
             Kommune/virksomhet <span className="text-muted-foreground text-[12px]">(valgfritt)</span>
           </Label>
           <Input
             id="organization"
+            name="organisasjon"
             type="text"
             value={formData.organization}
             onChange={(e) => handleInputChange("organization", e.target.value)}
@@ -194,7 +232,7 @@ const ContactForm = () => {
           />
         </div>
 
-        {/* Topic dropdown */}
+        {/* Topic */}
         <div className="space-y-2">
           <Label htmlFor="topic" className="text-[14px] font-medium text-primary">
             Tema <span className="text-muted-foreground text-[12px]">(valgfritt)</span>
@@ -203,24 +241,19 @@ const ContactForm = () => {
             value={formData.topic}
             onValueChange={(value) => handleInputChange("topic", value)}
           >
-            <SelectTrigger 
-              id="topic"
-              className="h-11 rounded-xl border-primary/15 focus:border-primary focus:ring-primary bg-card"
-            >
+            <SelectTrigger id="topic" className="h-11 rounded-xl border-primary/15 focus:border-primary focus:ring-primary bg-card">
               <SelectValue placeholder="Velg tema" />
             </SelectTrigger>
             <SelectContent className="bg-card border border-primary/15 rounded-xl shadow-lg z-50">
               {topics.map((topic) => (
-                <SelectItem 
-                  key={topic.value} 
-                  value={topic.value}
-                  className="focus:bg-secondary/50"
-                >
+                <SelectItem key={topic.value} value={topic.value} className="focus:bg-secondary/50">
                   {topic.label}
                 </SelectItem>
               ))}
             </SelectContent>
           </Select>
+          {/* Hidden input so the select value is included in FormData */}
+          <input type="hidden" name="tema" value={formData.topic} />
         </div>
 
         {/* Message */}
@@ -230,6 +263,7 @@ const ContactForm = () => {
           </Label>
           <Textarea
             id="message"
+            name="melding"
             value={formData.message}
             onChange={(e) => handleInputChange("message", e.target.value)}
             className={`min-h-[120px] md:min-h-[140px] rounded-xl border-primary/15 focus:border-primary focus:ring-primary resize-y ${
@@ -240,50 +274,35 @@ const ContactForm = () => {
             aria-invalid={!!errors.message}
           />
           {errors.message && (
-            <p id="message-error" className="text-[13px] text-red-500">
-              {errors.message}
-            </p>
+            <p id="message-error" className="text-[13px] text-red-500">{errors.message}</p>
           )}
-          <p className="text-[12px] text-muted-foreground">
-            {formData.message.length}/2000 tegn
-          </p>
+          <p className="text-[12px] text-muted-foreground">{formData.message.length}/2000 tegn</p>
         </div>
 
-        {/* Consent checkbox */}
+        {/* Consent */}
         <div className="space-y-2">
           <div className="flex items-start gap-3">
             <Checkbox
               id="consent"
               checked={formData.consent}
-              onCheckedChange={(checked) =>
-                handleInputChange("consent", checked === true)
-              }
+              onCheckedChange={(checked) => handleInputChange("consent", checked === true)}
               className={`mt-0.5 ${errors.consent ? "border-red-500" : ""}`}
               aria-describedby={errors.consent ? "consent-error" : undefined}
               aria-invalid={!!errors.consent}
             />
-            <Label
-              htmlFor="consent"
-              className="text-[14px] leading-relaxed text-muted-foreground cursor-pointer"
-            >
+            <Label htmlFor="consent" className="text-[14px] leading-relaxed text-muted-foreground cursor-pointer">
               Jeg samtykker til at NIVI Analyse kan kontakte meg om henvendelsen.{" "}
-              <Link
-                to="/personvern"
-                className="text-primary underline underline-offset-2 hover:text-accent transition-colors"
-              >
+              <Link to="/personvern" className="text-primary underline underline-offset-2 hover:text-accent transition-colors">
                 Se personvern
               </Link>
               . <span className="text-accent">*</span>
             </Label>
           </div>
           {errors.consent && (
-            <p id="consent-error" className="text-[13px] text-red-500 ml-7">
-              {errors.consent}
-            </p>
+            <p id="consent-error" className="text-[13px] text-red-500 ml-7">{errors.consent}</p>
           )}
         </div>
 
-        {/* Submit button */}
         <Button
           type="submit"
           className="w-full h-12 bg-accent hover:bg-accent/90 text-accent-foreground font-semibold rounded-xl text-[15px] transition-all duration-200 shadow-sm hover:shadow-md"
