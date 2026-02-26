@@ -21,14 +21,15 @@ const FaktaErfaringSection = () => {
       />
 
       {/* Content */}
-      <div className="relative z-10 mx-auto px-5 sm:px-6 lg:px-8 flex justify-center items-center" style={{ maxWidth: '1100px' }}>
+      <div className="relative z-10 mx-auto px-5 sm:px-6 lg:px-8 flex justify-end" style={{ maxWidth: '1100px' }}>
         <div
           style={{
-            maxWidth: '640px',
+            maxWidth: '560px',
             width: '100%',
+            marginRight: '14%',
             padding: '40px',
-            backgroundColor: 'rgba(0, 0, 0, 0.18)',
-            borderRadius: '6px',
+            backgroundColor: 'rgba(0, 0, 0, 0.14)',
+            borderRadius: '8px',
           }}
         >
           <h2
