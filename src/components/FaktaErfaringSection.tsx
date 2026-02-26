@@ -8,7 +8,7 @@ const fakta = [
 
 const FaktaErfaringSection = () => {
   return (
-    <section className="relative overflow-hidden" style={{ paddingTop: '140px', paddingBottom: '110px' }}>
+    <section className="relative overflow-hidden" style={{ paddingTop: '80px', paddingBottom: '80px' }}>
       {/* Background image – clean, no overlay */}
       <div
         className="absolute inset-0"
@@ -21,11 +21,11 @@ const FaktaErfaringSection = () => {
       />
 
       {/* Content */}
-      <div className="relative z-10 mx-auto px-5 sm:px-6 lg:px-8 flex justify-end" style={{ maxWidth: '1100px' }}>
+      <div className="relative z-10 mx-auto px-5 sm:px-6 lg:px-8 flex justify-center items-center" style={{ maxWidth: '1100px' }}>
         <div
           style={{
             maxWidth: '640px',
-            marginRight: '8%',
+            width: '100%',
             padding: '40px',
             backgroundColor: 'rgba(0, 0, 0, 0.18)',
             borderRadius: '6px',
