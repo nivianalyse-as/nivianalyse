@@ -17,14 +17,14 @@ const FaktaErfaringSection = () => {
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
-          filter: 'blur(22px)',
-          transform: 'scale(1.08)',
+          filter: 'blur(10px)',
+          transform: 'scale(1.04)',
         }}
       />
       {/* Dark green overlay */}
       <div
         className="absolute inset-0"
-        style={{ backgroundColor: 'hsl(168, 70%, 11%)', opacity: 0.75 }}
+        style={{ backgroundColor: 'hsl(168, 70%, 11%)', opacity: 0.58 }}
       />
 
       {/* Content */}
