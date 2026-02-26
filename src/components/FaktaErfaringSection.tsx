@@ -17,8 +17,7 @@ const FaktaErfaringSection = () => {
           backgroundSize: 'cover',
           backgroundPosition: 'center right',
           backgroundRepeat: 'no-repeat',
-          filter: 'blur(2px)',
-          transform: 'scale(1.01)',
+          filter: 'none',
         }}
       />
       {/* Dark gradient behind text area (left side only) */}
