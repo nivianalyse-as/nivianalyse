@@ -18,6 +18,16 @@
   </head>
 
   <body>
+    <!-- Netlify form detection for SPA -->
+    <form name="kontakt" netlify hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="tel" name="phone" />
+      <input type="text" name="organization" />
+      <input type="text" name="topic" />
+      <textarea name="message"></textarea>
+    </form>
+
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

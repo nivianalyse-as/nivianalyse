@@ -11,8 +11,6 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { useToast } from "@/hooks/use-toast";
-import { Loader2, CheckCircle2 } from "lucide-react";
 import { Link } from "react-router-dom";
 
 interface FormData {
@@ -42,9 +40,6 @@ const topics = [
 ];
 
 const ContactForm = () => {
-  const { toast } = useToast();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
   const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
@@ -67,24 +62,18 @@ const ContactForm = () => {
 
     if (!formData.name.trim()) {
       newErrors.name = "Navn er påkrevd";
-    } else if (formData.name.trim().length > 100) {
-      newErrors.name = "Navn må være under 100 tegn";
     }
 
     if (!formData.email.trim()) {
       newErrors.email = "E-post er påkrevd";
     } else if (!validateEmail(formData.email)) {
       newErrors.email = "Ugyldig e-postadresse";
-    } else if (formData.email.length > 255) {
-      newErrors.email = "E-post må være under 255 tegn";
     }
 
     if (!formData.message.trim()) {
       newErrors.message = "Melding er påkrevd";
     } else if (formData.message.trim().length < 20) {
       newErrors.message = "Meldingen må være minst 20 tegn";
-    } else if (formData.message.length > 2000) {
-      newErrors.message = "Meldingen må være under 2000 tegn";
     }
 
     if (!formData.consent) {
@@ -95,69 +84,6 @@ const ContactForm = () => {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-
-    // Honeypot check - if filled, it's a bot
-    if (formData.honeypot) {
-      console.log("Bot detected");
-      return;
-    }
-
-    if (!validateForm()) {
-      return;
-    }
-
-    setIsSubmitting(true);
-
-    try {
-      const body = new URLSearchParams({
-        "form-name": "kontakt",
-        name: formData.name,
-        email: formData.email,
-        phone: formData.phone,
-        organization: formData.organization,
-        topic: formData.topic,
-        message: formData.message,
-      });
-
-      const response = await fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: body.toString(),
-      });
-
-      if (!response.ok) {
-        throw new Error(`Server error: ${response.status}`);
-      }
-
-      setIsSubmitted(true);
-      toast({
-        title: "Henvendelse mottatt",
-        description: "Takk! Vi svarer normalt innen 1–2 virkedager.",
-      });
-
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        organization: "",
-        topic: "",
-        message: "",
-        consent: false,
-        honeypot: "",
-      });
-    } catch (error) {
-      toast({
-        title: "Noe gikk galt",
-        description: "Kunne ikke sende henvendelsen. Prøv igjen senere.",
-        variant: "destructive",
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
   const handleInputChange = (field: keyof FormData, value: string | boolean) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
     // Clear error when user starts typing
@@ -166,37 +92,13 @@ const ContactForm = () => {
     }
   };
 
-  if (isSubmitted) {
-    return (
-      <div className="bg-card border border-primary/[0.08] rounded-[20px] p-8 md:p-10 shadow-sm">
-        <div className="text-center py-6">
-          <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-green-100 mb-5">
-            <CheckCircle2 className="w-7 h-7 text-green-600" />
-          </div>
-          <h3 className="text-lg font-semibold text-primary mb-2">
-            Takk!
-          </h3>
-          <p className="text-muted-foreground text-[15px] max-w-sm mx-auto leading-relaxed">
-            Vi har mottatt henvendelsen din og svarer normalt innen 1–2 virkedager.
-          </p>
-          <Button
-            variant="outline"
-            className="mt-5 rounded-xl"
-            onClick={() => setIsSubmitted(false)}
-          >
-            Send ny henvendelse
-          </Button>
-        </div>
-      </div>
-    );
-  }
-
   return (
     <form
       name="kontakt"
       method="POST"
       data-netlify="true"
-      onSubmit={handleSubmit}
+      data-netlify-honeypot="bot-field"
+      action="/takk"
       className="bg-card border border-primary/[0.08] rounded-[20px] p-6 md:p-10 shadow-sm max-w-lg"
       noValidate
     >
@@ -384,17 +286,9 @@ const ContactForm = () => {
         {/* Submit button */}
         <Button
           type="submit"
-          disabled={isSubmitting}
-          className="w-full h-12 bg-accent hover:bg-accent/90 text-accent-foreground font-semibold rounded-xl text-[15px] transition-all duration-200 shadow-sm hover:shadow-md disabled:opacity-70"
+          className="w-full h-12 bg-accent hover:bg-accent/90 text-accent-foreground font-semibold rounded-xl text-[15px] transition-all duration-200 shadow-sm hover:shadow-md"
         >
-          {isSubmitting ? (
-            <>
-              <Loader2 className="w-4 h-4 mr-2 animate-spin" />
-              Sender...
-            </>
-          ) : (
-            "Send henvendelse"
-          )}
+          Send henvendelse
         </Button>
       </div>
     </form>
