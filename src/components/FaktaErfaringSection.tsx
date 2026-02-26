@@ -9,8 +9,8 @@ const fakta = [
 const FaktaErfaringSection = () => {
   return (
     <>
-      {/* 1. Full-width image – no text, no overlay */}
-      <section className="w-full overflow-hidden" style={{ height: '70vh' }}>
+      {/* 1. Full-width image – desktop only */}
+      <section className="hidden md:block w-full overflow-hidden" style={{ height: '70vh' }}>
         <img
           src={faktaBg}
           alt="NIVI Analyse grunnleggere"
@@ -20,8 +20,8 @@ const FaktaErfaringSection = () => {
         />
       </section>
 
-      {/* 2. Text section below */}
-      <section style={{ backgroundColor: '#F4F1EA', padding: '80px 0' }}>
+      {/* 2. Text section */}
+      <section style={{ backgroundColor: '#F4F1EA' }} className="py-10 md:py-20">
         <div className="mx-auto px-5 sm:px-6 lg:px-8" style={{ maxWidth: '1100px' }}>
           <h2
             className="font-semibold"
@@ -43,7 +43,7 @@ const FaktaErfaringSection = () => {
             Analyse- og utredningsvirksomhet i kommunesektoren siden 2006.
           </p>
 
-          <div className="grid grid-cols-2 md:grid-cols-4" style={{ gap: '48px 32px' }}>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-x-8 md:gap-y-12">
             {fakta.map((item) => (
               <div key={item.beskrivelse}>
                 <div
@@ -69,6 +69,17 @@ const FaktaErfaringSection = () => {
                 Departementer, statsforvaltere og KS
               </p>
             </div>
+          </div>
+
+          {/* Mobile-only image below stats */}
+          <div className="mt-6 md:hidden">
+            <img
+              src={faktaBg}
+              alt="NIVI Analyse grunnleggere"
+              className="w-full object-cover"
+              style={{ borderRadius: '8px', objectPosition: 'center' }}
+              loading="lazy"
+            />
           </div>
         </div>
       </section>
