@@ -1,4 +1,4 @@
-import faktaBg from "@/assets/fakta-bg.jpg";
+import faktaBg from "@/assets/fakta-bg-new.jpg";
 
 const fakta = [
   { tall: "60+", beskrivelse: "Års samlet erfaring" },
@@ -15,22 +15,17 @@ const FaktaErfaringSection = () => {
         style={{
           backgroundImage: `url(${faktaBg})`,
           backgroundSize: 'cover',
-          backgroundPosition: 'center',
+          backgroundPosition: 'center right',
           backgroundRepeat: 'no-repeat',
-          filter: 'blur(3px)',
-          transform: 'scale(1.02)',
+          filter: 'blur(2px)',
+          transform: 'scale(1.01)',
         }}
       />
-      {/* Light brand-tone wash */}
-      <div
-        className="absolute inset-0"
-        style={{ backgroundColor: 'hsla(168, 70%, 11%, 0.27)' }}
-      />
-      {/* Dark gradient behind text area (left side) */}
+      {/* Dark gradient behind text area (left side only) */}
       <div
         className="absolute inset-0"
         style={{
-          background: 'linear-gradient(to right, hsla(168, 70%, 11%, 0.72) 0%, hsla(168, 70%, 11%, 0.45) 40%, hsla(168, 70%, 11%, 0) 65%)',
+          background: 'linear-gradient(to right, rgba(9, 40, 34, 0.78) 0%, rgba(9, 40, 34, 0.5) 35%, rgba(9, 40, 34, 0) 60%)',
         }}
       />
 
@@ -54,7 +49,7 @@ const FaktaErfaringSection = () => {
         <div style={{ marginBottom: '64px' }}>
           <h2
             className="font-semibold"
-            style={{ fontSize: '2.3rem', lineHeight: 1.25, marginBottom: '16px', color: 'hsl(0, 0%, 100%)' }}
+            style={{ fontSize: '2.5rem', lineHeight: 1.25, marginBottom: '16px', color: 'hsl(0, 0%, 100%)' }}
           >
             Fakta og erfaring
           </h2>
