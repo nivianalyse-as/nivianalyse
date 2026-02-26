@@ -9,7 +9,7 @@ const fakta = [
 const FaktaErfaringSection = () => {
   return (
     <section className="relative overflow-hidden" style={{ paddingTop: '120px', paddingBottom: '110px' }}>
-      {/* Blurred background image */}
+      {/* Background image – near-sharp */}
       <div
         className="absolute inset-0"
         style={{
@@ -17,29 +17,20 @@ const FaktaErfaringSection = () => {
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
-          filter: 'blur(6px)',
-          transform: 'scale(1.03)',
+          filter: 'blur(3px)',
+          transform: 'scale(1.02)',
         }}
       />
-      {/* Overlay: radial mask lighter around faces (right-center) */}
+      {/* Light brand-tone wash */}
+      <div
+        className="absolute inset-0"
+        style={{ backgroundColor: 'hsla(168, 70%, 11%, 0.27)' }}
+      />
+      {/* Dark gradient behind text area (left side) */}
       <div
         className="absolute inset-0"
         style={{
-          background: 'radial-gradient(ellipse 50% 70% at 65% 45%, hsla(168, 70%, 11%, 0.37), hsla(168, 70%, 11%, 0.49))',
-        }}
-      />
-      {/* Subtle dark gradient behind text area (left side) */}
-      <div
-        className="absolute inset-0"
-        style={{
-          background: 'linear-gradient(to right, hsla(168, 70%, 11%, 0.18) 0%, hsla(168, 70%, 11%, 0) 60%)',
-        }}
-      />
-      {/* Dark mid-band gradient behind the numbers row */}
-      <div
-        className="absolute inset-0"
-        style={{
-          background: 'linear-gradient(to bottom, hsla(168, 70%, 11%, 0) 55%, hsla(168, 70%, 11%, 0.2) 70%, hsla(168, 70%, 11%, 0.2) 85%, hsla(168, 70%, 11%, 0) 100%)',
+          background: 'linear-gradient(to right, hsla(168, 70%, 11%, 0.72) 0%, hsla(168, 70%, 11%, 0.45) 40%, hsla(168, 70%, 11%, 0) 65%)',
         }}
       />
 
@@ -63,7 +54,7 @@ const FaktaErfaringSection = () => {
         <div style={{ marginBottom: '64px' }}>
           <h2
             className="font-semibold"
-            style={{ fontSize: '2.1rem', lineHeight: 1.25, marginBottom: '16px', color: 'hsl(0, 0%, 100%)' }}
+            style={{ fontSize: '2.3rem', lineHeight: 1.25, marginBottom: '16px', color: 'hsl(0, 0%, 100%)' }}
           >
             Fakta og erfaring
           </h2>
