@@ -8,94 +8,93 @@ const fakta = [
 
 const FaktaErfaringSection = () => {
   return (
-    <section className="relative overflow-hidden" style={{ paddingTop: '170px', paddingBottom: '110px' }}>
-      {/* Background image – near-sharp */}
+    <section className="relative overflow-hidden" style={{ paddingTop: '140px', paddingBottom: '110px' }}>
+      {/* Background image – clean, no overlay */}
       <div
         className="absolute inset-0"
         style={{
           backgroundImage: `url(${faktaBg})`,
           backgroundSize: 'cover',
-          backgroundPosition: 'center right',
+          backgroundPosition: 'center center',
           backgroundRepeat: 'no-repeat',
-          filter: 'none',
-        }}
-      />
-      {/* Dark gradient behind text area (left side only) */}
-      <div
-        className="absolute inset-0"
-        style={{
-          background: 'linear-gradient(to right, rgba(9, 40, 34, 0.55) 0%, rgba(9, 40, 34, 0.33) 40%, rgba(9, 40, 34, 0) 70%)',
         }}
       />
 
       {/* Content */}
       <div className="relative z-10 mx-auto px-5 sm:px-6 lg:px-8" style={{ maxWidth: '1100px' }}>
-        {/* Tidslinje 2006–2026 */}
-        <div style={{ marginBottom: '40px' }}>
-          <div className="flex justify-between" style={{ marginBottom: '4px', padding: '0 2px' }}>
-            <span style={{ fontSize: '0.7rem', lineHeight: 1, color: 'hsla(0, 0%, 100%, 0.45)' }}>2006</span>
-            <span style={{ fontSize: '0.7rem', lineHeight: 1, color: 'hsla(0, 0%, 100%, 0.45)' }}>2026</span>
-          </div>
-          <div className="relative w-full" style={{ height: '2px', backgroundColor: 'hsla(0, 0%, 100%, 0.15)' }}>
-            <div
-              className="absolute top-0"
-              style={{ width: '10%', height: '2px', right: '3%', backgroundColor: 'hsl(17, 90%, 45%)' }}
-            />
-          </div>
-        </div>
-
-        {/* Overskrift og undertekst */}
-        <div style={{ marginBottom: '64px' }}>
+        {/* Content column with subtle backdrop */}
+        <div
+          style={{
+            maxWidth: '720px',
+            padding: '40px',
+            backgroundColor: 'rgba(0, 0, 0, 0.15)',
+            borderRadius: '2px',
+          }}
+        >
+          {/* Overskrift */}
           <h2
             className="font-semibold"
-            style={{ fontSize: '2.5rem', lineHeight: 1.25, marginBottom: '16px', color: 'hsl(0, 0%, 100%)' }}
+            style={{ fontSize: '2.7rem', lineHeight: 1.2, marginBottom: '8px', color: 'hsl(0, 0%, 100%)' }}
           >
             Fakta og erfaring
           </h2>
+
+          {/* Årstall */}
           <p
-            style={{ fontSize: '1.065rem', lineHeight: 1.6, color: 'hsla(0, 0%, 100%, 0.7)' }}
+            className="font-medium"
+            style={{ fontSize: '1.25rem', lineHeight: 1.4, marginBottom: '12px', color: 'hsla(0, 0%, 100%, 0.75)', letterSpacing: '0.02em' }}
+          >
+            2006 — 2026
+          </p>
+
+          {/* Oransje strek */}
+          <div style={{ width: '70px', height: '2.5px', backgroundColor: 'hsl(17, 90%, 45%)', marginBottom: '32px' }} />
+
+          {/* Undertekst */}
+          <p
+            style={{ fontSize: '1.065rem', lineHeight: 1.6, marginBottom: '56px', color: 'hsla(0, 0%, 100%, 0.75)' }}
           >
             Analyse- og utredningsvirksomhet i kommunesektoren siden 2006.
           </p>
-        </div>
 
-        {/* Tall-grid */}
-        <div className="grid grid-cols-2 lg:grid-cols-4" style={{ gap: '48px 32px' }}>
-          {fakta.map((item) => (
-            <div key={item.beskrivelse}>
+          {/* Tall-grid */}
+          <div className="grid grid-cols-2 lg:grid-cols-4" style={{ gap: '48px 32px' }}>
+            {fakta.map((item) => (
+              <div key={item.beskrivelse}>
+                <div
+                  className="font-black"
+                  style={{ fontSize: '2.875rem', lineHeight: 1.1, marginBottom: '14px', color: 'hsl(0, 0%, 100%)', textShadow: '0 1px 4px rgba(0,0,0,0.25)' }}
+                >
+                  {item.tall}
+                </div>
+                <p
+                  style={{ fontSize: '0.875rem', lineHeight: 1.5, color: 'hsla(0, 0%, 100%, 0.65)' }}
+                >
+                  {item.beskrivelse}
+                </p>
+              </div>
+            ))}
+
+            {/* Siste blokk: Nasjonale oppdragsgivere */}
+            <div>
               <div
-                className="font-extrabold"
-                style={{ fontSize: '2.875rem', lineHeight: 1.1, marginBottom: '14px', color: 'hsl(0, 0%, 100%)', textShadow: '0 1px 4px rgba(0,0,0,0.3)' }}
+                className="font-semibold"
+                style={{ fontSize: '1.5rem', lineHeight: 1.25, marginBottom: '4px', color: 'hsl(0, 0%, 100%)' }}
               >
-                {item.tall}
+                Nasjonale
+              </div>
+              <div
+                className="font-semibold"
+                style={{ fontSize: '1.5rem', lineHeight: 1.25, marginBottom: '8px', color: 'hsl(0, 0%, 100%)' }}
+              >
+                oppdragsgivere
               </div>
               <p
-                style={{ fontSize: '0.875rem', lineHeight: 1.5, color: 'hsla(0, 0%, 100%, 0.6)' }}
+                style={{ fontSize: '0.875rem', lineHeight: 1.5, color: 'hsla(0, 0%, 100%, 0.65)' }}
               >
-                {item.beskrivelse}
+                Departementer, statsforvaltere og KS
               </p>
             </div>
-          ))}
-
-          {/* Siste blokk: Nasjonale oppdragsgivere */}
-          <div>
-            <div
-              className="font-semibold"
-              style={{ fontSize: '1.5rem', lineHeight: 1.25, marginBottom: '4px', color: 'hsl(0, 0%, 100%)' }}
-            >
-              Nasjonale
-            </div>
-            <div
-              className="font-semibold"
-              style={{ fontSize: '1.5rem', lineHeight: 1.25, marginBottom: '8px', color: 'hsl(0, 0%, 100%)' }}
-            >
-              oppdragsgivere
-            </div>
-            <p
-              style={{ fontSize: '0.875rem', lineHeight: 1.5, color: 'hsla(0, 0%, 100%, 0.6)' }}
-            >
-              Departementer, statsforvaltere og KS
-            </p>
           </div>
         </div>
       </div>
