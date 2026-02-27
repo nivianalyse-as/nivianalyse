@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import SectionHeader from "@/components/SectionHeader";
 
 const punkter = [
-  "122 publikasjoner (2008–2025)",
+  "112 publikasjoner (2008–2025)",
   "Oppdrag for departementer, statsforvaltere og fylkeskommuner",
   "Dokumentert metodikk for kartlegging og strukturvurdering",
 ];
@@ -18,7 +18,7 @@ const PublikasjonAutoritet = () => {
         <div className="max-w-[720px] mx-auto text-center">
           <p className="text-muted-foreground" style={{ fontSize: '1.065rem', lineHeight: 1.7, color: 'hsl(168, 30%, 30%)' }}>
             NIVI Analyse ble etablert sommeren 2007. De første rapportene ble publisert i 2008.
-            Arkivet inneholder 122 analyser og utredninger fra 2008 til 2025 om kommunestruktur,
+            Arkivet inneholder 112 analyser og utredninger fra 2008 til 2025 om kommunestruktur,
             interkommunalt samarbeid og regional forvaltning, og dokumenterer sentrale reformer og
             utviklingsløp i norsk kommunesektor.
           </p>
