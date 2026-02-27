@@ -8,7 +8,6 @@ import { Checkbox } from "@/components/ui/checkbox";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
-import SchemaMarkup from "@/components/SchemaMarkup";
 import { rapporter } from "@/data/reports";
 import { ALL_THEMES, ALL_TYPES, themeToSlug, type RapportType } from "@/types/rapport";
 
@@ -194,13 +193,17 @@ const Rapportarkiv = () => {
         description="Utredninger og analyser om interkommunalt samarbeid, kommunereform og regional utvikling fra NIVI Analyse. Arkiv med rapporter, notater og samarbeidsrapporter fra 2006 til i dag."
         canonical="https://nivi.no/publikasjoner"
       />
-      <SchemaMarkup
-        schema={{
-          type: "Organization",
-          name: "NIVI Analyse AS",
-          url: "https://nivi.no/publikasjoner",
-          description: "Publikasjoner fra NIVI Analyse – utredninger om interkommunalt samarbeid, kommunestruktur og regional utvikling.",
-        }}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          name: "Rapportarkiv – NIVI Analyse",
+          description: "NIVI Analyse sitt arkiv over publiserte rapporter, notater og samarbeidsrapporter fra 2008–2025.",
+          url: "https://nivianalyse.no/publikasjoner",
+          inLanguage: "no",
+          isPartOf: { "@type": "WebSite", name: "NIVI Analyse", url: "https://nivianalyse.no" }
+        }) }}
       />
       <Header />
       <main id="main-content">
