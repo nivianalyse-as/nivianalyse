@@ -1,3 +1,11 @@
+/**
+ * FAGLIGE INNSIKTER – NIVI Analyse AS.
+ * Kun faktiske publiserte artikler.
+ * Ikke generer nye artikler automatisk.
+ * Ikke opprett plassholdere.
+ * Alle endringer skal være eksplisitte og manuelle.
+ */
+
 import { ArticleContent } from "@/types/content";
 
 export const articles: ArticleContent[] = [
@@ -66,7 +74,7 @@ export const articles: ArticleContent[] = [
         content: "Covid-19-pandemien satte kommunal beredskap og politisk lederskap på en historisk prøve."
       },
       {
-        title: "Problemstilling", 
+        title: "Problemstilling",
         content: "Hva kjennetegnet kommuner som håndterte krisen godt, og hvordan kan lærdommene overføres til fremtidig beredskap?"
       },
       {

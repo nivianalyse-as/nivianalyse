@@ -3,8 +3,8 @@ import { Calendar, Newspaper, Radio, ArrowRight, ExternalLink, FileText, Play } 
 import { Link } from "react-router-dom";
 import SectionHeader from "@/components/SectionHeader";
 import MediaCard from "@/components/MediaCard";
-import { articles } from "@/data/inspirasjonContent";
-import { mediaEntries } from "@/data/mediaContent";
+import { articles } from "@/data/insights";
+import { mediaEntries } from "@/data/media";
 import { ContentCategory, ArticleContent } from "@/types/content";
 import { MediaEntry } from "@/types/media";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";

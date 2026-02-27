@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import SectionHeader from "@/components/SectionHeader";
 import MediaCard from "@/components/MediaCard";
-import { getFeaturedMedia } from "@/data/mediaContent";
+import { getFeaturedMedia } from "@/data/media";
 
 const MediaSection = () => {
   const featuredMedia = getFeaturedMedia();

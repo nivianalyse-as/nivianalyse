@@ -13,7 +13,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Button } from "@/components/ui/button";
-import { mediaEntries, getMediaSources, getMediaYears } from "@/data/mediaContent";
+import { mediaEntries, getMediaSources, getMediaYears } from "@/data/media";
 import { MediaType, mediaTypeLabels } from "@/types/media";
 
 const ITEMS_PER_PAGE = 9;
