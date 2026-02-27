@@ -9,7 +9,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import SchemaMarkup from "@/components/SchemaMarkup";
-import { rapporter } from "@/data/rapporter";
+import { rapporter } from "@/data/reports";
 import { ALL_THEMES, ALL_TYPES, themeToSlug, type RapportType } from "@/types/rapport";
 
 const years = Array.from(new Set(rapporter.map((r) => r.year))).sort((a, b) => b - a);

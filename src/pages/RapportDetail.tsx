@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
-import { rapporter } from "@/data/rapporter";
+import { rapporter } from "@/data/reports";
 import { themeToSlug } from "@/types/rapport";
 import { useEffect, useMemo } from "react";
 
