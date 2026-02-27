@@ -76,6 +76,30 @@ const detailedReferences: DetailedReference[] = [
     beskrivelse: "Longyearbyen lokalstyre er en «kommune»/lokalsamfunn, med en kort historie som folkevalgt styrt organisasjon. Longyearbyen lokalstyre er en organisasjon med veldig store turnover (ca 20 % i året) og det har vært et stort behov for å skape en organisasjon med god forvaltningspraksis som er selvgående uavhengig av hvilke personer som fyller de ulike rollene til enhver tid. Håvard Moe har bistått med evaluering av SNU 2 - administrativ organisering, kommunekompassevalueringer, utvikling av forbedret forvaltningspraksis lederutvikling, tilrettelegging studieturer, strategisk utviklingspartner, mm",
     referanse: { navn: "Sissel Hultgren", tittel: "Personalsjef", epost: "sissel.hultgren@lokalstyre.no" },
   },
+  {
+    kommune: "Vestvågøy og Moskenes – Utredning av kommunesammenslutning",
+    periode: "2025",
+    beskrivelse: "I april 2025 vedtok Regjeringen at staten ville dekke akkumulert merforbruk i Moskenes kommune på om lag 160 mill. kr under forutsetning av frivillig kommunesammenslutning med én eller flere nabokommuner. Kommunene nedsatte forhandlingsutvalg og startet utredning av sammenslutning som ble enstemmig vedtatt i begge kommunestyrene i august 2025. Geir Vinsand bisto i prosessen som ekstern faglig utreder og rådgiver, i samarbeid med Randi Gregersen som ivaretok rollen som stedlig prosjektkoordinator. Samarbeidet er videreført etter oppnevning av Fellesnemnd med ansvar for gjennomføring av sammenslutningen.",
+    referanse: { navn: "Lill Stabell", tittel: "Kommunedirektør Vestvågøy kommune", epost: "lill.stabell@vestvagoy.kommune.no" },
+  },
+  {
+    kommune: "Statsforvalteren i Buskerud, Østfold, Oslo og Akershus – Interkommunalt samarbeid i Østfold",
+    periode: "2025",
+    beskrivelse: "NIVI har gjennomført en kartlegging og analyse av formalisert interkommunalt samarbeid som dekker alle fylkets 12 kommuner. Kartleggingen omfatter også interkommunale fagnettverk og kommunenes samarbeid mot fylkeskommunen og staten. Det er innhentet erfaringer med dagens samarbeid fra kommunedirektører og daglige ledere i regionrådene. NIVI har gjennomført analyser av samarbeidets omfang, innhold og organisering og gitt sine anbefalinger om videreutvikling av samarbeidet.",
+    referanse: { navn: "Tor Håkon Skomsvold", tittel: "Direktør", epost: "tor.skomsvold@statsforvalteren.no" },
+  },
+  {
+    kommune: "Statsforvalteren i Agder – Interkommunalt samarbeid i Agder",
+    periode: "2024",
+    beskrivelse: "NIVI har gjennomført en kommunevis kartlegging som omfatter alle fylkets 25 kommuner. I sluttrapport fra NIVI er det gjennomført analyser av samarbeidets omfang og organisering. Kartleggingen omfatter også forekomst av fagnettverk og kommunenes samarbeid mot staten og fylkeskommunen. NIVI har drøftet prinsipper for fremtidig samarbeid og formidlet resultater på Statsforvalterens ordfører- og kommunedirektørkonferanse i Mandal.",
+    referanse: { navn: "Dag Petter Sødal", tittel: "Spesialrådgiver", epost: "dag.sodal@statsforvalteren.no" },
+  },
+  {
+    kommune: "Hammerfest, Måsøy og Hasvik – Regionalt plankontor",
+    periode: "2024",
+    beskrivelse: "NIVI utredet regionalt plankontor for de tre kommunene. Utredningen hadde sin bakgrunn i at kommunene har inngått en bygdevekstavtale med staten, som har som formål å bidra til befolkningsvekst i regionen. I avtalen med staten er det konkretisert seks satsingsområder, inkludert økt samarbeid om samfunnsutvikling og planlegging. Utredningen har også sin bakgrunn i økte nasjonale krav til kommunenes planfunksjoner og sårbarheter ved dagens organisering i de tre kommunene. NIVI fremmet forslag til løsningsmodell og organisering ved oppstart av samarbeidet.",
+    referanse: { navn: "Elisabeth Paulsen", tittel: "Kommunedirektør Hammerfest kommune", epost: "elisabeth.paulsen@hammerfest.kommune.no" },
+  },
 ];
 
 interface ReferenceProject {
