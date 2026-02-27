@@ -12,7 +12,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Link } from "react-router-dom";
-import { CheckCircle, Loader2 } from "lucide-react";
+import { Loader2 } from "lucide-react";
 
 interface FormData {
   name: string;
@@ -41,7 +41,10 @@ const topics = [
 ];
 
 const SuccessMessage = ({ onReset }: { onReset: () => void }) => (
-  <div className="animate-fade-in bg-card border border-primary/[0.08] rounded-[20px] p-6 md:p-10 shadow-sm max-w-lg">
+  <div
+    className="bg-card border border-primary/[0.08] rounded-[20px] p-6 md:p-10 shadow-sm max-w-lg"
+    style={{ animation: 'fade-in 250ms ease-out both' }}
+  >
     <h2
       tabIndex={-1}
       className="text-2xl md:text-3xl font-semibold tracking-tight text-primary mb-6"
@@ -55,16 +58,29 @@ const SuccessMessage = ({ onReset }: { onReset: () => void }) => (
       </p>
       <p>
         Dersom henvendelsen gjelder noe som haster, ber vi deg ta direkte
-        kontakt på telefon eller e-post.
+        kontakt på{" "}
+        <a href="tel:+4722123456" className="text-primary hover:text-accent transition-colors underline underline-offset-2">
+          telefon&nbsp;+47&nbsp;22&nbsp;12&nbsp;34&nbsp;56
+        </a>{" "}
+        eller{" "}
+        <a href="mailto:post@nivianalyse.no" className="text-primary hover:text-accent transition-colors underline underline-offset-2">
+          e-post
+        </a>.
       </p>
     </div>
-    <div className="mt-8">
+    <div className="mt-8 flex flex-col sm:flex-row gap-3">
       <button
         onClick={onReset}
         className="text-sm text-muted-foreground hover:text-primary transition-colors"
       >
         Send en ny melding
       </button>
+      <a
+        href="/"
+        className="text-sm text-muted-foreground hover:text-primary transition-colors"
+      >
+        Tilbake til forsiden
+      </a>
     </div>
   </div>
 );
@@ -149,7 +165,12 @@ const ContactForm = () => {
         body: new URLSearchParams(data as any).toString(),
       });
 
-      formRef.current?.scrollIntoView({ behavior: "smooth" });
+      // Scroll with offset for sticky header (~84px)
+      const el = formRef.current;
+      if (el) {
+        const top = el.getBoundingClientRect().top + window.scrollY - 100;
+        window.scrollTo({ top, behavior: "smooth" });
+      }
 
       // GA4 event (if installed)
       if ((window as any).gtag) {
