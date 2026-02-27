@@ -1,3 +1,11 @@
+/**
+ * MEDIAOPPSLAG – NIVI Analyse AS.
+ * Kun faktiske publiserte medieoppslag.
+ * Ikke generer nye poster automatisk.
+ * Ikke opprett plassholdere.
+ * Alle endringer skal være eksplisitte og manuelle.
+ */
+
 import { MediaEntry } from "@/types/media";
 
 export const mediaEntries: MediaEntry[] = [

@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import MediaCard from "@/components/MediaCard";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { getMediaBySlug, mediaEntries } from "@/data/mediaContent";
+import { getMediaBySlug, mediaEntries } from "@/data/media";
 import { mediaTypeLabels } from "@/types/media";
 
 const formatDate = (dateString: string): string => {

@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Calendar, Newspaper } from "lucide-react";
 import SectionHeader from "@/components/SectionHeader";
-import { articles } from "@/data/inspirasjonContent";
-import { mediaEntries } from "@/data/mediaContent";
+import { articles } from "@/data/insights";
+import { mediaEntries } from "@/data/media";
 import { ArticleContent } from "@/types/content";
 import { MediaEntry } from "@/types/media";
 
