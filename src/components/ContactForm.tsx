@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -41,22 +41,31 @@ const topics = [
 ];
 
 const SuccessMessage = ({ onReset }: { onReset: () => void }) => (
-  <div className="animate-fade-in bg-card border border-primary/[0.08] rounded-[20px] p-6 md:p-10 shadow-sm max-w-lg text-center space-y-5">
-    <CheckCircle className="mx-auto h-12 w-12 text-accent" strokeWidth={1.5} />
-    <h3 className="text-[1.4rem] md:text-[1.6rem] font-semibold text-primary" style={{ lineHeight: 1.3 }}>
-      Takk for din henvendelse
-    </h3>
-    <div className="space-y-3 text-muted-foreground" style={{ fontSize: '0.975rem', lineHeight: 1.7 }}>
-      <p>Tusen takk for at du tok kontakt med NIVI Analyse.</p>
-      <p>Vi har mottatt meldingen din og vil ta kontakt så snart vi har anledning.</p>
-      <p>Dersom henvendelsen gjelder noe som haster, ber vi deg ta direkte kontakt på telefon eller e-post.</p>
-    </div>
-    <button
-      onClick={onReset}
-      className="text-sm text-primary underline underline-offset-2 hover:text-accent transition-colors"
+  <div className="animate-fade-in bg-card border border-primary/[0.08] rounded-[20px] p-6 md:p-10 shadow-sm max-w-lg">
+    <h2
+      tabIndex={-1}
+      className="text-2xl md:text-3xl font-semibold tracking-tight text-primary mb-6"
     >
-      Send en ny melding
-    </button>
+      Takk for din henvendelse
+    </h2>
+    <div className="space-y-4 text-muted-foreground leading-relaxed">
+      <p>
+        Tusen takk for at du tok kontakt med NIVI Analyse.
+        Vi har mottatt meldingen din og vil ta kontakt så snart vi har anledning.
+      </p>
+      <p>
+        Dersom henvendelsen gjelder noe som haster, ber vi deg ta direkte
+        kontakt på telefon eller e-post.
+      </p>
+    </div>
+    <div className="mt-8">
+      <button
+        onClick={onReset}
+        className="text-sm text-muted-foreground hover:text-primary transition-colors"
+      >
+        Send en ny melding
+      </button>
+    </div>
   </div>
 );
 
@@ -157,6 +166,14 @@ const ContactForm = () => {
       setLoading(false);
     }
   };
+
+  // Auto-focus heading for accessibility after submit
+  useEffect(() => {
+    if (submitted) {
+      const heading = formRef.current?.querySelector('h2');
+      heading?.focus();
+    }
+  }, [submitted]);
 
   if (submitted) {
     return (
