@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -12,7 +12,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Link } from "react-router-dom";
-import { CheckCircle } from "lucide-react";
+import { CheckCircle, Loader2 } from "lucide-react";
 
 interface FormData {
   name: string;
@@ -40,7 +40,7 @@ const topics = [
   { value: "annet", label: "Annet" },
 ];
 
-const SuccessMessage = () => (
+const SuccessMessage = ({ onReset }: { onReset: () => void }) => (
   <div className="bg-card border border-primary/[0.08] rounded-[20px] p-6 md:p-10 shadow-sm max-w-lg text-center space-y-5">
     <CheckCircle className="mx-auto h-12 w-12 text-accent" strokeWidth={1.5} />
     <h3 className="text-[1.4rem] md:text-[1.6rem] font-semibold text-primary" style={{ lineHeight: 1.3 }}>
@@ -51,10 +51,17 @@ const SuccessMessage = () => (
       <p>Vi har mottatt meldingen din og vil ta kontakt så snart vi har anledning.</p>
       <p>Dersom henvendelsen gjelder noe som haster, ber vi deg ta direkte kontakt på telefon eller e-post.</p>
     </div>
+    <button
+      onClick={onReset}
+      className="text-sm text-primary underline underline-offset-2 hover:text-accent transition-colors"
+    >
+      Send en ny melding
+    </button>
   </div>
 );
 
 const ContactForm = () => {
+  const formRef = useRef<HTMLDivElement>(null);
   const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
@@ -67,6 +74,7 @@ const ContactForm = () => {
   });
   const [errors, setErrors] = useState<FormErrors>({});
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const validateEmail = (email: string): boolean => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -107,10 +115,20 @@ const ContactForm = () => {
     }
   };
 
+  const handleReset = () => {
+    setSubmitted(false);
+    setFormData({
+      name: "", email: "", phone: "", organization: "", topic: "", message: "", consent: false, honeypot: "",
+    });
+    setErrors({});
+    window.history.replaceState(null, "", window.location.pathname);
+  };
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     if (!validateForm()) return;
+    setLoading(true);
 
     const form = e.currentTarget;
     const data = new FormData(form);
@@ -121,17 +139,35 @@ const ContactForm = () => {
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: new URLSearchParams(data as any).toString(),
       });
+
+      formRef.current?.scrollIntoView({ behavior: "smooth" });
+
+      // GA4 event (if installed)
+      if ((window as any).gtag) {
+        (window as any).gtag("event", "form_submit", { form_name: "kontakt" });
+      }
+
+      window.history.replaceState(null, "", "#takk");
       setSubmitted(true);
+      form.reset();
     } catch (error) {
       console.error("Form submission error:", error);
+      alert("Noe gikk galt. Prøv igjen.");
+    } finally {
+      setLoading(false);
     }
   };
 
   if (submitted) {
-    return <SuccessMessage />;
+    return (
+      <div ref={formRef}>
+        <SuccessMessage onReset={handleReset} />
+      </div>
+    );
   }
 
   return (
+    <div ref={formRef}>
     <form
       name="kontakt"
       method="POST"
@@ -305,12 +341,21 @@ const ContactForm = () => {
 
         <Button
           type="submit"
-          className="w-full h-12 bg-accent hover:bg-accent/90 text-accent-foreground font-semibold rounded-xl text-[15px] transition-all duration-200 shadow-sm hover:shadow-md"
+          disabled={loading}
+          className="w-full h-12 bg-accent hover:bg-accent/90 text-accent-foreground font-semibold rounded-xl text-[15px] transition-all duration-200 shadow-sm hover:shadow-md disabled:opacity-60"
         >
-          Send henvendelse
+          {loading ? (
+            <span className="flex items-center gap-2">
+              <Loader2 className="h-4 w-4 animate-spin" />
+              Sender...
+            </span>
+          ) : (
+            "Send henvendelse"
+          )}
         </Button>
       </div>
     </form>
+    </div>
   );
 };
 
