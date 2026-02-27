@@ -44,7 +44,7 @@ const experts: Expert[] = [
       "Beredskap og samfunnssikkerhet",
     ],
     description:
-      "Over 30 års erfaring med analyse og rådgivning i kommunesektoren. Blant Norges mest erfarne eksperter på interkommunalt samarbeid og kommunestruktur, med oppdrag for departementer, KS og et stort antall kommuner og regioner.",
+      "Over 30 års erfaring med analyse og rådgivning i kommunesektoren. Blant Norges mest erfarne eksperter på interkommunalt samarbeid og kommunestruktur, med oppdrag for departementer, statsforvaltere og et stort antall kommuner og regioner.",
     cv: {
       intro:
         "Geir Vinsand er ressursøkonom fra NMBU og en av Norges mest erfarne eksperter på kommunestruktur og interkommunalt samarbeid. Han har bakgrunn fra Næringsdepartementet og Kommunaldepartementet, og har vært sentral i flere av de viktigste utredningene om norsk kommunesektor.",

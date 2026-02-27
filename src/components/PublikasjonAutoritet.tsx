@@ -12,14 +12,15 @@ const PublikasjonAutoritet = () => {
     <section className="bg-background" style={{ paddingTop: '96px', paddingBottom: '96px' }}>
       <div className="mx-auto px-5 sm:px-6 lg:px-8" style={{ maxWidth: '1100px' }}>
         <div style={{ marginBottom: '40px' }}>
-          <SectionHeader title="Dokumentert utvikling i kommunesektoren siden 2006" />
+          <SectionHeader title="Dokumentert utvikling i kommunesektoren siden 2008" />
         </div>
 
         <div className="max-w-[720px] mx-auto text-center">
           <p className="text-muted-foreground" style={{ fontSize: '1.065rem', lineHeight: 1.7, color: 'hsl(168, 30%, 30%)' }}>
-            NIVI Analyse har publisert 122 analyser og utredninger fra 2006 til 2025 om kommunestruktur,
-            interkommunalt samarbeid og regional forvaltning. Arkivet dokumenterer sentrale reformer og
-            utviklingsløp i norsk kommunesektor gjennom nesten to tiår.
+            NIVI Analyse ble etablert sommeren 2007. De første rapportene ble publisert i 2008.
+            Arkivet inneholder 122 analyser og utredninger fra 2008 til 2025 om kommunestruktur,
+            interkommunalt samarbeid og regional forvaltning, og dokumenterer sentrale reformer og
+            utviklingsløp i norsk kommunesektor.
           </p>
 
           <ul className="mt-8 space-y-3 text-left inline-block">
