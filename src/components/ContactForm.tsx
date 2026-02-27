@@ -167,11 +167,12 @@ const ContactForm = () => {
     }
   };
 
-  // Auto-focus heading for accessibility after submit
+  // Auto-focus heading for accessibility after submit (delayed for fade-in)
   useEffect(() => {
     if (submitted) {
-      const heading = formRef.current?.querySelector('h2');
-      heading?.focus();
+      setTimeout(() => {
+        formRef.current?.querySelector('h2')?.focus();
+      }, 100);
     }
   }, [submitted]);
 
