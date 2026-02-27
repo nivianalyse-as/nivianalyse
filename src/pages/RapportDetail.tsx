@@ -82,11 +82,7 @@ const RapportDetail = () => {
         author={rapport.authors.join(", ")}
         publishedTime={`${rapport.year}-01-01`}
         canonical={canonicalUrl}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(reportSchema) }}
-        style={{ display: "none" }}
+        schema={reportSchema}
       />
       <Header />
       <main id="main-content">

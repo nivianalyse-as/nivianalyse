@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { articles } from "@/data/insights";
 import { mediaEntries } from "@/data/media";
 import { ArticleContent } from "@/types/content";
+import SEOHead from "@/components/SEOHead";
 
 const ArticleDetail = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -75,9 +76,12 @@ const ArticleDetail = () => {
   if (item.type === "article") {
     return (
       <article className="bg-background">
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+        <SEOHead
+          title={item.title}
+          description={item.ingress || item.excerpt}
+          type="article"
+          author={item.authors?.join(", ")}
+          schema={articleSchema}
         />
         {/* Hero */}
         <div className="bg-primary text-primary-foreground py-16 md:py-24">
