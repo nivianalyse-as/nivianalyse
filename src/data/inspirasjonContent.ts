@@ -22,36 +22,6 @@ export const articles: ArticleContent[] = [
     pdfUrl: "/docs/Havard_Moes_10_rad.pdf"
   },
   {
-    id: "1",
-    type: "article",
-    title: "Kommunesamarbeid i praksis",
-    excerpt: "En gjennomgang av hvordan norske kommuner kan styrke samarbeidet for bedre tjenester.",
-    date: "12. jan 2025",
-    category: "Interkommunalt samarbeid",
-    slug: "kommunesamarbeid-i-praksis",
-    ingress: "Interkommunalt samarbeid er nøkkelen til bærekraftige tjenester i små og mellomstore kommuner. Denne analysen ser på hva som fungerer – og hva som kan forbedres.",
-    sections: [
-      {
-        title: "Bakgrunn",
-        content: "Norske kommuner står overfor økende krav til tjenestekvalitet og effektivitet. Samtidig gjør demografiske endringer at mange kommuner opplever press på både økonomi og fagmiljøer."
-      },
-      {
-        title: "Problemstilling",
-        content: "Hvordan kan kommuner samarbeide bedre for å sikre robuste fagmiljøer og kostnadseffektive tjenester uten å miste lokal forankring?"
-      },
-      {
-        title: "Hva vi gjorde",
-        content: "NIVI Analyse gjennomførte en omfattende kartlegging av eksisterende samarbeidsordninger i 45 kommuner, med intervjuer av rådmenn, ordførere og tjenesteledere."
-      },
-      {
-        title: "Resultat",
-        content: "Analysen avdekket at kommuner med formaliserte samarbeidsstrukturer og tydelig politisk forankring oppnår bedre resultater enn ad hoc-samarbeid."
-      }
-    ],
-    relatedTopics: ["Interkommunalt samarbeid", "Kommunestruktur", "Organisasjon"],
-    authors: ["Geir Vinsand"]
-  },
-  {
     id: "2",
     type: "article",
     title: "Økonomisk bærekraft i små kommuner",
