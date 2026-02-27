@@ -30,10 +30,55 @@ const ArticleDetail = () => {
     );
   }
 
+  // Parse Norwegian date ("14. feb 2026") to ISO
+  const parseNorDate = (d: string): string => {
+    const months: Record<string, string> = {
+      jan: "01", feb: "02", mar: "03", apr: "04", mai: "05", jun: "06",
+      jul: "07", aug: "08", sep: "09", okt: "10", nov: "11", des: "12",
+    };
+    const parts = d.replace(/\./g, "").trim().split(/\s+/);
+    if (parts.length === 3) {
+      const [day, mon, year] = parts;
+      const m = months[mon.toLowerCase()];
+      if (m) return `${year}-${m}-${day.padStart(2, "0")}`;
+    }
+    return d;
+  };
+
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: item.title,
+    description: item.ingress || item.excerpt,
+    datePublished: parseNorDate(item.date),
+    author: (item.authors || []).map((name) => ({
+      "@type": "Person",
+      name,
+    })),
+    publisher: {
+      "@type": "Organization",
+      name: "NIVI Analyse AS",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://nivianalyse.no/logo.png",
+      },
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `https://nivianalyse.no/faglige-innsikter/${item.slug}`,
+    },
+    about: item.relatedTopics || [],
+    inLanguage: "no",
+  };
+
   // Render based on content type
   if (item.type === "article") {
     return (
       <article className="bg-background">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+        />
         {/* Hero */}
         <div className="bg-primary text-primary-foreground py-16 md:py-24">
           <div className="container-content">
