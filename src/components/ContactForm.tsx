@@ -217,16 +217,13 @@ const ContactForm = () => {
       noValidate
     >
       <input type="hidden" name="form-name" value="kontakt" />
-      <div className="absolute -left-[9999px]" aria-hidden="true">
-        <input
-          type="text"
-          name="website"
-          tabIndex={-1}
-          autoComplete="off"
-          value={formData.honeypot}
-          onChange={(e) => handleInputChange("honeypot", e.target.value)}
-        />
-      </div>
+
+      <p className="hidden">
+        <label>
+          Ikke fyll ut dette feltet:
+          <input name="bot-field" />
+        </label>
+      </p>
 
       <div className="space-y-4 md:space-y-5">
         {/* Name */}
