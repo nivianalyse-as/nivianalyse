@@ -41,7 +41,7 @@ const topics = [
 ];
 
 const SuccessMessage = ({ onReset }: { onReset: () => void }) => (
-  <div className="bg-card border border-primary/[0.08] rounded-[20px] p-6 md:p-10 shadow-sm max-w-lg text-center space-y-5">
+  <div className="animate-fade-in bg-card border border-primary/[0.08] rounded-[20px] p-6 md:p-10 shadow-sm max-w-lg text-center space-y-5">
     <CheckCircle className="mx-auto h-12 w-12 text-accent" strokeWidth={1.5} />
     <h3 className="text-[1.4rem] md:text-[1.6rem] font-semibold text-primary" style={{ lineHeight: 1.3 }}>
       Takk for din henvendelse
