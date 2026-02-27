@@ -1,3 +1,11 @@
+/**
+ * OFFISIELT RAPPORTARKIV – NIVI Analyse AS.
+ * Kun faktiske publiserte rapporter.
+ * Ikke generer nye rapporter automatisk.
+ * Ikke opprett plassholdere.
+ * Alle endringer skal være eksplisitte og manuelle.
+ */
+
 import { Rapport } from "@/types/rapport";
 
 export const rapporter: Rapport[] = [
