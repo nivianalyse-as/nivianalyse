@@ -215,7 +215,7 @@ const Rapportarkiv = () => {
             </h1>
             <div className="mx-auto h-[2px] w-10 bg-accent/80 rounded-full mt-4 mb-5 mr-auto ml-0" />
             <p className="text-muted-foreground max-w-[680px] mb-4" style={{ fontSize: "1.05rem", lineHeight: 1.65 }}>
-              NIVI Analyse er et fagmiljø innen utredning av kommunal organisering, interkommunalt samarbeid og forvaltningsstruktur. Siden 2006 har vi analysert og dokumentert sentrale utviklingsløp i norsk kommunesektor på oppdrag fra departementer, statsforvaltere, fylkeskommuner og kommuner over hele landet.
+              NIVI Analyse er et fagmiljø innen utredning av kommunal organisering, interkommunalt samarbeid og forvaltningsstruktur. Siden 2007 har vi analysert og dokumentert sentrale utviklingsløp i norsk kommunesektor på oppdrag fra departementer, statsforvaltere, fylkeskommuner og kommuner over hele landet.
             </p>
             <p className="text-muted-foreground max-w-[680px]" style={{ fontSize: "0.95rem", lineHeight: 1.65 }}>
               Dette arkivet samler analyser og utredninger publisert fra 2008 til 2025. Materialet dokumenterer sentrale reformer og utviklingsprosesser, inkludert kommunereform, samkommunemodeller, NAV-organisering, regional styring og transportforvaltning.
