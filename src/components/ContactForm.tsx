@@ -59,8 +59,8 @@ const SuccessMessage = ({ onReset }: { onReset: () => void }) => (
       <p>
         Dersom henvendelsen gjelder noe som haster, ber vi deg ta direkte
         kontakt på{" "}
-        <a href="tel:+4722123456" className="text-primary hover:text-accent transition-colors underline underline-offset-2">
-          telefon&nbsp;+47&nbsp;22&nbsp;12&nbsp;34&nbsp;56
+        <a href="tel:+4748148813" className="text-primary hover:text-accent transition-colors underline underline-offset-2">
+          telefon&nbsp;+47&nbsp;48&nbsp;14&nbsp;88&nbsp;13
         </a>{" "}
         eller{" "}
         <a href="mailto:post@nivianalyse.no" className="text-primary hover:text-accent transition-colors underline underline-offset-2">
