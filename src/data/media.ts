@@ -25,7 +25,7 @@ export const mediaEntries: MediaEntry[] = [
     ],
     externalUrl: "https://tv.nrk.no/serie/debatten/sesong/202511/episode/NNFA51111125",
     embedUrl: "https://tv.nrk.no/serie/debatten/sesong/202511/episode/NNFA51111125",
-    featured: true,
+    featured: false,
     tags: ["nrk", "debatt", "kommuneøkonomi"]
   },
   {
@@ -43,7 +43,7 @@ export const mediaEntries: MediaEntry[] = [
       "NIVI-analyse viser mønsteret på tvers av kommuner"
     ],
     externalUrl: "https://www.nrk.no/buskerud/xl/kommunene-ma-velge-mellom-skole-og-eldre_-_-har-gatt-i-luksusfella-1.17085405",
-    featured: true,
+    featured: false,
     tags: ["nrk", "kommuneøkonomi", "skole", "eldreomsorg"]
   },
   {
@@ -61,7 +61,7 @@ export const mediaEntries: MediaEntry[] = [
       "Analysen peker på regionale forskjeller"
     ],
     externalUrl: "https://www.nrk.no/vestland/over-halvparten-av-norske-kommunar-styrer-mot-underskot-1.17048778",
-    featured: true,
+    featured: false,
     tags: ["nrk", "kommuneøkonomi", "analyse"]
   },
   {
@@ -115,7 +115,7 @@ export const mediaEntries: MediaEntry[] = [
       "Betydelig offentlig debatt om forslagene"
     ],
     externalUrl: "https://www.nrk.no/nordland/slik-vil-kommuneekspert-at-nord-norge-skal-se-ut-1.17715638",
-    featured: false,
+    featured: true,
     tags: ["nrk", "kommunestruktur", "nord-norge"]
   },
   {
@@ -267,7 +267,7 @@ export const mediaEntries: MediaEntry[] = [
     ],
     externalUrl: "https://www.kommunal-rapport.no/meninger/ikke-statens-feil-at-kommunene-ikke-vil/836768",
     pdfUrl: "/docs/Ikke_statens_feil_at_kommunene_ikke_vil.pdf",
-    featured: false,
+    featured: true,
     tags: ["kommunal rapport", "kommuneøkonomi", "debatt"]
   }
 ];
