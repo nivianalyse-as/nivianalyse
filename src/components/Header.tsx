@@ -226,11 +226,11 @@ const Header = () => {
                   <span>post@nivianalyse.no</span>
                 </a>
                 <a
-                  href="tel:+4722123456"
+                  href="tel:+4748148813"
                   className="flex items-center gap-3 text-white/80 hover:text-white transition-colors text-sm"
                 >
                   <Phone className="w-4 h-4 flex-shrink-0" />
-                  <span>+47 22 12 34 56</span>
+                  <span>+47 48 14 88 13</span>
                 </a>
                 <div className="flex items-start gap-3 text-white/80 text-sm">
                   <MapPin className="w-4 h-4 flex-shrink-0 mt-0.5" />
