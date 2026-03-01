@@ -138,7 +138,7 @@ export const niviOrganizationSchema: OrganizationSchema & { creator?: { name: st
     postalCode: "3233",
     addressCountry: "NO",
   },
-  telephone: "+47 22 12 34 56",
+  telephone: "+47 48 14 88 13",
   email: "post@nivianalyse.no",
   creator: {
     name: "Digital Thinking",
@@ -158,7 +158,7 @@ export const niviProfessionalServiceSchema = {
     postalCode: "3233",
     addressCountry: "NO",
   },
-  telephone: "+47 22 12 34 56",
+  telephone: "+47 48 14 88 13",
   email: "post@nivianalyse.no",
 };
 

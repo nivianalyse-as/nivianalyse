@@ -47,7 +47,7 @@ const Personvern = () => {
                   <li>Virksomhet: NIVI Analyse AS</li>
                   <li>Adresse: Solløkkaveien 73, 3233 Sandefjord</li>
                   <li>E-post: post@nivianalyse.no</li>
-                  <li>Telefon: +47 22 12 34 56</li>
+                  <li>Telefon: +47 48 14 88 13</li>
                 </ul>
               </section>
 

@@ -71,11 +71,11 @@ const Footer = () => {
                 <span className="group-hover:underline underline-offset-4 decoration-[0.5px]">post@nivianalyse.no</span>
               </a>
               <a
-                href="tel:+4722123456"
+                href="tel:+4748148813"
                 className="group flex items-center gap-2.5 text-white/85 hover:text-white transition-colors text-[15px] leading-[1.5] focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-offset-2 focus-visible:ring-offset-[#07342F] rounded"
               >
                 <Phone className="w-4 h-4 flex-shrink-0 opacity-70 group-hover:opacity-100 transition-opacity" />
-                <span className="group-hover:underline underline-offset-4 decoration-[0.5px]">+47 22 12 34 56</span>
+                <span className="group-hover:underline underline-offset-4 decoration-[0.5px]">+47 48 14 88 13</span>
               </a>
               <div className="flex items-start gap-2.5 text-white/85 text-[15px] leading-[1.5]">
                 <MapPin className="w-4 h-4 flex-shrink-0 mt-0.5 opacity-70" />
