@@ -30,66 +30,6 @@ export const articles: ArticleContent[] = [
     pdfUrl: "/docs/Havard_Moes_10_rad.pdf"
   },
   {
-    id: "2",
-    type: "article",
-    title: "Økonomisk bærekraft i små kommuner",
-    excerpt: "Hvordan sikre langsiktig økonomisk stabilitet i møte med demografiske endringer?",
-    date: "5. jan 2025",
-    category: "Kommuneøkonomi",
-    slug: "okonomisk-barekraft-sma-kommuner",
-    ingress: "Små kommuner møter spesielle utfordringer knyttet til økonomi og demografi. Denne rapporten analyserer strategier for langsiktig bærekraft.",
-    sections: [
-      {
-        title: "Bakgrunn",
-        content: "Mange små kommuner opplever befolkningsnedgang og aldring. Dette påvirker både inntektsgrunnlag og utgiftsbehov."
-      },
-      {
-        title: "Problemstilling",
-        content: "Hvilke grep kan små kommuner ta for å sikre økonomisk handlingsrom i årene fremover?"
-      },
-      {
-        title: "Hva vi gjorde",
-        content: "Vi analyserte økonomiske nøkkeltall for 80 kommuner med under 5000 innbyggere og identifiserte fellestrekk ved de mest robuste."
-      },
-      {
-        title: "Resultat",
-        content: "Kommuner som kombinerer stram driftsstyring med strategiske investeringer i næringsutvikling viser best langsiktig utvikling."
-      }
-    ],
-    relatedTopics: ["Kommuneøkonomi", "Analyse"],
-    authors: ["Håvard Moe"]
-  },
-  {
-    id: "3",
-    type: "article",
-    title: "Politisk ledelse i krisetider",
-    excerpt: "Lærdommer fra pandemien og hvordan kommuner kan styrke sin beredskap.",
-    date: "18. des 2024",
-    category: "Politisk rådgivning",
-    slug: "politisk-ledelse-krisetider",
-    ingress: "Pandemien testet kommunenes evne til rask omstilling og politisk ledelse under press. Hva kan vi lære?",
-    sections: [
-      {
-        title: "Bakgrunn",
-        content: "Covid-19-pandemien satte kommunal beredskap og politisk lederskap på en historisk prøve."
-      },
-      {
-        title: "Problemstilling",
-        content: "Hva kjennetegnet kommuner som håndterte krisen godt, og hvordan kan lærdommene overføres til fremtidig beredskap?"
-      },
-      {
-        title: "Hva vi gjorde",
-        content: "NIVI gjennomførte intervjuer med 25 ordførere og rådmenn om deres erfaringer fra krisehåndteringen."
-      },
-      {
-        title: "Resultat",
-        content: "Tett samspill mellom politisk og administrativ ledelse, kombinert med god kommunikasjon til innbyggerne, var avgjørende suksessfaktorer."
-      }
-    ],
-    relatedTopics: ["Politisk rådgivning", "Organisasjon"],
-    authors: ["Geir Vinsand", "Håvard Moe"]
-  },
-  {
     id: "4",
     type: "article",
     title: "Kommunestruktur 2030: Nye muligheter",
