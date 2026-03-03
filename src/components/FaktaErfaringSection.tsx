@@ -14,9 +14,12 @@ const FaktaErfaringSection = () => {
         <img
           src={faktaBg}
           alt="NIVI Analyse grunnleggere"
+          width={1200}
+          height={800}
           className="w-full h-full object-cover"
           style={{ objectPosition: 'center' }}
           loading="lazy"
+          decoding="async"
         />
       </section>
 
@@ -76,9 +79,12 @@ const FaktaErfaringSection = () => {
             <img
               src={faktaBg}
               alt="NIVI Analyse grunnleggere"
+              width={800}
+              height={533}
               className="w-full object-cover"
               style={{ borderRadius: '8px', objectPosition: 'center' }}
               loading="lazy"
+              decoding="async"
             />
           </div>
         </div>

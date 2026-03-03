@@ -57,6 +57,10 @@ const HeroSection = () => {
           <img
             src={heroImage}
             alt="NIVI Analyse konsulenter"
+            width={1200}
+            height={800}
+            fetchPriority="high"
+            decoding="async"
             className="absolute inset-0 w-full h-full object-cover object-[center_40%]"
           />
         </div>
@@ -101,6 +105,10 @@ const HeroSection = () => {
           <img
             src={heroImage}
             alt="NIVI Analyse konsulenter"
+            width={1200}
+            height={420}
+            loading="lazy"
+            decoding="async"
             className="w-full h-full object-cover object-[center_40%]"
             style={{ height: '420px' }}
           />
@@ -129,11 +137,19 @@ const HeroSection = () => {
               <img
                 src={havardThumb}
                 alt="Håvard Moe"
+                width={80}
+                height={80}
+                loading="lazy"
+                decoding="async"
                 className="w-20 h-20 rounded-full object-cover object-top border-2 border-border"
               />
               <img
                 src={geirThumb}
                 alt="Geir Vinsand"
+                width={80}
+                height={80}
+                loading="lazy"
+                decoding="async"
                 className="w-20 h-20 rounded-full object-cover object-top border-2 border-border"
               />
             </div>
