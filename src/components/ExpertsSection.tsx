@@ -117,6 +117,10 @@ const ExpertsSection = () => {
                 <img
                   src={expert.image}
                   alt={`${expert.name}, ${expert.title}`}
+                  width={600}
+                  height={750}
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover object-[center_15%]"
                 />
               </div>
