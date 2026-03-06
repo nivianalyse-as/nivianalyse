@@ -100,6 +100,8 @@ const ContactForm = () => {
   const [errors, setErrors] = useState<FormErrors>({});
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [turnstileError, setTurnstileError] = useState<string | null>(null);
+  const turnstileRef = useRef<HTMLDivElement>(null);
 
   const validateEmail = (email: string): boolean => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -154,11 +156,37 @@ const ContactForm = () => {
 
     if (!validateForm()) return;
     setLoading(true);
+    setTurnstileError(null);
 
     const form = e.currentTarget;
     const data = new FormData(form);
 
+    // Turnstile verification
+    const turnstileToken = data.get("cf-turnstile-response") as string;
+    if (!turnstileToken) {
+      setTurnstileError("Vennligst bekreft at du ikke er en robot.");
+      setLoading(false);
+      return;
+    }
+
     try {
+      const verifyRes = await fetch("/.netlify/functions/verify-turnstile", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ "cf-turnstile-response": turnstileToken }),
+      });
+      const verifyData = await verifyRes.json();
+
+      if (!verifyData.success) {
+        setTurnstileError("Verifisering mislyktes. Prøv igjen.");
+        // Reset Turnstile widget
+        if ((window as any).turnstile && turnstileRef.current) {
+          (window as any).turnstile.reset(turnstileRef.current);
+        }
+        setLoading(false);
+        return;
+      }
+
       await fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -374,6 +402,16 @@ const ContactForm = () => {
             <p id="consent-error" className="text-[13px] text-red-500 ml-7">{errors.consent}</p>
           )}
         </div>
+
+        {/* Turnstile widget */}
+        <div
+          ref={turnstileRef}
+          className="cf-turnstile"
+          data-sitekey="0x4AAAAAACnWCTQBNCAURIW-"
+        />
+        {turnstileError && (
+          <p className="text-[13px] text-red-500 -mt-2">{turnstileError}</p>
+        )}
 
         <Button
           type="submit"
