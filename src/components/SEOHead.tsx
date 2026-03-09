@@ -15,7 +15,7 @@ const SEOHead = ({
   title = "NIVI Analyse – Uavhengig rådgivning for kommunesektoren",
   description = "NIVI Analyse tilbyr strategisk analyse, kommuneøkonomi og organisasjonsutvikling. Erfarne seniorkonsulenter med direkte tilgang til spisskompetanse for norske kommuner.",
   type = "website",
-  image = "https://lovable.dev/opengraph-image-p98pqg.png",
+  image = "https://nivianalyse.no/nivi-favicon.png",
   url,
   author,
   publishedTime,
