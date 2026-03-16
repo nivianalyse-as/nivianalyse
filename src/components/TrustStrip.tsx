@@ -17,11 +17,26 @@ const TrustStrip = () => {
               Utdanningsnytt
             </a>
             <span className="mx-2 text-primary/30">·</span>
-            <span className="text-primary/75">Kommunal Rapport</span>
+            <a
+              href="#"
+              className="text-primary/75 hover:text-accent hover:underline underline-offset-4 transition-colors duration-200"
+            >
+              Kommunal Rapport
+            </a>
             <span className="mx-2 text-primary/30">·</span>
-            <span className="text-primary/75">NRK</span>
+            <a
+              href="#"
+              className="text-primary/75 hover:text-accent hover:underline underline-offset-4 transition-colors duration-200"
+            >
+              NRK
+            </a>
             <span className="mx-2 text-primary/30">·</span>
-            <span className="text-primary/75">debatt og fagpresse</span>
+            <a
+              href="#"
+              className="text-primary/75 hover:text-accent hover:underline underline-offset-4 transition-colors duration-200"
+            >
+              debatt og fagpresse
+            </a>
           </p>
           <Link 
             to="/i-media" 
