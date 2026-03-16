@@ -10,6 +10,23 @@ import { MediaEntry } from "@/types/media";
 
 export const mediaEntries: MediaEntry[] = [
   {
+    id: 16,
+    title: "Skoler med under 50 elever burde vært forbudt",
+    slug: "skoler-under-50-elever-forbudt",
+    type: "article",
+    source: "Utdanningsnytt",
+    date: "2025-03-14",
+    excerpt: "Håvard Moe, partner og daglig leder i NIVI Analyse, uttaler seg om skolestruktur og minstestørrelser for grunnskoler i Norge.",
+    keyPoints: [
+      "Skoler med under 50 elever er krevende å drifte forsvarlig",
+      "Kommuneøkonomien presser frem strukturendringer",
+      "Behov for tydeligere nasjonale føringer på skolestruktur"
+    ],
+    externalUrl: "https://www.utdanningsnytt.no/kommuneokonomi-skolenedleggelse/skoler-med-under-50-elever-burde-vaert-forbudt/475972",
+    featured: true,
+    tags: ["skolestruktur", "kommuneøkonomi", "utdanning"]
+  },
+  {
     id: 1,
     title: "NRK Debatten: Kommuneøkonomi og prioriteringer",
     slug: "nrk-debatten-kommuneokonomi",
