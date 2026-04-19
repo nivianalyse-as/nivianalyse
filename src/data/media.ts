@@ -10,6 +10,24 @@ import { MediaEntry } from "@/types/media";
 
 export const mediaEntries: MediaEntry[] = [
   {
+    id: 17,
+    title: "Kommuneekspert om Gjøvik og Toten: – Kan ende med at staten overtar",
+    slug: "kommuneekspert-gjovik-toten-staten-overtar",
+    type: "article",
+    source: "Oppland Arbeiderblad",
+    date: "2026-04-18",
+    excerpt: "Håvard Moe kommenterer kommuneøkonomi, statlig styring og risiko for inngrep i Gjøvik og Toten.",
+    keyPoints: [
+      "Kommuneøkonomi i Gjøvik og Toten under press",
+      "Statlig styring og mulig inngrep diskuteres",
+      "Behov for strukturelle grep og tydelige prioriteringer"
+    ],
+    externalUrl: "https://www.oa.no/kommuneekspert-om-gjovik-og-toten-kan-ende-med-at-staten-overtar/s/5-35-2255057",
+    pdfUrl: "/docs/Ostre_Toten_Oppland_Arbeiderblad.pdf",
+    featured: true,
+    tags: ["oppland arbeiderblad", "kommuneøkonomi", "statlig styring"]
+  },
+  {
     id: 16,
     title: "Skoler med under 50 elever burde vært forbudt",
     slug: "skoler-under-50-elever-forbudt",
