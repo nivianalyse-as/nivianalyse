@@ -1,12 +1,11 @@
 import { useState, useMemo } from "react";
-import { Calendar, Newspaper, Radio, ArrowRight, ExternalLink, FileText, Play } from "lucide-react";
+import { Calendar, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import SectionHeader from "@/components/SectionHeader";
 import MediaCard from "@/components/MediaCard";
 import { articles } from "@/data/insights";
 import { mediaEntries } from "@/data/media";
 import { ContentCategory, ArticleContent } from "@/types/content";
-import { MediaEntry } from "@/types/media";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const categories: ContentCategory[] = [
