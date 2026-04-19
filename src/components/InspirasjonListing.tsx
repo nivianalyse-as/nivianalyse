@@ -1,11 +1,12 @@
 import { useState, useMemo } from "react";
-import { Calendar, ArrowRight } from "lucide-react";
+import { Calendar, Newspaper, Radio, ArrowRight, ExternalLink, FileText, Play } from "lucide-react";
 import { Link } from "react-router-dom";
 import SectionHeader from "@/components/SectionHeader";
 import MediaCard from "@/components/MediaCard";
 import { articles } from "@/data/insights";
 import { mediaEntries } from "@/data/media";
 import { ContentCategory, ArticleContent } from "@/types/content";
+import { MediaEntry } from "@/types/media";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const categories: ContentCategory[] = [
@@ -112,21 +113,14 @@ const InspirasjonListing = () => {
           </div>
         )}
 
-        {/* Content grid — fanene styrer datasett. Ingen sammenslåing. */}
+        {/* Content grid */}
         {activeTab === "media" ? (
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
             {sortedMedia.map((entry) => (
               <MediaCard key={entry.id} entry={entry} />
             ))}
-            {sortedMedia.length === 0 && (
-              <div className="text-center py-16 col-span-full">
-                <p className="text-muted-foreground text-lg">
-                  Ingen medieoppslag funnet.
-                </p>
-              </div>
-            )}
           </div>
-        ) : (
+        ) : activeTab === "artikler" ? (
           <>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
               {filteredArticles.map((item) => (
@@ -134,6 +128,50 @@ const InspirasjonListing = () => {
               ))}
             </div>
             {filteredArticles.length === 0 && (
+              <div className="text-center py-16">
+                <p className="text-muted-foreground text-lg">
+                  Ingen innhold funnet for valgt filter.
+                </p>
+              </div>
+            )}
+          </>
+        ) : (
+          <>
+            {/* "Alle" tab: combined articles + media sorted by date */}
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
+              {(() => {
+                const monthMap: Record<string, string> = {
+                  jan: "01", feb: "02", mar: "03", apr: "04", mai: "05", jun: "06",
+                  jul: "07", aug: "08", sep: "09", okt: "10", nov: "11", des: "12"
+                };
+                const parseNorDate = (d: string) => {
+                  const parts = d.replace(/\./g, "").trim().split(/\s+/);
+                  if (parts.length === 3) {
+                    const [day, mon, year] = parts;
+                    return new Date(`${year}-${monthMap[mon.toLowerCase()] || "01"}-${day.padStart(2, "0")}`);
+                  }
+                  return new Date(0);
+                };
+                type MixedItem = { kind: "article"; data: ArticleContent } | { kind: "media"; data: MediaEntry };
+                const articleItems: MixedItem[] = filteredArticles.map(a => ({ kind: "article", data: a }));
+                const mediaItems: MixedItem[] = activeFilter === "Alle" || activeFilter === "I media" || activeFilter === "Debatt/NRK"
+                  ? sortedMedia.map(m => ({ kind: "media", data: m }))
+                  : [];
+                const combined = [...articleItems, ...mediaItems].sort((a, b) => {
+                  const getDate = (item: MixedItem) => {
+                    if (item.kind === "article") return parseNorDate(item.data.date);
+                    return item.data.date ? new Date(item.data.date) : new Date(0);
+                  };
+                  return getDate(b).getTime() - getDate(a).getTime();
+                });
+                return combined.map((item) =>
+                  item.kind === "media"
+                    ? <MediaCard key={`m-${item.data.id}`} entry={item.data} />
+                    : <ArticleCard key={`a-${item.data.id}`} item={item.data} />
+                );
+              })()}
+            </div>
+            {filteredArticles.length === 0 && sortedMedia.length === 0 && (
               <div className="text-center py-16">
                 <p className="text-muted-foreground text-lg">
                   Ingen innhold funnet for valgt filter.
