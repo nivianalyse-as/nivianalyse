@@ -10,34 +10,6 @@ import { ArticleContent } from "@/types/content";
 
 export const articles: ArticleContent[] = [
   {
-    id: "gjovik-toten-staten-overtar",
-    type: "article",
-    title: "Kommuneekspert om Gjøvik og Toten: – Kan ende med at staten overtar",
-    excerpt: "Håvard Moe om kommuneøkonomi, statlig styring og risiko for inngrep i Gjøvik, Vestre Toten og Østre Toten.",
-    date: "18. apr 2026",
-    category: "Kommuneøkonomi",
-    slug: "gjovik-toten-staten-overtar",
-    ingress: "Håvard Moe analyserer den økonomiske situasjonen i Gjøvik og Toten og advarer om at utviklingen kan føre til statlig overtakelse. Saken berører sentrale spørsmål innen kommuneøkonomi, økonomisk handlingsrom og statlig styring av kommunesektoren.",
-    sections: [
-      {
-        title: "Bakgrunn",
-        content: "Håvard Moe, én av Norges mest profilerte kommuneøkonomer, vurderer den økonomiske situasjonen i Vestre Toten, Østre Toten og Gjøvik – tre kommuner som nå utreder sammenslåing til Toten kommune. Moe peker på at hovedutfordringen ikke er penger, men evnen til å omstille tjenestene i takt med endringene i innbyggernes alderssammensetning."
-      },
-      {
-        title: "Risiko for statlig overtakelse",
-        content: "Moe advarer om at dersom kommunene ikke klarer å flytte ressurser fra skole og oppvekst til helse og omsorg – og sikre nok arbeidskraft der behovet er størst – vil staten innen 10–15 år måtte overta de tyngste kommunale helsetjenestene gjennom statlige foretak."
-      },
-      {
-        title: "Vurdering av sammenslåing",
-        content: "Moe støtter sammenslåing til Toten kommune. Han peker på stordriftsfordeler, effektivitetsgevinster på rundt 90 millioner kroner årlig i administrasjon, samt videreføring av basistilskudd som om kommunene var tre separate enheter de neste 20 årene – tilsvarende nær én milliard kroner ekstra i statlige overføringer."
-      }
-    ],
-    relatedTopics: ["Kommuneøkonomi", "Statlig styring", "Kommuneforvaltning"],
-    authors: ["Håvard Moe"],
-    externalUrl: "https://www.oa.no/kommuneekspert-om-gjovik-og-toten-kan-ende-med-at-staten-overtar/s/5-35-2255057",
-    pdfUrl: "/docs/Ostre_Toten_Oppland_Arbeiderblad.pdf"
-  },
-  {
     id: "10-rad",
     type: "article",
     title: "Håvard Moes 10 råd for bærekraftig kommuneøkonomi",

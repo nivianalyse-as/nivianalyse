@@ -271,6 +271,24 @@ export const mediaEntries: MediaEntry[] = [
     tags: ["nrk", "debatt", "kommuneøkonomi"]
   },
   {
+    id: 17,
+    title: "Kommuneekspert om Gjøvik og Toten: – Kan ende med at staten overtar",
+    slug: "gjovik-toten-staten-overtar",
+    type: "article",
+    source: "Oppland Arbeiderblad",
+    date: "2026-04-18",
+    excerpt: "Håvard Moe kommenterer kommuneøkonomien i Gjøvik og Toten og vurderer risiko for statlig overtakelse.",
+    keyPoints: [
+      "Kommuneøkonomi i Gjøvik, Vestre Toten og Østre Toten",
+      "Risiko for statlig overtakelse av tunge helsetjenester",
+      "Vurdering av sammenslåing til Toten kommune"
+    ],
+    externalUrl: "https://www.oa.no/kommuneekspert-om-gjovik-og-toten-kan-ende-med-at-staten-overtar/s/5-35-2255057",
+    pdfUrl: "/docs/Ostre_Toten_Oppland_Arbeiderblad.pdf",
+    featured: true,
+    tags: ["oppland arbeiderblad", "kommuneøkonomi", "statlig styring"]
+  },
+  {
     id: 15,
     title: "Ikke statens feil at kommunene ikke vil",
     slug: "kommunal-rapport-ikke-statens-feil",
