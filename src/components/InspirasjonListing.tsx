@@ -112,14 +112,21 @@ const InspirasjonListing = () => {
           </div>
         )}
 
-        {/* Content grid */}
+        {/* Content grid — fanene styrer datasett. Ingen sammenslåing. */}
         {activeTab === "media" ? (
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
             {sortedMedia.map((entry) => (
               <MediaCard key={entry.id} entry={entry} />
             ))}
+            {sortedMedia.length === 0 && (
+              <div className="text-center py-16 col-span-full">
+                <p className="text-muted-foreground text-lg">
+                  Ingen medieoppslag funnet.
+                </p>
+              </div>
+            )}
           </div>
-        ) : activeTab === "artikler" ? (
+        ) : (
           <>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
               {filteredArticles.map((item) => (
@@ -127,37 +134,6 @@ const InspirasjonListing = () => {
               ))}
             </div>
             {filteredArticles.length === 0 && (
-              <div className="text-center py-16">
-                <p className="text-muted-foreground text-lg">
-                  Ingen innhold funnet for valgt filter.
-                </p>
-              </div>
-            )}
-          </>
-        ) : (
-          <>
-            {/* "Alle" tab: artikler og media renderes separat fra hver sin datakilde */}
-            {filteredArticles.length > 0 && (
-              <div className="mb-12">
-                <h2 className="text-xl md:text-2xl font-semibold text-primary mb-6">Artikler</h2>
-                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
-                  {filteredArticles.map((item) => (
-                    <ArticleCard key={`a-${item.id}`} item={item} />
-                  ))}
-                </div>
-              </div>
-            )}
-            {(activeFilter === "Alle" || activeFilter === "I media" || activeFilter === "Debatt/NRK") && sortedMedia.length > 0 && (
-              <div>
-                <h2 className="text-xl md:text-2xl font-semibold text-primary mb-6">NIVI i media</h2>
-                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
-                  {sortedMedia.map((entry) => (
-                    <MediaCard key={`m-${entry.id}`} entry={entry} />
-                  ))}
-                </div>
-              </div>
-            )}
-            {filteredArticles.length === 0 && sortedMedia.length === 0 && (
               <div className="text-center py-16">
                 <p className="text-muted-foreground text-lg">
                   Ingen innhold funnet for valgt filter.
