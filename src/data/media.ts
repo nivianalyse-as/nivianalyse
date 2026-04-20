@@ -16,9 +16,9 @@ export const mediaEntries: MediaEntry[] = [
     type: "article",
     source: "Oppland Arbeiderblad",
     date: "2026-04-18",
-    excerpt: "Håvard Moe kommenterer kommuneøkonomi, statlig styring og risiko for inngrep i Gjøvik og Toten.",
+    excerpt: "Håvard Moe kommenterer kommuneøkonomi, statlig styring og risiko for inngrep i Gjøvik og Østre og Vestre Toten kommuner.",
     keyPoints: [
-      "Kommuneøkonomi i Gjøvik og Toten under press",
+      "Kommuneøkonomien i Gjøvik og Østre og Vestre Toten kommuner under press",
       "Statlig styring og mulig inngrep diskuteres",
       "Behov for strukturelle grep og tydelige prioriteringer"
     ],
