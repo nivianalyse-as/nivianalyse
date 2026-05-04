@@ -10,6 +10,60 @@ import { MediaEntry } from "@/types/media";
 
 export const mediaEntries: MediaEntry[] = [
   {
+    id: 20,
+    title: "Åmot får knallhard kritikk",
+    slug: "amot-far-knallhard-kritikk",
+    type: "article",
+    source: "Østlendingen",
+    date: "2026-04-16",
+    excerpt: "Håvard Moe, daglig leder i NIVI Analyse, retter sterk kritikk mot manglende helhetlig styring av økonomien i Åmot kommune.",
+    keyPoints: [
+      "En helhetlig KOSTRA-analyse avdekker store utfordringer i økonomistyringen",
+      "Åmot må omstille kraftig for å unngå ROBEK",
+      "Svak økonomistyring henger sammen med svak forvaltningspraksis"
+    ],
+    externalUrl: "https://www.ostlendingen.no/amot-kommune-i-okonomisk-ufore-far-kritikk-for-manglende-kontroll/s/80-69-248175",
+    pdfUrl: "/docs/Ostlendingen_Amot_16.04.26.pdf",
+    featured: true,
+    tags: ["østlendingen", "kommuneøkonomi", "åmot", "robek"]
+  },
+  {
+    id: 19,
+    title: "Fleire eldre, færre unge – korleis ser Seljord kommune ut om ti eller tjue år?",
+    slug: "seljord-fleire-eldre-faerre-unge",
+    type: "article",
+    source: "Vest Telemark Blad",
+    date: "2026-04-15",
+    excerpt: "Håvard Moe deltok på folkemøte i Seljord og understreket behovet for tydelige prioriteringer i møte med demografiske endringer.",
+    keyPoints: [
+      "Flere eldre og færre unge",
+      "Vi må tørre å ta debatten om hva vi skal prioritere i fremtiden",
+      "Det å ikke velge er også et valg"
+    ],
+    externalUrl: "https://www.vtb.no/nyhende/fleire-eldre-faerre-unge-korleis-ser-seljord-kommune-ut-om-ti-eller-tjue-ar/635967",
+    pdfUrl: "/docs/VTB_Seljord_15.04.26.pdf",
+    featured: false,
+    tags: ["vest telemark blad", "demografi", "seljord", "prioriteringer"]
+  },
+  {
+    id: 18,
+    title: "Nå skal sparekniven kvesses",
+    slug: "vinje-na-skal-sparekniven-kvesses",
+    type: "article",
+    source: "Vest Telemark Blad",
+    date: "2026-04-11",
+    excerpt: "Håvard Moe fra NIVI Analyse la frem underveisrapport for formannskapet i Vinje 9. april og advarte om kurs mot ROBEK innen 2030 dersom det ikke tas grep.",
+    keyPoints: [
+      "Kunnskapsbasert omstilling basert på gode økonomiske analyser",
+      "Medvirkning fra hele organisasjonen",
+      "Tøffe men nødvendige valg"
+    ],
+    externalUrl: "https://www.vtb.no/nyhende/na-skal-sparekniven-skjerpast/633215",
+    pdfUrl: "/docs/VTB_Vinje_11.04.26.pdf",
+    featured: false,
+    tags: ["vest telemark blad", "kommuneøkonomi", "vinje", "robek"]
+  },
+  {
     id: 17,
     title: "Kommuneekspert om Gjøvik og Toten: – Kan ende med at staten overtar",
     slug: "kommuneekspert-gjovik-toten-staten-overtar",
