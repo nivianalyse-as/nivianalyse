@@ -10,6 +10,24 @@ import { MediaEntry } from "@/types/media";
 
 export const mediaEntries: MediaEntry[] = [
   {
+    id: 21,
+    title: "Tromsø kommune har ikke dårlig råd – de mangler styring",
+    slug: "itromso-tromso-mangler-styring",
+    type: "article",
+    source: "iTromsø",
+    date: "2026-04-17",
+    excerpt: "Håvard Moe uttaler seg til iTromsø om økonomistyringen og den kommunaløkonomiske bærekraften i Tromsø kommune.",
+    keyPoints: [
+      "Økonom Håvard Moe kritiserer Tromsø kommune for svak økonomistyring",
+      "Tromsø er ikke en fattig kommune, men har økonomiske utfordringer grunnet høye utgifter og stor gjeld",
+      "Kommunen må være villig til upopulære tiltak for å bedre økonomien"
+    ],
+    externalUrl: "https://www.itromso.no/nyheter/n/k0MlR6/kommuneoekonom-om-tromsoe-haelvettes-sytpeisa",
+    pdfUrl: "/docs/iTromso_Tromso_17.04.26.pdf",
+    featured: false,
+    tags: ["itromsø", "kommuneøkonomi", "tromsø", "styring"]
+  },
+  {
     id: 20,
     title: "Åmot får knallhard kritikk",
     slug: "amot-far-knallhard-kritikk",
