@@ -15,7 +15,7 @@ export const mediaEntries: MediaEntry[] = [
     slug: "itromso-tromso-mangler-styring",
     type: "article",
     source: "iTromsø",
-    date: "2026-04-17",
+    date: "2026-05-05T23:33:00",
     excerpt: "Håvard Moe uttaler seg til iTromsø om økonomistyringen og den kommunaløkonomiske bærekraften i Tromsø kommune.",
     keyPoints: [
       "Økonom Håvard Moe kritiserer Tromsø kommune for svak økonomistyring",
@@ -33,7 +33,7 @@ export const mediaEntries: MediaEntry[] = [
     slug: "amot-far-knallhard-kritikk",
     type: "article",
     source: "Østlendingen",
-    date: "2026-04-16",
+    date: "2026-04-30T10:51:00",
     excerpt: "Håvard Moe, daglig leder i NIVI Analyse, retter sterk kritikk mot manglende helhetlig styring av økonomien i Åmot kommune.",
     keyPoints: [
       "En helhetlig KOSTRA-analyse avdekker store utfordringer i økonomistyringen",
@@ -51,7 +51,7 @@ export const mediaEntries: MediaEntry[] = [
     slug: "seljord-fleire-eldre-faerre-unge",
     type: "article",
     source: "Vest Telemark Blad",
-    date: "2026-04-15",
+    date: "2026-04-30T05:30:00",
     excerpt: "Håvard Moe deltok på folkemøte i Seljord og understreket behovet for tydelige prioriteringer i møte med demografiske endringer.",
     keyPoints: [
       "Flere eldre og færre unge",
@@ -69,7 +69,7 @@ export const mediaEntries: MediaEntry[] = [
     slug: "vinje-na-skal-sparekniven-kvesses",
     type: "article",
     source: "Vest Telemark Blad",
-    date: "2026-04-11",
+    date: "2026-04-11T05:30:00",
     excerpt: "Håvard Moe fra NIVI Analyse la frem underveisrapport for formannskapet i Vinje 9. april og advarte om kurs mot ROBEK innen 2030 dersom det ikke tas grep.",
     keyPoints: [
       "Kunnskapsbasert omstilling basert på gode økonomiske analyser",
@@ -87,7 +87,7 @@ export const mediaEntries: MediaEntry[] = [
     slug: "kommuneekspert-gjovik-toten-staten-overtar",
     type: "article",
     source: "Oppland Arbeiderblad",
-    date: "2026-04-18",
+    date: "2026-04-18T12:00:00",
     excerpt: "Håvard Moe kommenterer kommuneøkonomi, statlig styring og risiko for inngrep i Gjøvik og Østre og Vestre Toten kommuner.",
     keyPoints: [
       "Kommuneøkonomien i Gjøvik og Østre og Vestre Toten kommuner under press",
@@ -335,7 +335,7 @@ export const mediaEntries: MediaEntry[] = [
     slug: "kommunal-rapport-brolaper",
     type: "article",
     source: "Kommunal Rapport",
-    date: "2026-02-04",
+    date: "2026-02-04T05:00:00",
     excerpt: "NIVI Analyse ved Geir Vinsand og Håvard Moe kommenterer sammenslåingsprosessen mellom to store kommuner og peker på viktige lærdommer for fremtidige strukturendringer.",
     keyPoints: [
       "Sammenslåingsprosessen mellom to store kommuner",
@@ -366,7 +366,7 @@ export const mediaEntries: MediaEntry[] = [
     slug: "kommunal-rapport-ikke-statens-feil",
     type: "article",
     source: "Kommunal Rapport",
-    date: "2026-02-16",
+    date: "2025-11-12T05:00:00",
     excerpt: "Så lenge Stortinget ikke følger opp de grunnleggende prinsippene for forholdet stat–kommune, blir det ikke orden på økonomien.",
     keyPoints: [
       "Kommuneøkonomi og statlig styring",
