@@ -20,6 +20,7 @@ import FagomradePage from "./pages/FagomradePage";
 import KommuneokonomiRadgivning from "./pages/KommuneokonomiRadgivning";
 import InterkommunaltSamarbeidKartlegging from "./pages/InterkommunaltSamarbeidKartlegging";
 import GuideKommuneokonomi from "./pages/GuideKommuneokonomi";
+import GuideInterkommunaltSamarbeid from "./pages/GuideInterkommunaltSamarbeid";
 import Takk from "./pages/Takk";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
@@ -72,6 +73,7 @@ const App = () => (
             <Route path="/kommuneokonomi-radgivning" element={<KommuneokonomiRadgivning />} />
             <Route path="/interkommunalt-samarbeid-kartlegging" element={<InterkommunaltSamarbeidKartlegging />} />
             <Route path="/guide/kommuneokonomi-norske-kommuner" element={<GuideKommuneokonomi />} />
+            <Route path="/guide/interkommunalt-samarbeid-norge" element={<GuideInterkommunaltSamarbeid />} />
             <Route path="/om-oss" element={<OmOss />} />
             <Route path="/takk" element={<Takk />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
