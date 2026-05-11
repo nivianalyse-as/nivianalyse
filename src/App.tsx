@@ -67,6 +67,7 @@ const App = () => (
             <Route path="/rapportarkiv" element={<Navigate to="/publikasjoner" replace />} />
             <Route path="/rapportarkiv/:year" element={<RedirectRapportarkivYear />} />
             <Route path="/fagomrader/:slug" element={<FagomradePage />} />
+            <Route path="/kommuneokonomi-radgivning" element={<KommuneokonomiRadgivning />} />
             <Route path="/om-oss" element={<OmOss />} />
             <Route path="/takk" element={<Takk />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
