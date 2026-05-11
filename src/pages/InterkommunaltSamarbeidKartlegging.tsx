@@ -71,8 +71,9 @@ const InterkommunaltSamarbeidKartlegging = () => {
   return (
     <div className="min-h-screen">
       <SEOHead
-        title="Kartlegging av interkommunalt samarbeid | NIVI Analyse"
-        description="NIVI Analyse er et ledende fagmiljø på fylkesvis kartlegging av interkommunalt samarbeid: oversikt, analyse, erfaringsinnhenting og anbefalinger for et mer strukturert samarbeidsbilde."
+        title="Kartlegging av interkommunalt samarbeid — NIVI Analyse"
+        description="NIVI Analyse gjennomfører fylkesvise kartlegginger av interkommunalt samarbeid for Statsforvaltere og fylkeskommuner. Erfaring fra Agder, Østfold, Møre og Romsdal og flere."
+        canonical="https://nivianalyse.no/interkommunalt-samarbeid-kartlegging"
       />
       <Header />
       <main id="main-content">
