@@ -85,8 +85,9 @@ const GuideInterkommunaltSamarbeid = () => {
   return (
     <div className="min-h-screen">
       <SEOHead
-        title="Interkommunalt samarbeid i Norge — hva det er og hvordan det fungerer | NIVI Analyse"
-        description="Faglig guide til interkommunalt samarbeid i Norge: IKS, vertskommunemodellen, samarbeidsavtaler og regionråd — fordeler, utfordringer og kartlegging fra NIVI Analyse."
+        title="Interkommunalt samarbeid i Norge — hva det er og hvordan det fungerer"
+        description="Guide til interkommunalt samarbeid: IKS, vertskommunemodellen, samarbeidsavtaler og regionråd. Fra NIVI Analyse — ett av Norges ledende fagmiljøer på kommunesamarbeid."
+        canonical="https://nivianalyse.no/guide/interkommunalt-samarbeid-norge"
       />
       <Header />
       <main id="main-content">

@@ -94,8 +94,9 @@ const GuideKommuneokonomi = () => {
   return (
     <div className="min-h-screen">
       <SEOHead
-        title="Kommuneøkonomi i norske kommuner — en faglig guide | NIVI Analyse"
-        description="Faglig guide til kommuneøkonomi: inntekter, utgifter, netto driftsresultat, KOSTRA, ROBEK og omstilling i norske kommuner — fra NIVI Analyse."
+        title="Kommuneøkonomi i norske kommuner — faglig guide fra NIVI Analyse"
+        description="Hva er kommuneøkonomi? Lær om KOSTRA, netto driftsresultat, ROBEK og omstilling. Faglig guide fra NIVI Analyse med 200+ analyser fra norsk kommunesektor."
+        canonical="https://nivianalyse.no/guide/kommuneokonomi-norske-kommuner"
       />
       <Header />
       <main id="main-content">

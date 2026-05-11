@@ -86,8 +86,9 @@ const KommuneokonomiRadgivning = () => {
   return (
     <div className="min-h-screen">
       <SEOHead
-        title="Kommuneøkonomi-rådgivning for norske kommuner | NIVI Analyse"
-        description="Uavhengig kommuneøkonomi-rådgivning fra NIVI Analyse: KOSTRA-analyse, kommunekompass, omstillingsstøtte og rammesak — basert på 200+ analyser i norsk kommunesektor."
+        title="Kommuneøkonomi-rådgivning for norske kommuner — NIVI Analyse"
+        description="NIVI Analyse tilbyr KOSTRA-analyse, kommunekompassevaluering og omstillingsstøtte. 300+ bistådde kommuner. Ta kontakt for en uforpliktende samtale."
+        canonical="https://nivianalyse.no/kommuneokonomi-radgivning"
       />
       <Header />
       <main id="main-content">
