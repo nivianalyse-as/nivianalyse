@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useParams, Link, Navigate } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import Header from "@/components/Header";
@@ -9,6 +10,27 @@ import { getFagomradeBySlug } from "@/data/fagomrader";
 const FagomradePage = () => {
   const { slug } = useParams<{ slug: string }>();
   const fag = getFagomradeBySlug(slug || "");
+
+  useEffect(() => {
+    if (!fag || !fag.faq?.length) return;
+    const jsonLd = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: fag.faq.map((q) => ({
+        "@type": "Question",
+        name: q.question,
+        acceptedAnswer: { "@type": "Answer", text: q.answer },
+      })),
+    };
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.id = `faq-jsonld-${fag.slug}`;
+    script.textContent = JSON.stringify(jsonLd);
+    document.head.appendChild(script);
+    return () => {
+      script.remove();
+    };
+  }, [fag]);
 
   if (!fag) return <Navigate to="/" replace />;
 
