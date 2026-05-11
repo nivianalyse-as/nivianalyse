@@ -16,6 +16,7 @@ import RapportDetail from "./pages/RapportDetail";
 import TemaPage from "./pages/TemaPage";
 import AarsPage from "./pages/AarsPage";
 import OmOss from "./pages/OmOss";
+import FagomradePage from "./pages/FagomradePage";
 import Takk from "./pages/Takk";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
@@ -64,6 +65,7 @@ const App = () => (
             {/* 301-style redirects from old /rapportarkiv paths */}
             <Route path="/rapportarkiv" element={<Navigate to="/publikasjoner" replace />} />
             <Route path="/rapportarkiv/:year" element={<RedirectRapportarkivYear />} />
+            <Route path="/fagomrader/:slug" element={<FagomradePage />} />
             <Route path="/om-oss" element={<OmOss />} />
             <Route path="/takk" element={<Takk />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

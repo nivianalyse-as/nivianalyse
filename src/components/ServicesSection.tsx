@@ -1,36 +1,6 @@
+import { Link } from "react-router-dom";
 import SectionHeader from "@/components/SectionHeader";
-
-interface Fagomrade {
-  title: string;
-  description: string;
-}
-
-const fagomrader: Fagomrade[] = [
-  {
-    title: "Kommuneøkonomi og omstilling",
-    description: "Analyse og styringsgrunnlag for bærekraftig kommuneøkonomi.",
-  },
-  {
-    title: "Organisasjonsutvikling",
-    description: "Struktur og ledelse i krevende omstillingsprosesser.",
-  },
-  {
-    title: "Interkommunalt samarbeid",
-    description: "Kartlegging og analyse av formalisert interkommunalt samarbeid.",
-  },
-  {
-    title: "Strukturreformer",
-    description: "Utredning og prosessledelse ved kommunesammenslåing.",
-  },
-  {
-    title: "Beredskap og samfunnssikkerhet",
-    description: "Organisering og styrking av kommunal beredskap.",
-  },
-  {
-    title: "Foredrag og debatt",
-    description: "Faglige analyser og bidrag i offentlig debatt.",
-  },
-];
+import { fagomrader } from "@/data/fagomrader";
 
 const ServicesSection = () => {
   return (
@@ -45,8 +15,9 @@ const ServicesSection = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {fagomrader.map((fag) => (
-            <div
-              key={fag.title}
+            <Link
+              key={fag.slug}
+              to={`/fagomrader/${fag.slug}`}
               className="group bg-card border border-border/50 p-5 md:p-7 flex flex-col rounded-xl shadow-[0_2px_10px_rgba(0,0,0,0.04)] transition-all duration-200 ease-in-out cursor-pointer md:hover:-translate-y-1 md:hover:shadow-[0_8px_24px_rgba(0,0,0,0.08)] md:hover:border-primary/30"
             >
               <h3
@@ -58,7 +29,7 @@ const ServicesSection = () => {
               <p style={{ fontSize: '15px', color: 'hsl(168, 20%, 28%)', lineHeight: 1.65 }}>
                 {fag.description}
               </p>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
