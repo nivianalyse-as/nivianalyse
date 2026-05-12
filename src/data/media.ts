@@ -10,6 +10,24 @@ import { MediaEntry } from "@/types/media";
 
 export const mediaEntries: MediaEntry[] = [
   {
+    id: 22,
+    title: "Vega kommune må ta grep om driften",
+    slug: "banett-vega-ma-ta-grep",
+    type: "article",
+    source: "BAnett",
+    date: "2026-05-11T08:00:00",
+    excerpt: "Altfor mye penger renner ut, mener Håvard Moe som advarer om at Vega kommune kan bli innmeldt i ROBEK innen kort tid dersom det ikke gjennomføres kraftig omstilling.",
+    keyPoints: [
+      "Vega må omstille kraftig for ikke å bli innmeldt i ROBEK i 2028",
+      "Kostnadsveksten har vært langt høyere enn inntektsveksten",
+      "Det vil handle om vilje. Nå haster det"
+    ],
+    externalUrl: "https://www.banett.no/nyheter/n/K86j66/ekspert-slakter-kommunens-oekonomiske-styring",
+    pdfUrl: "/docs/BAnett_Vega_11.05.26.pdf",
+    featured: false,
+    tags: ["banett", "kommuneøkonomi", "vega", "robek"]
+  },
+  {
     id: 21,
     title: "Tromsø kommune har ikke dårlig råd – de mangler styring",
     slug: "itromso-tromso-mangler-styring",
