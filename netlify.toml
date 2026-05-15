@@ -1,0 +1,24 @@
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/wp-content/*"
+  to = "/404"
+  status = 404
+
+[[redirects]]
+  from = "/wp-admin/*"
+  to = "/404"
+  status = 404
+
+[[redirects]]
+  from = "/index.php"
+  to = "/404"
+  status = 404
+
+[[redirects]]
+  from = "/category/*"
+  to = "/404"
+  status = 404
