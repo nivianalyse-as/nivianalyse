@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { CheckCircle } from "lucide-react";
@@ -7,6 +8,7 @@ import { CheckCircle } from "lucide-react";
 const Takk = () => {
   return (
     <div className="min-h-screen flex flex-col">
+      <SEOHead canonicalOnly />
       <Header />
       <main className="flex-1 flex items-center justify-center px-6 py-24 md:py-32">
         <div className="max-w-xl text-center space-y-6">
