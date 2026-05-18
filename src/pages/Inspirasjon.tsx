@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 import InspirasjonListing from "@/components/InspirasjonListing";
 
 const collectionSchema = {
@@ -15,6 +16,7 @@ const collectionSchema = {
 const Inspirasjon = () => {
   return (
     <div className="min-h-screen">
+      <SEOHead canonicalOnly />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema) }}
