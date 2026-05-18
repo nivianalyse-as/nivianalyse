@@ -1,6 +1,7 @@
 import { useParams, Link, Navigate } from "react-router-dom";
 import { ArrowLeft, Calendar, User, Tag, ExternalLink, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import SEOHead from "@/components/SEOHead";
 import { articles } from "@/data/insights";
 import { mediaEntries } from "@/data/media";
 import { ArticleContent } from "@/types/content";
