@@ -75,7 +75,9 @@ const ArticleDetail = () => {
   // Render based on content type
   if (item.type === "article") {
     return (
-      <article className="bg-background">
+      <>
+        <SEOHead canonicalOnly />
+        <article className="bg-background">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
