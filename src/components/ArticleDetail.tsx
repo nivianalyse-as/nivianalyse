@@ -1,6 +1,7 @@
 import { useParams, Link, Navigate } from "react-router-dom";
 import { ArrowLeft, Calendar, User, Tag, ExternalLink, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import SEOHead from "@/components/SEOHead";
 import { articles } from "@/data/insights";
 import { mediaEntries } from "@/data/media";
 import { ArticleContent } from "@/types/content";
@@ -74,7 +75,9 @@ const ArticleDetail = () => {
   // Render based on content type
   if (item.type === "article") {
     return (
-      <article className="bg-background">
+      <>
+        <SEOHead canonicalOnly />
+        <article className="bg-background">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
@@ -198,6 +201,7 @@ const ArticleDetail = () => {
           </div>
         </div>
       </article>
+      </>
     );
   }
 

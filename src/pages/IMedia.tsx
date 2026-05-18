@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Search, ChevronLeft } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 import MediaCard from "@/components/MediaCard";
 import { Input } from "@/components/ui/input";
 import {
@@ -66,6 +67,7 @@ const IMedia = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead canonicalOnly />
       <Header />
       <main className="pt-20 md:pt-24">
         {/* Hero Section */}

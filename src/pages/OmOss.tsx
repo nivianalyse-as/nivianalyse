@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 import SectionHeader from "@/components/SectionHeader";
 import ExpertsSection from "@/components/ExpertsSection";
 import { FileText, Download } from "lucide-react";
@@ -7,6 +8,7 @@ import { FileText, Download } from "lucide-react";
 const OmOss = () => {
   return (
     <div className="min-h-screen">
+      <SEOHead canonicalOnly />
       <Header />
       <main id="main-content">
         {/* NIVIs historie */}

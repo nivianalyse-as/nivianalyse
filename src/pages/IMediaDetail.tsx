@@ -2,6 +2,7 @@ import { useParams, Link, Navigate } from "react-router-dom";
 import { ChevronLeft, ExternalLink, Download, Play, Calendar, Building2 } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 import MediaCard from "@/components/MediaCard";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -38,6 +39,7 @@ const IMediaDetail = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead canonicalOnly />
       <Header />
       <main className="pt-20 md:pt-24">
         {/* Hero Section */}

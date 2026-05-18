@@ -191,7 +191,7 @@ const Rapportarkiv = () => {
       <SEOHead
         title="Publikasjoner | NIVI Analyse"
         description="Utredninger og analyser om interkommunalt samarbeid, kommunereform og regional utvikling fra NIVI Analyse. Arkiv med rapporter, notater og samarbeidsrapporter fra 2006 til i dag."
-        canonical="https://nivi.no/publikasjoner"
+        canonical="https://nivianalyse.no/publikasjoner"
       />
       <script
         type="application/ld+json"
