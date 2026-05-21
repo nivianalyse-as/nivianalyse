@@ -10,6 +10,25 @@ import { MediaEntry } from "@/types/media";
 
 export const mediaEntries: MediaEntry[] = [
   {
+    id: 23,
+    title: "Kommunesystemet styrer mot kollaps",
+    slug: "vikebladet-kommunesystemet-styrer-mot-kollaps",
+    type: "article",
+    source: "Vikebladet",
+    date: "2026-05-16T14:15:00",
+    excerpt: "Geir Vinsand meiner dagens kommuneorganisering er ute av kontroll og at nasjonale styresmakter ikkje tek alvoret innover seg.",
+    keyPoints: [
+      "Kommunesystemet styrer mot kollaps",
+      "Nasjonale politikarar tek ikkje innover seg alvoret",
+      "Vinsand foreslår regionkommunar med rettleiande innbyggjartal på 15–20.000",
+      "Slike einingar ville vore sterke nok til å sikre forsvarlege tenester og redusere avhengigheit av staten"
+    ],
+    externalUrl: "https://www.vikebladet.no/nyhende/n/xrMkgB/staten-har-ingen-kontroll-med-kommunane",
+    pdfUrl: "/docs/Vikebladet_mai_2026.pdf",
+    featured: false,
+    tags: ["vikebladet", "kommunestruktur", "regionkommunar"]
+  },
+  {
     id: 22,
     title: "Vega kommune må ta grep om driften",
     slug: "banett-vega-ma-ta-grep",
