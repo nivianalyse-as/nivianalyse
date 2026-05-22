@@ -9,36 +9,8 @@ const TrustStrip = () => {
           <h2 className="text-[1.35rem] md:text-[1.55rem] font-semibold text-primary tracking-[-0.01em]">
             NIVI i media
           </h2>
-          <div className="flex flex-wrap items-center justify-center gap-x-1 gap-y-2 text-[15px] md:text-base">
-            <a
-              href="https://www.utdanningsnytt.no/kommuneokonomi-skolenedleggelse/skoler-med-under-50-elever-burde-vaert-forbudt/475972"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-primary/75 hover:text-accent hover:underline underline-offset-4 transition-colors duration-200"
-            >
-              Utdanningsnytt
-            </a>
-            <span className="mx-2 text-primary/30">·</span>
-            <a
-              href="#"
-              className="text-primary/75 hover:text-accent hover:underline underline-offset-4 transition-colors duration-200"
-            >
-              Kommunal Rapport
-            </a>
-            <span className="mx-2 text-primary/30">·</span>
-            <a
-              href="#"
-              className="text-primary/75 hover:text-accent hover:underline underline-offset-4 transition-colors duration-200"
-            >
-              NRK
-            </a>
-            <span className="mx-2 text-primary/30">·</span>
-            <a
-              href="#"
-              className="text-primary/75 hover:text-accent hover:underline underline-offset-4 transition-colors duration-200"
-            >
-              debatt og fagpresse
-            </a>
+          <div className="flex flex-wrap items-center justify-center gap-x-1 gap-y-2 text-[15px] md:text-base text-primary/75">
+            Kommunal rapport – NRK – Regional og lokal presse – debatt og fagpresse
           </div>
           <Link 
             to="/i-media" 
