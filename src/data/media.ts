@@ -10,6 +10,25 @@ import { MediaEntry } from "@/types/media";
 
 export const mediaEntries: MediaEntry[] = [
   {
+    id: 24,
+    title: "Har liten tro på regjeringens varslede oppfølgingsordning",
+    slug: "kommunal-rapport-oppfolgingsordning-cowboykommuner",
+    type: "article",
+    source: "Kommunal Rapport",
+    date: "2026-05-22T05:00:00",
+    excerpt: "Geir Vinsand mener regjeringens varslede oppfølgingsordning for kommuner med manglende kontroll neppe vil styrke innbyggernes rettssikkerhet.",
+    keyPoints: [
+      "Geir Vinsand tviler på den varslede oppfølgingsordningen",
+      "Han tar til orde for et Jusbek-register for kommuner med vedvarende og alvorlig svikt",
+      "Registeret skal omfatte kommuner med omfattende lovbrudd, sviktende rettssikkerhet og uforsvarlige tjenester",
+      "Vinsand mener statlig grep haster"
+    ],
+    externalUrl: "https://www.kommunal-rapport.no/nyheter/har-liten-tro-pa-regjeringens-varslede-oppfolgingsordning/861071",
+    pdfUrl: "/docs/KR_Geir_oppfolging_cowboykommuner_22.05.26.pdf",
+    featured: false,
+    tags: ["kommunal rapport", "rettssikkerhet", "statlig styring"]
+  },
+  {
     id: 23,
     title: "Kommunesystemet styrer mot kollaps",
     slug: "vikebladet-kommunesystemet-styrer-mot-kollaps",
