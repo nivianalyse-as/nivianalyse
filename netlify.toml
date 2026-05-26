@@ -1,24 +1,85 @@
+## Gamle WordPress-URL-er — returner 410 Gone (må stå FØR SPA fallback)
+[[redirects]]
+  from = "/wp-content/*"
+  to = "/410.html"
+  status = 410
+  force = true
+
+[[redirects]]
+  from = "/wp-admin/*"
+  to = "/410.html"
+  status = 410
+  force = true
+
+[[redirects]]
+  from = "/index.php"
+  to = "/410.html"
+  status = 410
+  force = true
+
+[[redirects]]
+  from = "/category/*"
+  to = "/410.html"
+  status = 410
+  force = true
+
+# Gamle WordPress datostier: /2018/05/slug, /2020/..., osv.
+[[redirects]]
+  from = "/2018/*"
+  to = "/410.html"
+  status = 410
+  force = true
+
+[[redirects]]
+  from = "/2019/*"
+  to = "/410.html"
+  status = 410
+  force = true
+
+[[redirects]]
+  from = "/2020/*"
+  to = "/410.html"
+  status = 410
+  force = true
+
+[[redirects]]
+  from = "/2021/*"
+  to = "/410.html"
+  status = 410
+  force = true
+
+[[redirects]]
+  from = "/2022/*"
+  to = "/410.html"
+  status = 410
+  force = true
+
+[[redirects]]
+  from = "/2023/*"
+  to = "/410.html"
+  status = 410
+  force = true
+
+[[redirects]]
+  from = "/2024/*"
+  to = "/410.html"
+  status = 410
+  force = true
+
+[[redirects]]
+  from = "/2025/*"
+  to = "/410.html"
+  status = 410
+  force = true
+
+[[redirects]]
+  from = "/2026/*"
+  to = "/410.html"
+  status = 410
+  force = true
+
+# SPA fallback (må stå sist)
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
-
-[[redirects]]
-  from = "/wp-content/*"
-  to = "/404"
-  status = 404
-
-[[redirects]]
-  from = "/wp-admin/*"
-  to = "/404"
-  status = 404
-
-[[redirects]]
-  from = "/index.php"
-  to = "/404"
-  status = 404
-
-[[redirects]]
-  from = "/category/*"
-  to = "/404"
-  status = 404
