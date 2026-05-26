@@ -1,3 +1,8 @@
+# Spam query-URL-er — 410 Gone (må stå FØR SPA fallback)
+/*  s=:any        /410.html  410!
+/*  option=:any   /410.html  410!
+/*  format=:any   /410.html  410!
+
 # Gamle WordPress-URL-er — 410 Gone (må stå FØR SPA fallback)
 /wp-content/*   /410.html   410!
 /wp-admin/*     /410.html   410!
