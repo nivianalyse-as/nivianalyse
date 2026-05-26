@@ -1,1 +1,17 @@
-/*    /index.html   200
+# Gamle WordPress-URL-er — 410 Gone (må stå FØR SPA fallback)
+/wp-content/*   /410.html   410!
+/wp-admin/*     /410.html   410!
+/index.php      /410.html   410!
+/category/*     /410.html   410!
+/2018/*         /410.html   410!
+/2019/*         /410.html   410!
+/2020/*         /410.html   410!
+/2021/*         /410.html   410!
+/2022/*         /410.html   410!
+/2023/*         /410.html   410!
+/2024/*         /410.html   410!
+/2025/*         /410.html   410!
+/2026/*         /410.html   410!
+
+# SPA fallback
+/*              /index.html 200
