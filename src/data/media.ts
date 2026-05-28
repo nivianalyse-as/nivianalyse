@@ -10,6 +10,41 @@ import { MediaEntry } from "@/types/media";
 
 export const mediaEntries: MediaEntry[] = [
   {
+    id: 26,
+    title: "Ordfører ville ikke følt seg trygg med å ha foreldrene på sykehjem",
+    slug: "nrk-sapmi-ordforer-trygg-sykehjem",
+    type: "article",
+    source: "NRK Sápmi",
+    date: "2026-05-26T06:26:42",
+    excerpt: "Oppfølgingssak om sykehjemsdebatt og kommunenes beredskap for den demografiske utviklingen. Håvard Moe peker på systemsvikt og manglende langsiktig styring.",
+    keyPoints: [
+      "Kommunesektoren er ikke forberedt på eldrebølgen",
+      "Kapasitetsutfordringene handler om arbeidskraft, ikke bare økonomi",
+      "Manglende styring forverrer situasjonen"
+    ],
+    externalUrl: "https://www.nrk.no/sapmi/ordforer-ville-ikke-folt-seg-trygg-med-a-ha-foreldrene-pa-sykehjem-1.17876303",
+    featured: false,
+    tags: ["nrk", "sápmi", "eldreomsorg", "sykehjem"]
+  },
+  {
+    id: 25,
+    title: "Sykehjemsfrykten: – Vi bryter menneskerettigheter hver dag",
+    slug: "nrk-sapmi-sykehjemsfrykten-menneskerettigheter",
+    type: "article",
+    source: "NRK Sápmi",
+    date: "2026-05-25T14:05:05",
+    excerpt: "Kommune-Norge står overfor enorme utfordringer som de ikke er forberedt på. Krisen består ikke av et økende antall eldre, men mangelen på titusenvis av ansatte som skal ta vare på de gamle, sier Håvard Moe, partner i NIVI Analyse.",
+    keyPoints: [
+      "Antall innbyggere over 80 år dobler seg, men det blir ikke flere hender i arbeid",
+      "Kommunesektoren har i liten grad realistiske planer for hvordan utfordringen skal håndteres",
+      "Vi må diskutere om vi skal flytte brukerne til arbeidskraften – ikke motsatt",
+      "Lokalpolitikere unngår å løfte temaet fordi det gir lite politisk gevinst"
+    ],
+    externalUrl: "https://www.nrk.no/sapmi/xl/sykehjemsfrykten_-_-vi-bryter-menneskerettigheter-hver-dag-1.17811131",
+    featured: false,
+    tags: ["nrk", "sápmi", "eldreomsorg", "sykehjem"]
+  },
+  {
     id: 24,
     title: "Har liten tro på regjeringens varslede oppfølgingsordning",
     slug: "kommunal-rapport-oppfolgingsordning-cowboykommuner",
