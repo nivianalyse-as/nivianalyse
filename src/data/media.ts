@@ -10,6 +10,24 @@ import { MediaEntry } from "@/types/media";
 
 export const mediaEntries: MediaEntry[] = [
   {
+    id: 27,
+    title: "– Nå skal det kuttes drastisk i kommunen",
+    slug: "hamar-arbeiderblad-stange-kuttes-drastisk",
+    type: "article",
+    source: "Hamar Arbeiderblad",
+    date: "2026-05-27T22:22:00",
+    excerpt: "Håvard Moe, partner i NIVI Analyse, skal bistå Stange kommune i en omfattende omstillingsprosess. Kommunen må omstille for 125 millioner kroner for å sikre bærekraftig kommuneøkonomi og unngå ROBEK. Moe varsler tøffe tiltak som vil berøre både innbyggere, tjenester og ansatte.",
+    keyPoints: [
+      "Stange har omstilt – men for lite, for sakte og for sent",
+      "Kommunen risikerer ROBEK innen 2030 dersom det ikke gjennomføres omstillinger på minimum 100 millioner innen 2029",
+      "NIVI skal sammen med administrasjonen utarbeide forslag til kutt og nye inntekter som danner grunnlag for ny økonomiplan og budsjett",
+      "25–40 «arbeidspakker» skal ferdigstilles for å synliggjøre effektiviseringsmuligheter"
+    ],
+    externalUrl: "https://www.h-a.no/na-skal-det-kuttes-drastisk-i-kommunen-det-blir-veldig-toffe-tak-som-kommer-til-a-ga-utover-innbyggere-tjenester-og-ansatte/s/5-139-2013091",
+    featured: false,
+    tags: ["hamar arbeiderblad", "kommuneøkonomi", "stange", "robek"]
+  },
+  {
     id: 26,
     title: "Ordfører ville ikke følt seg trygg med å ha foreldrene på sykehjem",
     slug: "nrk-sapmi-ordforer-trygg-sykehjem",
