@@ -24,6 +24,7 @@ export const mediaEntries: MediaEntry[] = [
       "25–40 «arbeidspakker» skal ferdigstilles for å synliggjøre effektiviseringsmuligheter"
     ],
     externalUrl: "https://www.h-a.no/na-skal-det-kuttes-drastisk-i-kommunen-det-blir-veldig-toffe-tak-som-kommer-til-a-ga-utover-innbyggere-tjenester-og-ansatte/s/5-139-2013091",
+    pdfUrl: "/docs/HA_Stange_27.05.26.pdf",
     featured: false,
     tags: ["hamar arbeiderblad", "kommuneøkonomi", "stange", "robek"]
   },
