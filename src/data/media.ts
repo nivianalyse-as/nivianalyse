@@ -10,6 +10,26 @@ import { MediaEntry } from "@/types/media";
 
 export const mediaEntries: MediaEntry[] = [
   {
+    id: 28,
+    title: "Kommuneekspert spår ROBEK for Hadsel: – Dere kommer ikke på ROBEK fordi dere har dårlig råd, men fordi dere er dårlig styrt",
+    slug: "bladet-vesteralen-hadsel-robek",
+    type: "article",
+    source: "Bladet Vesterålen",
+    date: "2026-06-09T20:11:00",
+    excerpt: "Håvard Moe, partner i NIVI Analyse, holdt innlegg på økonomiseminar for Hadsel kommunestyre og advarte om at kommunen er på vei mot ROBEK dersom det ikke gjennomføres betydelige omstillinger. Han understreket at utfordringen ikke handler om manglende inntekter, men om manglende økonomisk styring.",
+    keyPoints: [
+      "Hadsel kommune har brukt opp fond på 30 millioner kroner på fire år og forventer stort underskudd i 2026",
+      "Kommunen har høyere kostnadsvekst og lavere effektivitet enn landsgjennomsnittet",
+      "Håvard Moe anbefaler omstillinger og prioriteringer i skolesektoren for å møte økende behov innen eldreomsorg",
+      "Han uttrykker sterk tvil om kommunen vil klare å bygge nytt sykehjem med dagens økonomiske situasjon",
+      "Hadsel beskrives som en av landets mest belånte kommuner samtidig som den driver med underskudd"
+    ],
+    externalUrl: "https://www.blv.no/kommune-ekspert-spar-robek-for-hadsel-tviler-pa-om-dere-klarer-a-bygge-sykehjem/s/5-9-945024",
+    pdfUrl: "/docs/BLV_Hadsel_09.06.26.pdf",
+    featured: false,
+    tags: ["bladet vesterålen", "kommuneøkonomi", "hadsel", "robek"]
+  },
+  {
     id: 27,
     title: "– Nå skal det kuttes drastisk i kommunen",
     slug: "hamar-arbeiderblad-stange-kuttes-drastisk",
