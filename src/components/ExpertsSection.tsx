@@ -1,8 +1,8 @@
 import { useState } from "react";
 import geirImage from "@/assets/geir-vinsand.jpg";
 import havardImage from "@/assets/havard-moe.jpg";
-import benteAsset from "@/assets/bente-rudrud-herdlevar.jpg.asset.json";
-import rogerAsset from "@/assets/roger-antonsen.png.asset.json";
+import benteImage from "@/assets/bente-rudrud-herdlevar.jpg";
+import rogerImage from "@/assets/roger-antonsen.jpg";
 import SectionHeader from "@/components/SectionHeader";
 import {
   Dialog,
@@ -99,7 +99,7 @@ const experts: Expert[] = [
   {
     name: "Bente Rudrud Hærdlevær",
     title: "Seniorrådgiver",
-    image: benteAsset.url,
+    image: benteImage,
     expertise: [
       "Ledelse",
       "Omstilling",
@@ -130,7 +130,7 @@ const experts: Expert[] = [
   {
     name: "Roger A. Antonsen",
     title: "Seniorrådgiver",
-    image: rogerAsset.url,
+    image: rogerImage,
     expertise: [
       "Ledelse",
       "Økonomi og regnskap",
