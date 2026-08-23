@@ -23,14 +23,14 @@ const HeroSection = () => {
               className="font-semibold text-foreground animate-fade-in"
               style={{ fontSize: 'clamp(2.2rem, 3vw, 3.6rem)', lineHeight: 1.15, letterSpacing: '-0.01em' }}
             >
-              NIVI Analyse tilbyr spisskompetanse på kommunal utvikling og omstilling
+            {heroTitle}
             </h1>
 
             <p
               className="text-muted-foreground max-w-[480px] animate-fade-in-delay-1"
               style={{ fontSize: 'clamp(1.05rem, 1.2vw, 1.25rem)', lineHeight: 1.6, marginTop: '44px' }}
             >
-              Uavhengig rådgivning for kommuner som vil styrke økonomi, styring og tjenesteutvikling.
+              {heroLead}
             </p>
 
             <div className="flex gap-6 animate-fade-in-delay-2 mt-10">
