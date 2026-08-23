@@ -1,8 +1,6 @@
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/nivi-team-hero.jpg";
 
-import geirThumb from "@/assets/geir-vinsand.jpg";
-import havardThumb from "@/assets/havard-moe.jpg";
 
 const HeroSection = () => {
   const scrollToSection = (href: string) => {
@@ -133,27 +131,19 @@ const HeroSection = () => {
               Håvard Moe og Geir&nbsp;Vinsand tilbyr uavhengig rådgivning for kommuner som vil styrke økonomi, styring og tjenesteutvikling.
             </p>
 
-            {/* Expert thumbnails */}
-            <div className="flex justify-center gap-3 mt-8 animate-fade-in-delay-1">
+            {/* Hero image (samme kilde som desktop) */}
+            <div className="flex justify-center mt-8 animate-fade-in-delay-1">
               <img
-                src={havardThumb}
-                alt="Håvard Moe"
-                width={80}
-                height={80}
+                src={heroImage}
+                alt="NIVI Analyse konsulenter"
+                width={1200}
+                height={675}
                 loading="lazy"
                 decoding="async"
-                className="w-20 h-20 rounded-full object-cover object-top border-2 border-border"
-              />
-              <img
-                src={geirThumb}
-                alt="Geir Vinsand"
-                width={80}
-                height={80}
-                loading="lazy"
-                decoding="async"
-                className="w-20 h-20 rounded-full object-cover object-top border-2 border-border"
+                className="w-full h-auto rounded-lg object-cover"
               />
             </div>
+
 
             <div className="animate-fade-in-delay-2 mt-8">
               <Button
