@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
-import heroAsset from "@/assets/nivi-team-hero.png.asset.json";
+import heroImage from "@/assets/nivi-team-hero.jpg";
 
-const heroImage = heroAsset.url;
 import geirThumb from "@/assets/geir-vinsand.jpg";
 import havardThumb from "@/assets/havard-moe.jpg";
 
