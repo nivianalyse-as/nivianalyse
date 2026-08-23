@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/nivi-team-hero.jpg";
 
+const heroTitle = "NIVI Analyse tilbyr spisskompetanse på kommunal utvikling og omstilling";
+const heroLead = "Uavhengig rådgivning for kommuner som vil styrke økonomi, styring og tjenesteutvikling.";
 
 const HeroSection = () => {
   const scrollToSection = (href: string) => {
@@ -21,14 +23,14 @@ const HeroSection = () => {
               className="font-semibold text-foreground animate-fade-in"
               style={{ fontSize: 'clamp(2.2rem, 3vw, 3.6rem)', lineHeight: 1.15, letterSpacing: '-0.01em' }}
             >
-              NIVI Analyse tilbyr spisskompetanse på kommunal utvikling og omstilling
+            {heroTitle}
             </h1>
 
             <p
               className="text-muted-foreground max-w-[480px] animate-fade-in-delay-1"
               style={{ fontSize: 'clamp(1.05rem, 1.2vw, 1.25rem)', lineHeight: 1.6, marginTop: '44px' }}
             >
-              Uavhengig rådgivning for kommuner som vil styrke økonomi, styring og tjenesteutvikling.
+              {heroLead}
             </p>
 
             <div className="flex gap-6 animate-fade-in-delay-2 mt-10">
@@ -73,13 +75,13 @@ const HeroSection = () => {
               className="text-3xl font-semibold text-foreground animate-fade-in"
               style={{ lineHeight: 1.2, letterSpacing: '-0.01em' }}
             >
-              NIVI Analyse tilbyr spisskompetanse på kommunal utvikling og omstilling
+              {heroTitle}
             </h1>
             <p
               className="text-base text-muted-foreground max-w-[460px] animate-fade-in-delay-1"
               style={{ lineHeight: 1.65, marginTop: '32px' }}
             >
-              Uavhengig rådgivning for kommuner som vil styrke økonomi, styring og tjenesteutvikling.
+              {heroLead}
             </p>
             <div className="flex gap-5 animate-fade-in-delay-2 mt-8">
               <Button
@@ -122,13 +124,13 @@ const HeroSection = () => {
               className="text-2xl font-semibold text-foreground animate-fade-in"
               style={{ lineHeight: 1.2, letterSpacing: '-0.01em' }}
             >
-              Spisskompetanse på kommunal utvikling og omstilling
+              {heroTitle}
             </h1>
             <p
               className="text-[15px] text-muted-foreground animate-fade-in-delay-1"
               style={{ lineHeight: 1.65, marginTop: '20px' }}
             >
-              Håvard Moe og Geir&nbsp;Vinsand tilbyr uavhengig rådgivning for kommuner som vil styrke økonomi, styring og tjenesteutvikling.
+              {heroLead}
             </p>
 
             {/* Hero image (samme kilde som desktop) */}
