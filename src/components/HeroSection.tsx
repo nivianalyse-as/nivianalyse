@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/nivi-team-hero.jpg";
 
+const heroTitle = "NIVI Analyse tilbyr spisskompetanse på kommunal utvikling og omstilling";
+const heroLead = "Uavhengig rådgivning for kommuner som vil styrke økonomi, styring og tjenesteutvikling.";
 
 const HeroSection = () => {
   const scrollToSection = (href: string) => {
