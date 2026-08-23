@@ -75,13 +75,13 @@ const HeroSection = () => {
               className="text-3xl font-semibold text-foreground animate-fade-in"
               style={{ lineHeight: 1.2, letterSpacing: '-0.01em' }}
             >
-              NIVI Analyse tilbyr spisskompetanse på kommunal utvikling og omstilling
+              {heroTitle}
             </h1>
             <p
               className="text-base text-muted-foreground max-w-[460px] animate-fade-in-delay-1"
               style={{ lineHeight: 1.65, marginTop: '32px' }}
             >
-              Uavhengig rådgivning for kommuner som vil styrke økonomi, styring og tjenesteutvikling.
+              {heroLead}
             </p>
             <div className="flex gap-5 animate-fade-in-delay-2 mt-8">
               <Button
