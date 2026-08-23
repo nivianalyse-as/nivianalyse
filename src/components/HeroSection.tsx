@@ -1,8 +1,6 @@
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/nivi-team-hero.jpg";
 
-import geirThumb from "@/assets/geir-vinsand.jpg";
-import havardThumb from "@/assets/havard-moe.jpg";
 
 const HeroSection = () => {
   const scrollToSection = (href: string) => {
