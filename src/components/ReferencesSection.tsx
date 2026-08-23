@@ -39,8 +39,8 @@ const ReferencesSection = () => {
     <section
       id="referanser"
       style={{
-        paddingTop: '132px',
-        paddingBottom: '132px',
+        paddingTop: '112px',
+        paddingBottom: '112px',
         backgroundColor: '#E3ECE8',
       }}
     >

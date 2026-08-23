@@ -31,7 +31,7 @@ const ArticlesSection = () => {
     .slice(0, 3);
 
   return (
-    <section id="inspirasjon" style={{ paddingTop: '128px', paddingBottom: '128px', backgroundColor: '#FFFFFF' }}>
+    <section id="inspirasjon" style={{ paddingTop: '112px', paddingBottom: '112px', backgroundColor: '#FFFFFF' }}>
       <div className="container-narrow">
         <div style={{ marginBottom: '64px' }}>
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4">

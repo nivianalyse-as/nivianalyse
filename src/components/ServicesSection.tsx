@@ -4,7 +4,7 @@ import { fagomrader } from "@/data/fagomrader";
 
 const ServicesSection = () => {
   return (
-    <section id="fagomrader" className="md:bg-background" style={{ paddingTop: '128px', paddingBottom: '128px', backgroundColor: '#F1F5F3' }}>
+    <section id="fagomrader" className="md:bg-background" style={{ paddingTop: '112px', paddingBottom: '112px', backgroundColor: '#F1F5F3' }}>
       <div className="mx-auto px-5 sm:px-6 lg:px-8" style={{ maxWidth: '1100px' }}>
         <div style={{ marginBottom: '64px' }}>
           <SectionHeader

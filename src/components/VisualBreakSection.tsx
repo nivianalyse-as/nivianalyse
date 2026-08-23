@@ -2,7 +2,7 @@ import visualBreakImage from "@/assets/nivi-havard-bente.jpg";
 
 const VisualBreakSection = () => {
   return (
-    <section className="w-full bg-background" style={{ paddingTop: '88px', paddingBottom: '88px' }}>
+    <section className="w-full bg-background" style={{ paddingTop: '96px', paddingBottom: '96px' }}>
       <div className="max-w-6xl mx-auto px-6">
         <div className="rounded-2xl overflow-hidden shadow-sm">
           <img

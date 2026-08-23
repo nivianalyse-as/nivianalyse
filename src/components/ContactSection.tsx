@@ -4,7 +4,7 @@ import SectionHeader from "@/components/SectionHeader";
 
 const ContactSection = () => {
   return (
-    <section id="kontakt" className="bg-background" style={{ paddingTop: '144px', paddingBottom: '144px' }}>
+    <section id="kontakt" className="bg-background" style={{ paddingTop: '112px', paddingBottom: '112px' }}>
       <div style={{ maxWidth: '1140px', marginLeft: 'auto', marginRight: 'auto', paddingLeft: '1.25rem', paddingRight: '1.25rem' }} className="sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20">
           {/* Left column - Info */}
