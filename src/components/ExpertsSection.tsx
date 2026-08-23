@@ -177,9 +177,11 @@ const ExpertsSection = () => {
                 <p className="text-primary font-semibold text-sm mb-0.5">
                   {expert.title}
                 </p>
-                <p className="text-primary/60 text-xs mb-4">
-                  {expert.secondaryRole}
-                </p>
+                {expert.secondaryRole && (
+                  <p className="text-primary/60 text-xs mb-4">
+                    {expert.secondaryRole}
+                  </p>
+                )}
                 
                 <div className="flex flex-wrap gap-2 mb-4">
                   {expert.expertise.map((skill) => (
@@ -196,22 +198,29 @@ const ExpertsSection = () => {
                   {expert.description}
                 </p>
 
-                <div className="text-sm mb-4 space-y-1" style={{ color: 'hsl(168, 20%, 28%)', lineHeight: 1.65 }}>
-                  <p>
-                    Mobil:{" "}
-                    <a href={`tel:${expert.phone.replace(/\s/g, "")}`} className="hover:text-accent transition-colors">
-                      {expert.phone}
-                    </a>
-                  </p>
-                  <p>
-                    E-post:{" "}
-                    <a href={`mailto:${expert.email}`} className="hover:text-accent transition-colors">
-                      {expert.email}
-                    </a>
-                  </p>
-                </div>
+                {(expert.phone || expert.email) && (
+                  <div className="text-sm mb-4 space-y-1" style={{ color: 'hsl(168, 20%, 28%)', lineHeight: 1.65 }}>
+                    {expert.phone && (
+                      <p>
+                        Mobil:{" "}
+                        <a href={`tel:${expert.phone.replace(/\s/g, "")}`} className="hover:text-accent transition-colors">
+                          {expert.phone}
+                        </a>
+                      </p>
+                    )}
+                    {expert.email && (
+                      <p>
+                        E-post:{" "}
+                        <a href={`mailto:${expert.email}`} className="hover:text-accent transition-colors">
+                          {expert.email}
+                        </a>
+                      </p>
+                    )}
+                  </div>
+                )}
 
                 <div className="flex flex-col gap-2">
+                  {expert.cv && (
                   <Dialog>
                     <DialogTrigger asChild>
                       <Button variant="default" size="sm" className="gap-2 w-full sm:w-auto">
@@ -257,13 +266,16 @@ const ExpertsSection = () => {
                       </div>
                     </DialogContent>
                   </Dialog>
+                  )}
 
-                  <a href={expert.cvPdf} target="_blank" rel="noopener noreferrer">
-                    <Button variant="outline" size="sm" className="gap-2 w-full sm:w-auto">
-                      <Download className="w-3.5 h-3.5" />
-                      Last ned full CV (PDF)
-                    </Button>
-                  </a>
+                  {expert.cvPdf && (
+                    <a href={expert.cvPdf} target="_blank" rel="noopener noreferrer">
+                      <Button variant="outline" size="sm" className="gap-2 w-full sm:w-auto">
+                        <Download className="w-3.5 h-3.5" />
+                        Last ned full CV (PDF)
+                      </Button>
+                    </a>
+                  )}
                 </div>
               </div>
             </div>
