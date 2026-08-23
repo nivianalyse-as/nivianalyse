@@ -1,4 +1,4 @@
-import visualBreakImage from "@/assets/nivi-visual-break.jpg";
+import visualBreakImage from "@/assets/nivi-havard-bente.jpg";
 
 const VisualBreakSection = () => {
   return (
@@ -7,8 +7,8 @@ const VisualBreakSection = () => {
         <div className="rounded-2xl overflow-hidden shadow-sm">
           <img
             src={visualBreakImage}
-            alt="Håvard Moe og Geir Vinsand i møterom – NIVI Analyse"
-            className="w-full h-[400px] md:h-[500px] object-cover object-[85%_center]"
+            alt="Håvard Moe og Bente Rudrud Hærdlevær i samtale – NIVI Analyse"
+            className="w-full h-[400px] md:h-[500px] object-cover object-center"
             loading="lazy"
           />
         </div>
