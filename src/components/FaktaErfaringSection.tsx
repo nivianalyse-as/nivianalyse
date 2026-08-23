@@ -74,19 +74,19 @@ const FaktaErfaringSection = () => {
             </div>
           </div>
 
-          {/* Mobile-only image below stats */}
-          <div className="mt-6 md:hidden">
+          {/* Image below stats */}
+          <div className="mt-12 md:mt-16 rounded-2xl overflow-hidden shadow-sm">
             <img
-              src={faktaBg}
-              alt="NIVI Analyse grunnleggere"
-              width={800}
-              height={533}
-              className="w-full object-cover"
-              style={{ borderRadius: '8px', objectPosition: 'center' }}
+              src={raadgivningImage}
+              alt="Håvard Moe og Geir Vinsand i møte – NIVI Analyse"
+              width={1200}
+              height={675}
+              className="w-full h-[240px] sm:h-[340px] md:h-[460px] object-cover object-center"
               loading="lazy"
               decoding="async"
             />
           </div>
+
         </div>
       </section>
     </>
