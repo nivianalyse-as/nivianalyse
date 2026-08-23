@@ -8,7 +8,7 @@ const MediaSection = () => {
   const featuredMedia = getFeaturedMedia();
 
   return (
-    <section style={{ paddingTop: '128px', paddingBottom: '128px', backgroundColor: '#FFFFFF' }}>
+    <section style={{ paddingTop: '112px', paddingBottom: '112px', backgroundColor: '#FFFFFF' }}>
       <div className="container-narrow">
         {/* Header */}
         <div style={{ marginBottom: '64px' }}>

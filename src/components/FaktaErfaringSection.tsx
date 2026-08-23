@@ -1,4 +1,6 @@
 import faktaBg from "@/assets/fakta-bg-new.jpg";
+import raadgivningImage from "@/assets/nivi-visual-break.jpg";
+
 
 const fakta = [
   { tall: "60+", beskrivelse: "Års samlet erfaring" },
@@ -24,7 +26,7 @@ const FaktaErfaringSection = () => {
       </section>
 
       {/* 2. Text section */}
-      <section style={{ backgroundColor: '#F4F1EA' }} className="py-10 md:py-20">
+      <section style={{ backgroundColor: '#F4F1EA' }} className="py-12 md:py-24">
         <div className="mx-auto px-5 sm:px-6 lg:px-8" style={{ maxWidth: '1100px' }}>
           <h2
             className="font-semibold"
@@ -74,19 +76,19 @@ const FaktaErfaringSection = () => {
             </div>
           </div>
 
-          {/* Mobile-only image below stats */}
-          <div className="mt-6 md:hidden">
+          {/* Image below stats */}
+          <div className="mt-12 md:mt-16 rounded-2xl overflow-hidden shadow-sm">
             <img
-              src={faktaBg}
-              alt="NIVI Analyse grunnleggere"
-              width={800}
-              height={533}
-              className="w-full object-cover"
-              style={{ borderRadius: '8px', objectPosition: 'center' }}
+              src={raadgivningImage}
+              alt="Håvard Moe og Geir Vinsand i møte – NIVI Analyse"
+              width={1200}
+              height={675}
+              className="w-full h-[240px] sm:h-[340px] md:h-[460px] object-cover object-center"
               loading="lazy"
               decoding="async"
             />
           </div>
+
         </div>
       </section>
     </>
