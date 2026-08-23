@@ -1,5 +1,7 @@
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-consultants.jpg";
+import heroAsset from "@/assets/nivi-team-hero.png.asset.json";
+
+const heroImage = heroAsset.url;
 import geirThumb from "@/assets/geir-vinsand.jpg";
 import havardThumb from "@/assets/havard-moe.jpg";
 
@@ -22,7 +24,7 @@ const HeroSection = () => {
               className="font-semibold text-foreground animate-fade-in"
               style={{ fontSize: 'clamp(2.2rem, 3vw, 3.6rem)', lineHeight: 1.15, letterSpacing: '-0.01em' }}
             >
-              Håvard Moe og Geir&nbsp;Vinsand tilbyr spisskompetanse på kommunal utvikling og omstilling
+              NIVI Analyse tilbyr spisskompetanse på kommunal utvikling og omstilling
             </h1>
 
             <p
@@ -74,7 +76,7 @@ const HeroSection = () => {
               className="text-3xl font-semibold text-foreground animate-fade-in"
               style={{ lineHeight: 1.2, letterSpacing: '-0.01em' }}
             >
-              Håvard Moe og Geir&nbsp;Vinsand tilbyr spisskompetanse på kommunal utvikling og omstilling
+              NIVI Analyse tilbyr spisskompetanse på kommunal utvikling og omstilling
             </h1>
             <p
               className="text-base text-muted-foreground max-w-[460px] animate-fade-in-delay-1"
