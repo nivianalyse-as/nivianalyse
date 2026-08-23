@@ -155,11 +155,11 @@ const HeroSection = () => {
           </div>
         </div>
         <HeroImage
-          className="relative overflow-hidden"
-          style={{ maxHeight: '420px', height: '420px' }}
+          className="px-10 pb-12"
           height={420}
-          layout="cover"
+          layout="responsive"
         />
+
       </div>
 
       {/* Mobile (<768px): clean text-only hero */}
