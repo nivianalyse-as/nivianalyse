@@ -26,7 +26,7 @@ const FaktaErfaringSection = () => {
       </section>
 
       {/* 2. Text section */}
-      <section style={{ backgroundColor: '#F4F1EA' }} className="py-10 md:py-20">
+      <section style={{ backgroundColor: '#F4F1EA' }} className="py-12 md:py-24">
         <div className="mx-auto px-5 sm:px-6 lg:px-8" style={{ maxWidth: '1100px' }}>
           <h2
             className="font-semibold"
