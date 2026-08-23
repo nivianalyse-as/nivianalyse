@@ -69,7 +69,7 @@ const FaktaErfaringSection = () => {
               alt="Håvard Moe og Geir Vinsand i møte – NIVI Analyse"
               width={1200}
               height={675}
-              className="w-full h-[240px] sm:h-[340px] md:h-[460px] object-cover object-center"
+              className="w-full h-auto object-contain"
               loading="lazy"
               decoding="async"
             />
