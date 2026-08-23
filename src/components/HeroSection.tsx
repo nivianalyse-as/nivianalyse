@@ -125,14 +125,14 @@ const HeroSection = () => {
           </div>
         </div>
 
-        {/* Right column – image */}
+        {/* Right column – image (full motif, no cropping of people) */}
         <HeroImage
-          className="relative overflow-hidden h-full"
-          style={{ minHeight: '70vh', maxHeight: '820px' }}
+          className="flex items-center justify-center h-full px-8 py-10 bg-background"
           loading="eager"
           height={800}
-          layout="cover"
+          layout="responsive"
         />
+
       </div>
 
       {/* Tablet (768px–1023px): vertical stack */}
