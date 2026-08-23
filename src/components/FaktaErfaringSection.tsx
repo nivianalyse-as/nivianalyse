@@ -1,4 +1,6 @@
 import faktaBg from "@/assets/fakta-bg-new.jpg";
+import raadgivningImage from "@/assets/nivi-visual-break.jpg";
+
 
 const fakta = [
   { tall: "60+", beskrivelse: "Års samlet erfaring" },
