@@ -35,6 +35,7 @@ const Index = () => {
         <TrustStrip />
         <PublikasjonAutoritet />
         <FaktaErfaringSection />
+        <VisualBreakSection />
         <ServicesSection />
         <ReferenceProjectsSection />
         <MediaSection />
