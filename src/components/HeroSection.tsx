@@ -124,13 +124,13 @@ const HeroSection = () => {
               className="text-2xl font-semibold text-foreground animate-fade-in"
               style={{ lineHeight: 1.2, letterSpacing: '-0.01em' }}
             >
-              Spisskompetanse på kommunal utvikling og omstilling
+              {heroTitle}
             </h1>
             <p
               className="text-[15px] text-muted-foreground animate-fade-in-delay-1"
               style={{ lineHeight: 1.65, marginTop: '20px' }}
             >
-              Håvard Moe og Geir&nbsp;Vinsand tilbyr uavhengig rådgivning for kommuner som vil styrke økonomi, styring og tjenesteutvikling.
+              {heroLead}
             </p>
 
             {/* Hero image (samme kilde som desktop) */}
