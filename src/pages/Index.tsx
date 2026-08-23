@@ -35,12 +35,13 @@ const Index = () => {
         <TrustStrip />
         <PublikasjonAutoritet />
         <FaktaErfaringSection />
-        <VisualBreakSection />
         <ServicesSection />
         <ReferenceProjectsSection />
         <MediaSection />
+        <VisualBreakSection />
         <ReferencesSection />
         <ArticlesSection />
+
         <ExpertsSection />
         <ContactSection />
       </main>

@@ -8,9 +8,13 @@ const VisualBreakSection = () => {
           <img
             src={visualBreakImage}
             alt="Håvard Moe og Bente Rudrud Hærdlevær i samtale – NIVI Analyse"
-            className="w-full h-[400px] md:h-[500px] object-cover object-center"
+            width={1920}
+            height={1280}
+            className="w-full h-auto object-contain"
             loading="lazy"
+            decoding="async"
           />
+
         </div>
       </div>
     </section>

@@ -125,14 +125,14 @@ const HeroSection = () => {
           </div>
         </div>
 
-        {/* Right column – image */}
+        {/* Right column – image (full motif, no cropping of people) */}
         <HeroImage
-          className="relative overflow-hidden h-full"
-          style={{ minHeight: '70vh', maxHeight: '820px' }}
+          className="flex items-center justify-center h-full px-8 py-10 bg-background"
           loading="eager"
           height={800}
-          layout="cover"
+          layout="responsive"
         />
+
       </div>
 
       {/* Tablet (768px–1023px): vertical stack */}
@@ -155,11 +155,11 @@ const HeroSection = () => {
           </div>
         </div>
         <HeroImage
-          className="relative overflow-hidden"
-          style={{ maxHeight: '420px', height: '420px' }}
+          className="px-10 pb-12"
           height={420}
-          layout="cover"
+          layout="responsive"
         />
+
       </div>
 
       {/* Mobile (<768px): clean text-only hero */}
