@@ -1,6 +1,8 @@
 import { useState } from "react";
 import geirImage from "@/assets/geir-vinsand.jpg";
 import havardImage from "@/assets/havard-moe.jpg";
+import benteAsset from "@/assets/bente-rudrud-herdlevar.jpg.asset.json";
+import rogerAsset from "@/assets/roger-antonsen.png.asset.json";
 import SectionHeader from "@/components/SectionHeader";
 import {
   Dialog,
@@ -21,17 +23,48 @@ interface ExpertCV {
 interface Expert {
   name: string;
   title: string;
-  secondaryRole: string;
+  secondaryRole?: string;
   image: string;
   expertise: string[];
   description: string;
-  cv: ExpertCV;
-  cvPdf: string;
-  phone: string;
-  email: string;
+  cv?: ExpertCV;
+  cvPdf?: string;
+  phone?: string;
+  email?: string;
 }
 
 const experts: Expert[] = [
+  {
+    name: "Håvard Moe",
+    title: "Partner",
+    secondaryRole: "Daglig leder",
+    image: havardImage,
+    expertise: [
+      "Kommuneøkonomi og ressursbruk",
+      "Organisasjonsgjennomgang",
+      "Strategisk planlegging",
+      "Økonomisk analyse og benchmarking",
+    ],
+    description:
+      "Partner med 25 års erfaring innen kommunal økonomi, organisasjon og styring.",
+    cv: {
+      intro:
+        "Håvard Moe har vært konsulent i kommunesektoren siden 2003, med 23 år i KS Konsulent før han ble daglig leder og partner i NIVI Analyse. Han har gjennomført oppdrag i over 300 kommuner direkte, og nådd enda flere gjennom nettverk og konferanser.",
+      keyExperience: [
+        "Oppdrag i 300+ kommuner med strategi, økonomi, omstilling og organisasjonsutvikling",
+        "Spesialist på KOSTRA-analyse, kommune-kompass og benchmarking",
+        "Programansvarlig og prosjektleder for KOMØK-konferansen (2009–2023) på oppdrag fra KS, KBN, NKK og NKRF",
+        "Foredragsholder om bærekraftig kommuneøkonomi, demografi og arbeidskraft",
+        "Toppledererfaring fra Oslo kommune",
+        "3 år i KS Forskning",
+        "Bred kompetanse innen organisasjons- og lederutvikling",
+      ],
+      education: "Cand.mag. Universitetet i Oslo, Master of Management BI",
+    },
+    cvPdf: "/cv/havard-moe-cv.pdf",
+    phone: "+47 481 48 813",
+    email: "hm@nivianalyse.no",
+  },
   {
     name: "Geir Vinsand",
     title: "Partner",
@@ -44,7 +77,7 @@ const experts: Expert[] = [
       "Beredskap og samfunnssikkerhet",
     ],
     description:
-      "Over 30 års erfaring med analyse og rådgivning i kommunesektoren. Blant Norges mest erfarne eksperter på interkommunalt samarbeid og kommunestruktur, med oppdrag for departementer, statsforvaltere og et stort antall kommuner og regioner.",
+      "Partner med over 30 års erfaring med analyse av kommunal utvikling, organisering og forvaltning.",
     cv: {
       intro:
         "Geir Vinsand er ressursøkonom fra NMBU og en av Norges mest erfarne eksperter på kommunestruktur og interkommunalt samarbeid. Han har bakgrunn fra Næringsdepartementet og Kommunaldepartementet, og har vært sentral i flere av de viktigste utredningene om norsk kommunesektor.",
@@ -64,37 +97,50 @@ const experts: Expert[] = [
     email: "gv@nivianalyse.no",
   },
   {
-    name: "Håvard Moe",
-    title: "Partner",
-    secondaryRole: "Daglig leder",
-    image: havardImage,
+    name: "Bente Rudrud Hærdlevær",
+    title: "Seniorrådgiver",
+    image: benteAsset.url,
     expertise: [
-      "Kommuneøkonomi og ressursbruk",
-      "Organisasjonsgjennomgang",
-      "Strategisk planlegging",
-      "Økonomisk analyse og benchmarking",
+      "Ledelse",
+      "Omstilling",
+      "Plan og strategi",
+      "Sikkerhet og beredskap",
     ],
     description:
-      "Seniorrådgiver innen kommunal økonomi, organisasjon og styring. Har bistått over 300 kommuner med økonomiske analyser, omstillingsprosesser og strategisk utvikling.",
+      "Seniorrådgiver innen kommunal styring og utvikling, herunder organisasjon og økonomi. Har bred erfaring fra omstillingsprosesser med og uten ROBEK, organisasjonsutvikling, interkommunalt samarbeid, planprosesser og strategisk utvikling.",
     cv: {
       intro:
-        "Håvard Moe har vært konsulent i kommunesektoren siden 2003, med 23 år i KS Konsulent før han ble daglig leder og partner i NIVI Analyse. Han har gjennomført oppdrag i over 300 kommuner direkte, og nådd enda flere gjennom nettverk og konferanser.",
+        "Bente Rudrud Hærdlevær har over 25 års toppledererfaring fra offentlig sektor, hvorav de siste 13 årene i kommunal sektor. Hun har vært kommunedirektør og assisterende kommunedirektør i både små og store kommuner, og har i tillegg arbeidet som seniorrådgiver i KS Konsulent.",
       keyExperience: [
-        "Oppdrag i 300+ kommuner med strategi, økonomi, omstilling og organisasjonsutvikling",
-        "Spesialist på KOSTRA-analyse, kommune-kompass og benchmarking",
-        "Programansvarlig og prosjektleder for KOMØK-konferansen (2009–2023) på oppdrag fra KS, KBN, NKK og NKRF",
-        "Foredragsholder om bærekraftig kommuneøkonomi, demografi og arbeidskraft",
-        "Toppledererfaring fra Oslo kommune",
-        "3 år i KS Forskning",
-        "Bred kompetanse innen organisasjons- og lederutvikling",
+        "Kommunedirektør i Nesbyen, kommunaldirektør i Bærum og kommunedirektør i Hurdal",
+        "Ledet strategisk og operativ omstilling av ROBEK-kommune, med forpliktende plan i samspill med KS og statsforvalter",
+        "Inngående kjennskap til inntektssystemet, KOSTRA-analyser og kommunekompassevalueringer",
+        "Prosjektleder for omstillingsprosjekter i blant annet Bodø, Trysil, Rødøy, Østre Toten, Drangedal og Balsfjord",
+        "Evaluering og utvikling av interkommunale samarbeid og eierstyring i Hallingdal, Fosen og Gjøvikregionen",
+        "Strategisk krise- og beredskapsledelse gjennom større hendelser",
+        "Ledet arbeid med planprosesser, samfunnsutvikling, innovasjon og digitalisering",
       ],
-      education: "Cand.mag. Universitetet i Oslo, Master of Management BI",
+      education:
+        "Handelsøkonom, Handelshøyskolen BI. Master of Management (BI) og masterprogram i innovasjonsledelse, Høgskolen i Lillehammer",
     },
-    cvPdf: "/cv/havard-moe-cv.pdf",
-    phone: "+47 481 48 813",
-    email: "hm@nivianalyse.no",
+    cvPdf: "/docs/CV_Bente_Rudrud_Herdlevar.pdf",
+    phone: "+47 95 75 51 01",
+    email: "brh@nivianalyse.no",
+  },
+  {
+    name: "Roger A. Antonsen",
+    title: "Seniorrådgiver",
+    image: rogerAsset.url,
+    expertise: [
+      "Ledelse",
+      "Økonomi og regnskap",
+      "Interimledelse (Management for Hire)",
+    ],
+    description:
+      "Seniorrådgiver innen kommunal økonomistyring og ledelse. Har bred operativ erfaring med kommunale økonomi- og regnskapsprosesser. Lang toppledererfaring fra flere kommuner. Særlig kompetanse innen inntektssystemet, havbrukskommuner og Framsikt.",
   },
 ];
+
 
 const ExpertsSection = () => {
   return (
@@ -131,9 +177,11 @@ const ExpertsSection = () => {
                 <p className="text-primary font-semibold text-sm mb-0.5">
                   {expert.title}
                 </p>
-                <p className="text-primary/60 text-xs mb-4">
-                  {expert.secondaryRole}
-                </p>
+                {expert.secondaryRole && (
+                  <p className="text-primary/60 text-xs mb-4">
+                    {expert.secondaryRole}
+                  </p>
+                )}
                 
                 <div className="flex flex-wrap gap-2 mb-4">
                   {expert.expertise.map((skill) => (
@@ -150,22 +198,29 @@ const ExpertsSection = () => {
                   {expert.description}
                 </p>
 
-                <div className="text-sm mb-4 space-y-1" style={{ color: 'hsl(168, 20%, 28%)', lineHeight: 1.65 }}>
-                  <p>
-                    Mobil:{" "}
-                    <a href={`tel:${expert.phone.replace(/\s/g, "")}`} className="hover:text-accent transition-colors">
-                      {expert.phone}
-                    </a>
-                  </p>
-                  <p>
-                    E-post:{" "}
-                    <a href={`mailto:${expert.email}`} className="hover:text-accent transition-colors">
-                      {expert.email}
-                    </a>
-                  </p>
-                </div>
+                {(expert.phone || expert.email) && (
+                  <div className="text-sm mb-4 space-y-1" style={{ color: 'hsl(168, 20%, 28%)', lineHeight: 1.65 }}>
+                    {expert.phone && (
+                      <p>
+                        Mobil:{" "}
+                        <a href={`tel:${expert.phone.replace(/\s/g, "")}`} className="hover:text-accent transition-colors">
+                          {expert.phone}
+                        </a>
+                      </p>
+                    )}
+                    {expert.email && (
+                      <p>
+                        E-post:{" "}
+                        <a href={`mailto:${expert.email}`} className="hover:text-accent transition-colors">
+                          {expert.email}
+                        </a>
+                      </p>
+                    )}
+                  </div>
+                )}
 
                 <div className="flex flex-col gap-2">
+                  {expert.cv && (
                   <Dialog>
                     <DialogTrigger asChild>
                       <Button variant="default" size="sm" className="gap-2 w-full sm:w-auto">
@@ -211,13 +266,16 @@ const ExpertsSection = () => {
                       </div>
                     </DialogContent>
                   </Dialog>
+                  )}
 
-                  <a href={expert.cvPdf} target="_blank" rel="noopener noreferrer">
-                    <Button variant="outline" size="sm" className="gap-2 w-full sm:w-auto">
-                      <Download className="w-3.5 h-3.5" />
-                      Last ned full CV (PDF)
-                    </Button>
-                  </a>
+                  {expert.cvPdf && (
+                    <a href={expert.cvPdf} target="_blank" rel="noopener noreferrer">
+                      <Button variant="outline" size="sm" className="gap-2 w-full sm:w-auto">
+                        <Download className="w-3.5 h-3.5" />
+                        Last ned full CV (PDF)
+                      </Button>
+                    </a>
+                  )}
                 </div>
               </div>
             </div>
