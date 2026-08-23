@@ -1,4 +1,3 @@
-import faktaBg from "@/assets/fakta-bg-new.jpg";
 import raadgivningImage from "@/assets/nivi-visual-break.jpg";
 
 
@@ -11,22 +10,9 @@ const fakta = [
 const FaktaErfaringSection = () => {
   return (
     <>
-      {/* 1. Full-width image – desktop only */}
-      <section className="hidden md:block w-full overflow-hidden" style={{ height: '70vh' }}>
-        <img
-          src={faktaBg}
-          alt="NIVI Analyse grunnleggere"
-          width={1200}
-          height={800}
-          className="w-full h-full object-cover"
-          style={{ objectPosition: 'center' }}
-          loading="lazy"
-          decoding="async"
-        />
-      </section>
-
-      {/* 2. Text section */}
+      {/* Text section */}
       <section style={{ backgroundColor: '#F4F1EA' }} className="py-12 md:py-24">
+
         <div className="mx-auto px-5 sm:px-6 lg:px-8" style={{ maxWidth: '1100px' }}>
           <h2
             className="font-semibold"
