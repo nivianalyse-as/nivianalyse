@@ -135,10 +135,17 @@ const experts: Expert[] = [
       "Ledelse",
       "Økonomi og regnskap",
       "Interimledelse (Management for Hire)",
+      "Kommuneøkonomi",
+      "Omstilling",
     ],
     description:
-      "Seniorrådgiver innen kommunal økonomistyring og ledelse. Har bred operativ erfaring med kommunale økonomi- og regnskapsprosesser. Lang toppledererfaring fra flere kommuner. Særlig kompetanse innen inntektssystemet, havbrukskommuner og Framsikt.",
+      "Roger A. Antonsen har lang ledererfaring fra Forsvaret og kommunesektoren. Han tilbyr økonomisk rådgivning til kommuner med behov for bedre styring, prioritering og omstilling, og bistår ledere og folkevalgte med å utvikle bærekraftige løsninger.",
+    cvLink: "/eksperter/roger-antonsen",
+    cvPdf: "/docs/CV_Roger_Antonsen.pdf",
+    phone: "+47 916 70 409",
+    email: "ra@nivianalyse.no",
   },
+
 ];
 
 
