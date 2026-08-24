@@ -229,6 +229,14 @@ const ExpertsSection = () => {
                 )}
 
                 <div className="flex flex-col gap-2">
+                  {!expert.cv && expert.cvLink && (
+                    <a href={expert.cvLink} target="_blank" rel="noopener noreferrer">
+                      <Button variant="default" size="sm" className="gap-2 w-full sm:w-auto">
+                        <FileText className="w-3.5 h-3.5" />
+                        Les CV
+                      </Button>
+                    </a>
+                  )}
                   {expert.cv && (
                   <Dialog>
                     <DialogTrigger asChild>
