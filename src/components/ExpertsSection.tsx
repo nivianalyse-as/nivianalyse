@@ -28,6 +28,7 @@ interface Expert {
   expertise: string[];
   description: string;
   cv?: ExpertCV;
+  cvLink?: string;
   cvPdf?: string;
   phone?: string;
   email?: string;
