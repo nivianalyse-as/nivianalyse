@@ -141,7 +141,7 @@ const experts: Expert[] = [
     ],
     description:
       "Roger A. Antonsen har lang ledererfaring fra Forsvaret og kommunesektoren. Han tilbyr økonomisk rådgivning til kommuner med behov for bedre styring, prioritering og omstilling, og bistår ledere og folkevalgte med å utvikle bærekraftige løsninger.",
-    cvLink: "/eksperter/roger-antonsen",
+    cvLink: "/docs/CV_Roger_Antonsen.pdf",
     cvPdf: "/docs/CV_Roger_Antonsen.pdf",
     phone: "+47 916 70 409",
     email: "ra@nivianalyse.no",
