@@ -127,11 +127,13 @@ const HeroSection = () => {
 
         {/* Right column – image (full motif, no cropping of people) */}
         <HeroImage
-          className="flex items-center justify-center h-full px-8 py-10 bg-background"
+          className="flex items-center justify-center h-full pl-2 pr-10 py-10 bg-background"
+          style={{ transform: 'translateX(-16px) scale(1.04)', transformOrigin: 'center' }}
           loading="eager"
           height={800}
           layout="responsive"
         />
+
 
       </div>
 
