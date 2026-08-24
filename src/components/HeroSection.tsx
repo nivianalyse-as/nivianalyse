@@ -144,7 +144,7 @@ const HeroSection = () => {
           <div className="max-w-[560px] text-left">
             <h1
               className="text-3xl font-semibold text-foreground animate-fade-in"
-              style={{ lineHeight: 1.2, letterSpacing: '-0.01em' }}
+              style={{ lineHeight: 1.2, letterSpacing: '-0.01em', textWrap: 'balance' }}
             >
               {heroData.title}
             </h1>
