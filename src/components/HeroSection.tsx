@@ -103,7 +103,7 @@ const HeroSection = () => {
   return (
     <section id="top" className="relative">
       {/* Desktop (>=1024px): 2-column grid, min-height 70vh */}
-      <div className="hidden lg:grid lg:grid-cols-[1fr_1fr] items-center" style={{ minHeight: '70vh', maxHeight: '820px' }}>
+      <div className="hidden lg:grid lg:grid-cols-[0.94fr_1.06fr] items-center" style={{ minHeight: '70vh', maxHeight: '820px' }}>
         {/* Left column – content */}
         <div className="flex items-center justify-center bg-background px-12 lg:px-20 h-full">
           <div style={{ maxWidth: '640px' }} className="text-left">
