@@ -74,6 +74,7 @@ const App = () => (
             <Route path="/kommuneokonomi-radgivning" element={<KommuneokonomiRadgivning />} />
             <Route path="/interkommunalt-samarbeid-kartlegging" element={<InterkommunaltSamarbeidKartlegging />} />
             <Route path="/guide/kommuneokonomi-norske-kommuner" element={<GuideKommuneokonomi />} />
+            <Route path="/eksperter/roger-antonsen" element={<EkspertRogerAntonsen />} />
             <Route path="/guide/interkommunalt-samarbeid-norge" element={<GuideInterkommunaltSamarbeid />} />
             <Route path="/om-oss" element={<OmOss />} />
             <Route path="/takk" element={<Takk />} />
