@@ -1,4 +1,4 @@
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link } from "@/lib/router-compat";
 import { ArrowLeft, ArrowRight, Download } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import Header from "@/components/Header";

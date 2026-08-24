@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
 import { X, Settings, Shield, BarChart3, Megaphone } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import {
   Dialog,
   DialogContent,
@@ -48,6 +48,7 @@ const CookieConsent = () => {
       const timer = setTimeout(() => setIsVisible(true), 1000);
       return () => clearTimeout(timer);
     }
+    return undefined;
   }, []);
 
   const applyConsentSettings = (consent: ConsentPreferences) => {

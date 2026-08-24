@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import { ArrowRight, Newspaper, Video, MessageSquare, FileText, Headphones } from "lucide-react";
 import { MediaEntry, mediaTypeLabels } from "@/types/media";
 import { Badge } from "@/components/ui/badge";

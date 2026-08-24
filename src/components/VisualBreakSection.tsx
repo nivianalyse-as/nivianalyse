@@ -4,7 +4,7 @@ const VisualBreakSection = () => {
   return (
     <section className="w-full bg-background" style={{ paddingTop: '96px', paddingBottom: '96px' }}>
       <div className="max-w-6xl mx-auto px-6">
-        <div className="rounded-2xl overflow-hidden shadow-sm">
+        <div className="rounded-2xl overflow-hidden shadow-xs">
           <img
             src={visualBreakImage}
             alt="Håvard Moe og Bente Rudrud Hærdlevær i samtale – NIVI Analyse"

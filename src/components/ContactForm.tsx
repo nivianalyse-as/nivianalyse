@@ -11,7 +11,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import { Loader2 } from "lucide-react";
 
 interface FormData {
@@ -42,7 +42,7 @@ const topics = [
 
 const SuccessMessage = ({ onReset }: { onReset: () => void }) => (
   <div
-    className="bg-card border border-primary/[0.08] rounded-[20px] p-6 md:p-10 shadow-sm max-w-lg"
+    className="bg-card border border-primary/[0.08] rounded-[20px] p-6 md:p-10 shadow-xs max-w-lg"
     style={{ animation: 'fade-in 250ms ease-out both' }}
   >
     <h2
@@ -225,6 +225,25 @@ const ContactForm = () => {
     }
   }, [submitted]);
 
+  // Render Turnstile explicitly after hydration — the implicit cf-turnstile
+  // scan mutates the DOM before React hydrates and causes a hydration mismatch.
+  useEffect(() => {
+    const el = turnstileRef.current;
+    if (!el) return undefined;
+    const tryRender = () => {
+      const ts = (window as any).turnstile;
+      if (ts && el.childElementCount === 0) {
+        ts.render(el, { sitekey: "0x4AAAAAACnWCTQBNCAURIW-" });
+      }
+      return !!ts;
+    };
+    if (tryRender()) return undefined;
+    const id = setInterval(() => {
+      if (tryRender()) clearInterval(id);
+    }, 200);
+    return () => clearInterval(id);
+  }, [submitted]);
+
   if (submitted) {
     return (
       <div ref={formRef}>
@@ -241,7 +260,7 @@ const ContactForm = () => {
       data-netlify="true"
       data-netlify-honeypot="bot-field"
       onSubmit={handleSubmit}
-      className="bg-card border border-primary/[0.08] rounded-[20px] p-6 md:p-10 shadow-sm max-w-lg"
+      className="bg-card border border-primary/[0.08] rounded-[20px] p-6 md:p-10 shadow-xs max-w-lg"
       noValidate
     >
       <input type="hidden" name="form-name" value="kontakt" />
@@ -403,12 +422,9 @@ const ContactForm = () => {
           )}
         </div>
 
-        {/* Turnstile widget */}
-        <div
-          ref={turnstileRef}
-          className="cf-turnstile"
-          data-sitekey="0x4AAAAAACnWCTQBNCAURIW-"
-        />
+        {/* Turnstile widget — rendered explicitly in useEffect (no cf-turnstile
+            class, so the implicit scan can't mutate the DOM before hydration) */}
+        <div ref={turnstileRef} />
         {turnstileError && (
           <p className="text-[13px] text-red-500 -mt-2">{turnstileError}</p>
         )}
@@ -416,7 +432,7 @@ const ContactForm = () => {
         <Button
           type="submit"
           disabled={loading}
-          className="w-full h-12 bg-accent hover:bg-accent/90 text-accent-foreground font-semibold rounded-xl text-[15px] transition-all duration-200 shadow-sm hover:shadow-md disabled:opacity-60"
+          className="w-full h-12 bg-accent hover:bg-accent/90 text-accent-foreground font-semibold rounded-xl text-[15px] transition-all duration-200 shadow-xs hover:shadow-md disabled:opacity-60"
         >
           {loading ? (
             <span className="flex items-center gap-2">

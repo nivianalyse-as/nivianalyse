@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import { ArrowRight, Calendar, Newspaper } from "lucide-react";
 import SectionHeader from "@/components/SectionHeader";
 import { articles } from "@/data/insights";

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "@/lib/router-compat";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Mail, Phone, MapPin } from "lucide-react";
 import {
@@ -108,7 +108,7 @@ const Header = () => {
       {/* Skip to content link for accessibility */}
       <a
         href="#main-content"
-        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-primary focus:text-primary-foreground focus:rounded-md focus:outline-none focus:ring-2 focus:ring-accent"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-primary focus:text-primary-foreground focus:rounded-md focus:outline-hidden focus:ring-2 focus:ring-accent"
       >
         Hopp til hovedinnhold
       </a>
@@ -126,7 +126,7 @@ const Header = () => {
           <Link
             to="/"
             onClick={() => handleNavClick("/")}
-            className="flex items-center focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-md group"
+            className="flex items-center focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-md group"
           >
             <span className="text-primary text-[20px] sm:text-[22px] md:text-[24px] font-bold tracking-[-0.025em]">
               NIVI
@@ -154,7 +154,7 @@ const Header = () => {
 
             {/* Hamburger Menu Button - ALWAYS visible */}
             <button
-              className="p-3 -mr-2 rounded-xl hover:bg-muted/50 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+              className="p-3 -mr-2 rounded-xl hover:bg-muted/50 transition-colors duration-200 focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2"
               onClick={() => setIsOpen(true)}
               aria-label="Åpne meny"
               aria-expanded={isOpen}
@@ -187,7 +187,7 @@ const Header = () => {
                     aria-hidden="true" 
                   />
                 </div>
-                <SheetClose className="rounded-full p-2.5 hover:bg-white/10 transition-colors focus:outline-none focus:ring-2 focus:ring-white/50">
+                <SheetClose className="rounded-full p-2.5 hover:bg-white/10 transition-colors focus:outline-hidden focus:ring-2 focus:ring-white/50">
                   <X className="h-5 w-5 text-white" />
                   <span className="sr-only">Lukk meny</span>
                 </SheetClose>
@@ -200,7 +200,7 @@ const Header = () => {
                 <button
                   key={item.name}
                   onClick={() => handleNavClick(item.href)}
-                  className="text-[17px] font-medium text-white/90 hover:text-white hover:bg-white/5 text-left px-4 py-4 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-white/50 focus:bg-white/5"
+                  className="text-[17px] font-medium text-white/90 hover:text-white hover:bg-white/5 text-left px-4 py-4 rounded-lg transition-colors focus:outline-hidden focus:ring-2 focus:ring-white/50 focus:bg-white/5"
                 >
                   {item.name}
                 </button>

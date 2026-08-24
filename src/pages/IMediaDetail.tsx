@@ -1,4 +1,4 @@
-import { useParams, Link, Navigate } from "react-router-dom";
+import { useParams, Link, Navigate } from "@/lib/router-compat";
 import { ChevronLeft, ExternalLink, Download, Play, Calendar, Building2 } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -83,7 +83,7 @@ const IMediaDetail = () => {
               </span>
               <span className="flex items-center gap-1.5">
                 <Calendar className="w-4 h-4" />
-                {formatDate(entry.date)}
+                {formatDate(entry.date ?? "")}
               </span>
             </div>
           </div>
