@@ -28,6 +28,7 @@ interface Expert {
   expertise: string[];
   description: string;
   cv?: ExpertCV;
+  cvLink?: string;
   cvPdf?: string;
   phone?: string;
   email?: string;
@@ -135,10 +136,17 @@ const experts: Expert[] = [
       "Ledelse",
       "Økonomi og regnskap",
       "Interimledelse (Management for Hire)",
+      "Kommuneøkonomi",
+      "Omstilling",
     ],
     description:
-      "Seniorrådgiver innen kommunal økonomistyring og ledelse. Har bred operativ erfaring med kommunale økonomi- og regnskapsprosesser. Lang toppledererfaring fra flere kommuner. Særlig kompetanse innen inntektssystemet, havbrukskommuner og Framsikt.",
+      "Roger A. Antonsen har lang ledererfaring fra Forsvaret og kommunesektoren. Han tilbyr økonomisk rådgivning til kommuner med behov for bedre styring, prioritering og omstilling, og bistår ledere og folkevalgte med å utvikle bærekraftige løsninger.",
+    cvLink: "/docs/CV_Roger_Antonsen.pdf",
+    cvPdf: "/docs/CV_Roger_Antonsen.pdf",
+    phone: "+47 916 70 409",
+    email: "ra@nivianalyse.no",
   },
+
 ];
 
 
@@ -221,6 +229,14 @@ const ExpertsSection = () => {
                 )}
 
                 <div className="flex flex-col gap-2">
+                  {!expert.cv && expert.cvLink && (
+                    <a href={expert.cvLink} target="_blank" rel="noopener noreferrer">
+                      <Button variant="default" size="sm" className="gap-2 w-full sm:w-auto">
+                        <FileText className="w-3.5 h-3.5" />
+                        Les CV
+                      </Button>
+                    </a>
+                  )}
                   {expert.cv && (
                   <Dialog>
                     <DialogTrigger asChild>

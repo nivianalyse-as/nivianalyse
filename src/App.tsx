@@ -20,6 +20,7 @@ import FagomradePage from "./pages/FagomradePage";
 import KommuneokonomiRadgivning from "./pages/KommuneokonomiRadgivning";
 import InterkommunaltSamarbeidKartlegging from "./pages/InterkommunaltSamarbeidKartlegging";
 import GuideKommuneokonomi from "./pages/GuideKommuneokonomi";
+import EkspertRogerAntonsen from "./pages/EkspertRogerAntonsen";
 import GuideInterkommunaltSamarbeid from "./pages/GuideInterkommunaltSamarbeid";
 import Takk from "./pages/Takk";
 import NotFound from "./pages/NotFound";
@@ -73,6 +74,7 @@ const App = () => (
             <Route path="/kommuneokonomi-radgivning" element={<KommuneokonomiRadgivning />} />
             <Route path="/interkommunalt-samarbeid-kartlegging" element={<InterkommunaltSamarbeidKartlegging />} />
             <Route path="/guide/kommuneokonomi-norske-kommuner" element={<GuideKommuneokonomi />} />
+            <Route path="/eksperter/roger-antonsen" element={<EkspertRogerAntonsen />} />
             <Route path="/guide/interkommunalt-samarbeid-norge" element={<GuideInterkommunaltSamarbeid />} />
             <Route path="/om-oss" element={<OmOss />} />
             <Route path="/takk" element={<Takk />} />
