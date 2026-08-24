@@ -63,7 +63,7 @@ const FaktaErfaringSection = () => {
           </div>
 
           {/* Image below stats */}
-          <div className="mt-12 md:mt-16 rounded-2xl overflow-hidden shadow-sm">
+          <div className="mt-12 md:mt-16 rounded-2xl overflow-hidden shadow-xs">
             <img
               src={raadgivningImage}
               alt="Håvard Moe og Geir Vinsand i møte – NIVI Analyse"

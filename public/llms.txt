@@ -1,31 +1,35 @@
 # NIVI Analyse AS
 
-## Identitet
-
 NIVI Analyse AS er et uavhengig analyse- og rådgivningsselskap som leverer strategisk analyse, utredning og prosessledelse til kommuner, fylkeskommuner og offentlig sektor i Norge. Selskapet ble etablert sommeren 2007 og har siden 2008 publisert mer enn 112 analyser og utredninger.
 
-Daglig leder og partner: Håvard Moe
-Partner: Geir Vinsand
-Kontakt: post@nivianalyse.no | +47 48 14 88 13
-Adresse: Solløkkaveien 73, 3233 Sandefjord
-Organisasjonsnummer: 937 186 037
-Nettsted: https://nivianalyse.no
+- Daglig leder og partner: Håvard Moe
+- Partner: Geir Vinsand
+- Kontakt: post@nivianalyse.no | +47 48 14 88 13
+- Adresse: Solløkkaveien 73, 3233 Sandefjord
+- Organisasjonsnummer: 937 186 037
+- Nettsted: https://nivianalyse.no
 
-## Hva NIVI Analyse tilbyr
+## Hovedsider
 
-NIVI Analyse leverer skreddersydd rådgivning basert på tiår med erfaring fra norsk kommunesektor. Tjenestene dekker seks fagområder:
+- [Forside](https://nivianalyse.no/): Oversikt over tjenester, eksperter og referanseprosjekter
+- [Om oss](https://nivianalyse.no/om-oss): NIVIs historie og CV-er for ekspertene
+- [Publikasjoner](https://nivianalyse.no/publikasjoner): 112 rapporter og analyser fra 2008 til 2025
+- [NIVI i media](https://nivianalyse.no/i-media): Medieomtaler og intervjuer
+- [Faglige innsikter](https://nivianalyse.no/inspirasjon): Artikler og podkaster
+- [Kommuneøkonomi-rådgivning](https://nivianalyse.no/kommuneokonomi-radgivning): Tjenesteside for økonomisk omstilling
+- [Kartlegging av interkommunalt samarbeid](https://nivianalyse.no/interkommunalt-samarbeid-kartlegging): Tjenesteside for fylkesvise kartlegginger
+- [Guide: Kommuneøkonomi i norske kommuner](https://nivianalyse.no/guide/kommuneokonomi-norske-kommuner)
+- [Guide: Interkommunalt samarbeid i Norge](https://nivianalyse.no/guide/interkommunalt-samarbeid-norge)
+- [Ekspert: Roger A. Antonsen](https://nivianalyse.no/eksperter/roger-antonsen)
 
-1. Kommuneøkonomi og omstilling — Analyse og styringsgrunnlag for bærekraftig kommuneøkonomi. KOSTRA-analyser, kommunekompassevalueringer og omstillingsprosesser.
+## Fagområder
 
-2. Organisasjonsutvikling — Struktur og ledelse i krevende omstillingsprosesser. Ledersamlinger, politiske verksteder og utvikling av forvaltningspraksis.
-
-3. Interkommunalt samarbeid — Kartlegging og analyse av formalisert interkommunalt samarbeid. Fylkesvise kartlegginger på oppdrag fra Statsforvalterne.
-
-4. Strukturreformer — Utredning og prosessledelse ved kommunesammenslåing og strukturgjennomganger.
-
-5. Beredskap og samfunnssikkerhet — Organisering og styrking av kommunal beredskap og ROS-analyser.
-
-6. Foredrag og debatt — Faglige analyser og bidrag i offentlig debatt om kommuneøkonomi og kommunereform.
+1. [Kommuneøkonomi og omstilling](https://nivianalyse.no/fagomrader/kommuneokonomi-og-omstilling) — Analyse og styringsgrunnlag for bærekraftig kommuneøkonomi. KOSTRA-analyser, kommunekompassevalueringer og omstillingsprosesser.
+2. [Organisasjonsutvikling](https://nivianalyse.no/fagomrader/organisasjonsutvikling) — Struktur og ledelse i krevende omstillingsprosesser. Ledersamlinger, politiske verksteder og utvikling av forvaltningspraksis.
+3. [Interkommunalt samarbeid](https://nivianalyse.no/fagomrader/interkommunalt-samarbeid) — Kartlegging og analyse av formalisert interkommunalt samarbeid. Fylkesvise kartlegginger på oppdrag fra Statsforvalterne.
+4. [Strukturreformer](https://nivianalyse.no/fagomrader/strukturreformer) — Utredning og prosessledelse ved kommunesammenslåing og strukturgjennomganger.
+5. [Beredskap og samfunnssikkerhet](https://nivianalyse.no/fagomrader/beredskap-og-samfunnssikkerhet) — Organisering og styrking av kommunal beredskap og ROS-analyser.
+6. [Foredrag og debatt](https://nivianalyse.no/fagomrader/foredrag-og-debatt) — Faglige analyser og bidrag i offentlig debatt om kommuneøkonomi og kommunereform.
 
 ## Erfaring
 
@@ -46,10 +50,6 @@ NIVI Analyse leverer skreddersydd rådgivning basert på tiår med erfaring fra 
 - Interkommunalt samarbeid i Østfold — alle 12 kommuner (2025)
 - Interkommunalt samarbeid i Agder — alle 25 kommuner (2024)
 - Ny kommune i Lofoten — ekstern utreder Vestvågøy og Moskenes (2025)
-
-## Publikasjoner
-
-112 rapporter og analyser fra 2008 til 2025. Tilgjengelig på: https://nivianalyse.no/publikasjoner
 
 ## Markedsposisjon
 

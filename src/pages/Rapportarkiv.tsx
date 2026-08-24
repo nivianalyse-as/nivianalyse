@@ -1,5 +1,5 @@
 import { useState, useMemo, useCallback, useEffect } from "react";
-import { useSearchParams, Link } from "react-router-dom";
+import { useSearchParams, Link } from "@/lib/router-compat";
 import { Search, X, Download, ArrowRight, Filter } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -105,8 +105,7 @@ const Rapportarkiv = () => {
   const groupedByYear = useMemo(() => {
     const groups: Record<number, typeof filtered> = {};
     filtered.forEach((r) => {
-      if (!groups[r.year]) groups[r.year] = [];
-      groups[r.year].push(r);
+      (groups[r.year] ??= []).push(r);
     });
     return Object.entries(groups)
       .sort(([a], [b]) => Number(b) - Number(a))

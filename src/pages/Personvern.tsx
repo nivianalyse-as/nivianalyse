@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import SEOHead from "@/components/SEOHead";
 
 const Personvern = () => {

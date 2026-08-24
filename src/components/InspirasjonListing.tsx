@@ -1,6 +1,6 @@
 import { useState, useMemo } from "react";
 import { Calendar, Newspaper, Radio, ArrowRight, ExternalLink, FileText, Play } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import SectionHeader from "@/components/SectionHeader";
 import MediaCard from "@/components/MediaCard";
 import { articles } from "@/data/insights";
@@ -65,19 +65,19 @@ const InspirasjonListing = () => {
           <TabsList className="h-auto p-1 bg-muted/50 rounded-xl inline-flex">
             <TabsTrigger 
               value="alle" 
-              className="px-5 py-2.5 text-sm font-medium rounded-lg data-[state=active]:bg-white data-[state=active]:shadow-sm"
+              className="px-5 py-2.5 text-sm font-medium rounded-lg data-[state=active]:bg-white data-[state=active]:shadow-xs"
             >
               Alle
             </TabsTrigger>
             <TabsTrigger 
               value="artikler"
-              className="px-5 py-2.5 text-sm font-medium rounded-lg data-[state=active]:bg-white data-[state=active]:shadow-sm"
+              className="px-5 py-2.5 text-sm font-medium rounded-lg data-[state=active]:bg-white data-[state=active]:shadow-xs"
             >
               Artikler
             </TabsTrigger>
             <TabsTrigger 
               value="media"
-              className="px-5 py-2.5 text-sm font-medium rounded-lg data-[state=active]:bg-white data-[state=active]:shadow-sm"
+              className="px-5 py-2.5 text-sm font-medium rounded-lg data-[state=active]:bg-white data-[state=active]:shadow-xs"
             >
               I media
             </TabsTrigger>
@@ -147,7 +147,7 @@ const InspirasjonListing = () => {
                 const parseNorDate = (d: string) => {
                   const parts = d.replace(/\./g, "").trim().split(/\s+/);
                   if (parts.length === 3) {
-                    const [day, mon, year] = parts;
+                    const [day = "", mon = "", year = ""] = parts;
                     return new Date(`${year}-${monthMap[mon.toLowerCase()] || "01"}-${day.padStart(2, "0")}`);
                   }
                   return new Date(0);

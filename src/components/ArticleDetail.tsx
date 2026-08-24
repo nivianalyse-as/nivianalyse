@@ -1,4 +1,4 @@
-import { useParams, Link, Navigate } from "react-router-dom";
+import { useParams, Link, Navigate } from "@/lib/router-compat";
 import { ArrowLeft, Calendar, User, Tag, ExternalLink, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import SEOHead from "@/components/SEOHead";
@@ -39,7 +39,7 @@ const ArticleDetail = () => {
     };
     const parts = d.replace(/\./g, "").trim().split(/\s+/);
     if (parts.length === 3) {
-      const [day, mon, year] = parts;
+      const [day = "", mon = "", year = ""] = parts;
       const m = months[mon.toLowerCase()];
       if (m) return `${year}-${m}-${day.padStart(2, "0")}`;
     }

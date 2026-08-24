@@ -405,7 +405,6 @@ export const mediaEntries: MediaEntry[] = [
       "Erfaringer fra NIVI Analyses kartlegginger",
       "Spørsmål fra salen og paneldiskusjon"
     ],
-    externalUrl: undefined,
     embedUrl: "https://www.youtube.com/watch?v=8pwnE_gOr-A",
     featured: false,
     tags: ["youtube", "foredrag", "kommunestruktur"]
@@ -424,7 +423,6 @@ export const mediaEntries: MediaEntry[] = [
       "Konkrete anbefalinger til kommunene",
       "Diskusjon om veien videre"
     ],
-    externalUrl: undefined,
     embedUrl: "https://www.youtube.com/watch?v=dIuaRU-5zxs",
     featured: false,
     tags: ["youtube", "presentasjon", "kommuneøkonomi"]
@@ -529,6 +527,6 @@ export const getMediaSources = (): string[] => {
 };
 
 export const getMediaYears = (): string[] => {
-  const years = new Set(mediaEntries.filter(e => e.date).map(entry => entry.date!.split("-")[0]));
+  const years = new Set(mediaEntries.filter(e => e.date).map(entry => entry.date!.split("-")[0] ?? ""));
   return Array.from(years).sort((a, b) => parseInt(b) - parseInt(a));
 };

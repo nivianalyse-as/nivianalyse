@@ -49,7 +49,7 @@ const Footer = () => {
                 <a
                   key={link.href}
                   href={link.href}
-                  className="text-white/85 hover:text-white hover:underline underline-offset-4 decoration-[0.5px] transition-colors text-[15px] leading-[1.6] py-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-offset-2 focus-visible:ring-offset-[#07342F] rounded"
+                  className="text-white/85 hover:text-white hover:underline underline-offset-4 decoration-[0.5px] transition-colors text-[15px] leading-[1.6] py-1 focus:outline-hidden focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-offset-2 focus-visible:ring-offset-[#07342F] rounded"
                 >
                   {link.label}
                 </a>
@@ -65,14 +65,14 @@ const Footer = () => {
             <div className="flex flex-col gap-3">
               <a
                 href="mailto:post@nivianalyse.no"
-                className="group flex items-center gap-2.5 text-white/85 hover:text-white transition-colors text-[15px] leading-[1.5] focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-offset-2 focus-visible:ring-offset-[#07342F] rounded"
+                className="group flex items-center gap-2.5 text-white/85 hover:text-white transition-colors text-[15px] leading-[1.5] focus:outline-hidden focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-offset-2 focus-visible:ring-offset-[#07342F] rounded"
               >
                 <Mail className="w-4 h-4 flex-shrink-0 opacity-70 group-hover:opacity-100 transition-opacity" />
                 <span className="group-hover:underline underline-offset-4 decoration-[0.5px]">post@nivianalyse.no</span>
               </a>
               <a
                 href="tel:+4748148813"
-                className="group flex items-center gap-2.5 text-white/85 hover:text-white transition-colors text-[15px] leading-[1.5] focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-offset-2 focus-visible:ring-offset-[#07342F] rounded"
+                className="group flex items-center gap-2.5 text-white/85 hover:text-white transition-colors text-[15px] leading-[1.5] focus:outline-hidden focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-offset-2 focus-visible:ring-offset-[#07342F] rounded"
               >
                 <Phone className="w-4 h-4 flex-shrink-0 opacity-70 group-hover:opacity-100 transition-opacity" />
                 <span className="group-hover:underline underline-offset-4 decoration-[0.5px]">+47 48 14 88 13</span>
@@ -106,13 +106,13 @@ const Footer = () => {
           <div className="flex items-center gap-5">
             <a
               href="/personvern"
-              className="text-[13px] text-white/70 hover:text-white hover:underline underline-offset-4 decoration-[0.5px] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-offset-2 focus-visible:ring-offset-[#07342F] rounded"
+              className="text-[13px] text-white/70 hover:text-white hover:underline underline-offset-4 decoration-[0.5px] transition-colors focus:outline-hidden focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-offset-2 focus-visible:ring-offset-[#07342F] rounded"
             >
               Personvern
             </a>
             <a
               href="/cookies"
-              className="text-[13px] text-white/70 hover:text-white hover:underline underline-offset-4 decoration-[0.5px] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-offset-2 focus-visible:ring-offset-[#07342F] rounded"
+              className="text-[13px] text-white/70 hover:text-white hover:underline underline-offset-4 decoration-[0.5px] transition-colors focus:outline-hidden focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-offset-2 focus-visible:ring-offset-[#07342F] rounded"
             >
               Cookies
             </a>
@@ -122,7 +122,7 @@ const Footer = () => {
                   (window as any).openCookieSettings();
                 }
               }}
-              className="text-[13px] text-white/70 hover:text-white hover:underline underline-offset-4 decoration-[0.5px] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-offset-2 focus-visible:ring-offset-[#07342F] rounded"
+              className="text-[13px] text-white/70 hover:text-white hover:underline underline-offset-4 decoration-[0.5px] transition-colors focus:outline-hidden focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-offset-2 focus-visible:ring-offset-[#07342F] rounded"
             >
               Cookie-innstillinger
             </button>
@@ -139,7 +139,7 @@ const Footer = () => {
               href="https://www.digitalthinking.no/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white/60 hover:text-white/90 hover:underline underline-offset-4 decoration-[0.5px] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-offset-2 focus-visible:ring-offset-[#07342F] rounded"
+              className="text-white/60 hover:text-white/90 hover:underline underline-offset-4 decoration-[0.5px] transition-colors focus:outline-hidden focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-offset-2 focus-visible:ring-offset-[#07342F] rounded"
             >
               Digital Thinking
             </a>

@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/nivi-team-hero.jpg";
+import heroImage from "@/assets/nivi-team-hero.webp";
 import { type ReactNode } from "react";
 
 const heroData = {
@@ -73,6 +73,7 @@ const HeroImage = ({
           alt={heroData.image.alt}
           width={heroData.image.width}
           height={height ?? heroData.image.height}
+          fetchPriority={loading === "eager" ? "high" : undefined}
           loading={loading ?? "lazy"}
           decoding="async"
           className="w-full h-auto rounded-lg object-cover"
