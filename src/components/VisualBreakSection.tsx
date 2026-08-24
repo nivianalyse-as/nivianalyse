@@ -7,7 +7,7 @@ const VisualBreakSection = () => {
         <div className="rounded-2xl overflow-hidden shadow-xs">
           <img
             src={visualBreakImage}
-            alt="Håvard Moe og Bente Rudrud Hærdlevær i samtale – NIVI Analyse"
+            alt="Håvard Moe og Bente Rudrud Herdlevær i samtale – NIVI Analyse"
             width={1920}
             height={1280}
             className="w-full h-auto object-contain"

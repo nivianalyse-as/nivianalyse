@@ -87,7 +87,7 @@ export const experts: Expert[] = [
     email: "gv@nivianalyse.no",
   },
   {
-    name: "Bente Rudrud Hærdlevær",
+    name: "Bente Rudrud Herdlevær",
     title: "Seniorrådgiver",
     image: benteImage,
     expertise: [
@@ -100,7 +100,7 @@ export const experts: Expert[] = [
       "Seniorrådgiver innen kommunal styring og utvikling, herunder organisasjon og økonomi. Har bred erfaring fra omstillingsprosesser med og uten ROBEK, organisasjonsutvikling, interkommunalt samarbeid, planprosesser og strategisk utvikling.",
     cv: {
       intro:
-        "Bente Rudrud Hærdlevær har over 25 års toppledererfaring fra offentlig sektor, hvorav de siste 13 årene i kommunal sektor. Hun har vært kommunedirektør og assisterende kommunedirektør i både små og store kommuner, og har i tillegg arbeidet som seniorrådgiver i KS Konsulent.",
+        "Bente Rudrud Herdlevær har over 25 års toppledererfaring fra offentlig sektor, hvorav de siste 13 årene i kommunal sektor. Hun har vært kommunedirektør og assisterende kommunedirektør i både små og store kommuner, og har i tillegg arbeidet som seniorrådgiver i KS Konsulent.",
       keyExperience: [
         "Kommunedirektør i Nesbyen, kommunaldirektør i Bærum og kommunedirektør i Hurdal",
         "Ledet strategisk og operativ omstilling av ROBEK-kommune, med forpliktende plan i samspill med KS og statsforvalter",
