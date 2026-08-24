@@ -3,7 +3,7 @@ import heroImage from "@/assets/nivi-team-hero.webp";
 import { type ReactNode } from "react";
 
 const heroData = {
-  title: "NIVI Analyse tilbyr spisskompetanse på kommunal utvikling og omstilling",
+  title: "NIVI\u00A0Analyse tilbyr spisskompetanse på kommunal utvikling og omstilling",
   lead: "Uavhengig rådgivning for kommuner som vil styrke økonomi, styring og tjenesteutvikling.",
   primaryButton: {
     label: "Kontakt oss",
@@ -110,7 +110,7 @@ const HeroSection = () => {
           <div style={{ maxWidth: '640px' }} className="text-left">
             <h1
               className="font-semibold text-foreground animate-fade-in"
-              style={{ fontSize: 'clamp(2.2rem, 3vw, 3.6rem)', lineHeight: 1.15, letterSpacing: '-0.01em' }}
+              style={{ fontSize: 'clamp(2.2rem, 3vw, 3.6rem)', lineHeight: 1.15, letterSpacing: '-0.01em', textWrap: 'balance' }}
             >
               {heroData.title}
             </h1>
@@ -144,7 +144,7 @@ const HeroSection = () => {
           <div className="max-w-[560px] text-left">
             <h1
               className="text-3xl font-semibold text-foreground animate-fade-in"
-              style={{ lineHeight: 1.2, letterSpacing: '-0.01em' }}
+              style={{ lineHeight: 1.2, letterSpacing: '-0.01em', textWrap: 'balance' }}
             >
               {heroData.title}
             </h1>
