@@ -110,7 +110,7 @@ const HeroSection = () => {
           <div style={{ maxWidth: '640px' }} className="text-left">
             <h1
               className="font-semibold text-foreground animate-fade-in"
-              style={{ fontSize: 'clamp(2.2rem, 3vw, 3.6rem)', lineHeight: 1.15, letterSpacing: '-0.01em' }}
+              style={{ fontSize: 'clamp(2.2rem, 3vw, 3.6rem)', lineHeight: 1.15, letterSpacing: '-0.01em', textWrap: 'balance' }}
             >
               {heroData.title}
             </h1>
