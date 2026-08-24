@@ -3,7 +3,7 @@ import heroImage from "@/assets/nivi-team-hero.webp";
 import { type ReactNode } from "react";
 
 const heroData = {
-  title: "NIVI Analyse tilbyr spisskompetanse på kommunal utvikling og omstilling",
+  title: "NIVI\u00A0Analyse tilbyr spisskompetanse på kommunal utvikling og omstilling",
   lead: "Uavhengig rådgivning for kommuner som vil styrke økonomi, styring og tjenesteutvikling.",
   primaryButton: {
     label: "Kontakt oss",
