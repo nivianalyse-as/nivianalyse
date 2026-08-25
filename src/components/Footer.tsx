@@ -24,8 +24,8 @@ const Footer = () => {
               <img 
                 src={niviFooterLogo}
                 alt="NIVI Analyse"
-                width={480}
-                height={160}
+                width={411}
+                height={403}
                 loading="lazy"
                 decoding="async"
                 className="h-14 w-auto"
