@@ -35,7 +35,7 @@ export const ExpertCard = ({ expert }: ExpertCardProps) => {
           {expert.title}
         </p>
         {expert.secondaryRole && (
-          <p className="text-primary/60 text-xs mb-4">
+          <p className="text-primary/80 text-xs mb-4">
             {expert.secondaryRole}
           </p>
         )}
@@ -65,6 +65,7 @@ export const ExpertCard = ({ expert }: ExpertCardProps) => {
                 Mobil:{" "}
                 <a
                   href={`tel:${expert.phone.replace(/\s/g, "")}`}
+                  aria-label={`Ring ${expert.name} på ${expert.phone}`}
                   className="hover:text-accent transition-colors"
                 >
                   {expert.phone}
@@ -76,6 +77,7 @@ export const ExpertCard = ({ expert }: ExpertCardProps) => {
                 E-post:{" "}
                 <a
                   href={`mailto:${expert.email}`}
+                  aria-label={`Send e-post til ${expert.name}`}
                   className="hover:text-accent transition-colors"
                 >
                   {expert.email}
