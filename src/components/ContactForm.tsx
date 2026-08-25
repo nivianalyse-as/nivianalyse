@@ -225,11 +225,23 @@ const ContactForm = () => {
     }
   }, [submitted]);
 
-  // Render Turnstile explicitly after hydration — the implicit cf-turnstile
-  // scan mutates the DOM before React hydrates and causes a hydration mismatch.
+  // Load + render Turnstile explicitly after hydration. The script is injected
+  // here (not in the document head) so it never blocks the main thread on
+  // pages without a contact form, and the implicit cf-turnstile scan cannot
+  // mutate the DOM before React hydrates (hydration mismatch).
   useEffect(() => {
     const el = turnstileRef.current;
     if (!el) return undefined;
+
+    const SRC = "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit";
+    if (!document.querySelector(`script[src="${SRC}"]`)) {
+      const s = document.createElement("script");
+      s.src = SRC;
+      s.async = true;
+      s.defer = true;
+      document.head.appendChild(s);
+    }
+
     const tryRender = () => {
       const ts = (window as any).turnstile;
       if (ts && el.childElementCount === 0) {
@@ -243,6 +255,7 @@ const ContactForm = () => {
     }, 200);
     return () => clearInterval(id);
   }, [submitted]);
+
 
   if (submitted) {
     return (
