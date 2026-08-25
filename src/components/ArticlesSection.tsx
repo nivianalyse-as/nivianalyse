@@ -1,3 +1,4 @@
+import { formatDateNumeric } from "@/lib/format-date";
 import { Link } from "@/lib/router-compat";
 import { ArrowRight, Calendar, Newspaper } from "lucide-react";
 import SectionHeader from "@/components/SectionHeader";
@@ -67,7 +68,7 @@ const ArticlesSection = () => {
                     {m.date && (
                       <span className="flex items-center gap-1.5 text-xs text-muted-foreground">
                         <Calendar className="w-3 h-3" />
-                        {new Date(m.date).toLocaleDateString("nb-NO")}
+                        {formatDateNumeric(m.date)}
                       </span>
                     )}
                   </div>
