@@ -126,33 +126,34 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     ],
     scripts: [
       {
-        children: `window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-RLRQ8X3374');
-(function(){
+        children: `(function(){
   var loaded = false;
   function load(){
     if (loaded) return;
     loaded = true;
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', 'G-RLRQ8X3374');
     var s = document.createElement('script');
     s.src = 'https://www.googletagmanager.com/gtag/js?id=G-RLRQ8X3374';
     s.async = true;
     document.head.appendChild(s);
   }
-  var idle = window.requestIdleCallback || function(cb){ return setTimeout(cb, 2500); };
-  if (document.readyState === 'complete') { idle(load, { timeout: 5000 }); }
-  else { window.addEventListener('load', function(){ idle(load, { timeout: 5000 }); }, { once: true }); }
+  var idle = window.requestIdleCallback || function(cb){ return setTimeout(cb, 3000); };
+  function schedule(){ idle(load, { timeout: 6000 }); }
+  ['pointerdown','keydown','touchstart','scroll'].forEach(function(e){
+    window.addEventListener(e, load, { once: true, passive: true });
+  });
+  if (document.readyState === 'complete') { schedule(); }
+  else { window.addEventListener('load', schedule, { once: true }); }
 })();`,
-      },
-      {
-        src: "https://challenges.cloudflare.com/turnstile/v0/api.js",
-        async: true,
-        defer: true,
       },
       { type: "application/ld+json", children: organizationJsonLd },
       { type: "application/ld+json", children: websiteJsonLd },
     ],
+
   }),
   shellComponent: RootShell,
   component: RootComponent,

@@ -13,7 +13,7 @@ const DetailedReferenceList = () => {
       <button
         onClick={() => setOpen(!open)}
         className="mx-auto flex items-center gap-2 text-sm font-semibold tracking-wide uppercase transition-colors"
-        style={{ color: 'hsl(17, 90%, 45%)', letterSpacing: '0.05em' }}
+        style={{ color: 'hsl(17, 92%, 33%)', letterSpacing: '0.05em' }}
       >
         Se utvalgte referanseoppdrag
         <ChevronDown

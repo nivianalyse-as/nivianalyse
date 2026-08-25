@@ -1,4 +1,4 @@
-import visualBreakImage from "@/assets/nivi-havard-bente.jpg";
+import visualBreakImage from "@/assets/nivi-havard-bente.webp";
 
 const VisualBreakSection = () => {
   return (

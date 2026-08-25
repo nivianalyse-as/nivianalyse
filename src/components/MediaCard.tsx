@@ -1,6 +1,7 @@
 import { Link } from "@/lib/router-compat";
 import { ArrowRight, Newspaper, Video, MessageSquare, FileText, Headphones } from "lucide-react";
 import { MediaEntry, mediaTypeLabels } from "@/types/media";
+import { formatDateNumeric } from "@/lib/format-date";
 import { Badge } from "@/components/ui/badge";
 
 interface MediaCardProps {
@@ -22,14 +23,7 @@ const getTypeIcon = (type: MediaEntry["type"]) => {
   }
 };
 
-const formatDate = (dateString: string): string => {
-  const date = new Date(dateString);
-  return date.toLocaleDateString("nb-NO", {
-    day: "2-digit",
-    month: "2-digit",
-    year: "numeric"
-  });
-};
+const formatDate = formatDateNumeric;
 
 const MediaCard = ({ entry }: MediaCardProps) => {
   const ctaText = entry.type === "podcast"

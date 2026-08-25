@@ -32,7 +32,7 @@ const Personvern = () => {
             </h1>
             
             <p className="text-muted-foreground text-[15px] mb-8">
-              Sist oppdatert: {new Date().toLocaleDateString("nb-NO", { day: "numeric", month: "long", year: "numeric" })}
+              Sist oppdatert: 25. august 2026
             </p>
 
             <div className="space-y-8 text-[15px] leading-relaxed text-foreground/90">

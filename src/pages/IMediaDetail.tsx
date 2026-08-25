@@ -5,18 +5,12 @@ import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import MediaCard from "@/components/MediaCard";
 import { Button } from "@/components/ui/button";
+import { formatDateLong } from "@/lib/format-date";
 import { Badge } from "@/components/ui/badge";
 import { getMediaBySlug, mediaEntries } from "@/data/media";
 import { mediaTypeLabels } from "@/types/media";
 
-const formatDate = (dateString: string): string => {
-  const date = new Date(dateString);
-  return date.toLocaleDateString("nb-NO", {
-    day: "numeric",
-    month: "long",
-    year: "numeric"
-  });
-};
+const formatDate = formatDateLong;
 
 const IMediaDetail = () => {
   const { slug } = useParams<{ slug: string }>();
