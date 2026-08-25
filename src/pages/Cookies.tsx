@@ -40,7 +40,7 @@ const Cookies = () => {
             </h1>
             
             <p className="text-muted-foreground text-[15px] mb-8">
-              Sist oppdatert: {new Date().toLocaleDateString("nb-NO", { day: "numeric", month: "long", year: "numeric" })}
+              Sist oppdatert: 25. august 2026
             </p>
 
             <div className="bg-secondary/20 rounded-2xl p-6 mb-8">
