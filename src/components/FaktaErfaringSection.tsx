@@ -1,4 +1,4 @@
-import raadgivningImage from "@/assets/nivi-visual-break.jpg";
+import raadgivningImage from "@/assets/nivi-visual-break.webp";
 
 
 const fakta = [
@@ -23,14 +23,14 @@ const FaktaErfaringSection = () => {
 
           <p
             className="font-medium"
-            style={{ fontSize: '1.25rem', lineHeight: 1.4, marginBottom: '12px', color: 'hsl(220, 10%, 45%)', letterSpacing: '0.02em' }}
+            style={{ fontSize: '1.25rem', lineHeight: 1.4, marginBottom: '12px', color: 'hsl(220, 18%, 28%)', letterSpacing: '0.02em' }}
           >
             2006 — 2026
           </p>
 
-          <div style={{ width: '70px', height: '2.5px', backgroundColor: 'hsl(17, 90%, 45%)', marginBottom: '32px' }} />
+          <div style={{ width: '70px', height: '2.5px', backgroundColor: 'hsl(17, 90%, 40%)', marginBottom: '32px' }} />
 
-          <p style={{ fontSize: '1.065rem', lineHeight: 1.6, marginBottom: '56px', color: 'hsl(220, 10%, 40%)', maxWidth: '600px' }}>
+          <p style={{ fontSize: '1.065rem', lineHeight: 1.6, marginBottom: '56px', color: 'hsl(220, 18%, 26%)', maxWidth: '600px' }}>
             Analyse- og utredningsvirksomhet i kommunesektoren siden 2006.
           </p>
 
@@ -43,7 +43,7 @@ const FaktaErfaringSection = () => {
                 >
                   {item.tall}
                 </div>
-                <p style={{ fontSize: '0.875rem', lineHeight: 1.5, color: 'hsl(220, 10%, 45%)' }}>
+                <p style={{ fontSize: '0.875rem', lineHeight: 1.5, color: 'hsl(220, 18%, 28%)' }}>
                   {item.beskrivelse}
                 </p>
               </div>
@@ -56,7 +56,7 @@ const FaktaErfaringSection = () => {
               <div className="font-semibold" style={{ fontSize: '1.5rem', lineHeight: 1.25, marginBottom: '8px', color: 'hsl(220, 20%, 18%)' }}>
                 oppdragsgivere
               </div>
-              <p style={{ fontSize: '0.875rem', lineHeight: 1.5, color: 'hsl(220, 10%, 45%)' }}>
+              <p style={{ fontSize: '0.875rem', lineHeight: 1.5, color: 'hsl(220, 18%, 28%)' }}>
                 Departementer, statsforvaltere og KS
               </p>
             </div>
