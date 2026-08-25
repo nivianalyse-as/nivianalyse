@@ -126,14 +126,24 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     ],
     scripts: [
       {
-        src: "https://www.googletagmanager.com/gtag/js?id=G-RLRQ8X3374",
-        async: true,
-      },
-      {
         children: `window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
-gtag('config', 'G-RLRQ8X3374');`,
+gtag('config', 'G-RLRQ8X3374');
+(function(){
+  var loaded = false;
+  function load(){
+    if (loaded) return;
+    loaded = true;
+    var s = document.createElement('script');
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-RLRQ8X3374';
+    s.async = true;
+    document.head.appendChild(s);
+  }
+  var idle = window.requestIdleCallback || function(cb){ return setTimeout(cb, 2500); };
+  if (document.readyState === 'complete') { idle(load, { timeout: 5000 }); }
+  else { window.addEventListener('load', function(){ idle(load, { timeout: 5000 }); }, { once: true }); }
+})();`,
       },
       {
         src: "https://challenges.cloudflare.com/turnstile/v0/api.js",
