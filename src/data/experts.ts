@@ -24,7 +24,7 @@ export interface Expert {
   email?: string;
 }
 
-const expertsData: Omit<Expert, "id">[] = [
+export const experts: Expert[] = [
   {
     name: "Håvard Moe",
     title: "Partner",
