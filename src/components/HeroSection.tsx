@@ -1,6 +1,12 @@
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/nivi-team-hero.webp";
+import heroImage640 from "@/assets/nivi-team-hero-640.webp";
+import heroImage960 from "@/assets/nivi-team-hero-960.webp";
+import heroImage1280 from "@/assets/nivi-team-hero-1280.webp";
 import { type ReactNode } from "react";
+
+export const heroSrcSet = `${heroImage640} 640w, ${heroImage960} 960w, ${heroImage1280} 1280w, ${heroImage} 1672w`;
+export const heroSizes = "(max-width: 767px) 92vw, (max-width: 1023px) 88vw, 50vw";
 
 const heroData = {
   title: "NIVI\u00A0Analyse tilbyr spisskompetanse på kommunal utvikling og omstilling",
