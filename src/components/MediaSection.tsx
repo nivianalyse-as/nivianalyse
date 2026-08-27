@@ -4,6 +4,9 @@ import SectionHeader from "@/components/SectionHeader";
 import MediaCard from "@/components/MediaCard";
 import { getFeaturedMedia } from "@/data/media";
 import visualBreakImage from "@/assets/nivi-havard-bente.webp";
+import visualBreak640 from "@/assets/nivi-havard-bente-640.webp";
+import visualBreak960 from "@/assets/nivi-havard-bente-960.webp";
+import visualBreak1280 from "@/assets/nivi-havard-bente-1280.webp";
 
 const MediaSection = () => {
   const featuredMedia = getFeaturedMedia();
@@ -41,6 +44,8 @@ const MediaSection = () => {
         <div className="rounded-2xl overflow-hidden shadow-xs">
           <img
             src={visualBreakImage}
+            srcSet={`${visualBreak640} 640w, ${visualBreak960} 960w, ${visualBreak1280} 1280w, ${visualBreakImage} 1600w`}
+            sizes="(max-width: 767px) 92vw, 1152px"
             alt="Håvard Moe og Bente Rudrud Herdlevær i samtale – NIVI Analyse"
             width={1920}
             height={1280}

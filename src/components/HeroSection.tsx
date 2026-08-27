@@ -76,6 +76,8 @@ const HeroImage = ({
       <div className={className} style={style}>
         <img
           src={heroData.image.src}
+          srcSet={heroSrcSet}
+          sizes={heroSizes}
           alt={heroData.image.alt}
           width={heroData.image.width}
           height={height ?? heroData.image.height}
@@ -93,6 +95,8 @@ const HeroImage = ({
     <div className={className} style={style}>
       <img
         src={heroData.image.src}
+        srcSet={heroSrcSet}
+        sizes={heroSizes}
         alt={heroData.image.alt}
         width={heroData.image.width}
         height={height ?? heroData.image.height}
