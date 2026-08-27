@@ -3,7 +3,6 @@ import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import SectionHeader from "@/components/SectionHeader";
 import ExpertsSection from "@/components/ExpertsSection";
-import { FileText, Download } from "lucide-react";
 
 const OmOss = () => {
   return (
@@ -49,52 +48,6 @@ const OmOss = () => {
 
         {/* Eksperter */}
         <ExpertsSection subtitle="" />
-
-        {/* CV-er */}
-        <section className="section-padding bg-alt">
-          <div className="container-narrow">
-            <div className="max-w-3xl mx-auto">
-              <h2 className="text-2xl md:text-3xl font-semibold text-primary mb-4">
-                CV
-              </h2>
-              <p className="text-muted-foreground mb-6">
-                Kortversjoner av CV-ene finnes her:
-              </p>
-              <div className="grid sm:grid-cols-2 gap-4">
-                <a
-                  href="/docs/CV_kort_Havard_Moe.pdf"
-                  download
-                  className="card-premium p-5 flex items-center gap-4 hover:shadow-md transition-shadow"
-                >
-                  <div className="w-10 h-10 bg-secondary/40 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Download className="w-5 h-5 text-primary/60" />
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <h3 className="text-sm font-semibold text-primary leading-snug">
-                      Håvard Moe – CV
-                    </h3>
-                    <p className="text-xs text-muted-foreground mt-1">Last ned (PDF)</p>
-                  </div>
-                </a>
-                <a
-                  href="/docs/CV_kort_Geir_Vinsand.docx"
-                  download
-                  className="card-premium p-5 flex items-center gap-4 hover:shadow-md transition-shadow"
-                >
-                  <div className="w-10 h-10 bg-secondary/40 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Download className="w-5 h-5 text-primary/60" />
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <h3 className="text-sm font-semibold text-primary leading-snug">
-                      Geir Vinsand – CV
-                    </h3>
-                    <p className="text-xs text-muted-foreground mt-1">Last ned (DOCX)</p>
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
       </main>
       <Footer />
     </div>
