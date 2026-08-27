@@ -20,7 +20,7 @@ const heroData = {
     href: "#fagomrader",
   },
   image: {
-    src: heroImage,
+    src: heroImage640,
     alt: "NIVI Analyse konsulenter",
     width: 1200,
     height: 800,

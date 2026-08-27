@@ -43,12 +43,12 @@ const MediaSection = () => {
       <div className="max-w-6xl mx-auto px-6 mt-10 md:mt-12">
         <div className="rounded-2xl overflow-hidden shadow-xs">
           <img
-            src={visualBreakImage}
-            srcSet={`${visualBreak640} 640w, ${visualBreak960} 960w, ${visualBreak1280} 1280w, ${visualBreakImage} 1600w`}
+            src={visualBreak960}
+            srcSet={`${visualBreak640} 640w, ${visualBreak960} 960w, ${visualBreak1280} 1280w`}
             sizes="(max-width: 767px) 92vw, 1152px"
             alt="Håvard Moe og Bente Rudrud Herdlevær i samtale – NIVI Analyse"
-            width={1920}
-            height={1280}
+            width={800}
+            height={533}
             className="w-full h-auto object-contain"
             loading="lazy"
             decoding="async"
