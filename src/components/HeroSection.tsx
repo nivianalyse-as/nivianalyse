@@ -164,6 +164,7 @@ const HeroSection = () => {
           className="px-10 pb-12"
           height={420}
           layout="responsive"
+          loading="eager"
         />
 
       </div>
@@ -189,6 +190,7 @@ const HeroSection = () => {
               className="flex justify-center mt-8 animate-fade-in-delay-1"
               layout="responsive"
               height={675}
+              loading="eager"
             />
 
             <div className="animate-fade-in-delay-2 mt-8">

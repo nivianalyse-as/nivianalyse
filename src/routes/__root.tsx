@@ -141,13 +141,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     s.async = true;
     document.head.appendChild(s);
   }
-  var idle = window.requestIdleCallback || function(cb){ return setTimeout(cb, 3000); };
-  function schedule(){ idle(load, { timeout: 6000 }); }
-  ['pointerdown','keydown','touchstart','scroll'].forEach(function(e){
+  ['pointerdown','mousedown','keydown','touchstart','scroll','wheel','click'].forEach(function(e){
     window.addEventListener(e, load, { once: true, passive: true });
   });
-  if (document.readyState === 'complete') { schedule(); }
-  else { window.addEventListener('load', schedule, { once: true }); }
 })();`,
       },
       { type: "application/ld+json", children: organizationJsonLd },
