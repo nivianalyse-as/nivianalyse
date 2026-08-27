@@ -3,7 +3,6 @@ import HeroSection from "@/components/HeroSection";
 import TrustStrip from "@/components/TrustStrip";
 import PublikasjonAutoritet from "@/components/PublikasjonAutoritet";
 import FaktaErfaringSection from "@/components/FaktaErfaringSection";
-import VisualBreakSection from "@/components/VisualBreakSection";
 import ServicesSection from "@/components/ServicesSection";
 import ArticlesSection from "@/components/ArticlesSection";
 import MediaSection from "@/components/MediaSection";
@@ -38,7 +37,6 @@ const Index = () => {
         <ServicesSection />
         <ReferenceProjectsSection />
         <MediaSection />
-        <VisualBreakSection />
         <ReferencesSection />
         <ArticlesSection />
 
