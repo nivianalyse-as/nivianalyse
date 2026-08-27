@@ -2,9 +2,10 @@ interface SectionHeaderProps {
   title: string;
   subtitle?: string | undefined;
   as?: "h1" | "h2";
+  compact?: boolean;
 }
 
-const SectionHeader = ({ title, subtitle, as: Tag = "h2" }: SectionHeaderProps) => {
+const SectionHeader = ({ title, subtitle, as: Tag = "h2", compact = false }: SectionHeaderProps) => {
   return (
     <div className="max-w-6xl mx-auto px-6 text-center">
       <Tag
@@ -13,7 +14,10 @@ const SectionHeader = ({ title, subtitle, as: Tag = "h2" }: SectionHeaderProps) 
       >
         {title}
       </Tag>
-      <div className="mx-auto h-[2px] w-10 bg-accent/80 rounded-full" style={{ marginTop: '16px', marginBottom: '24px' }} />
+      <div
+        className="mx-auto h-[2px] w-10 bg-accent/80 rounded-full"
+        style={compact ? { marginTop: '12px', marginBottom: '16px' } : { marginTop: '16px', marginBottom: '24px' }}
+      />
       {subtitle && (
         <p className="max-w-[720px] mx-auto text-muted-foreground" style={{ fontSize: '1.065rem', lineHeight: 1.6, color: 'hsl(168, 30%, 30%)' }}>
           {subtitle}
