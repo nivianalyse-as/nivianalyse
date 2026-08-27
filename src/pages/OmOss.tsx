@@ -4,7 +4,6 @@ import SEOHead from "@/components/SEOHead";
 import SectionHeader from "@/components/SectionHeader";
 import ExpertsSection from "@/components/ExpertsSection";
 
-
 const OmOss = () => {
   return (
     <div className="min-h-screen">
