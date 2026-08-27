@@ -164,6 +164,7 @@ const HeroSection = () => {
           className="px-10 pb-12"
           height={420}
           layout="responsive"
+          loading="eager"
         />
 
       </div>
