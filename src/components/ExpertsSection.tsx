@@ -6,7 +6,7 @@ interface ExpertsSectionProps {
   subtitle?: string;
 }
 
-const ExpertsSection = ({ subtitle = "Over 60 års samlet erfaring fra kommunesektoren." }: ExpertsSectionProps) => {
+const ExpertsSection = ({ subtitle }: ExpertsSectionProps) => {
   return (
     <section
       id="eksperter"

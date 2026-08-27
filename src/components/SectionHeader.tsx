@@ -1,6 +1,6 @@
 interface SectionHeaderProps {
   title: string;
-  subtitle?: string;
+  subtitle?: string | undefined;
   as?: "h1" | "h2";
 }
 
