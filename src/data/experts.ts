@@ -10,6 +10,7 @@ export interface ExpertCV {
 }
 
 export interface Expert {
+  id?: string;
   name: string;
   title: string;
   secondaryRole?: string;
@@ -23,7 +24,7 @@ export interface Expert {
   email?: string;
 }
 
-export const experts: Expert[] = [
+const expertsData: Omit<Expert, "id">[] = [
   {
     name: "Håvard Moe",
     title: "Partner",
