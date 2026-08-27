@@ -3,12 +3,13 @@ import { ArrowRight } from "lucide-react";
 import SectionHeader from "@/components/SectionHeader";
 import MediaCard from "@/components/MediaCard";
 import { getFeaturedMedia } from "@/data/media";
+import visualBreakImage from "@/assets/nivi-havard-bente.webp";
 
 const MediaSection = () => {
   const featuredMedia = getFeaturedMedia();
 
   return (
-    <section style={{ paddingTop: '112px', paddingBottom: '112px', backgroundColor: '#FFFFFF' }}>
+    <section style={{ paddingTop: '70px', paddingBottom: '70px', backgroundColor: '#FFFFFF' }}>
       <div className="container-narrow">
         {/* Header */}
         <div style={{ marginBottom: '64px' }}>
@@ -32,6 +33,21 @@ const MediaSection = () => {
           {featuredMedia.map((entry) => (
             <MediaCard key={entry.id} entry={entry} />
           ))}
+        </div>
+      </div>
+
+      {/* Visual break image integrated as a natural part of the section */}
+      <div className="max-w-6xl mx-auto px-6 mt-10 md:mt-12">
+        <div className="rounded-2xl overflow-hidden shadow-xs">
+          <img
+            src={visualBreakImage}
+            alt="Håvard Moe og Bente Rudrud Herdlevær i samtale – NIVI Analyse"
+            width={1920}
+            height={1280}
+            className="w-full h-auto object-contain"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
       </div>
     </section>
