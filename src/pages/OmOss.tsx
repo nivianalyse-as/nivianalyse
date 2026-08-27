@@ -11,15 +11,16 @@ const OmOss = () => {
       <Header />
       <main id="main-content">
         {/* NIVIs historie */}
-        <section className="section-padding bg-background">
+        <section className="py-10 md:py-14 bg-background">
           <div className="container-narrow">
             <SectionHeader
               title="Om NIVI Analyse"
               subtitle="Uavhengig analyse og rådgivning for kommunesektoren siden 2007."
+              compact
             />
 
-            <div className="max-w-3xl mx-auto mt-10">
-              <h2 className="text-2xl md:text-3xl font-semibold text-primary mb-6">
+            <div className="max-w-3xl mx-auto mt-6">
+              <h2 className="text-2xl md:text-3xl font-semibold text-primary mb-4">
                 NIVIs historie
               </h2>
               <div className="card-premium p-6 md:p-8 space-y-4">
