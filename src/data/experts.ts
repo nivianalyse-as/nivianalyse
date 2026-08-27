@@ -10,6 +10,7 @@ export interface ExpertCV {
 }
 
 export interface Expert {
+  id?: string;
   name: string;
   title: string;
   secondaryRole?: string;
@@ -25,6 +26,7 @@ export interface Expert {
 
 export const experts: Expert[] = [
   {
+    id: "havard-moe",
     name: "Håvard Moe",
     title: "Partner",
     secondaryRole: "Daglig leder",
@@ -56,6 +58,7 @@ export const experts: Expert[] = [
     email: "hm@nivianalyse.no",
   },
   {
+    id: "geir-vinsand",
     name: "Geir Vinsand",
     title: "Partner",
     secondaryRole: "Styreformann",
@@ -87,6 +90,7 @@ export const experts: Expert[] = [
     email: "gv@nivianalyse.no",
   },
   {
+    id: "bente-herdlevaer",
     name: "Bente Rudrud Herdlevær",
     title: "Seniorrådgiver",
     image: benteImage,
@@ -118,6 +122,7 @@ export const experts: Expert[] = [
     email: "brh@nivianalyse.no",
   },
   {
+    id: "roger-antonsen",
     name: "Roger A. Antonsen",
     title: "Seniorrådgiver",
     image: rogerImage,
