@@ -47,6 +47,9 @@ const OmOss = () => {
           </div>
         </section>
 
+        {/* Eksperter */}
+        <ExpertsSection subtitle="" />
+
         {/* CV-er */}
         <section className="section-padding bg-alt">
           <div className="container-narrow">
@@ -92,9 +95,6 @@ const OmOss = () => {
             </div>
           </div>
         </section>
-
-        {/* Eksperter */}
-        <ExpertsSection />
       </main>
       <Footer />
     </div>

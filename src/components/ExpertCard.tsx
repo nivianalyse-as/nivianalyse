@@ -15,7 +15,7 @@ interface ExpertCardProps {
 
 export const ExpertCard = ({ expert }: ExpertCardProps) => {
   return (
-    <div className="card-premium overflow-hidden flex flex-col transition-all duration-200 h-full">
+    <div id={expert.id} className="card-premium overflow-hidden flex flex-col transition-all duration-200 h-full">
       <div className="aspect-[4/5] md:aspect-[3/4] overflow-hidden">
         <img
           src={expert.image}

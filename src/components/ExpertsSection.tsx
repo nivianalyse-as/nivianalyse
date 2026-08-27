@@ -2,7 +2,11 @@ import SectionHeader from "@/components/SectionHeader";
 import ExpertCard from "@/components/ExpertCard";
 import { experts } from "@/data/experts";
 
-const ExpertsSection = () => {
+interface ExpertsSectionProps {
+  subtitle?: string;
+}
+
+const ExpertsSection = ({ subtitle = "Over 60 års samlet erfaring fra kommunesektoren." }: ExpertsSectionProps) => {
   return (
     <section
       id="eksperter"
@@ -16,7 +20,7 @@ const ExpertsSection = () => {
         <div style={{ marginBottom: "56px" }}>
           <SectionHeader
             title="Møt ekspertene"
-            subtitle="Over 60 års samlet erfaring fra kommunesektoren."
+            subtitle={subtitle}
           />
         </div>
 
