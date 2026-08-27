@@ -113,6 +113,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:image", content: "https://nivianalyse.no/nivi-favicon.png" },
     ],
     links: [
+      { rel: "preload", as: "style", href: appCss },
       { rel: "stylesheet", href: appCss },
       { rel: "icon", type: "image/png", href: "/nivi-favicon.png?v=1" },
       { rel: "shortcut icon", href: "/nivi-favicon.png?v=1" },

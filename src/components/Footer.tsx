@@ -107,7 +107,7 @@ const Footer = () => {
       <div className="max-w-[1200px] mx-auto px-6">
         <div className="py-5 flex flex-col sm:flex-row justify-between items-center gap-3">
           <p className="text-[13px] text-white/85 text-center sm:text-left">
-            © {new Date().getUTCFullYear()} NIVI Analyse AS. Alle rettigheter forbeholdt.
+            © 2026 NIVI Analyse AS. Alle rettigheter forbeholdt.
           </p>
           <div className="flex items-center gap-5">
             <a
