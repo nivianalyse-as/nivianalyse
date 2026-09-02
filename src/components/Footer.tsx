@@ -140,11 +140,20 @@ const Footer = () => {
       <div className="max-w-[1200px] mx-auto px-6">
         <div className="pb-4 pt-2">
           <p className="text-[12px] text-white/85 text-center sm:text-left">
-            Nettsiden er utviklet av{" "}
+            Utviklet med presisjonsweb av{" "}
             <a
-              href="https://www.digitalthinking.no/"
+              href="https://synligweb.no"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noopener"
+              className="text-white/85 hover:text-white/90 hover:underline underline-offset-4 decoration-[0.5px] transition-colors focus:outline-hidden focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-offset-2 focus-visible:ring-offset-[#07342F] rounded"
+            >
+              SynligWeb
+            </a>
+            {" "}og{" "}
+            <a
+              href="https://digitalthinking.no"
+              target="_blank"
+              rel="noopener"
               className="text-white/85 hover:text-white/90 hover:underline underline-offset-4 decoration-[0.5px] transition-colors focus:outline-hidden focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-offset-2 focus-visible:ring-offset-[#07342F] rounded"
             >
               Digital Thinking
