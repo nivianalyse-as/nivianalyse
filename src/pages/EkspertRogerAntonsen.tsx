@@ -4,13 +4,14 @@ import SEOHead from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
 import rogerImage from "@/assets/roger-antonsen.jpg";
+import rogerCvAsset from "@/assets/CV_Roger_Antonsen.pdf.asset.json";
 
 const expertise = [
   "Ledelse",
-  "Økonomi og regnskap",
-  "Interimledelse (Management for Hire)",
   "Kommuneøkonomi",
   "Omstilling",
+  "Økonomistyring",
+  "Management for hire",
 ];
 
 const utdanning = [
@@ -77,8 +78,9 @@ const EkspertRogerAntonsen = () => {
 
                   <p className="text-muted-foreground leading-relaxed mb-5">
                     Roger A. Antonsen har lang ledererfaring fra Forsvaret og kommunesektoren. Han
-                    tilbyr økonomisk rådgivning til kommuner med behov for bedre styring,
-                    prioritering og omstilling, og bistår ledere og folkevalgte med å utvikle
+                    har vært generalintendant i Forsvaret, kommunedirektør, kommunalsjef,
+                    økonomisjef og assisterende kommunedirektør. I NIVI Analyse bistår han
+                    kommuner med økonomistyring, omstilling, prioritering og utvikling av
                     bærekraftige løsninger.
                   </p>
 
@@ -97,7 +99,7 @@ const EkspertRogerAntonsen = () => {
                     </p>
                   </div>
 
-                  <a href="/docs/CV_Roger_Antonsen.pdf" target="_blank" rel="noopener noreferrer">
+                  <a href={rogerCvAsset.url} target="_blank" rel="noopener noreferrer">
                     <Button variant="outline" size="sm" className="gap-2">
                       <Download className="w-3.5 h-3.5" />
                       Last ned full CV (PDF)
