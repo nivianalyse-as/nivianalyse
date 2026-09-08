@@ -29,7 +29,9 @@ const IMediaDetail = () => {
     )
     .slice(0, 3);
 
-  const shortSummary = entry.excerpt;
+  const introduction = entry.introduction || entry.excerpt;
+  const shortSummary = entry.shortSummary || entry.excerpt;
+
 
   return (
     <div className="min-h-screen bg-background">
@@ -86,9 +88,9 @@ const IMediaDetail = () => {
         {/* Content Section */}
         <section className="py-12 md:py-16">
           <div className="container max-w-4xl mx-auto px-4">
-            {/* Excerpt */}
+            {/* Introduction */}
             <p className="text-lg text-foreground leading-relaxed mb-8">
-              {entry.excerpt}
+              {introduction}
             </p>
 
             {/* Key Points */}

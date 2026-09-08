@@ -10,6 +10,8 @@ export interface MediaEntry {
   source: string;
   date?: string; // ISO format, optional for podcasts
   excerpt: string;
+  introduction?: string; // Detaljside-innledning (faller tilbake til excerpt)
+  shortSummary?: string; // Kort oppsummert-boks (faller tilbake til excerpt)
   keyPoints: string[];
   externalUrl?: string;
   pdfUrl?: string;
