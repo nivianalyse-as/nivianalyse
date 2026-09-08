@@ -4,7 +4,6 @@ import SEOHead from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
 import rogerImage from "@/assets/roger-antonsen.jpg";
-import rogerCvAsset from "@/assets/CV_Roger_Antonsen.pdf.asset.json";
 
 const expertise = [
   "Ledelse",
@@ -99,7 +98,7 @@ const EkspertRogerAntonsen = () => {
                     </p>
                   </div>
 
-                  <a href={rogerCvAsset.url} target="_blank" rel="noopener noreferrer">
+                  <a href="/docs/CV_Roger_Antonsen.pdf" target="_blank" rel="noopener noreferrer">
                     <Button variant="outline" size="sm" className="gap-2">
                       <Download className="w-3.5 h-3.5" />
                       Last ned full CV (PDF)
