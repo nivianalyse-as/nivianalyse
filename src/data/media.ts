@@ -7,8 +7,31 @@
  */
 
 import { MediaEntry } from "@/types/media";
+import haStangePdf from "@/assets/HA_Stange_07.09.26.pdf.asset.json";
 
 export const mediaEntries: MediaEntry[] = [
+  {
+    id: 29,
+    title: "Stange må kutte kraftig for å sikre bærekraftig kommuneøkonomi",
+    slug: "hamar-arbeiderblad-stange-kutte-kraftig",
+    type: "article",
+    source: "Hamar Arbeiderblad",
+    date: "2026-09-07T17:15:00",
+    excerpt: "Håvard Moe presenterte NIVI Analyses omstillingsanalyse for Stange kommune. Analysen viser hvilke tiltak som kan bidra til en mer bærekraftig kommuneøkonomi.",
+    introduction: "Håvard Moe, partner i NIVI Analyse, presenterte en omfattende omstillingsanalyse for Stange kommune. Analysen viser hvilke tiltak kommunen kan vurdere for å sikre en bærekraftig kommuneøkonomi over tid, og danner grunnlag for videre politiske prioriteringer.",
+    keyPoints: [
+      "Stange kommune må forbedre resultatet med om lag 125 millioner kroner for å sikre en bærekraftig kommuneøkonomi.",
+      "NIVI Analyse har kartlagt kommunens økonomiske handlingsrom og identifisert mulige omstillingstiltak.",
+      "Analysen omfatter 35 arbeidspakker med et samlet innsparingspotensial på rundt 230 millioner kroner.",
+      "Tiltakene er presentert som muligheter og beslutningsgrunnlag, ikke som konkrete anbefalinger.",
+      "Kommunedirektøren skal prioritere og utrede tiltakene videre sammen med ansatte og tillitsvalgte."
+    ],
+    shortSummary: "NIVI Analyse presenterte en omfattende omstillingsanalyse for Stange kommune som synliggjør mulige tiltak for å styrke kommuneøkonomien. Analysen gir politikerne et bredt beslutningsgrunnlag for videre prioriteringer og viser hvilke muligheter kommunen har for å oppnå økonomisk balanse.",
+    externalUrl: "https://www.h-a.no/sjekk-hele-lista-for-hva-kommunen-kan-spare-over-200-millioner-pa-dette-vil-smerte/s/80-139-40119",
+    pdfUrl: haStangePdf.url,
+    featured: false,
+    tags: ["hamar arbeiderblad", "kommuneøkonomi", "stange", "omstilling"]
+  },
   {
     id: 28,
     title: "Kommuneekspert spår ROBEK for Hadsel: – Dere kommer ikke på ROBEK fordi dere har dårlig råd, men fordi dere er dårlig styrt",
