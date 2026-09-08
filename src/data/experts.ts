@@ -2,6 +2,7 @@ import geirImage from "@/assets/geir-vinsand.jpg";
 import havardImage from "@/assets/havard-moe.jpg";
 import benteImage from "@/assets/bente-rudrud-herdlevar.jpg";
 import rogerImage from "@/assets/roger-antonsen.jpg";
+import rogerCvAsset from "@/assets/CV_Roger_Antonsen.pdf.asset.json";
 
 export interface ExpertCV {
   intro: string;
@@ -128,15 +129,15 @@ export const experts: Expert[] = [
     image: rogerImage,
     expertise: [
       "Ledelse",
-      "Økonomi og regnskap",
-      "Interimledelse (Management for Hire)",
       "Kommuneøkonomi",
       "Omstilling",
+      "Økonomistyring",
+      "Management for hire",
     ],
     description:
-      "Roger A. Antonsen har lang ledererfaring fra Forsvaret og kommunesektoren. Han tilbyr økonomisk rådgivning til kommuner med behov for bedre styring, prioritering og omstilling, og bistår ledere og folkevalgte med å utvikle bærekraftige løsninger.",
-    cvLink: "/docs/CV_Roger_Antonsen.pdf",
-    cvPdf: "/docs/CV_Roger_Antonsen.pdf",
+      "Roger A. Antonsen har lang ledererfaring fra Forsvaret og kommunesektoren. Han har vært generalintendant i Forsvaret, kommunedirektør, kommunalsjef, økonomisjef og assisterende kommunedirektør. I NIVI Analyse bistår han kommuner med økonomistyring, omstilling, prioritering og utvikling av bærekraftige løsninger.",
+    cvLink: rogerCvAsset.url,
+    cvPdf: rogerCvAsset.url,
     phone: "+47 916 70 409",
     email: "ra@nivianalyse.no",
   },
