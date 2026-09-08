@@ -135,7 +135,20 @@ export const experts: Expert[] = [
     ],
     description:
       "Roger A. Antonsen har lang ledererfaring fra Forsvaret og kommunesektoren. Han har vært generalintendant i Forsvaret, kommunedirektør, kommunalsjef, økonomisjef og assisterende kommunedirektør. I NIVI Analyse bistår han kommuner med økonomistyring, omstilling, prioritering og utvikling av bærekraftige løsninger.",
-    cvLink: "/docs/CV_Roger_Antonsen.pdf",
+    cv: {
+      intro:
+        "Roger A. Antonsen har lang og bred ledererfaring fra Forsvaret og kommunesektoren. Han har vært generalintendant i Forsvaret, kommunedirektør, kommunalsjef, økonomisjef og assisterende kommunedirektør. I NIVI Analyse bistår han kommuner med økonomistyring, omstilling, prioritering og utvikling av bærekraftige løsninger.",
+      keyExperience: [
+        "Generalintendant i Forsvaret – toppleder med ansvar for logistikk og økonomi",
+        "Kommunedirektør, kommunalsjef og økonomisjef i kommunesektoren",
+        "Assisterende kommunedirektør med ansvar for økonomi og organisasjon",
+        "Omstilling, prioritering og økonomistyring i kommuner",
+        "Management for hire – midlertidig ledelse og bistand i krevende situasjoner",
+        "Utvikling av bærekraftige økonomiske løsninger for kommuner",
+      ],
+      education:
+        "Utdannet fra Forsvarets stabsskole og Forsvarets høgskole, med videreutdanning i økonomi, ledelse og offentlig forvaltning",
+    },
     cvPdf: "/docs/CV_Roger_Antonsen.pdf",
     phone: "+47 916 70 409",
     email: "ra@nivianalyse.no",
