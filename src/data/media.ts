@@ -33,6 +33,28 @@ export const mediaEntries: MediaEntry[] = [
     tags: ["hamar arbeiderblad", "kommuneøkonomi", "stange", "omstilling"]
   },
   {
+    id: 30,
+    title: "«Vi mangler ikke penger. Det eneste vi mangler i Norge er politisk vilje.»",
+    slug: "dagens-perspektiv-politisk-vilje",
+    type: "article",
+    source: "Dagens Perspektiv",
+    date: "2026-09-07T11:08:00",
+    excerpt: "Håvard Moe og Geir Vinsand, partnere i rådgivingsselskapet i NIVI Analyse var på Norsk kommunedirektørforum sin topplederkonferanse og la frem sine perspektiver på utfordringsbildet for fremtidens kommunesektor. Norge har alt vi behøver for å løse morgendagens utfordringer - hovedproblemet er manglende politisk vilje til omstilling og en kommunesektor som strukturelt ikke er rigget for det utfordringsbildet som nå ruller inn over landet.",
+    introduction: "Håvard Moe og Geir Vinsand, partnere i rådgivingsselskapet i NIVI Analyse var på Norsk kommunedirektørforum sin topplederkonferanse og la frem sine perspektiver på utfordringsbildet for fremtidens kommunesektor. Norge har alt vi behøver for å løse morgendagens utfordringer - hovedproblemet er manglende politisk vilje til omstilling og en kommunesektor som strukturelt ikke er rigget for det utfordringsbildet som nå ruller inn over landet.",
+    keyPoints: [
+      "Demografien krever en kraftig omfordeling av ressursene. Færre barn og unge og langt flere eldre innebærer at kapasitet må flyttes fra blant annet skolesektoren til helse og omsorg.",
+      "Kommunene står overfor alvorlig kompetanse- og bemanningsmangel. Utfordringen er særlig stor i små distriktskommuner, som blir stadig mer avhengige av kostbare vikarer og midlertidig arbeidskraft.",
+      "Hovedproblemet er manglende politisk vilje til omstilling, ikke mangel på penger. Nødvendige strukturendringer blir ofte utsatt eller stoppet av lokal motstand.",
+      "Dagens kommunestruktur er ikke bærekraftig overalt. Ifølge forskerne kan 20–30 kommuner innen 2040 bli så ressurs- og kompetansesvake at driften ikke lenger er juridisk eller faglig forsvarlig.",
+      "Det trengs større og mer forpliktende kommunalt samarbeid. Når kommunesammenslåinger er politisk vanskelige og frivillig samarbeid ofte bryter sammen, bør det vurderes en lov om forpliktende interkommunalt samarbeid."
+    ],
+    shortSummary: "Håvard Moe og Geir Vinsand, partnere i rådgivingsselskapet i NIVI Analyse var på Norsk kommunedirektørforum sin topplederkonferanse og la frem sine perspektiver på utfordringsbildet for fremtidens kommunesektor. Norge har alt vi behøver for å løse morgendagens utfordringer - hovedproblemet er manglende politisk vilje til omstilling og en kommunesektor som strukturelt ikke er rigget for det utfordringsbildet som nå ruller inn over landet.",
+    externalUrl: "https://www.dagensperspektiv.no/samfunnsstyring/vi-mangler-ikke-penger-det-eneste-vi-mangler-i-norge-er-politisk-vilje/1447533",
+    pdfUrl: "/docs/DP_PolitiskVilje_07.09.26.pdf",
+    featured: false,
+    tags: ["dagens perspektiv", "omstilling", "kommunestruktur", "interkommunalt samarbeid"]
+  },
+  {
     id: 28,
     title: "Kommuneekspert spår ROBEK for Hadsel: – Dere kommer ikke på ROBEK fordi dere har dårlig råd, men fordi dere er dårlig styrt",
     slug: "bladet-vesteralen-hadsel-robek",
