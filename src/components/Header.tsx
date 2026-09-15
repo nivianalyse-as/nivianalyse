@@ -54,53 +54,52 @@ const Header = () => {
     { name: "Om oss", href: "/om-oss" },
   ];
 
-  const handleNavClick = (href: string) => {
+  // Run navigation after the drawer has finished closing so the dialog
+  // unmount/focus-restore never swallows the route change.
+  const runAfterClose = (fn: () => void) => {
     setIsOpen(false);
-    
+    setTimeout(fn, 0);
+  };
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) element.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const handleNavClick = (href: string) => {
     if (href === "/") {
-      navigate("/");
-      window.scrollTo({ top: 0, behavior: "smooth" });
+      runAfterClose(() => {
+        if (location.pathname !== "/") navigate("/");
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
       return;
     }
-    
+
     if (href.startsWith("/#")) {
       const sectionId = href.substring(2);
-      if (location.pathname === "/") {
-        const element = document.getElementById(sectionId);
-        if (element) {
-          element.scrollIntoView({ behavior: "smooth" });
+      runAfterClose(() => {
+        if (location.pathname === "/") {
+          scrollToSection(sectionId);
+        } else {
+          navigate("/");
+          setTimeout(() => scrollToSection(sectionId), 150);
         }
-      } else {
-        navigate("/");
-        setTimeout(() => {
-          const element = document.getElementById(sectionId);
-          if (element) {
-            element.scrollIntoView({ behavior: "smooth" });
-          }
-        }, 100);
-      }
+      });
       return;
     }
-    
-    navigate(href);
+
+    runAfterClose(() => navigate(href));
   };
 
   const handleContactClick = () => {
-    setIsOpen(false);
-    if (location.pathname === "/") {
-      const element = document.getElementById("kontakt");
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
+    runAfterClose(() => {
+      if (location.pathname === "/") {
+        scrollToSection("kontakt");
+      } else {
+        navigate("/");
+        setTimeout(() => scrollToSection("kontakt"), 150);
       }
-    } else {
-      navigate("/");
-      setTimeout(() => {
-        const element = document.getElementById("kontakt");
-        if (element) {
-          element.scrollIntoView({ behavior: "smooth" });
-        }
-      }, 100);
-    }
+    });
   };
 
   return (
