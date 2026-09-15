@@ -14,6 +14,9 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import ScrollToTop from "@/components/ScrollToTop";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import CookieConsent from "@/components/CookieConsent";
 import NotFound from "@/pages/NotFound";
 import { reportLovableError } from "@/lib/lovable-error-reporting";
 import appCss from "@/styles.css?url";
@@ -198,7 +201,11 @@ function RootComponent() {
         <Toaster />
         <Sonner />
         <ScrollToTop />
+        {/* Persistent chrome: mounted once so route changes never remount it */}
+        <Header />
         <Outlet />
+        <Footer />
+        <CookieConsent />
       </TooltipProvider>
     </ThemeProvider>
   );

@@ -2,8 +2,6 @@ import { useParams, Link } from "@/lib/router-compat";
 import { ArrowLeft, Download, Calendar, FileText, Building2, ArrowRight } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import { rapporter } from "@/data/reports";
 import { themeToSlug } from "@/types/rapport";
@@ -30,14 +28,12 @@ const RapportDetail = () => {
   if (!rapport) {
     return (
       <div className="min-h-screen">
-        <Header />
         <main className="container-narrow section-padding text-center">
           <h1 className="text-2xl font-semibold text-primary mb-4">Rapport ikke funnet</h1>
           <Link to="/publikasjoner" className="text-accent hover:text-accent/80">
             ← Tilbake til publikasjoner
           </Link>
         </main>
-        <Footer />
       </div>
     );
   }
@@ -88,7 +84,6 @@ const RapportDetail = () => {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(reportSchema) }}
         style={{ display: "none" }}
       />
-      <Header />
       <main id="main-content">
         <article style={{ paddingTop: "72px", paddingBottom: "96px" }}>
           <div className="mx-auto max-w-[860px] px-5 md:px-8">
@@ -287,7 +282,6 @@ const RapportDetail = () => {
           </div>
         </article>
       </main>
-      <Footer />
     </div>
   );
 };

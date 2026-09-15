@@ -5,8 +5,6 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Checkbox } from "@/components/ui/checkbox";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import { rapporter } from "@/data/reports";
 import { ALL_THEMES, ALL_TYPES, themeToSlug, type RapportType } from "@/types/rapport";
@@ -204,7 +202,6 @@ const Rapportarkiv = () => {
           isPartOf: { "@type": "WebSite", name: "NIVI Analyse", url: "https://nivianalyse.no" }
         }) }}
       />
-      <Header />
       <main id="main-content">
         {/* Hero */}
         <section className="bg-background" style={{ paddingTop: "72px", paddingBottom: "48px" }}>
@@ -379,7 +376,6 @@ const Rapportarkiv = () => {
           </div>
         </section>
       </main>
-      <Footer />
     </div>
   );
 };

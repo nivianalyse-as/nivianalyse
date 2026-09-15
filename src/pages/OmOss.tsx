@@ -1,5 +1,3 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import SectionHeader from "@/components/SectionHeader";
 import ExpertsSection from "@/components/ExpertsSection";
@@ -8,7 +6,6 @@ const OmOss = () => {
   return (
     <div className="min-h-screen">
       <SEOHead canonicalOnly />
-      <Header />
       <main id="main-content">
         {/* NIVIs historie */}
         <section className="py-10 md:py-14 bg-background">
@@ -50,7 +47,6 @@ const OmOss = () => {
         {/* Eksperter */}
         <ExpertsSection subtitle="" />
       </main>
-      <Footer />
     </div>
   );
 };

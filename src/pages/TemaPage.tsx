@@ -1,8 +1,6 @@
 import { useParams, Link } from "@/lib/router-compat";
 import { ArrowLeft, ArrowRight, Download } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import { rapporter } from "@/data/reports";
 import { slugToTheme, themeToSlug } from "@/types/rapport";
@@ -31,14 +29,12 @@ const TemaPage = () => {
   if (!theme) {
     return (
       <div className="min-h-screen">
-        <Header />
         <main className="container-narrow section-padding text-center">
           <h1 className="text-2xl font-semibold text-primary mb-4">Tema ikke funnet</h1>
            <Link to="/publikasjoner" className="text-accent hover:text-accent/80">
             ← Tilbake til publikasjoner
           </Link>
         </main>
-        <Footer />
       </div>
     );
   }
@@ -52,7 +48,6 @@ const TemaPage = () => {
         title={`${theme} – Rapportoversikt | NIVI Analyse`}
         description={`${description.substring(0, 155)}...`}
       />
-      <Header />
       <main id="main-content">
         <section className="bg-background" style={{ paddingTop: "72px", paddingBottom: "96px" }}>
           <div className="container-narrow">
@@ -123,7 +118,6 @@ const TemaPage = () => {
           </div>
         </section>
       </main>
-      <Footer />
     </div>
   );
 };

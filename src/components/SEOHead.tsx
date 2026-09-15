@@ -71,13 +71,9 @@ const SEOHead = ({
       }
     }
 
-    return () => {
-      // Clean up canonical on unmount
-      if (resolvedCanonical) {
-        const link = document.querySelector('link[rel="canonical"]');
-        if (link) link.remove();
-      }
-    };
+    // No cleanup: removing and re-creating the canonical link on every route
+    // change caused pointless head churn (and a frame with no canonical tag).
+    // The next page's effect overwrites href in place instead.
   }, [title, description, type, image, url, author, publishedTime, canonical, canonicalOnly]);
 
   return null;
