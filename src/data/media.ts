@@ -487,14 +487,17 @@ export const mediaEntries: MediaEntry[] = [
     type: "article",
     source: "Kommunal Rapport",
     date: "2026-02-04T05:00:00",
-    excerpt: "NIVI Analyse ved Geir Vinsand og Håvard Moe kommenterer sammenslåingsprosessen mellom to store kommuner og peker på viktige lærdommer for fremtidige strukturendringer.",
+    excerpt: "Håvard Moe går inn som partner i NIVI Analyse sammen med Geir Vinsand. Kommunal Rapport omtaler samlingen av de to profilerte kommuneekspertene som «De to største brølapene slår seg sammen», og beskriver bakgrunnen for det nye partnerskapet.",
     keyPoints: [
-      "Sammenslåingsprosessen mellom to store kommuner",
-      "Viktige lærdommer for fremtidige strukturendringer"
+      "Håvard Moe går fra KS Konsulent til NIVI Analyse.",
+      "Moe går inn som partner og daglig leder, mens Geir Vinsand fortsetter som partner og styreleder.",
+      "Artikkelen beskriver hvordan to av kommunesektorens mest profilerte rådgivere samler sin kompetanse i ett fagmiljø.",
+      "Begge er kjent for sitt sterke engasjement innen kommuneøkonomi, kommunestruktur og omstilling."
     ],
+    shortSummary: "Kommunal Rapport omtaler Håvard Moes overgang til NIVI Analyse og etableringen av partnerskapet med Geir Vinsand. Artikkelen beskriver hvorfor de to velger å arbeide sammen, deres lange erfaring fra kommunesektoren og hvordan de ønsker å styrke rådgivningen overfor norske kommuner.",
     pdfUrl: "/docs/de-to-storste-brolapene.pdf",
     featured: true,
-    tags: ["kommunal rapport", "kommunestruktur", "sammenslåing"]
+    tags: ["kommunal rapport", "kommuneøkonomi", "omstilling"]
   },
   {
     id: 14,
