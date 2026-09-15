@@ -195,15 +195,33 @@ const Header = () => {
             </SheetHeader>
 
             <nav className="flex flex-col p-6" role="navigation">
-              {navItems.map((item) => (
-                <button
-                  key={item.name}
-                  onClick={() => handleNavClick(item.href)}
-                  className="text-[17px] font-medium text-white/90 hover:text-white hover:bg-white/5 text-left px-4 py-4 rounded-lg transition-colors focus:outline-hidden focus:ring-2 focus:ring-white/50 focus:bg-white/5"
-                >
-                  {item.name}
-                </button>
-              ))}
+              {navItems.map((item) => {
+                const itemClass =
+                  "text-[17px] font-medium text-white/90 hover:text-white hover:bg-white/5 text-left px-4 py-4 rounded-lg transition-colors focus:outline-hidden focus:ring-2 focus:ring-white/50 focus:bg-white/5";
+
+                if (item.href.startsWith("/#") || item.href === "/") {
+                  return (
+                    <button
+                      key={item.name}
+                      onClick={() => handleNavClick(item.href)}
+                      className={itemClass}
+                    >
+                      {item.name}
+                    </button>
+                  );
+                }
+
+                return (
+                  <Link
+                    key={item.name}
+                    to={item.href}
+                    onClick={() => setIsOpen(false)}
+                    className={itemClass}
+                  >
+                    {item.name}
+                  </Link>
+                );
+              })}
 
               <div className="mt-6 pt-6 border-t border-white/10">
                 <Button
