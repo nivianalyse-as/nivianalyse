@@ -54,53 +54,52 @@ const Header = () => {
     { name: "Om oss", href: "/om-oss" },
   ];
 
-  const handleNavClick = (href: string) => {
+  // Run navigation after the drawer has finished closing so the dialog
+  // unmount/focus-restore never swallows the route change.
+  const runAfterClose = (fn: () => void) => {
     setIsOpen(false);
-    
+    setTimeout(fn, 0);
+  };
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) element.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const handleNavClick = (href: string) => {
     if (href === "/") {
-      navigate("/");
-      window.scrollTo({ top: 0, behavior: "smooth" });
+      runAfterClose(() => {
+        if (location.pathname !== "/") navigate("/");
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
       return;
     }
-    
+
     if (href.startsWith("/#")) {
       const sectionId = href.substring(2);
-      if (location.pathname === "/") {
-        const element = document.getElementById(sectionId);
-        if (element) {
-          element.scrollIntoView({ behavior: "smooth" });
+      runAfterClose(() => {
+        if (location.pathname === "/") {
+          scrollToSection(sectionId);
+        } else {
+          navigate("/");
+          setTimeout(() => scrollToSection(sectionId), 150);
         }
-      } else {
-        navigate("/");
-        setTimeout(() => {
-          const element = document.getElementById(sectionId);
-          if (element) {
-            element.scrollIntoView({ behavior: "smooth" });
-          }
-        }, 100);
-      }
+      });
       return;
     }
-    
-    navigate(href);
+
+    runAfterClose(() => navigate(href));
   };
 
   const handleContactClick = () => {
-    setIsOpen(false);
-    if (location.pathname === "/") {
-      const element = document.getElementById("kontakt");
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
+    runAfterClose(() => {
+      if (location.pathname === "/") {
+        scrollToSection("kontakt");
+      } else {
+        navigate("/");
+        setTimeout(() => scrollToSection("kontakt"), 150);
       }
-    } else {
-      navigate("/");
-      setTimeout(() => {
-        const element = document.getElementById("kontakt");
-        if (element) {
-          element.scrollIntoView({ behavior: "smooth" });
-        }
-      }, 100);
-    }
+    });
   };
 
   return (
@@ -196,15 +195,33 @@ const Header = () => {
             </SheetHeader>
 
             <nav className="flex flex-col p-6" role="navigation">
-              {navItems.map((item) => (
-                <button
-                  key={item.name}
-                  onClick={() => handleNavClick(item.href)}
-                  className="text-[17px] font-medium text-white/90 hover:text-white hover:bg-white/5 text-left px-4 py-4 rounded-lg transition-colors focus:outline-hidden focus:ring-2 focus:ring-white/50 focus:bg-white/5"
-                >
-                  {item.name}
-                </button>
-              ))}
+              {navItems.map((item) => {
+                const itemClass =
+                  "text-[17px] font-medium text-white/90 hover:text-white hover:bg-white/5 text-left px-4 py-4 rounded-lg transition-colors focus:outline-hidden focus:ring-2 focus:ring-white/50 focus:bg-white/5";
+
+                if (item.href.startsWith("/#") || item.href === "/") {
+                  return (
+                    <button
+                      key={item.name}
+                      onClick={() => handleNavClick(item.href)}
+                      className={itemClass}
+                    >
+                      {item.name}
+                    </button>
+                  );
+                }
+
+                return (
+                  <Link
+                    key={item.name}
+                    to={item.href}
+                    onClick={() => setIsOpen(false)}
+                    className={itemClass}
+                  >
+                    {item.name}
+                  </Link>
+                );
+              })}
 
               <div className="mt-6 pt-6 border-t border-white/10">
                 <Button
