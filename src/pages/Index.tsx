@@ -1,4 +1,3 @@
-import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import TrustStrip from "@/components/TrustStrip";
 import PublikasjonAutoritet from "@/components/PublikasjonAutoritet";
@@ -11,8 +10,6 @@ import ReferenceProjectsSection from "@/components/ReferenceProjectsSection";
 
 import ExpertsSection from "@/components/ExpertsSection";
 import ContactSection from "@/components/ContactSection";
-import Footer from "@/components/Footer";
-import CookieConsent from "@/components/CookieConsent";
 import SEOHead from "@/components/SEOHead";
 import SchemaMarkup, { 
   geirVinsandSchema, 
@@ -28,7 +25,6 @@ const Index = () => {
       <SchemaMarkup schema={geirVinsandSchema} />
       <SchemaMarkup schema={havardMoeSchema} />
       
-      <Header />
       <main id="main-content">
         <HeroSection />
         <TrustStrip />
@@ -45,8 +41,6 @@ const Index = () => {
       </main>
       <div className="h-10 md:hidden bg-gradient-to-b from-background to-[#0E3B32]" aria-hidden="true" />
       <div style={{ height: '32px', backgroundColor: 'hsl(var(--background))' }} className="hidden md:block" aria-hidden="true" />
-      <Footer />
-      <CookieConsent />
     </div>
   );
 };

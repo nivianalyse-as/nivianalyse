@@ -33,15 +33,30 @@ const Header = () => {
     return () => document.removeEventListener("keydown", handleEscape);
   }, []);
 
-  // Lock body scroll when menu is open
+  // Lock body scroll when menu is open.
+  // While the drawer is closing, Radix keeps `pointer-events: none` on <body>
+  // until its 300ms exit animation ends. Clicks made in that window are
+  // swallowed, which reads as a frozen UI when navigating quickly. Clear the
+  // lock ourselves as soon as the drawer starts closing.
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
+      return () => {
+        document.body.style.overflow = "";
+      };
     }
+
+    document.body.style.overflow = "";
+    document.body.style.pointerEvents = "";
+    const raf = requestAnimationFrame(() => {
+      document.body.style.pointerEvents = "";
+    });
+    const timer = window.setTimeout(() => {
+      document.body.style.pointerEvents = "";
+    }, 320);
     return () => {
-      document.body.style.overflow = "";
+      cancelAnimationFrame(raf);
+      window.clearTimeout(timer);
     };
   }, [isOpen]);
 

@@ -1,8 +1,6 @@
 import { useEffect } from "react";
 import { Link } from "@/lib/router-compat";
 import { ArrowRight } from "lucide-react";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import KortSvar from "@/components/KortSvar";
 
@@ -75,7 +73,6 @@ const InterkommunaltSamarbeidKartlegging = () => {
         description="NIVI Analyse gjennomfører fylkesvise kartlegginger av interkommunalt samarbeid for Statsforvaltere og fylkeskommuner. Erfaring fra Agder, Østfold, Møre og Romsdal og flere."
         canonical="https://nivianalyse.no/interkommunalt-samarbeid-kartlegging"
       />
-      <Header />
       <main id="main-content">
         <section className="bg-background" style={{ paddingTop: "72px", paddingBottom: "32px" }}>
           <div className="container-narrow">
@@ -191,7 +188,6 @@ const InterkommunaltSamarbeidKartlegging = () => {
           </div>
         </section>
       </main>
-      <Footer />
     </div>
   );
 };

@@ -1,8 +1,6 @@
 import { useEffect } from "react";
 import { Link } from "@/lib/router-compat";
 import { ArrowRight } from "lucide-react";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import KortSvar from "@/components/KortSvar";
 
@@ -90,7 +88,6 @@ const KommuneokonomiRadgivning = () => {
         description="NIVI Analyse tilbyr KOSTRA-analyse, kommunekompassevaluering og omstillingsstøtte. 300+ bistådde kommuner. Ta kontakt for en uforpliktende samtale."
         canonical="https://nivianalyse.no/kommuneokonomi-radgivning"
       />
-      <Header />
       <main id="main-content">
         <section className="bg-background" style={{ paddingTop: "72px", paddingBottom: "32px" }}>
           <div className="container-narrow">
@@ -236,7 +233,6 @@ const KommuneokonomiRadgivning = () => {
           </div>
         </section>
       </main>
-      <Footer />
     </div>
   );
 };

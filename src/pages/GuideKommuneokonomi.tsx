@@ -1,6 +1,4 @@
 import { useEffect } from "react";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import KortSvar from "@/components/KortSvar";
 
@@ -98,7 +96,6 @@ const GuideKommuneokonomi = () => {
         description="Hva er kommuneøkonomi? Lær om KOSTRA, netto driftsresultat, ROBEK og omstilling. Faglig guide fra NIVI Analyse med 200+ analyser fra norsk kommunesektor."
         canonical="https://nivianalyse.no/guide/kommuneokonomi-norske-kommuner"
       />
-      <Header />
       <main id="main-content">
         <section className="bg-background" style={{ paddingTop: "72px", paddingBottom: "32px" }}>
           <div className="container-narrow">
@@ -216,7 +213,6 @@ const GuideKommuneokonomi = () => {
           </div>
         </section>
       </main>
-      <Footer />
     </div>
   );
 };

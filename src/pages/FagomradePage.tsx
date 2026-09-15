@@ -1,8 +1,6 @@
 import { useEffect } from "react";
 import { useParams, Link, Navigate } from "@/lib/router-compat";
 import { ArrowLeft } from "lucide-react";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import KortSvar from "@/components/KortSvar";
 import { getFagomradeBySlug } from "@/data/fagomrader";
@@ -40,7 +38,6 @@ const FagomradePage = () => {
         title={`${fag.title} | NIVI Analyse`}
         description={fag.kortSvar.text.substring(0, 155)}
       />
-      <Header />
       <main id="main-content">
         <section className="bg-background" style={{ paddingTop: "72px", paddingBottom: "32px" }}>
           <div className="container-narrow">
@@ -74,7 +71,6 @@ const FagomradePage = () => {
           </div>
         </section>
       </main>
-      <Footer />
     </div>
   );
 };

@@ -1,7 +1,5 @@
 import { useParams, Link, Navigate } from "@/lib/router-compat";
 import { ChevronLeft, ExternalLink, Download, Play, Calendar, Building2 } from "lucide-react";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import MediaCard from "@/components/MediaCard";
 import { Button } from "@/components/ui/button";
@@ -36,7 +34,6 @@ const IMediaDetail = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead canonicalOnly />
-      <Header />
       <main className="pt-20 md:pt-24">
         {/* Hero Section */}
         <section className="py-12 md:py-16 bg-secondary/20">
@@ -197,7 +194,6 @@ const IMediaDetail = () => {
           </section>
         )}
       </main>
-      <Footer />
     </div>
   );
 };

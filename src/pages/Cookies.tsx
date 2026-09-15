@@ -1,5 +1,3 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import { Link } from "@/lib/router-compat";
 import SEOHead from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
@@ -18,7 +16,6 @@ const Cookies = () => {
         title="Cookie-policy – NIVI Analyse"
         description="Les om hvordan NIVI Analyse bruker informasjonskapsler (cookies) og hvordan du kan endre innstillingene."
       />
-      <Header />
       <main id="main-content" className="flex-1 py-12 md:py-20">
         <div className="container-content">
           {/* Breadcrumb */}
@@ -160,7 +157,6 @@ const Cookies = () => {
           </article>
         </div>
       </main>
-      <Footer />
     </div>
   );
 };

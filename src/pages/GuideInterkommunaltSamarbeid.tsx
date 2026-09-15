@@ -1,8 +1,6 @@
 import { useEffect } from "react";
 import { Link } from "@/lib/router-compat";
 import { ArrowRight } from "lucide-react";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import KortSvar from "@/components/KortSvar";
 
@@ -89,7 +87,6 @@ const GuideInterkommunaltSamarbeid = () => {
         description="Guide til interkommunalt samarbeid: IKS, vertskommunemodellen, samarbeidsavtaler og regionråd. Fra NIVI Analyse — ett av Norges ledende fagmiljøer på kommunesamarbeid."
         canonical="https://nivianalyse.no/guide/interkommunalt-samarbeid-norge"
       />
-      <Header />
       <main id="main-content">
         <section className="bg-background" style={{ paddingTop: "72px", paddingBottom: "32px" }}>
           <div className="container-narrow">
@@ -199,7 +196,6 @@ const GuideInterkommunaltSamarbeid = () => {
           </div>
         </section>
       </main>
-      <Footer />
     </div>
   );
 };

@@ -1,8 +1,6 @@
 import { useParams, Link } from "@/lib/router-compat";
 import { ArrowLeft, ArrowRight, Download } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import { rapporter } from "@/data/reports";
 import { themeToSlug } from "@/types/rapport";
@@ -16,14 +14,12 @@ const AarsPage = () => {
   if (!yearNum || yearRapporter.length === 0) {
     return (
       <div className="min-h-screen">
-        <Header />
         <main className="container-narrow section-padding text-center">
           <h1 className="text-2xl font-semibold text-primary mb-4">Ingen rapporter for {year}</h1>
           <Link to="/publikasjoner" className="text-accent hover:text-accent/80">
             ← Tilbake til publikasjoner
           </Link>
         </main>
-        <Footer />
       </div>
     );
   }
@@ -39,7 +35,6 @@ const AarsPage = () => {
         title={`Rapporter fra ${yearNum} | NIVI Analyse`}
         description={`Oversikt over rapporter og utredninger publisert av NIVI Analyse i ${yearNum}.`}
       />
-      <Header />
       <main id="main-content">
         <section className="bg-background" style={{ paddingTop: "72px", paddingBottom: "96px" }}>
           <div className="container-narrow">
@@ -117,7 +112,6 @@ const AarsPage = () => {
           </div>
         </section>
       </main>
-      <Footer />
     </div>
   );
 };

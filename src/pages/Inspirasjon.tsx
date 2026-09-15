@@ -1,5 +1,3 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import InspirasjonListing from "@/components/InspirasjonListing";
 
@@ -21,11 +19,9 @@ const Inspirasjon = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema) }}
       />
-      <Header />
       <main id="main-content">
         <InspirasjonListing />
       </main>
-      <Footer />
     </div>
   );
 };

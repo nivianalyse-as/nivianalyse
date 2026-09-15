@@ -1,5 +1,3 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import { Link } from "@/lib/router-compat";
 import SEOHead from "@/components/SEOHead";
 
@@ -10,7 +8,6 @@ const Personvern = () => {
         title="Personvernerklæring – NIVI Analyse"
         description="Les om hvordan NIVI Analyse behandler personopplysninger og dine rettigheter."
       />
-      <Header />
       <main id="main-content" className="flex-1 py-12 md:py-20">
         <div className="container-content">
           {/* Breadcrumb */}
@@ -135,7 +132,6 @@ const Personvern = () => {
           </article>
         </div>
       </main>
-      <Footer />
     </div>
   );
 };

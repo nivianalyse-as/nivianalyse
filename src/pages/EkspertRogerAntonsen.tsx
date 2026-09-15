@@ -1,5 +1,3 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
@@ -46,7 +44,6 @@ const EkspertRogerAntonsen = () => {
         title="Roger A. Antonsen – Seniorrådgiver | NIVI Analyse"
         description="Roger A. Antonsen er seniorrådgiver i NIVI Analyse med lang ledererfaring fra Forsvaret og kommunesektoren innen økonomistyring, omstilling og interimledelse."
       />
-      <Header />
       <main id="main-content">
         <section className="section-padding bg-background">
           <div className="container-narrow">
@@ -166,7 +163,6 @@ const EkspertRogerAntonsen = () => {
           </div>
         </section>
       </main>
-      <Footer />
     </div>
   );
 };
