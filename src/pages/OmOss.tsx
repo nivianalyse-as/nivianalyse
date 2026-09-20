@@ -7,6 +7,9 @@ const OmOss = () => {
     <div className="min-h-screen">
       <SEOHead canonicalOnly />
       <main id="main-content">
+        {/* Eksperter */}
+        <ExpertsSection subtitle="" />
+
         {/* NIVIs historie */}
         <section className="py-10 md:py-14 bg-background">
           <div className="container-narrow">
@@ -43,9 +46,6 @@ const OmOss = () => {
             </div>
           </div>
         </section>
-
-        {/* Eksperter */}
-        <ExpertsSection subtitle="" />
       </main>
     </div>
   );
