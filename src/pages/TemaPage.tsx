@@ -5,7 +5,7 @@ import SEOHead from "@/components/SEOHead";
 import { rapporter } from "@/data/reports";
 import { slugToTheme, themeToSlug } from "@/types/rapport";
 
-const themeDescriptions: Record<string, string> = {
+export const themeDescriptions: Record<string, string> = {
   "Interkommunalt samarbeid": "NIVI Analyse har gjennom flere tiår kartlagt og analysert interkommunalt samarbeid i hele Norge. Vi har utviklet en systematisk kartleggingsmetodikk som er benyttet i de fleste fylker.",
   "Kommunestruktur": "Kommunestrukturen er et sentralt tema i norsk forvaltningspolitikk. NIVI Analyse har levert utredninger og analyser om kommunestruktur for departementer, fylkesmenn og kommuner.",
   "Kommunereform": "NIVI Analyse bidro aktivt med kunnskapsgrunnlag under kommunereformen. Vi har analysert reformens forutsetninger, prosesser og konsekvenser.",

@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import Index from "@/pages/Index";
+import { seo } from "@/lib/seo";
 import heroImage from "@/assets/nivi-team-hero.webp";
 import heroImage640 from "@/assets/nivi-team-hero-640.webp";
 import heroImage960 from "@/assets/nivi-team-hero-960.webp";
@@ -9,9 +10,17 @@ const heroSrcSet = `${heroImage640} 640w, ${heroImage960} 960w, ${heroImage1280}
 const heroSizes = "(max-width: 767px) 92vw, (max-width: 1023px) 88vw, 50vw";
 
 export const Route = createFileRoute("/")({
-  head: () => ({
+  head: () => {
+    const base = seo({
+      path: "/",
+      title: "NIVI Analyse – Uavhengig rådgivning for kommunesektoren",
+      description:
+        "NIVI Analyse tilbyr strategisk analyse, kommuneøkonomi og organisasjonsutvikling. Erfarne seniorkonsulenter med direkte tilgang til spisskompetanse for norske kommuner.",
+    });
+    return {
+    meta: base.meta,
     links: [
-      { rel: "canonical", href: "https://nivianalyse.no/" },
+      ...base.links,
       {
         rel: "preload",
         as: "image",
@@ -21,7 +30,7 @@ export const Route = createFileRoute("/")({
         fetchPriority: "high",
       },
     ],
-    meta: [{ property: "og:url", content: "https://nivianalyse.no/" }],
-  }),
+    };
+  },
   component: Index,
 });

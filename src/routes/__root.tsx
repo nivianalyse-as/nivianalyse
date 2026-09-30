@@ -109,11 +109,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "NIVI Analyse" },
-      { property: "og:image", content: "https://nivianalyse.no/nivi-favicon.png" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@nivianalyse" },
       { name: "twitter:title", content: SITE_TITLE },
-      { name: "twitter:image", content: "https://nivianalyse.no/nivi-favicon.png" },
     ],
     links: [
       { rel: "preload", as: "style", href: appCss },
