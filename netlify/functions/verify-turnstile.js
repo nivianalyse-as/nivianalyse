@@ -1,4 +1,4 @@
-exports.handler = async function (event) {
+export const handler = async function (event) {
   try {
     const body = JSON.parse(event.body || "{}");
     const token = body["cf-turnstile-response"];
