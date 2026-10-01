@@ -3,6 +3,6 @@ import { seo } from "@/lib/seo";
 import IMedia from "@/pages/IMedia";
 
 export const Route = createFileRoute("/i-media/")({
-  head: () => seo({ path: "/i-media", title: "NIVI i media – Medieomtaler og debatt | NIVI Analyse", description: "Medieomtaler, intervjuer og debattinnlegg med NIVI Analyse om kommuneøkonomi, kommunestruktur og interkommunalt samarbeid." }),
+  head: () => seo({ path: "/i-media", title: "I media | Nivi Analyse – Omtaler, kronikker og samfunnsdebatt", description: "Se medieomtaler, artikler og ekspertkommentarer fra Nivi Analyse om kommunestruktur, offentlig forvaltning og samfunnsøkonomi." }),
   component: IMedia,
 });

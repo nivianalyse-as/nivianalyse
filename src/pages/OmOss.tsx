@@ -7,6 +7,15 @@ const OmOss = () => {
     <div className="min-h-screen">
       <SEOHead canonicalOnly />
       <main id="main-content">
+        {/* Hovedoverskrift */}
+        <section className="pt-20 md:pt-24 pb-6 md:pb-8 bg-background">
+          <div className="container-narrow">
+            <h1 className="text-3xl md:text-4xl font-semibold text-primary">
+              Om Nivi Analyse
+            </h1>
+          </div>
+        </section>
+
         {/* Eksperter */}
         <ExpertsSection subtitle="" />
 
