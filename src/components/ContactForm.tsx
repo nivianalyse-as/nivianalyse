@@ -101,6 +101,7 @@ const ContactForm = () => {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [turnstileError, setTurnstileError] = useState<string | null>(null);
+  const [submitError, setSubmitError] = useState(false);
   const turnstileRef = useRef<HTMLDivElement>(null);
 
   const validateEmail = (email: string): boolean => {
@@ -157,6 +158,7 @@ const ContactForm = () => {
     if (!validateForm()) return;
     setLoading(true);
     setTurnstileError(null);
+    setSubmitError(false);
 
     const form = e.currentTarget;
     const data = new FormData(form);
@@ -187,11 +189,16 @@ const ContactForm = () => {
         return;
       }
 
-      await fetch("/", {
+      // Post to a real static file so Netlify Forms intercepts the submission.
+      data.delete("cf-turnstile-response");
+      const submitRes = await fetch("/__forms.html", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: new URLSearchParams(data as any).toString(),
       });
+      if (!submitRes.ok) {
+        throw new Error(`Netlify Forms svarte ${submitRes.status}`);
+      }
 
       // Scroll with offset for sticky header (~84px)
       const el = formRef.current;
@@ -210,7 +217,7 @@ const ContactForm = () => {
       form.reset();
     } catch (error) {
       console.error("Form submission error:", error);
-      alert("Noe gikk galt. Prøv igjen.");
+      setSubmitError(true);
     } finally {
       setLoading(false);
     }
@@ -456,6 +463,14 @@ const ContactForm = () => {
             "Send henvendelse"
           )}
         </Button>
+        {submitError && (
+          <div role="alert" className="text-[13px] text-red-600 leading-relaxed">
+            Meldingen din ble ikke sendt. Prøv igjen, eller kontakt oss direkte på{" "}
+            <a href="tel:+4748148813" className="underline underline-offset-2">telefon&nbsp;+47&nbsp;48&nbsp;14&nbsp;88&nbsp;13</a>{" "}
+            eller{" "}
+            <a href="mailto:post@nivianalyse.no" className="underline underline-offset-2">post@nivianalyse.no</a>.
+          </div>
+        )}
       </div>
     </form>
     </div>

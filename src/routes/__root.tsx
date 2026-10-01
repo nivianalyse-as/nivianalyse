@@ -177,14 +177,6 @@ function RootShell({ children }: { children: ReactNode }) {
         <HeadContent />
       </head>
       <body>
-        {/* Netlify form detection for SPA */}
-        <form name="kontakt" data-netlify="true" hidden data-netlify-honeypot="bot-field">
-          <input type="text" name="navn" />
-          <input type="email" name="epost" />
-          <input type="tel" name="telefon" />
-          <textarea name="melding"></textarea>
-          <input name="bot-field" />
-        </form>
         {children}
         <Scripts />
       </body>
