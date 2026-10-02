@@ -7,7 +7,6 @@
  */
 
 import { MediaEntry } from "@/types/media";
-import haStangePdf from "@/assets/HA_Stange_07.09.26.pdf.asset.json";
 
 export const mediaEntries: MediaEntry[] = [
   {
@@ -28,7 +27,7 @@ export const mediaEntries: MediaEntry[] = [
     ],
     shortSummary: "NIVI Analyse presenterte en omfattende omstillingsanalyse for Stange kommune som synliggjør mulige tiltak for å styrke kommuneøkonomien. Analysen gir politikerne et bredt beslutningsgrunnlag for videre prioriteringer og viser hvilke muligheter kommunen har for å oppnå økonomisk balanse.",
     externalUrl: "https://www.h-a.no/sjekk-hele-lista-for-hva-kommunen-kan-spare-over-200-millioner-pa-dette-vil-smerte/s/80-139-40119",
-    pdfUrl: haStangePdf.url,
+    pdfUrl: "/docs/HA_Stange_07.09.26.pdf",
     featured: false,
     tags: ["hamar arbeiderblad", "kommuneøkonomi", "stange", "omstilling"]
   },
