@@ -10,6 +10,28 @@ import { MediaEntry } from "@/types/media";
 
 export const mediaEntries: MediaEntry[] = [
   {
+    id: 31,
+    title: "«Kan spare 30 millioner: Færre sjefer, bedre struktur»",
+    slug: "nordlys-senja-kan-spare-30-millioner",
+    type: "article",
+    source: "Nordlys",
+    date: "2026-10-08T13:06:00",
+    excerpt: "En rapport fra NIVI Analyse viser at Senja kommune har et effektiviseringspotensial på 25–30 millioner kroner gjennom bedre organisering, samordning og digitalisering. Kommunen preges fortsatt av kommunesammenslåingen i 2020, med ulik praksis, mange ledernivåer og skjev fordeling av leder- og støtteressurser. Rapporten anbefaler tydeligere ansvarslinjer og felles administrative funksjoner for å frigjøre ressurser og styrke tjenestene. Forslagene skal konkretiseres og konsekvensvurderes før beslutninger tas, med mål om minst 10 millioner kroner i innsparing i 2027.",
+    introduction: "En rapport fra NIVI Analyse viser at Senja kommune har et effektiviseringspotensial på 25–30 millioner kroner gjennom bedre organisering, samordning og digitalisering. Kommunen preges fortsatt av kommunesammenslåingen i 2020, med ulik praksis, mange ledernivåer og skjev fordeling av leder- og støtteressurser. Rapporten anbefaler tydeligere ansvarslinjer og felles administrative funksjoner for å frigjøre ressurser og styrke tjenestene. Forslagene skal konkretiseres og konsekvensvurderes før beslutninger tas, med mål om minst 10 millioner kroner i innsparing i 2027.",
+    keyPoints: [
+      "Enklere lederstruktur: En rendyrket trenivåmodell og samlet stab kan gi besparelser på 10–15 millioner kroner.",
+      "Felles administrativ støtte: Samordning av blant annet arkiv, innkjøp og fakturamottak kan redusere dobbeltarbeid.",
+      "Bedre organisering i oppvekst: Felles ledelse for mindre skoler og barnehager bør vurderes, uten at tjenestestedene nødvendigvis slås sammen.",
+      "Avlastning av helseledere: Et felles ressurskontor for turnus, bemanning og vikarhåndtering kan frigjøre tid til medarbeideroppfølging og kvalitetsutvikling.",
+      "Sterkere styring og samarbeid: Tydeligere roller, digitalisering og bedre utnyttelse av kompetanse skal bidra til at kommunen fungerer som én samlet organisasjon."
+    ],
+    shortSummary: "En rapport fra NIVI Analyse viser at Senja kommune har et effektiviseringspotensial på 25–30 millioner kroner gjennom bedre organisering, samordning og digitalisering. Kommunen preges fortsatt av kommunesammenslåingen i 2020, med ulik praksis, mange ledernivåer og skjev fordeling av leder- og støtteressurser. Rapporten anbefaler tydeligere ansvarslinjer og felles administrative funksjoner for å frigjøre ressurser og styrke tjenestene. Forslagene skal konkretiseres og konsekvensvurderes før beslutninger tas, med mål om minst 10 millioner kroner i innsparing i 2027.",
+    externalUrl: "https://www.nordlys.no/kan-spare-30-millioner-farre-sjefer-bedre-struktur/s/80-34-20031",
+    pdfUrl: "/docs/Nordlys_Senja_08.10.26.pdf",
+    featured: false,
+    tags: ["nordlys", "senja", "organisering", "kommuneøkonomi"]
+  },
+  {
     id: 29,
     title: "Stange må kutte kraftig for å sikre bærekraftig kommuneøkonomi",
     slug: "hamar-arbeiderblad-stange-kutte-kraftig",
