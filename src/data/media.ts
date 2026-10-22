@@ -10,6 +10,26 @@ import { MediaEntry } from "@/types/media";
 
 export const mediaEntries: MediaEntry[] = [
   {
+    id: 32,
+    title: "Ga knallhard beskjed: Kommer dere til å feige ut?",
+    slug: "tvedestrandsposten-ga-knallhard-beskjed",
+    type: "article",
+    source: "Tvedestrandsposten",
+    date: "2026-10-20T22:41:00",
+    excerpt: "Tvedestrand kommune har en alvorlig økonomisk ubalanse og må redusere utgiftene for å komme ut av ROBEK. Det umiddelbare behovet er rundt 35 millioner. Håvard Moe - partner og daglig leder i NIVI Analyse - mener at dette er fullt mulig å få til, men at omstillingen forutsetter krevende politiske prioriteringer, særlig innen helse og omsorg, oppvekst og tekniske tjenester. Budskapet er at politikerne må samle seg om en tydelig plan og handle raskt, fordi utsettelser vil gjøre situasjonen betydelig vanskeligere noen få år frem i tid.",
+    introduction: "Tvedestrand kommune har en alvorlig økonomisk ubalanse og må redusere utgiftene for å komme ut av ROBEK. Det umiddelbare behovet er rundt 35 millioner. Håvard Moe - partner og daglig leder i NIVI Analyse - mener at dette er fullt mulig å få til, men at omstillingen forutsetter krevende politiske prioriteringer, særlig innen helse og omsorg, oppvekst og tekniske tjenester. Budskapet er at politikerne må samle seg om en tydelig plan og handle raskt, fordi utsettelser vil gjøre situasjonen betydelig vanskeligere noen få år frem i tid.",
+    keyPoints: [
+      "Størst potensial innen velferdstjenestene: Analysen viser mulige innsparinger på 30 millioner kroner innen helse og omsorg og 20 millioner innen skole og barnehage.",
+      "Skoletilbudet må vurderes: Elevtallet har falt med 47 siden 2023 uten tilsvarende tilpasning av driften.",
+      "Veier og båttilbud berøres: Privatisering av kommunale veier og endringer i båttilbudet på Sandøya omtales som muligheter med et samlet potensial på 10 millioner kroner.",
+      "Barnevernet krever gjennomgang: Kraftig kostnadsvekst og begrenset direkte styring gir grunn til å vurdere organiseringen og kostnadsfordelingen i det interkommunale samarbeidet."
+    ],
+    shortSummary: "Det jobbes nå med å identifisere de konkrete omstillingstiltakene. Kommunestyret skal få arbeidspakker med kuttforslag presentert i kommunestyremøte 18. november.",
+    externalUrl: "https://www.tvedestrandsposten.no/ga-knallhard-beskjed-kommer-dere-til-a-feige-ut/s/80-52-5358",
+    featured: false,
+    tags: ["tvedestrandsposten", "tvedestrand", "robek", "kommuneøkonomi"]
+  },
+  {
     id: 31,
     title: "«Kan spare 30 millioner: Færre sjefer, bedre struktur»",
     slug: "nordlys-senja-kan-spare-30-millioner",
