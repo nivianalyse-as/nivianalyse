@@ -26,6 +26,7 @@ export const mediaEntries: MediaEntry[] = [
     ],
     shortSummary: "Det jobbes nå med å identifisere de konkrete omstillingstiltakene. Kommunestyret skal få arbeidspakker med kuttforslag presentert i kommunestyremøte 18. november.",
     externalUrl: "https://www.tvedestrandsposten.no/ga-knallhard-beskjed-kommer-dere-til-a-feige-ut/s/80-52-5358",
+    pdfUrl: "/docs/TP_Tvedestrand_20.10.26.pdf",
     featured: false,
     tags: ["tvedestrandsposten", "tvedestrand", "robek", "kommuneøkonomi"]
   },
