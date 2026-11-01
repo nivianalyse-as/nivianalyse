@@ -8,7 +8,9 @@ import { fagomrader } from "../data/fagomrader";
 import { ALL_THEMES, themeToSlug } from "../types/rapport";
 
 const xml = readFileSync(new URL("../../public/sitemap.xml", import.meta.url), "utf8");
-const urls = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]);
+const urls = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].flatMap((match) =>
+  typeof match[1] === "string" ? [match[1]] : [],
+);
 const origin = "https://nivianalyse.no";
 
 describe("Production sitemap", () => {
