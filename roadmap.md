@@ -9,12 +9,14 @@ Resultat: robots.txt er korrekt og uendret. Begge Lovable-advarslene gjelder avv
 
 ## Oppfølging etter Netlify-deploy
 - [x] Sammenlign produksjonsrespons uten query med kildefilen og tilgjengelige byggfiler.
-- [ ] Finn og rett dokumentert deploy-årsak. Blokkert: Netlify-deployens logg og publiserte filer er ikke tilgjengelige, og ingen produksjonsbyggfiler finnes i sandkassen.
+- [x] Avslutt tidligere deploy-undersøkelse: bruker opplyser i nytt vedlegg at sitemap med 198 URL-er nå fungerer; den historiske deploy-årsaken er ikke dokumentert.
 - [x] Verifiser innhold og rapporter eventuelle tilgangsbegrensninger uten publisering.
 
 Kontroll 01.11.2026: produksjonsadressen uten query gir HTTP 200 og 18 URL-er, også med Cache-Control: no-cache og Pragma: no-cache. Netlify svarer med cache miss og max-age=0,must-revalidate. Lokal respons er byte-identisk med public/sitemap.xml og har 198 URL-er; syv tester består. Ingen alternativ sitemap-generering eller sitemap-rewrite funnet i prosjektet. Ingen funksjonelle endringer utført uten dokumentert deploy-årsak.
 
 ## Automatisk generering (godkjent i vedlegg)
-- [ ] Generer fra eksisterende ruter og publiserte datasett ved hver build.
-- [ ] Behold 198 eksisterende adresser og kontroller at filen kopieres til klientens byggmappe.
-- [ ] Test nye poster, eksklusjoner og feil; ikke publiser.
+- [x] Generer fra eksisterende ruter og publiserte datasett ved hver build.
+- [x] Behold 198 eksisterende adresser og kontroller at filen kopieres til klientens byggmappe.
+- [x] Test nye poster, eksklusjoner og feil; ikke publiser.
+
+Verifisert: 198-adressers referanse identisk som mengde, 15 tester består, lokal XML gir HTTP 200, begge byggkroker testet med kopiert klientfil, automatisk kontroll grønn. Netlify-deploy og dens faktiske publiseringsmappe er ikke tilgjengelig; ingen publisering utført.
