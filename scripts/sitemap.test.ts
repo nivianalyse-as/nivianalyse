@@ -1,9 +1,10 @@
 // @vitest-environment node
-import { readFileSync, mkdtempSync, writeFileSync, rmSync } from "node:fs";
+import { readFileSync, mkdtempSync, writeFileSync, rmSync, mkdirSync, cpSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join, resolve } from "node:path";
 import { describe, expect, it } from "vitest";
-import { collectSitemapPaths, readRouteSources, siteContent, sitemapXml, verifySitemapOutput } from "./sitemap";
+import type { ResolvedConfig, ViteBuilder } from "vite";
+import { automaticSitemap, collectSitemapPaths, readRouteSources, siteContent, sitemapXml, verifySitemapOutput } from "./sitemap";
 
 const routes = readRouteSources(resolve("src/routes"));
 const baseline = readFileSync(resolve("public/sitemap.xml"), "utf8");
@@ -62,6 +63,36 @@ describe("Automatic sitemap generation", () => {
       expect(() => verifySitemapOutput(file, expected)).toThrow("differs");
       writeFileSync(file, expected);
       expect(() => verifySitemapOutput(file, expected)).not.toThrow();
+    } finally { rmSync(dir, { recursive: true, force: true }); }
+  });
+  it("supports Nitro-managed copying with copyPublicDir false and verifies its final output", async () => {
+    const dir = mkdtempSync(join(tmpdir(), "nivi-sitemap-nitro-"));
+    try {
+      mkdirSync(join(dir, "src"));
+      cpSync(resolve("src/routes"), join(dir, "src/routes"), { recursive: true });
+      const config = {
+        root: dir, publicDir: join(dir, "public"),
+        build: { copyPublicDir: false, outDir: "dist/server" },
+        environments: { client: { build: { copyPublicDir: false, outDir: "intermediate" } } },
+      } as unknown as ResolvedConfig;
+      const plugin = automaticSitemap();
+      expect(plugin.enforce).toBe("post");
+      if (typeof plugin.configResolved !== "function") throw new Error("Missing configResolved hook");
+      await plugin.configResolved.call({} as never, config);
+      const generated = readFileSync(join(dir, "public/sitemap.xml"), "utf8");
+      expect((generated.match(/<url>/g) ?? []).length).toBe(198);
+      expect(config.build.copyPublicDir).toBe(false);
+      expect(config.environments?.["client"]?.build.copyPublicDir).toBe(false);
+      const hook = plugin.buildApp;
+      if (!hook || typeof hook === "function") throw new Error("Missing ordered buildApp hook");
+      expect(hook.order).toBe("post");
+      const builder = { environments: { client: { config: { build: { outDir: "dist/client" } } } } } as unknown as ViteBuilder;
+      await expect(hook.handler.call({} as never, builder)).rejects.toThrow();
+      // Simulate the adapter's existing copying step, not a new plugin copy.
+      cpSync(join(dir, "public"), join(dir, "dist/client"), { recursive: true });
+      await expect(hook.handler.call({} as never, builder)).resolves.toBeUndefined();
+      writeFileSync(join(dir, "dist/client/sitemap.xml"), "old sitemap");
+      await expect(hook.handler.call({} as never, builder)).rejects.toThrow("differs");
     } finally { rmSync(dir, { recursive: true, force: true }); }
   });
 });
