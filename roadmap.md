@@ -22,7 +22,9 @@ Kontroll 01.11.2026: produksjonsadressen uten query gir HTTP 200 og 18 URL-er, o
 Verifisert: 198-adressers referanse identisk som mengde, 15 tester består, lokal XML gir HTTP 200, begge byggkroker testet med kopiert klientfil, automatisk kontroll grønn. Netlify-deploy og dens faktiske publiseringsmappe er ikke tilgjengelig; ingen publisering utført.
 
 ## Rett feilet Netlify-build
-- [ ] Dokumenter hvorfor sitemap-pluginen avviser eksisterende offentlig filkopiering.
-- [ ] Rett kun pluginens kompatibilitet uten å endre SSR eller deploy-regler.
-- [ ] Test 198 URL-er, automatisk inkludering og uendret levering av statiske filer.
-- [ ] Kontroller tilgjengelig byggresultat og rapporter begrensninger; ikke publiser manuelt.
+- [x] Dokumenter hvorfor sitemap-pluginen avviser eksisterende offentlig filkopiering.
+- [x] Rett kun pluginens kompatibilitet uten å endre SSR eller deploy-regler.
+- [x] Test 198 URL-er, automatisk inkludering og uendret levering av statiske filer.
+- [x] Kontroller tilgjengelig byggresultat og rapporter begrensninger; ikke publiser manuelt.
+
+Resultat: Nitro setter klientens copyPublicDir=false med vilje og utfører copyPublicAssets selv. Pluginens gamle guard avviste dette. Guard er fjernet for copyPublicDir, og pluginen er post-enforced slik at kontrollen kjører etter Nitros post-build-kopiering og bruker builderens faktiske klientmappe. 16 tester består, inkludert simulert Nitro-kopiering med copyPublicDir=false samt avvisning av manglende/gammel output. Automatisk byggkontroll rapporterer build OK (01.11.2026 12:27:33 UTC). Lokal sitemap har 198 URL-er og HTTP 200, byte-identisk med kildefilen; to PDF-er, __forms.html og robots.txt gir også HTTP 200 og identisk innhold. Sandboxen eksponerer ingen dist/client-, .output/public- eller .netlify-mappe. Netlifys eksakte produksjonskommando, publiseringsmappe og faktiske serverpakke kan derfor ikke bekreftes her; manuelt produksjonsbygg er ikke kjørt, og ingen publisering er utført.
