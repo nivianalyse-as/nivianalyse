@@ -10,6 +10,26 @@ import { MediaEntry } from "@/types/media";
 
 export const mediaEntries: MediaEntry[] = [
   {
+    id: 33,
+    title: "Telemarksforsking har laga rapport om samanslåing mellom Ørsta og Volda",
+    slug: "nrk-orsta-volda-kommunesammenslaing",
+    type: "article",
+    source: "NRK Møre og Romsdal",
+    date: "2026-10-29T21:17:00",
+    excerpt: "Håvard Moe fra NIVI Analyse mener Ørsta og Volda er de mest opplagte kommunene i landet å slå sammen, og at en sammenslåing vil gi store fortrinn. Han understreker samtidig at begge kommunene må gjennomføre omstillinger uansett hvilken løsning de velger, og at følelser og lokal tilhørighet må respekteres. Begge kommunene har store økonomiske utfordringer, og debatten viser ulike syn på om sammenslåing vil styrke økonomien og regionen. Begge ordførerne ønsker å gå videre med prosessen, men det er fortsatt uenighet om den endelige løsningen.",
+    introduction: "Håvard Moe fra NIVI Analyse mener Ørsta og Volda er de mest opplagte kommunene i landet å slå sammen, og at en sammenslåing vil gi store fortrinn. Han understreker samtidig at begge kommunene må gjennomføre omstillinger uansett hvilken løsning de velger, og at følelser og lokal tilhørighet må respekteres. Begge kommunene har store økonomiske utfordringer, og debatten viser ulike syn på om sammenslåing vil styrke økonomien og regionen. Begge ordførerne ønsker å gå videre med prosessen, men det er fortsatt uenighet om den endelige løsningen.",
+    keyPoints: [
+      "Tydelig anbefaling fra Moe: Han mener spørsmålet er hvorfor Ørsta og Volda ikke skal slå seg sammen.",
+      "Omstilling er nødvendig uansett: Ørsta er på ROBEK-listen, og Volda står i fare for å havne der.",
+      "Mulighet for en sterkere region: Tilhengerne peker på større regional tyngde og felles interesser knyttet til blant annet sykehus og flyplass.",
+      "Økonomisk og lokal skepsis: Motstanderne tviler på at sammenslåing løser økonomiproblemene, og er opptatt av avstander og nærhet til tjenestene.",
+      "Videre avklaring: Kommunestyrene skal 12. november avgjøre om prosessen fortsetter, med mulig folkeavstemning i mai 2027 og endelige vedtak i juni."
+    ],
+    externalUrl: "https://www.nrk.no/mr/telemarksforsking-har-laga-rapport-om-samanslaing-mellom-orsta-og-volda-1.18065522",
+    featured: false,
+    tags: ["nrk", "ørsta", "volda", "kommunesammenslåing"]
+  },
+  {
     id: 32,
     title: "Ga knallhard beskjed: Kommer dere til å feige ut?",
     slug: "tvedestrandsposten-ga-knallhard-beskjed",
