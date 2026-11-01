@@ -20,3 +20,9 @@ Kontroll 01.11.2026: produksjonsadressen uten query gir HTTP 200 og 18 URL-er, o
 - [x] Test nye poster, eksklusjoner og feil; ikke publiser.
 
 Verifisert: 198-adressers referanse identisk som mengde, 15 tester består, lokal XML gir HTTP 200, begge byggkroker testet med kopiert klientfil, automatisk kontroll grønn. Netlify-deploy og dens faktiske publiseringsmappe er ikke tilgjengelig; ingen publisering utført.
+
+## Rett feilet Netlify-build
+- [ ] Dokumenter hvorfor sitemap-pluginen avviser eksisterende offentlig filkopiering.
+- [ ] Rett kun pluginens kompatibilitet uten å endre SSR eller deploy-regler.
+- [ ] Test 198 URL-er, automatisk inkludering og uendret levering av statiske filer.
+- [ ] Kontroller tilgjengelig byggresultat og rapporter begrensninger; ikke publiser manuelt.
