@@ -1,3 +1,3 @@
 # Project architecture
 
-- Sitemap automation is build-only tooling in `scripts/sitemap.ts`: derive static pages from route metadata and dynamic pages from authoritative content datasets, generate the single public XML before asset copying, and fail the build if its client output differs; this preserves SSR and deploy routing while preventing stale sitemap artifacts.
+- Sitemap automation is build-only tooling in `scripts/sitemap.ts`: derive static pages from route metadata and dynamic pages from authoritative content datasets, generate the single public XML in configResolved, and verify the actual builder client output after Nitro's post buildApp hook; accept Nitro-managed public copying with copyPublicDir false without overriding SSR or asset settings, and fail on missing or stale output.

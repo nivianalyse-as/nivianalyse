@@ -149,20 +149,25 @@ export function automaticSitemap(): Plugin {
   return {
     name: "nivi-automatic-sitemap",
     apply: "build",
-    enforce: "pre",
+    // Nitro's post buildApp hook copies public assets and builds the server.
+    // Run our verification after it, not before it via a pre-enforced plugin.
+    enforce: "post",
     configResolved(resolved) {
       config = resolved;
-      if (!config.publicDir || config.build.copyPublicDir === false || config.environments?.["client"]?.build.copyPublicDir === false) {
-        throw new Error("Sitemap requires the existing public asset copying step");
+      if (!config.publicDir) {
+        throw new Error("Sitemap requires the existing public source directory");
       }
-      // Runs before Vite copies public assets, including when CI invokes vite build directly.
+      // Nitro intentionally disables Vite's copyPublicDir and copies public assets
+      // itself. Generate before either copying mechanism, without overriding it.
       expected = generateSitemap(config.root);
       console.info(`[sitemap] Generated ${expected.match(/<url>/g)?.length ?? 0} canonical URLs for ${SITE_URL}`);
     },
     buildApp: {
       order: "post",
-      async handler() {
-        const output = resolve(config.root, config.environments?.["client"]?.build.outDir ?? config.build.outDir);
+      async handler(builder) {
+        const client = builder.environments["client"];
+        if (!client) throw new Error("Sitemap requires the existing client build environment");
+        const output = resolve(config.root, client.config.build.outDir);
         verifySitemapOutput(join(output, "sitemap.xml"), expected);
         console.info(`[sitemap] Verified published client asset: ${join(output, "sitemap.xml")}`);
       },
