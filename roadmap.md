@@ -13,3 +13,8 @@ Resultat: robots.txt er korrekt og uendret. Begge Lovable-advarslene gjelder avv
 - [x] Verifiser innhold og rapporter eventuelle tilgangsbegrensninger uten publisering.
 
 Kontroll 01.11.2026: produksjonsadressen uten query gir HTTP 200 og 18 URL-er, også med Cache-Control: no-cache og Pragma: no-cache. Netlify svarer med cache miss og max-age=0,must-revalidate. Lokal respons er byte-identisk med public/sitemap.xml og har 198 URL-er; syv tester består. Ingen alternativ sitemap-generering eller sitemap-rewrite funnet i prosjektet. Ingen funksjonelle endringer utført uten dokumentert deploy-årsak.
+
+## Automatisk generering (godkjent i vedlegg)
+- [ ] Generer fra eksisterende ruter og publiserte datasett ved hver build.
+- [ ] Behold 198 eksisterende adresser og kontroller at filen kopieres til klientens byggmappe.
+- [ ] Test nye poster, eksklusjoner og feil; ikke publiser.
