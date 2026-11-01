@@ -152,7 +152,7 @@ export function automaticSitemap(): Plugin {
     enforce: "pre",
     configResolved(resolved) {
       config = resolved;
-      if (!config.publicDir || config.build.copyPublicDir === false || config.environments?.client?.build.copyPublicDir === false) {
+      if (!config.publicDir || config.build.copyPublicDir === false || config.environments?.["client"]?.build.copyPublicDir === false) {
         throw new Error("Sitemap requires the existing public asset copying step");
       }
       // Runs before Vite copies public assets, including when CI invokes vite build directly.
@@ -161,8 +161,8 @@ export function automaticSitemap(): Plugin {
     },
     buildApp: {
       order: "post",
-      handler() {
-        const output = resolve(config.root, config.environments?.client?.build.outDir ?? config.build.outDir);
+      async handler() {
+        const output = resolve(config.root, config.environments?.["client"]?.build.outDir ?? config.build.outDir);
         verifySitemapOutput(join(output, "sitemap.xml"), expected);
         console.info(`[sitemap] Verified published client asset: ${join(output, "sitemap.xml")}`);
       },
