@@ -11,7 +11,7 @@ import { MediaEntry } from "@/types/media";
 export const mediaEntries: MediaEntry[] = [
   {
     id: 33,
-    title: "Telemarksforsking har laga rapport om samanslåing mellom Ørsta og Volda",
+    title: "Ørsta og Volda er de mest opplagte kommunene i landet å slå sammen mener NIVI Analyse",
     slug: "nrk-orsta-volda-kommunesammenslaing",
     type: "article",
     source: "NRK Møre og Romsdal",
