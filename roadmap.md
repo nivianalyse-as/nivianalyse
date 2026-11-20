@@ -1,5 +1,12 @@
 # Målrettet crawler- og sitemap-gjennomgang
 
+## Ny medieomtale: Ringerikes Blad
+- [x] Legg inn ordrett tekst, faktisk publiseringsdato og original-PDF i eksisterende oppsett.
+- [x] Kontroller lenker, sortering, automatisk sitemap og visning på desktop, nettbrett og mobil.
+- [x] Kjør relevante tester og kontroller tilgjengelig byggresultat uten manuell publisering.
+
+Resultat: publisert 22.10.2026 kl. 00:00 ifølge original-PDF (oppdatert 23.10 er ikke brukt). Ordrett ingress og tre nøkkelpunkter, eksisterende sammendragsfallback og knapper beholdt. Original-PDF optimalisert til 3,1 MB uten å fjerne sider eller tekst (alle åtte sider kontrollert); lokal adresse gir HTTP 200 og byte-identisk fil. Desktop, nettbrett og mobil kontrollert visuelt og med lenke-/SEO-kontroller. Omtalen sorteres mellom NRK og Tvedestrandsposten. Generatoren gir 199 adresser og tar med ny URL; 17 tester består og automatisk byggkontroll er grønn. Faktiske Netlify-publiserte filer og produksjonsrespons etter automatisk deploy er ikke tilgjengelige før deploy; ingen manuell publisering utført.
+
 - [x] Undersøk crawlerregler og sitemap på nivianalyse.no og i prosjektet.
 - [x] Kontroller offentlige innholdssider, kanoniske adresser og deploy-oppsett.
 - [x] Rett bare dokumenterte feil og verifiser eventuelle endringer.

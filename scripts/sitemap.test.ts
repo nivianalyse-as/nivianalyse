@@ -11,16 +11,17 @@ const baseline = readFileSync(resolve("public/sitemap.xml"), "utf8");
 const baselinePaths = [...baseline.matchAll(/<loc>https:\/\/nivianalyse\.no([^<]+)<\/loc>/g)].flatMap((match) => typeof match[1] === "string" ? [match[1]] : []);
 
 describe("Automatic sitemap generation", () => {
-  it("preserves all 198 existing canonical URLs", () => {
+  it("preserves all existing canonical URLs and includes the Hole media story", () => {
     const paths = collectSitemapPaths(routes);
-    expect(paths.length).toBe(198);
+    expect(paths.length).toBe(199);
+    expect(paths).toContain("/i-media/ringerikes-blad-hole-27-arbeidspakker");
     expect(paths).toEqual([...baselinePaths].sort());
   });
   it("automatically includes a new media story without editing routes or XML", () => {
     const paths = collectSitemapPaths(routes, { ...siteContent, media: [...siteContent.media, { slug: "ny-publisert-medieomtale" }] });
     expect(paths).toContain("/i-media/ny-publisert-medieomtale");
     expect(paths).not.toContain("/inspirasjon/ny-publisert-medieomtale");
-    expect(paths.length).toBe(199);
+    expect(paths.length).toBe(200);
   });
   it("automatically includes new articles and reports with their year archive", () => {
     const paths = collectSitemapPaths(routes, {
@@ -38,7 +39,7 @@ describe("Automatic sitemap generation", () => {
       { slug: "upublisert", published: false }, { slug: "utkast", draft: true },
       { slug: "skjult", noindex: true }, { slug: "venter", status: "draft" },
     ] });
-    expect(paths.length).toBe(198);
+    expect(paths.length).toBe(199);
     expect(paths).not.toContain("/takk");
     expect(paths.some((path) => /^\/(rapport|rapportarkiv)\//.test(path))).toBe(false);
   });
@@ -47,7 +48,7 @@ describe("Automatic sitemap generation", () => {
     expect(paths).toContain("/ny-side");
   });
   it("deduplicates records and rejects invalid slugs", () => {
-    expect(collectSitemapPaths(routes, { ...siteContent, media: [...siteContent.media, ...siteContent.media] }).length).toBe(198);
+    expect(collectSitemapPaths(routes, { ...siteContent, media: [...siteContent.media, ...siteContent.media] }).length).toBe(199);
     expect(() => collectSitemapPaths(routes, { ...siteContent, media: [{ slug: "../../410.html" }] })).toThrow("Invalid sitemap slug");
   });
   it("fails rather than silently omitting an unsupported dynamic route", () => {
@@ -80,7 +81,7 @@ describe("Automatic sitemap generation", () => {
       if (typeof plugin.configResolved !== "function") throw new Error("Missing configResolved hook");
       await plugin.configResolved.call({} as never, config);
       const generated = readFileSync(join(dir, "public/sitemap.xml"), "utf8");
-      expect((generated.match(/<url>/g) ?? []).length).toBe(198);
+      expect((generated.match(/<url>/g) ?? []).length).toBe(199);
       expect(config.build.copyPublicDir).toBe(false);
       expect(config.environments?.["client"]?.build.copyPublicDir).toBe(false);
       const hook = plugin.buildApp;

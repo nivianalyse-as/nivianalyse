@@ -10,6 +10,24 @@ import { MediaEntry } from "@/types/media";
 
 export const mediaEntries: MediaEntry[] = [
   {
+    id: 34,
+    title: "Konsulent la fram 27 arbeidspakker: Foreslår avspasering i stedet for overtid",
+    slug: "ringerikes-blad-hole-27-arbeidspakker",
+    type: "article",
+    source: "Ringerikes Blad",
+    date: "2026-10-22T00:00:00",
+    excerpt: "Hole kommune har hatt underskudd tre år på rad, og disposisjonsfondet falt fra 110 til 33 millioner kroner mellom 2022 og 2025. Håvard Moe i NIVI Analyse la fram 27 arbeidspakker for formannskapet og advarte om at kommunen kan havne i ROBEK i 2029 dersom tiltakene utsettes. Arbeidspakkene er anslått å gi innsparinger på 16 millioner kroner i 2027 og 30 millioner kroner i 2030. Moe anbefalte også innføring av eiendomsskatt for å finansiere den vedtatte investeringsplanen, noe som kan bringe den samlede budsjetteffekten opp i 48 millioner kroner i 2030.",
+    keyPoints: [
+      "Det er gjennomført en god prosess der ledere og tillitsvalgte i Hole har vist stor profesjonalitet i arbeidet med å utarbeide omstillingstiltak på kort tid.",
+      "Kommunen bør vedta omstillingstiltak i 2026 for å bremse nedbyggingen av disposisjonsfondet og redusere risikoen for ROBEK.",
+      "Kommunen må innføre eiendomsskatt for å finansiere vedtatte investeringer, ikke for å finansiere driften. Driftsutfordringene må løses gjennom omstillingstiltak."
+    ],
+    externalUrl: "https://www.ringblad.no/konsulent-la-fram-27-arbeidspakker-foreslar-avspasering-i-stedet-for-overtid/s/80-45-13580",
+    pdfUrl: "/docs/2026_Hole_Ringerike_blad.pdf",
+    featured: false,
+    tags: ["ringerikes blad", "hole", "omstilling", "kommuneøkonomi"]
+  },
+  {
     id: 33,
     title: "Ørsta og Volda er de mest opplagte kommunene i landet å slå sammen mener NIVI Analyse",
     slug: "nrk-orsta-volda-kommunesammenslaing",
